@@ -103,8 +103,7 @@ bool is_valid_town(char* town){
 }
 
 bool is_valid_data(char* name, char* surname, char* date, char* coded_town, char sex){
-	return
-			is_valid_name(name)&&is_valid_surname(surname)&&is_valid_date(date)&&
+	return is_valid_name(name)&&is_valid_surname(surname)&&is_valid_date(date)&&
 			is_valid_town_code(coded_town)&&is_valid_sex(sex);
 }
 
