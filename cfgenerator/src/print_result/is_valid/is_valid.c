@@ -91,11 +91,11 @@ bool is_valid_town_code(char* code){
 }
 
 bool is_not_empty_string(char* string){
-	return (strcmp(string,EMPTY_STRING)!=ZERO);
+	return strcmp(string,EMPTY_STRING)!=ZERO;
 }
 
 bool is_valid_sex(char sex){
-	return (sex==M||sex==F);
+	return sex==M||sex==F;
 }
 
 bool is_valid_town(char* town){
