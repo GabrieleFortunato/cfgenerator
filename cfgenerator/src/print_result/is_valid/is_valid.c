@@ -142,3 +142,18 @@ static bool is_valid_chars_data_code(char* code){
 bool is_valid_date_code(char* code){
 	return strlen(code)==FIVE&&is_valid_chars_data_code(code);
 }
+
+static bool is_valid_birth_place_code_char(char* code, int i){
+	return (i==ZERO)?isupper(code[i]):isdigit(code[i]);
+}
+
+static bool is_valid_birth_place_code_chars(char* code){
+	bool flag = true;
+	for (int i=ZERO;i<strlen(code)&&flag;i++)
+		flag = is_valid_birth_place_code_char(code,i);
+	return flag;
+}
+
+bool is_valid_birth_place_code(char* code){
+	return strlen(code) == FOUR&&is_valid_birth_place_code_chars(code);
+}

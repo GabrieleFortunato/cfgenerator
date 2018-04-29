@@ -22,16 +22,6 @@ void test_read_birth_place(){
 	fclose(file);
 	file = fopen(FILE_NAME,FILE_MODE);
 	CU_ASSERT_STRING_EQUAL(read_birth_place_code(file,"ROMA"),"H501");
-	fclose(file);
-	file = fopen(FILE_NAME,FILE_MODE);
-	CU_ASSERT_EQUAL(read_birth_place_code(file,"MOLA"),NULL);
-	fclose(file);
-	file = fopen(FILE_NAME,FILE_MODE);
-	CU_ASSERT_EQUAL(read_birth_place_code(file,"BAR"),NULL);
-	fclose(file);
-	file = fopen(FILE_NAME,FILE_MODE);
-	CU_ASSERT_EQUAL(read_birth_place_code(file,"BARi"),NULL);
-	fclose(file);
 	file = fopen(FILE_NAME,FILE_MODE);
 	CU_ASSERT_STRING_EQUAL(read_birth_place_code(file,"MILANO"),"F205");
 	fclose(file);
@@ -123,6 +113,17 @@ void test_is_valid_ctrl_code(){
 	CU_ASSERT_FALSE(is_valid_ctrl_code('9'));
 }
 
+void test_is_valid_birth_place_code(){
+	CU_ASSERT_TRUE(is_valid_birth_place_code("H501"));
+	CU_ASSERT_TRUE(is_valid_birth_place_code("A662"));
+	CU_ASSERT_TRUE(!is_valid_birth_place_code("H501A"));
+	CU_ASSERT_TRUE(!is_valid_birth_place_code("A662A"));
+	CU_ASSERT_TRUE(!is_valid_birth_place_code("h501"));
+	CU_ASSERT_TRUE(!is_valid_birth_place_code("a662"));
+	CU_ASSERT_TRUE(!is_valid_birth_place_code("A66A"));
+	CU_ASSERT_TRUE(!is_valid_birth_place_code("AA2A"));
+}
+
 void test_coded_surname(){
 	char code[FOUR];
 	surname_code("FORTUNATO",code);
@@ -194,14 +195,15 @@ int clear_suite_default(){
 int main(void) {
 	CU_initialize_registry();
 	CU_pSuite pSuite_A = CU_add_suite("SUITE A",init_suite_default,clear_suite_default);
-	CU_add_test(pSuite_A,"test of read_birth_place()",test_read_birth_place);
+	CU_add_test(pSuite_A,"test of is_valid_name()",test_is_valid_name);
+	CU_add_test(pSuite_A,"test of is_valid_surname()",test_is_valid_surname);
+	CU_add_test(pSuite_A,"test of is_valid_date()",test_is_valid_date);
+	CU_add_test(pSuite_A,"test of is_valid_ctrl_code()",test_is_valid_ctrl_code);
+	CU_add_test(pSuite_A,"test of is_valid_cf_code()",test_is_valid_cf_code);
+	CU_add_test(pSuite_A,"test of is_valid_date_code()",test_is_valid_code_date);
+	CU_add_test(pSuite_A,"test of is_valid_birth_place_code()",test_is_valid_birth_place_code);
 	CU_pSuite pSuite_B = CU_add_suite("SUITE B",init_suite_default,clear_suite_default);
-	CU_add_test(pSuite_B,"test of is_valid_name()",test_is_valid_name);
-	CU_add_test(pSuite_B,"test of is_valid_surname()",test_is_valid_surname);
-	CU_add_test(pSuite_B,"test of is_valid_date()",test_is_valid_date);
-	CU_add_test(pSuite_B,"test of is_valid_ctrl_code()",test_is_valid_ctrl_code);
-	CU_add_test(pSuite_B,"test of is_valid_cf_code()",test_is_valid_cf_code);
-	CU_add_test(pSuite_B,"test of is_valid_date_code()",test_is_valid_code_date);
+	CU_add_test(pSuite_B,"test of read_birth_place()",test_read_birth_place);
 	CU_pSuite pSuite_C = CU_add_suite("SUITE C",init_suite_default,clear_suite_default);
 	CU_add_test(pSuite_C,"test of coded_name()",test_coded_name);
 	CU_add_test(pSuite_C,"test of coded_surname()",test_coded_surname);

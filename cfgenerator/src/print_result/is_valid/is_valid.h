@@ -92,6 +92,12 @@ bool is_valid_town_code(char* code);
  */
 bool is_valid_date_code(char* code);
 
+/**
+ * Vericfica che il codice catastale abbia il giusto formato
+ * @param code
+ * @return
+ */
+bool is_valid_birth_place_code(char* code);
 
 /**
  * Verifica che il sesso sia rappresentato da un M o da una F
