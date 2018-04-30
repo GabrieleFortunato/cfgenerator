@@ -15,7 +15,6 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
-#include "close/close.h"
 
 #define FILE_NOT_FOUND "\nFile dei codici catastali non trovato\n"
 #define ERROR		   "Errore di allocazione nella memoria"

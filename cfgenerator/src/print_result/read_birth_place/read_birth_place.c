@@ -28,6 +28,10 @@ char* read_birth_place_code(FILE* places_file,char* birth_place){
     	town = strtok(part, VIRGO);
     	result = get_result(birth_place,town,code,result);
     }
+    free(part);
+    free(town);
+    free(code);
+    free(result);
     assert(is_valid_birth_place_code(result));
     return result;
 }
@@ -35,5 +39,4 @@ char* read_birth_place_code(FILE* places_file,char* birth_place){
 void file_not_found(){
 	puts(FILE_NOT_FOUND);
 	system(PAUSE);
-	close();
 }

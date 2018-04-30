@@ -8,7 +8,6 @@
 #include "intro.h"
 
 void intro(void){
-	system(CLS);
 	puts(
 			NEW_LINE BAR NEW_LINE PRESENTATION_ONE
 			NEW_LINE BAR NEW_LINE PRESENTATION_TWO

@@ -12,7 +12,6 @@
 #include <stdlib.h>
 
 #define NEW_LINE 		  "\n"
-#define CLS               "CLS"
 #define BAR      		  "======================================="
 #define PRESENTATION_ONE  "PROGRAMMA DI CALCOLO DEL CODICE FISCALE"
 #define PRESENTATION_TWO  "a cura di Gabriele Fortunato"
