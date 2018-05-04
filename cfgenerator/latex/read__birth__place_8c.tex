@@ -1,0 +1,57 @@
+\hypertarget{read__birth__place_8c}{}\section{src/print\+\_\+result/read\+\_\+birth\+\_\+place/read\+\_\+birth\+\_\+place.c File Reference}
+\label{read__birth__place_8c}\index{src/print\+\_\+result/read\+\_\+birth\+\_\+place/read\+\_\+birth\+\_\+place.\+c@{src/print\+\_\+result/read\+\_\+birth\+\_\+place/read\+\_\+birth\+\_\+place.\+c}}
+{\ttfamily \#include $<$print\+\_\+result/read\+\_\+birth\+\_\+place/read\+\_\+birth\+\_\+place.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{read__birth__place_8c_a010678c3c8f5267cb96a048f1b7b0794}{read\+\_\+birth\+\_\+place\+\_\+code} (F\+I\+LE $\ast$places\+\_\+file, char $\ast$birth\+\_\+place)
+\item 
+void \hyperlink{read__birth__place_8c_ac547debbc7ff88dd753efb9589535d11}{file\+\_\+not\+\_\+found} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{read__birth__place_8c_ac547debbc7ff88dd753efb9589535d11}\label{read__birth__place_8c_ac547debbc7ff88dd753efb9589535d11}} 
+\index{read\+\_\+birth\+\_\+place.\+c@{read\+\_\+birth\+\_\+place.\+c}!file\+\_\+not\+\_\+found@{file\+\_\+not\+\_\+found}}
+\index{file\+\_\+not\+\_\+found@{file\+\_\+not\+\_\+found}!read\+\_\+birth\+\_\+place.\+c@{read\+\_\+birth\+\_\+place.\+c}}
+\subsubsection{\texorpdfstring{file\+\_\+not\+\_\+found()}{file\_not\_found()}}
+{\footnotesize\ttfamily void file\+\_\+not\+\_\+found (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stampa un messaggio di errore se il file non è stato trovato 
+
+Definition at line 35 of file read\+\_\+birth\+\_\+place.\+c.
+
+
+
+References close(), F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND, and P\+A\+U\+SE.
+
+\mbox{\Hypertarget{read__birth__place_8c_a010678c3c8f5267cb96a048f1b7b0794}\label{read__birth__place_8c_a010678c3c8f5267cb96a048f1b7b0794}} 
+\index{read\+\_\+birth\+\_\+place.\+c@{read\+\_\+birth\+\_\+place.\+c}!read\+\_\+birth\+\_\+place\+\_\+code@{read\+\_\+birth\+\_\+place\+\_\+code}}
+\index{read\+\_\+birth\+\_\+place\+\_\+code@{read\+\_\+birth\+\_\+place\+\_\+code}!read\+\_\+birth\+\_\+place.\+c@{read\+\_\+birth\+\_\+place.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+birth\+\_\+place\+\_\+code()}{read\_birth\_place\_code()}}
+{\footnotesize\ttfamily char$\ast$ read\+\_\+birth\+\_\+place\+\_\+code (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{places\+\_\+file,  }\item[{char $\ast$}]{birth\+\_\+place }\end{DoxyParamCaption})}
+
+Legge da file il codice catastale del comune di nascita \begin{DoxyPrecond}{Precondition}
+il file deve essere aperto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+il codice risultante deve essere una stringa di 4 caratteri di cui la prima una lettera e gli altri cifre 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em places\+\_\+file} & \\
+\hline
+{\em birth\+\_\+place} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 10 of file read\+\_\+birth\+\_\+place.\+c.
+
+
+
+References F\+I\+VE, is\+\_\+not\+\_\+empty\+\_\+string(), and S\+T\+R\+L\+EN.
+

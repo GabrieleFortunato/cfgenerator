@@ -12,6 +12,7 @@
 #include <print_result/read_birth_place/read_birth_place.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "close/close.h"
 
 #define CODE_LENGTH     17
 #define BAR_RESULT      "\n================================\n"

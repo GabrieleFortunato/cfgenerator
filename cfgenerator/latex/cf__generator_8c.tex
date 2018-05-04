@@ -1,0 +1,161 @@
+\hypertarget{cf__generator_8c}{}\section{src/print\+\_\+result/cf\+\_\+generator/cf\+\_\+generator.c File Reference}
+\label{cf__generator_8c}\index{src/print\+\_\+result/cf\+\_\+generator/cf\+\_\+generator.\+c@{src/print\+\_\+result/cf\+\_\+generator/cf\+\_\+generator.\+c}}
+{\ttfamily \#include $<$print\+\_\+result/cf\+\_\+generator/cf\+\_\+generator.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{cf__generator_8c_a3fc31bfb373229fad595bdd58fd4936d}{name\+\_\+code} (char name\mbox{[}$\,$\mbox{]}, char code\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{cf__generator_8c_ab1b86778c6102ec98c108cf32695b42c}{surname\+\_\+code} (char surname\mbox{[}$\,$\mbox{]}, char code\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{cf__generator_8c_a99de8347879a700ec6670f070512d07a}{birth\+\_\+date\+\_\+code} (char date\mbox{[}$\,$\mbox{]}, char sex, char code\mbox{[}$\,$\mbox{]})
+\item 
+char \hyperlink{cf__generator_8c_a70956311015a919ecee6f20621fb4ed8}{ctrl\+\_\+code} (char coded\+\_\+name\mbox{[}$\,$\mbox{]}, char coded\+\_\+surname\mbox{[}$\,$\mbox{]}, char coded\+\_\+birth\+\_\+date\mbox{[}$\,$\mbox{]}, char coded\+\_\+birth\+\_\+place\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{cf__generator_8c_ab4f4e4915be0df06691c1fcc269d1716}{cf\+\_\+generator} (char name\mbox{[}$\,$\mbox{]}, char surname\mbox{[}$\,$\mbox{]}, char birth\+\_\+date\mbox{[}$\,$\mbox{]}, char coded\+\_\+town\mbox{[}$\,$\mbox{]}, char sex, char code\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cf__generator_8c_a99de8347879a700ec6670f070512d07a}\label{cf__generator_8c_a99de8347879a700ec6670f070512d07a}} 
+\index{cf\+\_\+generator.\+c@{cf\+\_\+generator.\+c}!birth\+\_\+date\+\_\+code@{birth\+\_\+date\+\_\+code}}
+\index{birth\+\_\+date\+\_\+code@{birth\+\_\+date\+\_\+code}!cf\+\_\+generator.\+c@{cf\+\_\+generator.\+c}}
+\subsubsection{\texorpdfstring{birth\+\_\+date\+\_\+code()}{birth\_date\_code()}}
+{\footnotesize\ttfamily void birth\+\_\+date\+\_\+code (\begin{DoxyParamCaption}\item[{char}]{date\mbox{[}$\,$\mbox{]},  }\item[{char}]{sex,  }\item[{char}]{code\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Codifica la data di nascita \begin{DoxyPrecond}{Precondition}
+La data deve essere una stringa avente formato G\+G/\+M\+M/\+A\+A\+AA 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+la data codificata deve essere una stringa di quattro caratteri 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \\
+\hline
+{\em sex} & \\
+\hline
+{\em code} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 282 of file cf\+\_\+generator.\+c.
+
+
+
+References is\+\_\+valid\+\_\+date(), is\+\_\+valid\+\_\+sex(), and M.
+
+
+
+Referenced by cf\+\_\+generator().
+
+\mbox{\Hypertarget{cf__generator_8c_ab4f4e4915be0df06691c1fcc269d1716}\label{cf__generator_8c_ab4f4e4915be0df06691c1fcc269d1716}} 
+\index{cf\+\_\+generator.\+c@{cf\+\_\+generator.\+c}!cf\+\_\+generator@{cf\+\_\+generator}}
+\index{cf\+\_\+generator@{cf\+\_\+generator}!cf\+\_\+generator.\+c@{cf\+\_\+generator.\+c}}
+\subsubsection{\texorpdfstring{cf\+\_\+generator()}{cf\_generator()}}
+{\footnotesize\ttfamily void cf\+\_\+generator (\begin{DoxyParamCaption}\item[{char}]{name\mbox{[}$\,$\mbox{]},  }\item[{char}]{surname\mbox{[}$\,$\mbox{]},  }\item[{char}]{birth\+\_\+date\mbox{[}$\,$\mbox{]},  }\item[{char}]{coded\+\_\+town\mbox{[}$\,$\mbox{]},  }\item[{char}]{sex,  }\item[{char}]{code\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Genera il codice fiscale \begin{DoxyPrecond}{Precondition}
+la stringa del nome non deve essere vuota 
+
+la stringa del cognome non deve essere vuota 
+
+La data deve essere una stringa avente formato G\+G/\+M\+M/\+A\+A\+AA 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+il codice generato deve essere una stringa di 16 caratteri 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em surname} & \\
+\hline
+{\em birth\+\_\+date} & \\
+\hline
+{\em coded\+\_\+town} & \\
+\hline
+{\em sex} & \\
+\hline
+{\em code} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 437 of file cf\+\_\+generator.\+c.
+
+
+
+References birth\+\_\+date\+\_\+code(), E\+OS, F\+O\+UR, is\+\_\+valid\+\_\+date(), is\+\_\+valid\+\_\+name(), is\+\_\+valid\+\_\+sex(), is\+\_\+valid\+\_\+surname(), name\+\_\+code(), S\+IX, surname\+\_\+code(), and Z\+E\+RO.
+
+\mbox{\Hypertarget{cf__generator_8c_a70956311015a919ecee6f20621fb4ed8}\label{cf__generator_8c_a70956311015a919ecee6f20621fb4ed8}} 
+\index{cf\+\_\+generator.\+c@{cf\+\_\+generator.\+c}!ctrl\+\_\+code@{ctrl\+\_\+code}}
+\index{ctrl\+\_\+code@{ctrl\+\_\+code}!cf\+\_\+generator.\+c@{cf\+\_\+generator.\+c}}
+\subsubsection{\texorpdfstring{ctrl\+\_\+code()}{ctrl\_code()}}
+{\footnotesize\ttfamily char ctrl\+\_\+code (\begin{DoxyParamCaption}\item[{char}]{coded\+\_\+name\mbox{[}$\,$\mbox{]},  }\item[{char}]{coded\+\_\+surname\mbox{[}$\,$\mbox{]},  }\item[{char}]{coded\+\_\+birth\+\_\+date\mbox{[}$\,$\mbox{]},  }\item[{char}]{coded\+\_\+birth\+\_\+place\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Genera il carattere di controllo \begin{DoxyPostcond}{Postcondition}
+il carattere di controllo deve essere una lettera maiuscola 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em coded\+\_\+name} & \\
+\hline
+{\em coded\+\_\+surname} & \\
+\hline
+{\em coded\+\_\+birth\+\_\+date} & \\
+\hline
+{\em coded\+\_\+birth\+\_\+place} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 419 of file cf\+\_\+generator.\+c.
+
+
+
+References E\+OS, F\+I\+F\+T\+E\+EN, is\+\_\+valid\+\_\+coded\+\_\+surname\+\_\+name(), and Z\+E\+RO.
+
+\mbox{\Hypertarget{cf__generator_8c_a3fc31bfb373229fad595bdd58fd4936d}\label{cf__generator_8c_a3fc31bfb373229fad595bdd58fd4936d}} 
+\index{cf\+\_\+generator.\+c@{cf\+\_\+generator.\+c}!name\+\_\+code@{name\+\_\+code}}
+\index{name\+\_\+code@{name\+\_\+code}!cf\+\_\+generator.\+c@{cf\+\_\+generator.\+c}}
+\subsubsection{\texorpdfstring{name\+\_\+code()}{name\_code()}}
+{\footnotesize\ttfamily void name\+\_\+code (\begin{DoxyParamCaption}\item[{char}]{name\mbox{[}$\,$\mbox{]},  }\item[{char}]{code\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 139 of file cf\+\_\+generator.\+c.
+
+
+
+References is\+\_\+valid\+\_\+name().
+
+
+
+Referenced by cf\+\_\+generator().
+
+\mbox{\Hypertarget{cf__generator_8c_ab1b86778c6102ec98c108cf32695b42c}\label{cf__generator_8c_ab1b86778c6102ec98c108cf32695b42c}} 
+\index{cf\+\_\+generator.\+c@{cf\+\_\+generator.\+c}!surname\+\_\+code@{surname\+\_\+code}}
+\index{surname\+\_\+code@{surname\+\_\+code}!cf\+\_\+generator.\+c@{cf\+\_\+generator.\+c}}
+\subsubsection{\texorpdfstring{surname\+\_\+code()}{surname\_code()}}
+{\footnotesize\ttfamily void surname\+\_\+code (\begin{DoxyParamCaption}\item[{char}]{surname\mbox{[}$\,$\mbox{]},  }\item[{char}]{code\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 226 of file cf\+\_\+generator.\+c.
+
+
+
+References is\+\_\+valid\+\_\+surname().
+
+
+
+Referenced by cf\+\_\+generator().
+

@@ -91,11 +91,11 @@ bool is_valid_town_code(char* code){
 }
 
 bool is_not_empty_string(char* string){
-	return strcmp(string,EMPTY_STRING)!=ZERO;
+	return (strcmp(string,EMPTY_STRING)!=ZERO);
 }
 
 bool is_valid_sex(char sex){
-	return sex==M||sex==F;
+	return (sex==M||sex==F);
 }
 
 bool is_valid_town(char* town){
@@ -103,7 +103,8 @@ bool is_valid_town(char* town){
 }
 
 bool is_valid_data(char* name, char* surname, char* date, char* coded_town, char sex){
-	return is_valid_name(name)&&is_valid_surname(surname)&&is_valid_date(date)&&
+	return
+			is_valid_name(name)&&is_valid_surname(surname)&&is_valid_date(date)&&
 			is_valid_town_code(coded_town)&&is_valid_sex(sex);
 }
 
@@ -140,19 +141,4 @@ static bool is_valid_chars_data_code(char* code){
 
 bool is_valid_date_code(char* code){
 	return strlen(code)==FIVE&&is_valid_chars_data_code(code);
-}
-
-static bool is_valid_birth_place_code_char(char* code, int i){
-	return (i==ZERO)?isupper(code[i]):isdigit(code[i]);
-}
-
-static bool is_valid_birth_place_code_chars(char* code){
-	bool flag = true;
-	for (int i=ZERO;i<strlen(code)&&flag;i++)
-		flag = is_valid_birth_place_code_char(code,i);
-	return flag;
-}
-
-bool is_valid_birth_place_code(char* code){
-	return strlen(code) == FOUR&&is_valid_birth_place_code_chars(code);
 }
