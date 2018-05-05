@@ -16,9 +16,8 @@ static void result_code(char* code, char* result){
 static char* get_result(char* birth_place,char *part,char *result){
 	char *town = strtok(part, VIRGO);
 	char *code = (char*) malloc((FIVE) * sizeof(char*));
-	if (strcmp(birth_place, town) == ZERO) {
+	if (strcmp(birth_place, town) == ZERO)
 		result_code(code,result);
-	}
 	return result;
 }
 
