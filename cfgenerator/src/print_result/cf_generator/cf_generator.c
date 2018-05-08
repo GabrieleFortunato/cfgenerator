@@ -74,7 +74,6 @@ static void name_code_BB(char code[],char consonants[]){
 
 static void name_code_B(char code[],char consonants[],char vowels[]){
 	strlen(vowels)>=ONE?name_code_BA(code,consonants,vowels):name_code_BB(code,consonants);
-
 }
 
 static void name_code_CA(char code[],char consonants[],char vowels[]){
