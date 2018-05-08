@@ -5,7 +5,7 @@
  *      Author: Gabriele Fortunato
  */
 
-#include "repeat.h"
+#include "../../src/repeat/repeat.h"
 
 static int get_repeat(void){
 	int repeat=0;

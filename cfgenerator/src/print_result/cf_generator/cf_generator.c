@@ -5,7 +5,7 @@
  *      Author: Gabriele Fortunato
  */
 
-#include <print_result/cf_generator/cf_generator.h>
+#include "../../../src/print_result/cf_generator/cf_generator.h"
 
 static bool is_vowel(char a){
 	return a==A||a==E||a==I||a==O||a==U;
@@ -17,7 +17,7 @@ static bool is_consonant(char a){
 
 static void get_vowel(char* string, char* vowels, int i, int* k){
 	if (is_vowel(string[i]))
-			vowels[(*k)++] = string[i];
+		vowels[(*k)++] = string[i];
 }
 
 static void get_consonant(char* string, char* consonants, int i, int* k){
@@ -60,8 +60,7 @@ static void name_code_A(char code[], char consonants[]){
 	strlen(consonants)==THREE?name_code_AA(code,consonants):name_code_AB(code,consonants);
 }
 
-static void name_code_BA(char code[],char consonants[],
-		char vowels[]){
+static void name_code_BA(char code[],char consonants[],char vowels[]){
 	code[ZERO] = consonants[ZERO];
 	code[ONE] = consonants[ONE];
 	code[TWO] = vowels[ZERO];
@@ -78,15 +77,13 @@ static void name_code_B(char code[],char consonants[],char vowels[]){
 
 }
 
-static void name_code_CA(char code[],char consonants[],
-		char vowels[]){
+static void name_code_CA(char code[],char consonants[],char vowels[]){
 	code[ZERO] = consonants[ZERO];
 	code[ONE] = vowels[ZERO];
 	code[TWO] = vowels[ONE];
 }
 
-static void name_code_CB(char code[],char consonants[],
-		char vowels[]){
+static void name_code_CB(char code[],char consonants[],char vowels[]){
 	code[ZERO] = consonants[ZERO];
 	code[ONE] = vowels[ZERO];
 	code[TWO] = X;
@@ -100,7 +97,7 @@ static void name_code_CC(char code[],char consonants[]){
 
 static void name_code_C(char code[],char consonants[],char vowels[]){
 	strlen(vowels)>ONE?name_code_CA(code,consonants,vowels):
-			strlen(vowels)==ONE?name_code_CB(code,consonants,vowels):name_code_CC(code,consonants);
+	strlen(vowels)==ONE?name_code_CB(code,consonants,vowels):name_code_CC(code,consonants);
 }
 
 static void name_code_DA(char code[], char vowels[]){
@@ -115,13 +112,11 @@ static void name_code_DB(char code[], char vowels[]){
 	code[TWO] = X;
 }
 
-
 static void name_code_DC(char code[], char vowels[]){
 	code[ZERO] = vowels[ZERO];
 	code[ONE] = X;
 	code[TWO] = X;
 }
-
 
 static void name_code_DD(char code[]){
 	code[ZERO] = X;
@@ -131,8 +126,8 @@ static void name_code_DD(char code[]){
 
 static void name_code_D(char code[], char vowels[]){
 	strlen(vowels)>=THREE?name_code_DA(code,vowels):
-			strlen(vowels)==TWO?name_code_DB(code,vowels):
-					strlen(vowels)==ONE?name_code_DC(code,vowels):name_code_DD(code);
+	strlen(vowels)==TWO?name_code_DB(code,vowels):
+	strlen(vowels)==ONE?name_code_DC(code,vowels):name_code_DD(code);
 
 }
 
@@ -142,8 +137,8 @@ void name_code(char name[], char code[]){
 	char vowels[strlen(name)];
 	get_consonants_vowels(name,vowels,consonants);
 	strlen(consonants) >= THREE?name_code_A(code,consonants):
-			strlen(consonants) == TWO?name_code_B(code,consonants,vowels):
-					strlen(consonants) == ONE?name_code_C(code,consonants,vowels):name_code_D(code,vowels);
+	strlen(consonants) == TWO?name_code_B(code,consonants,vowels):
+	strlen(consonants) == ONE?name_code_C(code,consonants,vowels):name_code_D(code,vowels);
 	code[THREE] = EOS;
 	assert(is_valid_coded_surname_name(code));
 }
@@ -190,7 +185,7 @@ static void surname_code_CC(char code[], char consonants[]){
 
 static void surname_code_C(char code[],	char consonants[], char vowels[]){
 	strlen(vowels)>ONE?surname_code_CA(code,consonants,vowels):
-			strlen(vowels)==ONE?surname_code_CB(code,consonants,vowels):surname_code_CC(code,consonants);
+	strlen(vowels)==ONE?surname_code_CB(code,consonants,vowels):surname_code_CC(code,consonants);
 }
 
 static void surname_code_DA(char code[], char vowels[]){
@@ -219,8 +214,8 @@ static void surname_code_DD(char code[]){
 
 static void surname_code_D(char code[], char vowels[]){
 	strlen(vowels)>=THREE?surname_code_DA(code,vowels):
-			strlen(vowels)==TWO?surname_code_DB(code,vowels):
-					strlen(vowels)==ONE?surname_code_DC(code,vowels):surname_code_DD(code);
+	strlen(vowels)==TWO?surname_code_DB(code,vowels):
+	strlen(vowels)==ONE?surname_code_DC(code,vowels):surname_code_DD(code);
 }
 
 void surname_code(char surname[], char code[]){
@@ -230,32 +225,34 @@ void surname_code(char surname[], char code[]){
 	char vowels[length];
 	get_consonants_vowels(surname,vowels,consonants);
 	strlen(consonants) >= THREE?surname_code_A(code,consonants):
-			strlen(consonants) == TWO?surname_code_B(code,consonants,vowels):
-					strlen(consonants) == ONE?surname_code_C(code,consonants,vowels):surname_code_D(code,vowels);
+	strlen(consonants) == TWO?surname_code_B(code,consonants,vowels):
+	strlen(consonants) == ONE?surname_code_C(code,consonants,vowels):surname_code_D(code,vowels);
 	code[THREE] = EOS;
 	assert(is_valid_coded_surname_name(code));
 }
 
 static char month_0(char a){
+	char result;
 	switch(a){
-	case CHAR_1: return A; break;
-	case CHAR_2: return B; break;
-	case CHAR_3: return C; break;
-	case CHAR_4: return D; break;
-	case CHAR_5: return E; break;
-	case CHAR_6: return H; break;
-	case CHAR_7: return L; break;
-	case CHAR_8: return M; break;
-	default: return CHAR_9;
-	}
+	case CHAR_1: result=A; break;
+	case CHAR_2: result=B; break;
+	case CHAR_3: result=C; break;
+	case CHAR_4: result=D; break;
+	case CHAR_5: result=E; break;
+	case CHAR_6: result=H; break;
+	case CHAR_7: result=L; break;
+	case CHAR_8: result=M; break;
+	default: result=CHAR_9;
+	} return result;
 }
 
 static char month_1(char b){
+	char result;
 	switch(b){
-	case CHAR_0: return R; break;
-	case CHAR_1: return S; break;
-	default: return CHAR_2;
-	}
+	case CHAR_0: result=R; break;
+	case CHAR_1: result=S; break;
+	default: result=CHAR_2;
+	} return result;
 }
 
 static char month(char a, char b){
@@ -287,128 +284,131 @@ void birth_date_code(char date[], char sex, char code[]){
 }
 
 static int even_character(char a){
+	char result;
 	switch(a){
-	case CHAR_0: return ONE; break;
-	case CHAR_1: return ZERO; break;
-	case CHAR_2: return FIVE; break;
-	case CHAR_3: return SEVEN; break;
-	case CHAR_4: return NINE; break;
-	case CHAR_5: return THIRTEEN; break;
-	case CHAR_6: return FIFTEEN; break;
-	case CHAR_7: return SEVENTEEN; break;
-	case CHAR_8: return NINETEEN; break;
-	case CHAR_9: return TWENTYONE; break;
-	case A: return ONE; break;
-	case B: return ZERO; break;
-	case C: return FIVE; break;
-	case D: return SEVEN; break;
-	case E: return NINE; break;
-	case F: return THIRTEEN; break;
-	case G: return FIFTEEN; break;
-	case H: return SEVENTEEN; break;
-	case I: return NINETEEN; break;
-	case J: return TWENTYONE; break;
-	case K: return TWO; break;
-	case L: return FOUR; break;
-	case M: return EIGHTEEN; break;
-	case N: return TWENTY; break;
-	case O: return ELEVEN; break;
-	case P: return THREE; break;
-	case Q: return SIX; break;
-	case R: return EIGHT; break;
-	case S: return TWELVE; break;
-	case T: return FOURTEEN; break;
-	case U: return SIXTEEN; break;
-	case V: return TEN; break;
-	case W: return TWENTYTWO; break;
-	case X: return TWENTYFIVE; break;
-	case Y: return TWENTYFOUR; break;
-	default: return TWENTYTHREE;
-	}
+	case CHAR_0: result=ONE; break;
+	case CHAR_1: result=ZERO; break;
+	case CHAR_2: result=FIVE; break;
+	case CHAR_3: result=SEVEN; break;
+	case CHAR_4: result=NINE; break;
+	case CHAR_5: result=THIRTEEN; break;
+	case CHAR_6: result=FIFTEEN; break;
+	case CHAR_7: result=SEVENTEEN; break;
+	case CHAR_8: result=NINETEEN; break;
+	case CHAR_9: result=TWENTYONE; break;
+	case A: result=ONE; break;
+	case B: result=ZERO; break;
+	case C: result=FIVE; break;
+	case D: result=SEVEN; break;
+	case E: result=NINE; break;
+	case F: result=THIRTEEN; break;
+	case G: result=FIFTEEN; break;
+	case H: result=SEVENTEEN; break;
+	case I: result=NINETEEN; break;
+	case J: result=TWENTYONE; break;
+	case K: result=TWO; break;
+	case L: result=FOUR; break;
+	case M: result=EIGHTEEN; break;
+	case N: result=TWENTY; break;
+	case O: result=ELEVEN; break;
+	case P: result=THREE; break;
+	case Q: result=SIX; break;
+	case R: result=EIGHT; break;
+	case S: result=TWELVE; break;
+	case T: result=FOURTEEN; break;
+	case U: result=SIXTEEN; break;
+	case V: result=TEN; break;
+	case W: result=TWENTYTWO; break;
+	case X: result=TWENTYFIVE; break;
+	case Y: result=TWENTYFOUR; break;
+	default: result=TWENTYTHREE;
+	} return result;
 }
 
 static int odd_character(char a){
+	char result;
 	switch(a){
-	case CHAR_0: return ZERO; break;
-	case CHAR_1: return ONE; break;
-	case CHAR_2: return TWO; break;
-	case CHAR_3: return THREE; break;
-	case CHAR_4: return FOUR; break;
-	case CHAR_5: return FIVE; break;
-	case CHAR_6: return SIX; break;
-	case CHAR_7: return SEVEN; break;
-	case CHAR_8: return EIGHT; break;
-	case CHAR_9: return NINE; break;
-	case A: return ZERO; break;
-	case B: return ONE; break;
-	case C: return TWO; break;
-	case D: return THREE; break;
-	case E: return FOUR; break;
-	case F: return FIVE; break;
-	case G: return SIX; break;
-	case H: return SEVEN; break;
-	case I: return EIGHT; break;
-	case J: return NINE; break;
-	case K: return TEN; break;
-	case L: return ELEVEN; break;
-	case M: return TWELVE; break;
-	case N: return THIRTEEN; break;
-	case O: return FOURTEEN; break;
-	case P: return FIFTEEN; break;
-	case Q: return SIXTEEN; break;
-	case R: return SEVENTEEN; break;
-	case S: return EIGHTEEN; break;
-	case T: return NINETEEN; break;
-	case U: return TWENTY; break;
-	case V: return TWENTYONE; break;
-	case W: return TWENTYTWO; break;
-	case X: return TWENTYTHREE; break;
-	case Y: return TWENTYFOUR; break;
-	default: return TWENTYFIVE;
-	}
+	case CHAR_0: result=ZERO; break;
+	case CHAR_1: result=ONE; break;
+	case CHAR_2: result=TWO; break;
+	case CHAR_3: result=THREE; break;
+	case CHAR_4: result=FOUR; break;
+	case CHAR_5: result=FIVE; break;
+	case CHAR_6: result=SIX; break;
+	case CHAR_7: result=SEVEN; break;
+	case CHAR_8: result=EIGHT; break;
+	case CHAR_9: result=NINE; break;
+	case A: result=ZERO; break;
+	case B: result=ONE; break;
+	case C: result=TWO; break;
+	case D: result=THREE; break;
+	case E: result=FOUR; break;
+	case F: result=FIVE; break;
+	case G: result=SIX; break;
+	case H: result=SEVEN; break;
+	case I: result=EIGHT; break;
+	case J: result=NINE; break;
+	case K: result=TEN; break;
+	case L: result=ELEVEN; break;
+	case M: result=TWELVE; break;
+	case N: result=THIRTEEN; break;
+	case O: result=FOURTEEN; break;
+	case P: result=FIFTEEN; break;
+	case Q: result=SIXTEEN; break;
+	case R: result=SEVENTEEN; break;
+	case S: result=EIGHTEEN; break;
+	case T: result=NINETEEN; break;
+	case U: result=TWENTY; break;
+	case V: result=TWENTYONE; break;
+	case W: result=TWENTYTWO; break;
+	case X: result=TWENTYTHREE; break;
+	case Y: result=TWENTYFOUR; break;
+	default: result=TWENTYFIVE;
+	} return result;
 }
 
 static char result(int number){
+	char result;
 	switch(number){
-	case ZERO: return A; break;
-	case ONE: return B; break;
-	case TWO: return C; break;
-	case THREE: return D; break;
-	case FOUR: return E; break;
-	case FIVE: return F; break;
-	case SIX: return G; break;
-	case SEVEN: return H; break;
-	case EIGHT: return I; break;
-	case NINE: return J; break;
-	case TEN:return K; break;
-	case ELEVEN: return L; break;
-	case TWELVE: return M; break;
-	case THIRTEEN: return N; break;
-	case FOURTEEN: return O; break;
-	case FIFTEEN: return P; break;
-	case SIXTEEN: return Q; break;
-	case SEVENTEEN: return R; break;
-	case EIGHTEEN: return S; break;
-	case NINETEEN: return T; break;
-	case TWENTY: return U; break;
-	case TWENTYONE: return V; break;
-	case TWENTYTWO: return W; break;
-	case TWENTYTHREE: return X; break;
-	case TWENTYFOUR: return Y; break;
-	default: return Z;
-	}
+	case ZERO: result=A; break;
+	case ONE: result=B; break;
+	case TWO: result=C; break;
+	case THREE: result=D; break;
+	case FOUR: result=E; break;
+	case FIVE: result=F; break;
+	case SIX: result=G; break;
+	case SEVEN: result=H; break;
+	case EIGHT: result=I; break;
+	case NINE: result=J; break;
+	case TEN: result=K; break;
+	case ELEVEN: result=L; break;
+	case TWELVE: result=M; break;
+	case THIRTEEN: result=N; break;
+	case FOURTEEN: result=O; break;
+	case FIFTEEN: result=P; break;
+	case SIXTEEN: result=Q; break;
+	case SEVENTEEN: result=R; break;
+	case EIGHTEEN: result=S; break;
+	case NINETEEN: result=T; break;
+	case TWENTY: result=U; break;
+	case TWENTYONE: result=V; break;
+	case TWENTYTWO: result=W; break;
+	case TWENTYTHREE: result=X; break;
+	case TWENTYFOUR: result=Y; break;
+	default: result=Z;
+	} return result;
 }
 
-static void string_for_ctrl_code(char coded_name[], char coded_surname[],char coded_birth_date[], char coded_birth_place[], char code[]){
+static void code_strcat(char coded_name[],char coded_surname[],char coded_birth_date[],char coded_town[],char code[]){
 	strcat(code,coded_surname);
 	strcat(code,coded_name);
 	strcat(code,coded_birth_date);
-	strcat(code,coded_birth_place);
+	strcat(code,coded_town);
 	code[strlen(code)]=EOS;
 }
 
 static void incr_number(char* code, int* number, int i){
-	i%TWO==ZERO?((*number)+= even_character(code[i])):((*number) += odd_character(code[i]));
+	i%TWO==ZERO?((*number)+=even_character(code[i])):((*number)+=odd_character(code[i]));
 }
 
 static void get_number(char* code, int *number){
@@ -421,17 +421,10 @@ char ctrl_code(char coded_name[], char coded_surname[],char coded_birth_date[], 
 	int number = ZERO;
 	char code[FIFTEEN];
 	code[ZERO]=EOS;
-	string_for_ctrl_code(coded_name, coded_surname,coded_birth_date, coded_birth_place,code);
+	code_strcat(coded_name, coded_surname,coded_birth_date, coded_birth_place,code);
 	get_number(code,&number);
 	assert(is_valid_ctrl_code(result(number%TWENTYSIX)));
 	return result(number%TWENTYSIX);
-}
-
-static void code_strcat(char coded_name[],char coded_surname[],char coded_birth_date[],char coded_town[],char code[]){
-	strcat(code,coded_surname);
-	strcat(code,coded_name);
-	strcat(code,coded_birth_date);
-	strcat(code,coded_town);
 }
 
 void cf_generator(char name[], char surname[], char birth_date[], char coded_town[],char sex, char code[]){

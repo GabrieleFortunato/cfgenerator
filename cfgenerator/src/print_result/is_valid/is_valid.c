@@ -5,7 +5,7 @@
  *      Author: gabriele
  */
 
-#include <print_result/is_valid/is_valid.h>
+#include "../../../src/print_result/is_valid/is_valid.h"
 
 static bool is_valid_char_name_surname_code(char* code){
 	bool flag = true;
@@ -47,22 +47,18 @@ static bool is_valid_day(char* date){
 }
 
 static bool is_valid_month(char* date){
-	return
-			number_A(date[THREE],date[FOUR])>ZERO&&number_A(date[THREE],date[FOUR])<=TWELVE;
+	return number_A(date[THREE],date[FOUR])>ZERO&&number_A(date[THREE],date[FOUR])<=TWELVE;
 }
 
 static bool is_valid_year(char* date){
-	return
-			number_B(date[SIX],date[SEVEN],date[EIGHT],date[NINE])>=MIN_YEAR
-			&&
-			number_B(date[SIX],date[SEVEN],date[EIGHT],date[NINE])<=MAX_YEAR;
+	return number_B(date[SIX],date[SEVEN],date[EIGHT],date[NINE])>=MIN_YEAR
+	       &&number_B(date[SIX],date[SEVEN],date[EIGHT],date[NINE])<=MAX_YEAR;
 }
 
 static bool is_valid_char_date(char* date){
 	bool flag = true;
-	for (int i = ZERO; i<strlen(date)&&flag; i++){
+	for (int i = ZERO; i<strlen(date)&&flag; i++)
 		flag = (((i==TWO||i==FIVE)&&(date[i]==SLASH))||isdigit(date[i]));
-	}
 	return flag;
 }
 
@@ -80,9 +76,8 @@ bool is_valid_ctrl_code(char code){
 
 static bool is_valid_char_town_code(char* code){
 	bool flag = true;
-	for (int i=ZERO;i<strlen(code)&&flag;i++){
+	for (int i=ZERO;i<strlen(code)&&flag;i++)
 		flag = (i==ZERO&&isupper(code[i]))||(i>ZERO&&isdigit(code[i]));
-	}
 	return flag;
 }
 
@@ -103,9 +98,8 @@ bool is_valid_town(char* town){
 }
 
 bool is_valid_data(char* name, char* surname, char* date, char* coded_town, char sex){
-	return
-			is_valid_name(name)&&is_valid_surname(surname)&&is_valid_date(date)&&
-			is_valid_town_code(coded_town)&&is_valid_sex(sex);
+	return is_valid_name(name)&&is_valid_surname(surname)&&is_valid_date(date)&&
+		   is_valid_town_code(coded_town)&&is_valid_sex(sex);
 }
 
 static bool is_valid_index (int i){
@@ -133,9 +127,8 @@ static bool is_valid_char_data_code(char* code, int i){
 
 static bool is_valid_chars_data_code(char* code){
 	bool flag = true;
-	for (int i=ZERO;i<strlen(code)&&flag;i++){
+	for (int i=ZERO;i<strlen(code)&&flag;i++)
 		flag = is_valid_char_data_code(code,i);
-	}
 	return flag;
 }
 

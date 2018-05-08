@@ -12,7 +12,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "intro/intro.h"
+
+#include "../../src/intro/intro.h"
 
 #define ZERO              0
 #define ONE               1

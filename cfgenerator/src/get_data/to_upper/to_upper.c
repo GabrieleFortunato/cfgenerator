@@ -5,7 +5,7 @@
  *      Author: Gabriele Fortunato
  */
 
-#include "to_upper.h"
+#include "../../../src/get_data/to_upper/to_upper.h"
 
 void to_upper(char* string){
 	for (int i=ZERO;i<strlen(string);i++){

@@ -5,7 +5,7 @@
  *      Author: Gabriele Fortunato
  */
 
-#include <print_result/print_code.h>
+#include "../../src/print_result/print_code.h"
 
 static void print_code(char* name, char* surname, char* birth_date, char* coded_town, char sex){
 	char code [CODE_LENGTH];

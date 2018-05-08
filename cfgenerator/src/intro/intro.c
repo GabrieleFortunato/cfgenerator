@@ -5,7 +5,7 @@
  *      Author: Gabriele Fortunato
  */
 
-#include "intro.h"
+#include "../../src/intro/intro.h"
 
 void intro(void){
 	system(CLS);

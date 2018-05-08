@@ -9,9 +9,10 @@
  */
 
 #include <CUnit/basic.h>
-#include <print_result/cf_generator/cf_generator.h>
-#include <print_result/is_valid/is_valid.h>
-#include <print_result/read_birth_place/read_birth_place.h>
+
+#include "../../cfgenerator/src/print_result/cf_generator/cf_generator.h"
+#include "../../cfgenerator/src/print_result/is_valid/is_valid.h"
+#include "../../cfgenerator/src/print_result/read_birth_place/read_birth_place.h"
 
 void test_read_birth_place(){
 	FILE* file = fopen(FILE_NAME,FILE_MODE);

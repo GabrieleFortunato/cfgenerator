@@ -10,12 +10,13 @@
 
 #include <assert.h>
 #include <ctype.h>
-#include <print_result/is_valid/is_valid.h>
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
-#include "close/close.h"
+
+#include "../../../src/close/close.h"
+#include "../../../src/print_result/is_valid/is_valid.h"
 
 #define FILE_NOT_FOUND "File dei codici catastali non trovato\n"
 #define ERROR		   "Errore di allocazione nella memoria"

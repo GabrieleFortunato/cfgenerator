@@ -12,7 +12,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
-#include <print_result/read_birth_place/read_birth_place.h>
+
+#include "../../../src/print_result/read_birth_place/read_birth_place.h"
 
 #define ZERO           	0
 #define ONE        		1

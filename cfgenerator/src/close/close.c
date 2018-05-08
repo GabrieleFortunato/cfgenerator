@@ -5,7 +5,7 @@
  *      Author: Gabriele Fortunato
  */
 
-#include "close.h"
+#include "../../src/close/close.h"
 
 void close(){
 	system(CLS);

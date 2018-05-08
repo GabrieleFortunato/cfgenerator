@@ -9,7 +9,8 @@
 #define SRC_CLOSE_CLOSE_H_
 
 #include <stdlib.h>
-#include "intro/intro.h"
+
+#include "../../src/intro/intro.h"
 
 #define CLS "CLS"
 

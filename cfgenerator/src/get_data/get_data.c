@@ -5,7 +5,7 @@
  *      Author: Gabriele Fortunato
  */
 
-#include "get_data.h"
+#include "../../src/get_data/get_data.h"
 
 char* get_name(){
 	fflush(stdin);

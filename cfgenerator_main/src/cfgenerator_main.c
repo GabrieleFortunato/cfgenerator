@@ -8,13 +8,13 @@
  ============================================================================
  */
 
-#include "print_result/print_code.h"
-#include "print_result/read_birth_place/read_birth_place.h"
-#include "get_data/get_data.h"
-#include "intro/intro.h"
-#include "repeat/repeat.h"
-#include "close/close.h"
-#include "access/access.h"
+#include "../../cfgenerator/src/access/access.h"
+#include "../../cfgenerator/src/close/close.h"
+#include "../../cfgenerator/src/get_data/get_data.h"
+#include "../../cfgenerator/src/intro/intro.h"
+#include "../../cfgenerator/src/print_result/print_code.h"
+#include "../../cfgenerator/src/print_result/read_birth_place/read_birth_place.h"
+#include "../../cfgenerator/src/repeat/repeat.h"
 
 void access(){
 	FILE* file = fopen(FILE_ACCESS_NAME,FILE_ACCESS_MODE);

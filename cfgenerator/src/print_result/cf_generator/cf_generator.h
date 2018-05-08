@@ -10,11 +10,12 @@
 
 #include <assert.h>
 #include <ctype.h>
-#include "print_result/is_valid/is_valid.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+
+#include "../../../src/print_result/is_valid/is_valid.h"
 
 #define ZERO  		  0
 #define ONE   		  1
