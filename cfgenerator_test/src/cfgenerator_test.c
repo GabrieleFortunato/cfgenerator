@@ -13,6 +13,7 @@
 #include "../../cfgenerator/src/print_result/cf_generator/cf_generator.h"
 #include "../../cfgenerator/src/print_result/is_valid/is_valid.h"
 #include "../../cfgenerator/src/print_result/read_birth_place/read_birth_place.h"
+#include "../../cfgenerator/src/get_data/to_upper/to_upper.h"
 
 void test_read_birth_place(){
 	FILE* file = fopen(FILE_NAME,FILE_MODE);
@@ -24,6 +25,12 @@ void test_read_birth_place(){
 	CU_ASSERT_STRING_EQUAL(read_birth_place_code(file,"NAPOLI"),"F839");
 	CU_ASSERT_STRING_EQUAL(read_birth_place_code(file,"SANGIANO"),"H872");
 	fclose(file);
+}
+
+void test_to_upper_string(){
+	char string[50];
+	to_upper_string(string);
+	CU_ASSERT_STRING_EQUAL(string,"CIAO");
 }
 
 void test_coded_name(){
@@ -196,15 +203,17 @@ int main(void) {
 	CU_add_test(pSuite_A,"test of is_valid_cf_code()",test_is_valid_cf_code);
 	CU_add_test(pSuite_A,"test of is_valid_date_code()",test_is_valid_code_date);
 	CU_add_test(pSuite_A,"test of is_valid_town_code()",test_is_valid_town_code);
-	CU_pSuite pSuite_B = CU_add_suite("SUITE READ BIRTH PLACE",init_suite_default,clear_suite_default);
-	CU_add_test(pSuite_B,"test of read_birth_place()",test_read_birth_place);
-	CU_pSuite pSuite_C = CU_add_suite("SUITE PARTIAL CFGENERATOR",init_suite_default,clear_suite_default);
-	CU_add_test(pSuite_C,"test of coded_name()",test_coded_name);
-	CU_add_test(pSuite_C,"test of coded_surname()",test_coded_surname);
-	CU_add_test(pSuite_C,"test of coded_birth_date()",test_coded_date);
-	CU_add_test(pSuite_C,"test of ctrl_code()",test_ctrl_code);
-	CU_pSuite pSuite_D = CU_add_suite("SUITE TOTAL CFGENERATOR",init_suite_default,clear_suite_default);
-	CU_add_test(pSuite_D,"test of cf_generator()",test_cf_generator);
+	CU_pSuite pSuite_B = CU_add_suite("SUITE TO UPPER STRING",init_suite_default,clear_suite_default);
+	CU_add_test(pSuite_B,"test of to_upper_string()",test_to_upper_string);
+	CU_pSuite pSuite_C = CU_add_suite("SUITE READ BIRTH PLACE",init_suite_default,clear_suite_default);
+	CU_add_test(pSuite_C,"test of read_birth_place()",test_read_birth_place);
+	CU_pSuite pSuite_D = CU_add_suite("SUITE PARTIAL CFGENERATOR",init_suite_default,clear_suite_default);
+	CU_add_test(pSuite_D,"test of coded_name()",test_coded_name);
+	CU_add_test(pSuite_D,"test of coded_surname()",test_coded_surname);
+	CU_add_test(pSuite_D,"test of coded_birth_date()",test_coded_date);
+	CU_add_test(pSuite_D,"test of ctrl_code()",test_ctrl_code);
+	CU_pSuite pSuite_E = CU_add_suite("SUITE TOTAL CFGENERATOR",init_suite_default,clear_suite_default);
+	CU_add_test(pSuite_E,"test of cf_generator()",test_cf_generator);
 	CU_basic_set_mode(CU_BRM_VERBOSE);
 	CU_basic_run_tests();
 	CU_cleanup_registry();

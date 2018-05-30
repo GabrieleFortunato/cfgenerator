@@ -7,10 +7,7 @@
 
 #include "../../../src/get_data/to_upper/to_upper.h"
 
-void to_upper(char* string){
-	for (int i=ZERO;i<strlen(string);i++){
-		if (isalpha(string[i])){
-			string[i] = toupper(string[i]);
-		}
-	};
+void to_upper_string(char* string){
+	for (int i=ZERO;i<strlen(string);i++)
+		string[i] = (islower(string[i]))?toupper(string[i]):string[i];
 }

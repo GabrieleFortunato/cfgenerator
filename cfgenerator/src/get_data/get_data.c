@@ -15,7 +15,7 @@ char* get_name(){
 		gets(name);
 	} while(!is_not_empty_string(name));
 	assert((is_not_empty_string(name)));
-	to_upper(name);
+	to_upper_string(name);
 	return name;
 }
 
@@ -27,7 +27,7 @@ char* get_surname(){
 		gets(surname);
 	} while(!is_not_empty_string(surname));
 	assert(is_not_empty_string(surname));
-	to_upper(surname);
+	to_upper_string(surname);
 	return surname;
 }
 
@@ -50,7 +50,7 @@ char* get_birth_town(){
 		gets(town);
 	} while(!is_not_empty_string(town));
 	assert(is_not_empty_string(town));
-	to_upper(town);
+	to_upper_string(town);
 	return town;
 }
 
@@ -59,6 +59,5 @@ char get_sex(){
 	char sex;
 	printf(INSERT_SEX);
 	scanf(SPEC_CHAR,&sex);
-	sex = toupper(sex);
-	return sex;
+	return toupper(sex);
 }

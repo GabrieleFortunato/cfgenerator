@@ -127,7 +127,6 @@ static void name_code_D(char code[], char vowels[]){
 	strlen(vowels)>=THREE?name_code_DA(code,vowels):
 	strlen(vowels)==TWO?name_code_DB(code,vowels):
 	strlen(vowels)==ONE?name_code_DC(code,vowels):name_code_DD(code);
-
 }
 
 void name_code(char name[], char code[]){
@@ -241,7 +240,7 @@ static char month_0(char a){
 	case CHAR_6: result=H; break;
 	case CHAR_7: result=L; break;
 	case CHAR_8: result=M; break;
-	default: result=CHAR_9;
+	default: result=P;
 	} return result;
 }
 
@@ -277,7 +276,7 @@ static void birth_date_code_F(char date[], char code[]){
 
 void birth_date_code(char date[], char sex, char code[]){
 	assert(is_valid_date(date)&&is_valid_sex(sex));
-	sex==M?birth_date_code_M(date,code):birth_date_code_F(date,code);;
+	sex==M?birth_date_code_M(date,code):birth_date_code_F(date,code);
 	code[FIVE] = EOS;
 	assert(is_valid_date_code(code));
 }
@@ -416,7 +415,8 @@ static void get_number(char* code, int *number){
 }
 
 char ctrl_code(char coded_name[], char coded_surname[],char coded_birth_date[], char coded_birth_place[]){
-	assert(is_valid_coded_surname_name(coded_name)&&is_valid_coded_surname_name(coded_surname));
+	assert(is_valid_coded_surname_name(coded_name));
+	assert(is_valid_coded_surname_name(coded_surname));
 	int number = ZERO;
 	char code[FIFTEEN];
 	code[ZERO]=EOS;
@@ -428,15 +428,15 @@ char ctrl_code(char coded_name[], char coded_surname[],char coded_birth_date[], 
 
 void cf_generator(char name[], char surname[], char birth_date[], char coded_town[],char sex, char code[]){
 	assert(is_valid_name(name)&&is_valid_surname(surname)&&is_valid_date(birth_date)&&is_valid_sex(sex));
-	code[ZERO]=EOS;
 	char coded_birth_date[SIX];
 	char coded_surname[FOUR];
 	char coded_name[FOUR];
+	code[ZERO]=EOS;
 	name_code(name,coded_name);
 	surname_code(surname,coded_surname);
 	birth_date_code(birth_date,sex,coded_birth_date);
 	code_strcat(coded_name,coded_surname,coded_birth_date,coded_town,code);
-	code[FIFTEEN] = ctrl_code (coded_name,coded_surname,coded_birth_date,coded_town);
+	code[FIFTEEN] = ctrl_code(coded_name,coded_surname,coded_birth_date,coded_town);
 	code[SIXTEEN]=EOS;
 	assert(is_valid_cf_code(code));
 }
