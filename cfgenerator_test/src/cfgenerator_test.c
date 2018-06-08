@@ -34,6 +34,9 @@ void test_to_upper_string(){
 	char string1[]="Fortunato";
 	to_upper_string(string1);
 	CU_ASSERT_STRING_EQUAL(string1,"FORTUNATO");
+	char string2[]="Ciao";
+	to_upper_string(string2);
+	CU_ASSERT_STRING_EQUAL(string2,"CIAO");
 }
 
 void test_coded_name(){
