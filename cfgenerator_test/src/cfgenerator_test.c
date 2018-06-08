@@ -28,9 +28,12 @@ void test_read_birth_place(){
 }
 
 void test_to_upper_string(){
-	char string[50];
+	char string[]="Gabriele";
 	to_upper_string(string);
-	CU_ASSERT_STRING_EQUAL(string,"CIAO");
+	CU_ASSERT_STRING_EQUAL(string,"GABRIELE");
+	char string1[]="Fortunato";
+	to_upper_string(string1);
+	CU_ASSERT_STRING_EQUAL(string1,"FORTUNATO");
 }
 
 void test_coded_name(){
