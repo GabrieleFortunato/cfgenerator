@@ -87,7 +87,7 @@ bool is_valid_ctrl_code(char code);
 bool is_valid_town_code(char* code);
 
 /**
- *
+ * Verifica che il codice abbia il giusto formato
  * @param code
  * @return
  */

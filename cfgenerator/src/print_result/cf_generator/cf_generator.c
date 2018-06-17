@@ -15,11 +15,6 @@ static bool is_consonant(char a){
 	return !is_vowel(a)&&isalpha(a);
 }
 
-static void get_vowel(char* string, char* vowels, int i, int* k){
-	if (is_vowel(string[i]))
-		vowels[(*k)++] = string[i];
-}
-
 static void get_consonant(char* string, char* consonants, int i, int* k){
 	if (is_consonant(string[i]))
 		consonants[(*k)++] = string[i];
@@ -30,6 +25,11 @@ static void get_consonants(char* string, char* consonants){
 	for (int i=ZERO;i<strlen(string);i++)
 		get_consonant(string,consonants,i,&k);
 	consonants[k] = EOS;
+}
+
+static void get_vowel(char* string, char* vowels, int i, int* k){
+	if (is_vowel(string[i]))
+		vowels[(*k)++] = string[i];
 }
 
 static void get_vowels(char* string, char* vowels){
@@ -134,9 +134,9 @@ void name_code(char name[], char code[]){
 	char consonants[strlen(name)];
 	char vowels[strlen(name)];
 	get_consonants_vowels(name,vowels,consonants);
-	strlen(consonants) >= THREE?name_code_A(code,consonants):
-	strlen(consonants) == TWO?name_code_B(code,consonants,vowels):
-	strlen(consonants) == ONE?name_code_C(code,consonants,vowels):name_code_D(code,vowels);
+	strlen(consonants) >= THREE ? name_code_A(code,consonants) :
+	strlen(consonants) == TWO ? name_code_B(code,consonants,vowels) :
+	strlen(consonants) == ONE ? name_code_C(code,consonants,vowels) : name_code_D(code,vowels);
 	code[THREE] = EOS;
 	assert(is_valid_coded_surname_name(code));
 }
@@ -160,7 +160,8 @@ static void surname_code_BB(char code[],char consonants[]){
 }
 
 static void surname_code_B(char code[],char consonants[], char vowels[]){
-	strlen(vowels)>=ONE?surname_code_BA(code,consonants,vowels):surname_code_BB(code,consonants);
+	strlen(vowels) >= ONE ? surname_code_BA(code,consonants,vowels) :
+			surname_code_BB(code,consonants);
 }
 
 static void surname_code_CA(char code[], char consonants[], char vowels[]){
