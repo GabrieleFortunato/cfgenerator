@@ -183,8 +183,8 @@ void test_cf_generator(){
 	CU_ASSERT_STRING_EQUAL(code,"FRTGRL78R02F280W");
 	cf_generator("ANNA","MONNO","17/05/1975","A662",'F',code);
 	CU_ASSERT_STRING_EQUAL(code,"MNNNNA75E57A662H");
-	cf_generator("ANA","MONNO","17/05/1975","A662",'F',code);
-	CU_ASSERT_STRING_EQUAL(code,"MNNNAA75E57A662O");
+	cf_generator("ANNA MARIA","PORCELLI","17/03/1953","A662",'F',code);
+	CU_ASSERT_STRING_EQUAL(code,"PRCNMR53C57A662M");
 	cf_generator("ANNA","DIANA","21/11/1920","A662",'F',code);
 	CU_ASSERT_STRING_EQUAL(code,"DNINNA20S61A662R");
 	cf_generator("FRANCESCO","FORTUNATO","15/04/1951","A662",'M',code);
