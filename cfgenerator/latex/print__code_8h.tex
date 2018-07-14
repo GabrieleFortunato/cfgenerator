@@ -1,101 +1,92 @@
-\hypertarget{print__code_8h}{}\section{src/print\+\_\+result/print\+\_\+code.h File Reference}
-\label{print__code_8h}\index{src/print\+\_\+result/print\+\_\+code.\+h@{src/print\+\_\+result/print\+\_\+code.\+h}}
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}../../src/close/close.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}../../src/print\+\_\+result/cf\+\_\+generator/cf\+\_\+generator.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}../../src/print\+\_\+result/read\+\_\+birth\+\_\+place/read\+\_\+birth\+\_\+place.\+h\char`\"{}}\newline
+\hypertarget{print__code_8h}{\section{src/print\-\_\-result/print\-\_\-code.h File Reference}
+\label{print__code_8h}\index{src/print\-\_\-result/print\-\_\-code.\-h@{src/print\-\_\-result/print\-\_\-code.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}../../src/close/close.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/print\-\_\-result/cf\-\_\-generator/cf\-\_\-generator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/print\-\_\-result/read\-\_\-birth\-\_\-place/read\-\_\-birth\-\_\-place.\-h\char`\"{}}\\*
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{print__code_8h_adef1ccff66668f22f319063311eb9817}{C\+O\+D\+E\+\_\+\+L\+E\+N\+G\+TH}~17
+\#define \hyperlink{print__code_8h_adef1ccff66668f22f319063311eb9817}{C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H}~17
 \item 
-\#define \hyperlink{print__code_8h_a94817932aa06f8bce38b1add563e60ff}{B\+A\+R\+\_\+\+R\+E\+S\+U\+LT}~\char`\"{}\textbackslash{}n================================\textbackslash{}n\char`\"{}
+\#define \hyperlink{print__code_8h_a94817932aa06f8bce38b1add563e60ff}{B\-A\-R\-\_\-\-R\-E\-S\-U\-L\-T}~\char`\"{}\textbackslash{}n================================\textbackslash{}n\char`\"{}
 \item 
-\#define \hyperlink{print__code_8h_ae6527c8381eb3f23b7fd6d6efec6ffc7}{C\+O\+DE}~\char`\"{}Codice fiscale\+: \%s\char`\"{}
+\#define \hyperlink{print__code_8h_ae6527c8381eb3f23b7fd6d6efec6ffc7}{C\-O\-D\-E}~\char`\"{}Codice fiscale\-: \%s\char`\"{}
 \item 
-\#define \hyperlink{print__code_8h_a4d3c0b56a47e91ca2c00d56f12173156}{N\+O\+T\+\_\+\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TA}~\char`\"{}\textbackslash{}nI dati inseriti non sono tutti corretti\textbackslash{}n\textbackslash{}n\char`\"{}
+\#define \hyperlink{print__code_8h_a4d3c0b56a47e91ca2c00d56f12173156}{N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A}~\char`\"{}\textbackslash{}n\-I dati inseriti non sono tutti corretti\textbackslash{}n\textbackslash{}n\char`\"{}
 \item 
-\#define \hyperlink{print__code_8h_a5666ac5930c9f903698073ab1fa694f7}{P\+A\+U\+SE}~\char`\"{}P\+A\+U\+SE\char`\"{}
+\#define \hyperlink{print__code_8h_a5666ac5930c9f903698073ab1fa694f7}{P\-A\-U\-S\-E}~\char`\"{}P\-A\-U\-S\-E\char`\"{}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{print__code_8h_ab01fddd39c85ea0329513da9a6d062ac}{print\+\_\+result} (char sex, char $\ast$coded\+\_\+town, char $\ast$birth\+\_\+date, char $\ast$surname, char $\ast$name)
+void \hyperlink{print__code_8h_ab01fddd39c85ea0329513da9a6d062ac}{print\-\_\-result} (char sex, char $\ast$coded\-\_\-town, char $\ast$birth\-\_\-date, char $\ast$surname, char $\ast$name)
 \end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
-\mbox{\Hypertarget{print__code_8h_a94817932aa06f8bce38b1add563e60ff}\label{print__code_8h_a94817932aa06f8bce38b1add563e60ff}} 
-\index{print\+\_\+code.\+h@{print\+\_\+code.\+h}!B\+A\+R\+\_\+\+R\+E\+S\+U\+LT@{B\+A\+R\+\_\+\+R\+E\+S\+U\+LT}}
-\index{B\+A\+R\+\_\+\+R\+E\+S\+U\+LT@{B\+A\+R\+\_\+\+R\+E\+S\+U\+LT}!print\+\_\+code.\+h@{print\+\_\+code.\+h}}
-\subsubsection{\texorpdfstring{B\+A\+R\+\_\+\+R\+E\+S\+U\+LT}{BAR\_RESULT}}
-{\footnotesize\ttfamily \#define B\+A\+R\+\_\+\+R\+E\+S\+U\+LT~\char`\"{}\textbackslash{}n================================\textbackslash{}n\char`\"{}}
+\hypertarget{print__code_8h_a94817932aa06f8bce38b1add563e60ff}{\index{print\-\_\-code.\-h@{print\-\_\-code.\-h}!B\-A\-R\-\_\-\-R\-E\-S\-U\-L\-T@{B\-A\-R\-\_\-\-R\-E\-S\-U\-L\-T}}
+\index{B\-A\-R\-\_\-\-R\-E\-S\-U\-L\-T@{B\-A\-R\-\_\-\-R\-E\-S\-U\-L\-T}!print_code.h@{print\-\_\-code.\-h}}
+\subsubsection[{B\-A\-R\-\_\-\-R\-E\-S\-U\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-A\-R\-\_\-\-R\-E\-S\-U\-L\-T~\char`\"{}\textbackslash{}n================================\textbackslash{}n\char`\"{}}}\label{print__code_8h_a94817932aa06f8bce38b1add563e60ff}
+
+
+Definition at line 19 of file print\-\_\-code.\-h.
+
+\hypertarget{print__code_8h_ae6527c8381eb3f23b7fd6d6efec6ffc7}{\index{print\-\_\-code.\-h@{print\-\_\-code.\-h}!C\-O\-D\-E@{C\-O\-D\-E}}
+\index{C\-O\-D\-E@{C\-O\-D\-E}!print_code.h@{print\-\_\-code.\-h}}
+\subsubsection[{C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-D\-E~\char`\"{}Codice fiscale\-: \%s\char`\"{}}}\label{print__code_8h_ae6527c8381eb3f23b7fd6d6efec6ffc7}
+
+
+Definition at line 20 of file print\-\_\-code.\-h.
+
+\hypertarget{print__code_8h_adef1ccff66668f22f319063311eb9817}{\index{print\-\_\-code.\-h@{print\-\_\-code.\-h}!C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H@{C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H@{C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H}!print_code.h@{print\-\_\-code.\-h}}
+\subsubsection[{C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H~17}}\label{print__code_8h_adef1ccff66668f22f319063311eb9817}
+
+
+Definition at line 18 of file print\-\_\-code.\-h.
+
+\hypertarget{print__code_8h_a4d3c0b56a47e91ca2c00d56f12173156}{\index{print\-\_\-code.\-h@{print\-\_\-code.\-h}!N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A@{N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A}}
+\index{N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A@{N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A}!print_code.h@{print\-\_\-code.\-h}}
+\subsubsection[{N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A~\char`\"{}\textbackslash{}n\-I dati inseriti non sono tutti corretti\textbackslash{}n\textbackslash{}n\char`\"{}}}\label{print__code_8h_a4d3c0b56a47e91ca2c00d56f12173156}
+
+
+Definition at line 21 of file print\-\_\-code.\-h.
+
+\hypertarget{print__code_8h_a5666ac5930c9f903698073ab1fa694f7}{\index{print\-\_\-code.\-h@{print\-\_\-code.\-h}!P\-A\-U\-S\-E@{P\-A\-U\-S\-E}}
+\index{P\-A\-U\-S\-E@{P\-A\-U\-S\-E}!print_code.h@{print\-\_\-code.\-h}}
+\subsubsection[{P\-A\-U\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-A\-U\-S\-E~\char`\"{}P\-A\-U\-S\-E\char`\"{}}}\label{print__code_8h_a5666ac5930c9f903698073ab1fa694f7}
+
+
+Definition at line 22 of file print\-\_\-code.\-h.
 
 
 
-Definition at line 19 of file print\+\_\+code.\+h.
-
-\mbox{\Hypertarget{print__code_8h_ae6527c8381eb3f23b7fd6d6efec6ffc7}\label{print__code_8h_ae6527c8381eb3f23b7fd6d6efec6ffc7}} 
-\index{print\+\_\+code.\+h@{print\+\_\+code.\+h}!C\+O\+DE@{C\+O\+DE}}
-\index{C\+O\+DE@{C\+O\+DE}!print\+\_\+code.\+h@{print\+\_\+code.\+h}}
-\subsubsection{\texorpdfstring{C\+O\+DE}{CODE}}
-{\footnotesize\ttfamily \#define C\+O\+DE~\char`\"{}Codice fiscale\+: \%s\char`\"{}}
-
-
-
-Definition at line 20 of file print\+\_\+code.\+h.
-
-\mbox{\Hypertarget{print__code_8h_adef1ccff66668f22f319063311eb9817}\label{print__code_8h_adef1ccff66668f22f319063311eb9817}} 
-\index{print\+\_\+code.\+h@{print\+\_\+code.\+h}!C\+O\+D\+E\+\_\+\+L\+E\+N\+G\+TH@{C\+O\+D\+E\+\_\+\+L\+E\+N\+G\+TH}}
-\index{C\+O\+D\+E\+\_\+\+L\+E\+N\+G\+TH@{C\+O\+D\+E\+\_\+\+L\+E\+N\+G\+TH}!print\+\_\+code.\+h@{print\+\_\+code.\+h}}
-\subsubsection{\texorpdfstring{C\+O\+D\+E\+\_\+\+L\+E\+N\+G\+TH}{CODE\_LENGTH}}
-{\footnotesize\ttfamily \#define C\+O\+D\+E\+\_\+\+L\+E\+N\+G\+TH~17}
-
-
-
-Definition at line 18 of file print\+\_\+code.\+h.
-
-\mbox{\Hypertarget{print__code_8h_a4d3c0b56a47e91ca2c00d56f12173156}\label{print__code_8h_a4d3c0b56a47e91ca2c00d56f12173156}} 
-\index{print\+\_\+code.\+h@{print\+\_\+code.\+h}!N\+O\+T\+\_\+\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TA@{N\+O\+T\+\_\+\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TA}}
-\index{N\+O\+T\+\_\+\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TA@{N\+O\+T\+\_\+\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TA}!print\+\_\+code.\+h@{print\+\_\+code.\+h}}
-\subsubsection{\texorpdfstring{N\+O\+T\+\_\+\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TA}{NOT\_VALID\_DATA}}
-{\footnotesize\ttfamily \#define N\+O\+T\+\_\+\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TA~\char`\"{}\textbackslash{}nI dati inseriti non sono tutti corretti\textbackslash{}n\textbackslash{}n\char`\"{}}
-
-
-
-Definition at line 21 of file print\+\_\+code.\+h.
-
-\mbox{\Hypertarget{print__code_8h_a5666ac5930c9f903698073ab1fa694f7}\label{print__code_8h_a5666ac5930c9f903698073ab1fa694f7}} 
-\index{print\+\_\+code.\+h@{print\+\_\+code.\+h}!P\+A\+U\+SE@{P\+A\+U\+SE}}
-\index{P\+A\+U\+SE@{P\+A\+U\+SE}!print\+\_\+code.\+h@{print\+\_\+code.\+h}}
-\subsubsection{\texorpdfstring{P\+A\+U\+SE}{PAUSE}}
-{\footnotesize\ttfamily \#define P\+A\+U\+SE~\char`\"{}P\+A\+U\+SE\char`\"{}}
-
-
-
-Definition at line 22 of file print\+\_\+code.\+h.
-
-
-
-Referenced by file\+\_\+not\+\_\+found().
+Referenced by file\-\_\-not\-\_\-found().
 
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{print__code_8h_ab01fddd39c85ea0329513da9a6d062ac}\label{print__code_8h_ab01fddd39c85ea0329513da9a6d062ac}} 
-\index{print\+\_\+code.\+h@{print\+\_\+code.\+h}!print\+\_\+result@{print\+\_\+result}}
-\index{print\+\_\+result@{print\+\_\+result}!print\+\_\+code.\+h@{print\+\_\+code.\+h}}
-\subsubsection{\texorpdfstring{print\+\_\+result()}{print\_result()}}
-{\footnotesize\ttfamily void print\+\_\+result (\begin{DoxyParamCaption}\item[{char}]{sex,  }\item[{char $\ast$}]{coded\+\_\+town,  }\item[{char $\ast$}]{birth\+\_\+date,  }\item[{char $\ast$}]{surname,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
-
+\hypertarget{print__code_8h_ab01fddd39c85ea0329513da9a6d062ac}{\index{print\-\_\-code.\-h@{print\-\_\-code.\-h}!print\-\_\-result@{print\-\_\-result}}
+\index{print\-\_\-result@{print\-\_\-result}!print_code.h@{print\-\_\-code.\-h}}
+\subsubsection[{print\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-result (
+\begin{DoxyParamCaption}
+\item[{char}]{sex, }
+\item[{char $\ast$}]{coded\-\_\-town, }
+\item[{char $\ast$}]{birth\-\_\-date, }
+\item[{char $\ast$}]{surname, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{print__code_8h_ab01fddd39c85ea0329513da9a6d062ac}
 Stampa a video il codice generato 
 \begin{DoxyParams}{Parameters}
 {\em sex} & \\
 \hline
-{\em coded\+\_\+town} & \\
+{\em coded\-\_\-town} & \\
 \hline
-{\em birth\+\_\+date} & \\
+{\em birth\-\_\-date} & \\
 \hline
 {\em surname} & \\
 \hline
@@ -104,9 +95,9 @@ Stampa a video il codice generato
 \end{DoxyParams}
 
 
-Definition at line 20 of file print\+\_\+code.\+c.
+Definition at line 20 of file print\-\_\-code.\-c.
 
 
 
-References is\+\_\+valid\+\_\+data().
+References is\-\_\-valid\-\_\-data().
 

@@ -94,7 +94,6 @@
  * @post il nome codificato deve essere una stringa di tre lettere
  * @param name
  * @param code
- * @return
  */
 void name_code(char name[], char* code);
 
@@ -126,9 +125,7 @@ void birth_date_code(char date[], char sex, char code[]);
  * @param coded_birth_place
  * @return
  */
-char ctrl_code(char coded_name[], char coded_surname[],
-		char coded_birth_date[], char coded_birth_place[]
-);
+char ctrl_code(char coded_name[], char coded_surname[],char coded_birth_date[], char coded_birth_place[]);
 
 /**
  * Genera il codice fiscale
@@ -143,9 +140,6 @@ char ctrl_code(char coded_name[], char coded_surname[],
  * @param sex
  * @param code
  */
-void cf_generator(
-		char name[], char surname[], char birth_date[],
-		char coded_town[], char sex, char code[]
-);
+void cf_generator(char name[], char surname[], char birth_date[],char coded_town[], char sex, char code[]);
 
 #endif /* SRC_CFGENERATOR_CF_GENERATOR_H_ */
