@@ -5,7 +5,72 @@
  *      Author: Gabriele Fortunato
  */
 
-#include "../../../src/print_result/cf_generator/cf_generator.h"
+#include "cf_generator.h"
+
+static const int ZERO = 0;
+static const int ONE = 1;
+static const int TWO = 2;
+static const int THREE = 3;
+static const int FOUR = 4;
+static const int FIVE = 5;
+static const int SIX = 6;
+static const int SEVEN = 7;
+static const int EIGHT = 8;
+static const int NINE = 9;
+static const int TEN = 10;
+static const int ELEVEN = 11;
+static const int TWELVE = 12;
+static const int THIRTEEN = 13;
+static const int FOURTEEN = 14;
+static const int FIFTEEN = 15;
+static const int SIXTEEN = 16;
+static const int SEVENTEEN = 17;
+static const int EIGHTEEN = 18;
+static const int NINETEEN = 19;
+static const int TWENTY = 20;
+static const int TWENTYONE = 21;
+static const int TWENTYTWO = 22;
+static const int TWENTYTHREE = 23;
+static const int TWENTYFOUR = 24;
+static const int TWENTYFIVE = 25;
+static const int TWENTYSIX = 26;
+static const char EOS = '\0';
+static const char A ='A';
+static const char B = 'B';
+static const char C = 'C';
+static const char D = 'D';
+static const char E = 'E';
+static const char F = 'F';
+static const char G = 'G';
+static const char H = 'H';
+static const char I = 'I';
+static const char J = 'J';
+static const char K = 'K';
+static const char L = 'L';
+static const char M = 'M';
+static const char N = 'N';
+static const char O = 'O';
+static const char P = 'P';
+static const char Q = 'Q';
+static const char R = 'R';
+static const char S = 'S';
+static const char T = 'T';
+static const char U = 'U';
+static const char V = 'V';
+static const char W = 'W';
+static const char X = 'X';
+static const char Y = 'Y';
+static const char Z = 'Z';
+static const char CHAR_0 = '0';
+static const char CHAR_1 = '1';
+static const char CHAR_2 = '2';
+static const char CHAR_3 = '3';
+static const char CHAR_4 = '4';
+static const char CHAR_5 = '5';
+static const char CHAR_6 = '6';
+static const char CHAR_7 = '7';
+static const char CHAR_8 = '8';
+static const char CHAR_9 = '9';
 
 static bool is_vowel(char a){
 	return a==A||a==E||a==I||a==O||a==U;
@@ -15,27 +80,29 @@ static bool is_consonant(char a){
 	return !is_vowel(a)&&isalpha(a);
 }
 
-static void get_consonant(char* string, char* consonants, int i, int* k){
+int get_consonant(int i, int k, char* string, char* consonants) {
 	if (is_consonant(string[i]))
-		consonants[(*k)++] = string[i];
+		consonants[k++] = string[i];
+	return k;
 }
 
 static void get_consonants(char* string, char* consonants){
 	int k = ZERO;
 	for (int i=ZERO;i<strlen(string);i++)
-		get_consonant(string,consonants,i,&k);
+		k = get_consonant(i, k, string, consonants);
 	consonants[k] = EOS;
 }
 
-static void get_vowel(char* string, char* vowels, int i, int* k){
+int get_vowel(int i, int k, char* string, char* vowels) {
 	if (is_vowel(string[i]))
-		vowels[(*k)++] = string[i];
+		vowels[k++] = string[i];
+	return k;
 }
 
 static void get_vowels(char* string, char* vowels){
 	int k = ZERO;
 	for (int i=ZERO;i<strlen(string);i++)
-		get_vowel(string,vowels,i,&k);
+		k = get_vowel(i, k, string, vowels);
 	vowels[k] = EOS;
 }
 
@@ -231,27 +298,13 @@ void surname_code(char surname[], char code[]){
 }
 
 static char month_0(char a){
-	char result;
-	switch(a){
-	case CHAR_1: result=A; break;
-	case CHAR_2: result=B; break;
-	case CHAR_3: result=C; break;
-	case CHAR_4: result=D; break;
-	case CHAR_5: result=E; break;
-	case CHAR_6: result=H; break;
-	case CHAR_7: result=L; break;
-	case CHAR_8: result=M; break;
-	default: result=P;
-	} return result;
+	return (a == CHAR_1) ? A : (a == CHAR_2) ? B : (a == CHAR_3) ? C :
+			(a == CHAR_4) ? D :	(a == CHAR_5) ? E : (a == CHAR_6) ? H :
+			(a == CHAR_7) ? L : M;
 }
 
 static char month_1(char b){
-	char result;
-	switch(b){
-	case CHAR_0: result=R; break;
-	case CHAR_1: result=S; break;
-	default: result=CHAR_2;
-	} return result;
+	return (b == CHAR_0) ? R : (b == CHAR_1) ? S : T;
 }
 
 static char month(char a, char b){
@@ -283,119 +336,36 @@ void birth_date_code(char date[], char sex, char code[]){
 }
 
 static int even_character(char a){
-	char result;
-	switch(a){
-	case CHAR_0: result=ONE; break;
-	case CHAR_1: result=ZERO; break;
-	case CHAR_2: result=FIVE; break;
-	case CHAR_3: result=SEVEN; break;
-	case CHAR_4: result=NINE; break;
-	case CHAR_5: result=THIRTEEN; break;
-	case CHAR_6: result=FIFTEEN; break;
-	case CHAR_7: result=SEVENTEEN; break;
-	case CHAR_8: result=NINETEEN; break;
-	case CHAR_9: result=TWENTYONE; break;
-	case A: result=ONE; break;
-	case B: result=ZERO; break;
-	case C: result=FIVE; break;
-	case D: result=SEVEN; break;
-	case E: result=NINE; break;
-	case F: result=THIRTEEN; break;
-	case G: result=FIFTEEN; break;
-	case H: result=SEVENTEEN; break;
-	case I: result=NINETEEN; break;
-	case J: result=TWENTYONE; break;
-	case K: result=TWO; break;
-	case L: result=FOUR; break;
-	case M: result=EIGHTEEN; break;
-	case N: result=TWENTY; break;
-	case O: result=ELEVEN; break;
-	case P: result=THREE; break;
-	case Q: result=SIX; break;
-	case R: result=EIGHT; break;
-	case S: result=TWELVE; break;
-	case T: result=FOURTEEN; break;
-	case U: result=SIXTEEN; break;
-	case V: result=TEN; break;
-	case W: result=TWENTYTWO; break;
-	case X: result=TWENTYFIVE; break;
-	case Y: result=TWENTYFOUR; break;
-	default: result=TWENTYTHREE;
-	} return result;
+	return	(a == CHAR_0 || a == A) ? ONE: (a == CHAR_1 || a == B) ? ZERO : (a == CHAR_2 || a == C) ? FIVE :
+			(a == CHAR_3 || a == D) ? SEVEN : (a == CHAR_4 || a == E) ? NINE :
+			(a == CHAR_5 || a == F) ? THIRTEEN : (a == CHAR_6 || a==G) ? FIFTEEN :
+		    (a==CHAR_7 || a==H) ? SEVENTEEN : (a==CHAR_8 || a == I) ? NINETEEN :
+		    (a==CHAR_9 || a == J) ? TWENTYONE : (a == K) ? TWO : (a == L) ? FOUR : (a == M) ? EIGHTEEN :
+			(a == N) ? TWENTY : (a == O) ? ELEVEN : (a == P) ? THREE : (a == Q) ? SIX : (a == R) ? EIGHT :
+			(a == S) ? TWELVE : (a == T) ? FOURTEEN: (a == U) ? SIXTEEN : (a == V) ? TEN :
+			(a == W) ? TWENTYTWO  : (a == X) ? TWENTYFIVE : (a == Y) ? TWENTYFOUR : TWENTYTHREE;
 }
 
 static int odd_character(char a){
-	char result;
-	switch(a){
-	case CHAR_0: result=ZERO; break;
-	case CHAR_1: result=ONE; break;
-	case CHAR_2: result=TWO; break;
-	case CHAR_3: result=THREE; break;
-	case CHAR_4: result=FOUR; break;
-	case CHAR_5: result=FIVE; break;
-	case CHAR_6: result=SIX; break;
-	case CHAR_7: result=SEVEN; break;
-	case CHAR_8: result=EIGHT; break;
-	case CHAR_9: result=NINE; break;
-	case A: result=ZERO; break;
-	case B: result=ONE; break;
-	case C: result=TWO; break;
-	case D: result=THREE; break;
-	case E: result=FOUR; break;
-	case F: result=FIVE; break;
-	case G: result=SIX; break;
-	case H: result=SEVEN; break;
-	case I: result=EIGHT; break;
-	case J: result=NINE; break;
-	case K: result=TEN; break;
-	case L: result=ELEVEN; break;
-	case M: result=TWELVE; break;
-	case N: result=THIRTEEN; break;
-	case O: result=FOURTEEN; break;
-	case P: result=FIFTEEN; break;
-	case Q: result=SIXTEEN; break;
-	case R: result=SEVENTEEN; break;
-	case S: result=EIGHTEEN; break;
-	case T: result=NINETEEN; break;
-	case U: result=TWENTY; break;
-	case V: result=TWENTYONE; break;
-	case W: result=TWENTYTWO; break;
-	case X: result=TWENTYTHREE; break;
-	case Y: result=TWENTYFOUR; break;
-	default: result=TWENTYFIVE;
-	} return result;
+	return (a == CHAR_0 || a == A) ? ZERO: (a == CHAR_1 || a == B) ? ONE : (a == CHAR_2 || a == C) ? TWO :
+		(a == CHAR_3 || a == D) ? THREE : (a == CHAR_4 || a == E) ? FOUR : (a == CHAR_5 || a==F) ? FIVE :
+		(a == CHAR_6 || a==G) ? SIX : (a==CHAR_7 || a==H) ? SEVEN : (a==CHAR_8 || a == I) ? EIGHT :
+		(a==CHAR_9 || a == J) ? NINE : (a == K) ? TEN : (a == L) ? ELEVEN : (a == M) ? TWELVE :
+		(a == N) ? THIRTEEN : (a == O) ? FOURTEEN : (a == P) ? FIFTEEN : (a == Q) ? SIXTEEN :
+		(a == R) ? SEVENTEEN : (a == S) ? EIGHTEEN : (a == T) ? NINETEEN : (a == U) ? TWENTY :
+	    (a == V) ? TWENTYONE : (a == W) ? TWENTYTWO  : (a == X) ? TWENTYTHREE : (a == Y) ? TWENTYFOUR :
+	    TWENTYFIVE;
 }
 
 static char result(int number){
-	char result;
-	switch(number){
-	case ZERO: result=A; break;
-	case ONE: result=B; break;
-	case TWO: result=C; break;
-	case THREE: result=D; break;
-	case FOUR: result=E; break;
-	case FIVE: result=F; break;
-	case SIX: result=G; break;
-	case SEVEN: result=H; break;
-	case EIGHT: result=I; break;
-	case NINE: result=J; break;
-	case TEN: result=K; break;
-	case ELEVEN: result=L; break;
-	case TWELVE: result=M; break;
-	case THIRTEEN: result=N; break;
-	case FOURTEEN: result=O; break;
-	case FIFTEEN: result=P; break;
-	case SIXTEEN: result=Q; break;
-	case SEVENTEEN: result=R; break;
-	case EIGHTEEN: result=S; break;
-	case NINETEEN: result=T; break;
-	case TWENTY: result=U; break;
-	case TWENTYONE: result=V; break;
-	case TWENTYTWO: result=W; break;
-	case TWENTYTHREE: result=X; break;
-	case TWENTYFOUR: result=Y; break;
-	default: result=Z;
-	} return result;
+	return (number == ZERO) ? A : (number == ONE) ? B : (number == TWO) ? C : (number == THREE) ? D :
+		   (number == FOUR) ? E : (number == FIVE) ? F : (number == SIX) ? G : (number == SEVEN) ? H :
+		   (number == EIGHT) ? I : (number == NINE) ? J : (number == TEN) ? K : (number == ELEVEN) ? L :
+		   (number == TWELVE) ? M : (number == THIRTEEN) ? N : (number == FOURTEEN) ? O :
+		   (number == FIFTEEN) ? P : (number == SIXTEEN) ? Q : (number == SEVENTEEN) ? R :
+		   (number == EIGHTEEN) ? S : (number == NINETEEN) ? T : (number == TWENTY) ? U :
+		   (number == TWENTYONE) ? V : (number == TWENTYTWO) ? W : (number == TWENTYTHREE) ? X :
+		   (number == TWENTYFOUR) ? Y : Z ;
 }
 
 static void code_strcat(char coded_name[],char coded_surname[],char coded_birth_date[],char coded_town[],char code[]){
@@ -406,25 +376,23 @@ static void code_strcat(char coded_name[],char coded_surname[],char coded_birth_
 	code[strlen(code)]=EOS;
 }
 
-static void incr_number(char* code, int* number, int i){
-	i%TWO==ZERO?((*number)+=even_character(code[i])):((*number)+=odd_character(code[i]));
-}
-
-static void get_number(char* code, int *number){
-	for (int i=ZERO;i<strlen(code)-ONE;i++)
-		incr_number(code,number,i);
+static int get_sum(char* code) {
+	int sum = ZERO;
+	for (int i = ZERO; i < strlen(code); i++)
+		sum += (i % TWO == ZERO) ?
+				even_character(code[i]) : odd_character(code[i]);
+	return sum;
 }
 
 char ctrl_code(char coded_name[], char coded_surname[],char coded_birth_date[], char coded_birth_place[]){
 	assert(is_valid_coded_surname_name(coded_name));
 	assert(is_valid_coded_surname_name(coded_surname));
-	int number = ZERO;
 	char code[FIFTEEN];
 	code[ZERO]=EOS;
 	code_strcat(coded_name, coded_surname,coded_birth_date, coded_birth_place,code);
-	get_number(code,&number);
-	assert(is_valid_ctrl_code(result(number%TWENTYSIX)));
-	return result(number%TWENTYSIX);
+	int sum = get_sum(code);
+	assert(is_valid_ctrl_code(result(sum%TWENTYSIX)));
+	return result(sum % TWENTYSIX);
 }
 
 void cf_generator(char name[], char surname[], char birth_date[], char coded_town[],char sex, char code[]){

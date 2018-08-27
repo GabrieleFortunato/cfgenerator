@@ -18,21 +18,6 @@
 #include "../../../src/close/close.h"
 #include "../../../src/print_result/is_valid/is_valid.h"
 
-#define FILE_NOT_FOUND "File dei codici catastali non trovato\n"
-#define ERROR		   "Errore di allocazione nella memoria"
-#define FILE_NAME  	   "comuni.csv"
-#define FILE_MODE      "r"
-#define PAUSE		   "PAUSE"
-#define EOS			   '\0'
-#define NEW_LINE       "\n"
-#define VIRGO	       ","
-#define ZERO           0
-#define FOUR           4
-#define FIVE           5
-#define FOURTYSIX      46
-#define STRLEN         50
-#define HUNDRED        100
-
 /**
  * Legge da file il codice catastale del comune di nascita
  * @pre il file deve essere aperto

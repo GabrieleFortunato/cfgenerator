@@ -5,13 +5,11 @@
  *      Author: Gabriele Fortunato
  */
 
-#include "../../src/access/access.h"
+#include "access.h"
+
+static const char* PRINT_ACCESS = "%s";
 
 void print_access(FILE* file){
 	time_t ora = time(NULL);
-	fprintf(
-			file,
-			ACCESS,
-			asctime(localtime(&ora))
-	);
+	fprintf(file, PRINT_ACCESS, asctime(localtime(&ora)));
 }

@@ -5,9 +5,11 @@
  *      Author: Gabriele Fortunato
  */
 
-#include "../../../src/get_data/to_upper/to_upper.h"
+#include "to_upper.h"
+
+static const int ZERO = 0;
 
 void to_upper_string(char* string){
-	for (int i=ZERO;i<strlen(string);i++)
+	for (int i = ZERO; i < strlen(string); i++)
 		string[i] = (islower(string[i]))?toupper(string[i]):string[i];
 }

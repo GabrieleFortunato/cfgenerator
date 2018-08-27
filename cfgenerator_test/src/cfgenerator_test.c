@@ -14,9 +14,10 @@
 #include "../../cfgenerator/src/print_result/is_valid/is_valid.h"
 #include "../../cfgenerator/src/print_result/read_birth_place/read_birth_place.h"
 #include "../../cfgenerator/src/get_data/to_upper/to_upper.h"
+#include <stdio.h>
 
 void test_read_birth_place(){
-	FILE* file = fopen(FILE_NAME,FILE_MODE);
+	FILE* file = fopen("comuni.csv","r");
 	CU_ASSERT_STRING_EQUAL(read_birth_place_code(file,"BARI"),"A662");
 	CU_ASSERT_STRING_EQUAL(read_birth_place_code(file,"MOLA DI BARI"),"F280");
 	CU_ASSERT_STRING_EQUAL(read_birth_place_code(file,"ROMA"),"H501");
@@ -40,7 +41,7 @@ void test_to_upper_string(){
 }
 
 void test_coded_name(){
-	char code[FOUR];
+	char code[4];
 	name_code("GABRIELE",code);
 	CU_ASSERT_STRING_EQUAL(code,"GRL");
 	name_code("DARIO",code);
@@ -130,7 +131,7 @@ void test_is_valid_ctrl_code(){
 }
 
 void test_coded_surname(){
-	char code[FOUR];
+	char code[4];
 	surname_code("FORTUNATO",code);
 	CU_ASSERT_STRING_EQUAL(code,"FRT");
 	surname_code("FO",code);
@@ -152,7 +153,7 @@ void test_coded_surname(){
 }
 
 void test_coded_date(){
-	char code[SIX];
+	char code[6];
 	birth_date_code("02/10/1978",'M',code);
 	CU_ASSERT_STRING_EQUAL(code,"78R02");
 	birth_date_code("02/10/1978",'F',code);
@@ -178,7 +179,7 @@ void test_ctrl_code(){
 }
 
 void test_cf_generator(){
-	char code[SEVENTEEN];
+	char code[16];
 	cf_generator("GABRIELE","FORTUNATO","02/10/1978","F280",'M',code);
 	CU_ASSERT_STRING_EQUAL(code,"FRTGRL78R02F280W");
 	cf_generator("ANNA","MONNO","17/05/1975","A662",'F',code);
@@ -192,11 +193,11 @@ void test_cf_generator(){
 }
 
 int init_suite_default(){
-	return ZERO;
+	return 0;
 }
 
 int clear_suite_default(){
-	return ZERO;
+	return 0;
 }
 
 int main(void) {

@@ -8,6 +8,8 @@
  ============================================================================
  */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "../../cfgenerator/src/access/access.h"
 #include "../../cfgenerator/src/close/close.h"
 #include "../../cfgenerator/src/get_data/get_data.h"
@@ -16,8 +18,13 @@
 #include "../../cfgenerator/src/print_result/read_birth_place/read_birth_place.h"
 #include "../../cfgenerator/src/repeat/repeat.h"
 
+static const char* ITALIAN_TOWNS_FILE = "comuni.csv";
+static const char* REAF_FROM_FILE = "r";
+static const char* WRITE_ON_FILE = "w";
+static const char* ACCESS_FILE_NAME = "accessi.txt";
+
 void access(){
-	FILE* file = fopen(FILE_ACCESS_NAME,FILE_ACCESS_MODE);
+	FILE* file = fopen(ACCESS_FILE_NAME, WRITE_ON_FILE);
 	print_access(file);
 	fclose(file);
 }
@@ -40,7 +47,7 @@ void cfgenerator(FILE* file){
 
 int main(void) {
 	access();
-	FILE* file = fopen(FILE_NAME,FILE_MODE);
+	FILE* file = fopen(ITALIAN_TOWNS_FILE, REAF_FROM_FILE);
 	(file==NULL)?file_not_found():cfgenerator(file);
 	fclose(file);
 	close();

@@ -7,6 +7,36 @@
 
 #include "../../../src/print_result/is_valid/is_valid.h"
 
+
+#define ZERO           	0
+#define ONE        		1
+#define TWO        		2
+#define THREE      		3
+#define FOUR       		4
+#define FIVE       		5
+#define SIX        		6
+#define SEVEN      		7
+#define EIGHT      		8
+#define NINE       		9
+#define TEN        		10
+#define TWELVE     		12
+#define THIRTEEN        13
+#define FOURTEEN        14
+#define SIXTEEN         16
+#define THIRTYONE  		31
+#define ASCII      		48
+#define HUNDRED  	  	100
+#define THOUSAND   		1000
+#define MIN_YEAR   		1900
+#define MAX_YEAR   		2018
+#define SLASH      		'/'
+#define F 	            'F'
+#define M 	            'M'
+#define SPACE           ' '
+#define APOSTROPHE      '\''
+#define EMPTY_STRING    ""
+
+
 static bool is_valid_char_name_surname_code(char* code){
 	bool flag = true;
 	for (int i = ZERO;i<strlen(code)&&flag;i++)

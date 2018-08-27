@@ -11,8 +11,6 @@
 #include <ctype.h>
 #include <string.h>
 
-#define ZERO 0
-
 /**
  * Rende maiuscole tutte le lettere minuscole presenti nella stringa
  * @param string
