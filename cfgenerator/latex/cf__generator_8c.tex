@@ -1,9 +1,13 @@
 \hypertarget{cf__generator_8c}{\section{src/print\-\_\-result/cf\-\_\-generator/cf\-\_\-generator.c File Reference}
 \label{cf__generator_8c}\index{src/print\-\_\-result/cf\-\_\-generator/cf\-\_\-generator.\-c@{src/print\-\_\-result/cf\-\_\-generator/cf\-\_\-generator.\-c}}
 }
-{\ttfamily \#include \char`\"{}../../../src/print\-\_\-result/cf\-\_\-generator/cf\-\_\-generator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cf\-\_\-generator.\-h\char`\"{}}\\*
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
+\item 
+int \hyperlink{cf__generator_8c_a6688aa312e4bacef2e48e9da3f05196d}{get\-\_\-consonant} (int i, int k, char $\ast$string, char $\ast$consonants)
+\item 
+int \hyperlink{cf__generator_8c_a0e083b4ee0c5c5df300fa0df41abfeed}{get\-\_\-vowel} (int i, int k, char $\ast$string, char $\ast$vowels)
 \item 
 void \hyperlink{cf__generator_8c_a3fc31bfb373229fad595bdd58fd4936d}{name\-\_\-code} (char name\mbox{[}$\,$\mbox{]}, char code\mbox{[}$\,$\mbox{]})
 \item 
@@ -47,11 +51,11 @@ la data codificata deve essere una stringa di quattro caratteri
 \end{DoxyReturn}
 
 
-Definition at line 278 of file cf\-\_\-generator.\-c.
+Definition at line 331 of file cf\-\_\-generator.\-c.
 
 
 
-References E\-O\-S, F\-I\-V\-E, is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-date\-\_\-code(), is\-\_\-valid\-\_\-sex(), and M.
+References F\-I\-V\-E, is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-date\-\_\-code(), is\-\_\-valid\-\_\-sex(), and M.
 
 
 
@@ -96,11 +100,11 @@ il codice generato deve essere una stringa di 16 caratteri
 \end{DoxyParams}
 
 
-Definition at line 430 of file cf\-\_\-generator.\-c.
+Definition at line 398 of file cf\-\_\-generator.\-c.
 
 
 
-References birth\-\_\-date\-\_\-code(), ctrl\-\_\-code(), E\-O\-S, F\-I\-F\-T\-E\-E\-N, F\-O\-U\-R, is\-\_\-valid\-\_\-cf\-\_\-code(), is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name(), is\-\_\-valid\-\_\-sex(), is\-\_\-valid\-\_\-surname(), name\-\_\-code(), S\-I\-X, S\-I\-X\-T\-E\-E\-N, surname\-\_\-code(), and Z\-E\-R\-O.
+References birth\-\_\-date\-\_\-code(), ctrl\-\_\-code(), F\-O\-U\-R, is\-\_\-valid\-\_\-cf\-\_\-code(), is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name(), is\-\_\-valid\-\_\-sex(), is\-\_\-valid\-\_\-surname(), name\-\_\-code(), S\-I\-X, S\-I\-X\-T\-E\-E\-N, surname\-\_\-code(), and Z\-E\-R\-O.
 
 \hypertarget{cf__generator_8c_a70956311015a919ecee6f20621fb4ed8}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!ctrl\-\_\-code@{ctrl\-\_\-code}}
 \index{ctrl\-\_\-code@{ctrl\-\_\-code}!cf_generator.c@{cf\-\_\-generator.\-c}}
@@ -131,15 +135,43 @@ il carattere di controllo deve essere una lettera maiuscola
 \end{DoxyReturn}
 
 
-Definition at line 418 of file cf\-\_\-generator.\-c.
+Definition at line 387 of file cf\-\_\-generator.\-c.
 
 
 
-References E\-O\-S, F\-I\-F\-T\-E\-E\-N, is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), is\-\_\-valid\-\_\-ctrl\-\_\-code(), T\-W\-E\-N\-T\-Y\-S\-I\-X, and Z\-E\-R\-O.
+References is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), is\-\_\-valid\-\_\-ctrl\-\_\-code(), and Z\-E\-R\-O.
 
 
 
 Referenced by cf\-\_\-generator().
+
+\hypertarget{cf__generator_8c_a6688aa312e4bacef2e48e9da3f05196d}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!get\-\_\-consonant@{get\-\_\-consonant}}
+\index{get\-\_\-consonant@{get\-\_\-consonant}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{get\-\_\-consonant}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-consonant (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{k, }
+\item[{char $\ast$}]{string, }
+\item[{char $\ast$}]{consonants}
+\end{DoxyParamCaption}
+)}}\label{cf__generator_8c_a6688aa312e4bacef2e48e9da3f05196d}
+
+
+Definition at line 83 of file cf\-\_\-generator.\-c.
+
+\hypertarget{cf__generator_8c_a0e083b4ee0c5c5df300fa0df41abfeed}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!get\-\_\-vowel@{get\-\_\-vowel}}
+\index{get\-\_\-vowel@{get\-\_\-vowel}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{get\-\_\-vowel}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-vowel (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{k, }
+\item[{char $\ast$}]{string, }
+\item[{char $\ast$}]{vowels}
+\end{DoxyParamCaption}
+)}}\label{cf__generator_8c_a0e083b4ee0c5c5df300fa0df41abfeed}
+
+
+Definition at line 96 of file cf\-\_\-generator.\-c.
 
 \hypertarget{cf__generator_8c_a3fc31bfb373229fad595bdd58fd4936d}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!name\-\_\-code@{name\-\_\-code}}
 \index{name\-\_\-code@{name\-\_\-code}!cf_generator.c@{cf\-\_\-generator.\-c}}
@@ -151,11 +183,11 @@ Referenced by cf\-\_\-generator().
 )}}\label{cf__generator_8c_a3fc31bfb373229fad595bdd58fd4936d}
 
 
-Definition at line 132 of file cf\-\_\-generator.\-c.
+Definition at line 199 of file cf\-\_\-generator.\-c.
 
 
 
-References E\-O\-S, is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), is\-\_\-valid\-\_\-name(), O\-N\-E, T\-H\-R\-E\-E, and T\-W\-O.
+References is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), is\-\_\-valid\-\_\-name(), O\-N\-E, T\-H\-R\-E\-E, and T\-W\-O.
 
 
 
@@ -171,11 +203,11 @@ Referenced by cf\-\_\-generator().
 )}}\label{cf__generator_8c_ab1b86778c6102ec98c108cf32695b42c}
 
 
-Definition at line 220 of file cf\-\_\-generator.\-c.
+Definition at line 287 of file cf\-\_\-generator.\-c.
 
 
 
-References E\-O\-S, is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), is\-\_\-valid\-\_\-surname(), O\-N\-E, T\-H\-R\-E\-E, and T\-W\-O.
+References is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), is\-\_\-valid\-\_\-surname(), O\-N\-E, T\-H\-R\-E\-E, and T\-W\-O.
 
 
 

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['r',['R',['../cf__generator_8h.html#a5c71a5e59a53413cd6c270266d63b031',1,'cf_generator.h']]],
   ['read_5fbirth_5fplace_2ec',['read_birth_place.c',['../read__birth__place_8c.html',1,'']]],
   ['read_5fbirth_5fplace_2eh',['read_birth_place.h',['../read__birth__place_8h.html',1,'']]],
   ['read_5fbirth_5fplace_5fcode',['read_birth_place_code',['../read__birth__place_8c.html#a010678c3c8f5267cb96a048f1b7b0794',1,'read_birth_place_code(FILE *places_file, char *birth_place):&#160;read_birth_place.c'],['../read__birth__place_8h.html#a010678c3c8f5267cb96a048f1b7b0794',1,'read_birth_place_code(FILE *places_file, char *birth_place):&#160;read_birth_place.c']]],
