@@ -86,9 +86,9 @@ int get_consonant(int i, int k, char* string, char* consonants) {
 	return k;
 }
 
-static void get_consonants(char* string, char* consonants){
+void get_consonants(char* string, char* consonants) {
 	int k = ZERO;
-	for (int i=ZERO;i<strlen(string);i++)
+	for (int i = ZERO; i < strlen(string); i++)
 		k = get_consonant(i, k, string, consonants);
 	consonants[k] = EOS;
 }
@@ -99,16 +99,16 @@ int get_vowel(int i, int k, char* string, char* vowels) {
 	return k;
 }
 
-static void get_vowels(char* string, char* vowels){
+void get_vowels(char* string, char* vowels) {
 	int k = ZERO;
-	for (int i=ZERO;i<strlen(string);i++)
+	for (int i = ZERO; i < strlen(string); i++)
 		k = get_vowel(i, k, string, vowels);
 	vowels[k] = EOS;
 }
 
 static void get_consonants_vowels(char* string, char* vowels, char* consonants){
-	get_consonants(string,consonants);
-	get_vowels(string,vowels);
+	get_consonants(string, consonants);
+	get_vowels(string, vowels);
 }
 
 static void name_code_AA(char code[], char consonants[]){
@@ -124,7 +124,7 @@ static void name_code_AB(char code[], char consonants[]){
 }
 
 static void name_code_A(char code[], char consonants[]){
-	strlen(consonants)==THREE?name_code_AA(code,consonants):name_code_AB(code,consonants);
+	strlen(consonants) == THREE ? name_code_AA(code, consonants) : name_code_AB(code, consonants);
 }
 
 static void name_code_BA(char code[],char consonants[],char vowels[]){
@@ -140,7 +140,7 @@ static void name_code_BB(char code[],char consonants[]){
 }
 
 static void name_code_B(char code[],char consonants[],char vowels[]){
-	strlen(vowels)>=ONE?name_code_BA(code,consonants,vowels):name_code_BB(code,consonants);
+	strlen(vowels)>=ONE ? name_code_BA(code, consonants, vowels) : name_code_BB(code, consonants);
 }
 
 static void name_code_CA(char code[],char consonants[],char vowels[]){
@@ -162,8 +162,8 @@ static void name_code_CC(char code[],char consonants[]){
 }
 
 static void name_code_C(char code[],char consonants[],char vowels[]){
-	strlen(vowels)>ONE?name_code_CA(code,consonants,vowels):
-	strlen(vowels)==ONE?name_code_CB(code,consonants,vowels):name_code_CC(code,consonants);
+	strlen(vowels)>ONE ? name_code_CA(code, consonants, vowels):
+	strlen(vowels)==ONE ? name_code_CB(code, consonants, vowels) : name_code_CC(code,consonants);
 }
 
 static void name_code_DA(char code[], char vowels[]){
@@ -191,9 +191,9 @@ static void name_code_DD(char code[]){
 }
 
 static void name_code_D(char code[], char vowels[]){
-	strlen(vowels)>=THREE?name_code_DA(code,vowels):
-	strlen(vowels)==TWO?name_code_DB(code,vowels):
-	strlen(vowels)==ONE?name_code_DC(code,vowels):name_code_DD(code);
+	strlen(vowels) >= THREE ? name_code_DA(code, vowels) :
+	strlen(vowels) == TWO ? name_code_DB(code, vowels) :
+	strlen(vowels) == ONE ? name_code_DC(code, vowels) : name_code_DD(code);
 }
 
 void name_code(char name[], char code[]){
@@ -201,9 +201,9 @@ void name_code(char name[], char code[]){
 	char consonants[strlen(name)];
 	char vowels[strlen(name)];
 	get_consonants_vowels(name,vowels,consonants);
-	strlen(consonants) >= THREE ? name_code_A(code,consonants) :
-	strlen(consonants) == TWO ? name_code_B(code,consonants,vowels) :
-	strlen(consonants) == ONE ? name_code_C(code,consonants,vowels) : name_code_D(code,vowels);
+	strlen(consonants) >= THREE ? name_code_A(code, consonants) :
+	strlen(consonants) == TWO ? name_code_B(code, consonants, vowels) :
+	strlen(consonants) == ONE ? name_code_C(code, consonants, vowels) : name_code_D(code, vowels);
 	code[THREE] = EOS;
 	assert(is_valid_coded_surname_name(code));
 }
@@ -250,8 +250,8 @@ static void surname_code_CC(char code[], char consonants[]){
 }
 
 static void surname_code_C(char code[],	char consonants[], char vowels[]){
-	strlen(vowels)>ONE?surname_code_CA(code,consonants,vowels):
-	strlen(vowels)==ONE?surname_code_CB(code,consonants,vowels):surname_code_CC(code,consonants);
+	strlen(vowels) > ONE ? surname_code_CA(code, consonants, vowels) :
+	strlen(vowels) == ONE ? surname_code_CB(code, consonants, vowels): surname_code_CC(code, consonants);
 }
 
 static void surname_code_DA(char code[], char vowels[]){
@@ -279,9 +279,9 @@ static void surname_code_DD(char code[]){
 }
 
 static void surname_code_D(char code[], char vowels[]){
-	strlen(vowels)>=THREE?surname_code_DA(code,vowels):
-	strlen(vowels)==TWO?surname_code_DB(code,vowels):
-	strlen(vowels)==ONE?surname_code_DC(code,vowels):surname_code_DD(code);
+	strlen(vowels) >= THREE ? surname_code_DA(code, vowels) :
+	strlen(vowels) == TWO ? surname_code_DB(code, vowels) :
+	strlen(vowels)==ONE ? surname_code_DC(code, vowels) : surname_code_DD(code);
 }
 
 void surname_code(char surname[], char code[]){
@@ -289,10 +289,10 @@ void surname_code(char surname[], char code[]){
 	int length = strlen(surname);
 	char consonants[length];
 	char vowels[length];
-	get_consonants_vowels(surname,vowels,consonants);
-	strlen(consonants) >= THREE?surname_code_A(code,consonants):
-	strlen(consonants) == TWO?surname_code_B(code,consonants,vowels):
-	strlen(consonants) == ONE?surname_code_C(code,consonants,vowels):surname_code_D(code,vowels);
+	get_consonants_vowels(surname, vowels, consonants);
+	strlen(consonants) >= THREE ? surname_code_A(code, consonants) :
+	strlen(consonants) == TWO ? surname_code_B(code, consonants, vowels) :
+	strlen(consonants) == ONE ? surname_code_C(code, consonants, vowels) : surname_code_D(code,vowels);
 	code[THREE] = EOS;
 	assert(is_valid_coded_surname_name(code));
 }
@@ -300,7 +300,7 @@ void surname_code(char surname[], char code[]){
 static char month_0(char a){
 	return (a == CHAR_1) ? A : (a == CHAR_2) ? B : (a == CHAR_3) ? C :
 			(a == CHAR_4) ? D :	(a == CHAR_5) ? E : (a == CHAR_6) ? H :
-			(a == CHAR_7) ? L : M;
+			(a == CHAR_7) ? L :(a == CHAR_7) ?  M : P;
 }
 
 static char month_1(char b){
@@ -308,7 +308,7 @@ static char month_1(char b){
 }
 
 static char month(char a, char b){
-	return a==CHAR_0?month_0(b):month_1(b);
+	return a==CHAR_0 ? month_0 (b) : month_1(b);
 }
 
 static void birth_date_code_M(char date[], char code[]){
@@ -336,25 +336,25 @@ void birth_date_code(char date[], char sex, char code[]){
 }
 
 static int even_character(char a){
-	return	(a == CHAR_0 || a == A) ? ONE: (a == CHAR_1 || a == B) ? ZERO : (a == CHAR_2 || a == C) ? FIVE :
-			(a == CHAR_3 || a == D) ? SEVEN : (a == CHAR_4 || a == E) ? NINE :
-			(a == CHAR_5 || a == F) ? THIRTEEN : (a == CHAR_6 || a==G) ? FIFTEEN :
-		    (a==CHAR_7 || a==H) ? SEVENTEEN : (a==CHAR_8 || a == I) ? NINETEEN :
-		    (a==CHAR_9 || a == J) ? TWENTYONE : (a == K) ? TWO : (a == L) ? FOUR : (a == M) ? EIGHTEEN :
-			(a == N) ? TWENTY : (a == O) ? ELEVEN : (a == P) ? THREE : (a == Q) ? SIX : (a == R) ? EIGHT :
-			(a == S) ? TWELVE : (a == T) ? FOURTEEN: (a == U) ? SIXTEEN : (a == V) ? TEN :
-			(a == W) ? TWENTYTWO  : (a == X) ? TWENTYFIVE : (a == Y) ? TWENTYFOUR : TWENTYTHREE;
+	return (a == CHAR_0 || a == A) ? ONE: (a == CHAR_1 || a == B) ? ZERO : (a == CHAR_2 || a == C) ? FIVE :
+		   (a == CHAR_3 || a == D) ? SEVEN : (a == CHAR_4 || a == E) ? NINE :
+		   (a == CHAR_5 || a == F) ? THIRTEEN : (a == CHAR_6 || a==G) ? FIFTEEN :
+		   (a==CHAR_7 || a==H) ? SEVENTEEN : (a==CHAR_8 || a == I) ? NINETEEN :
+		   (a==CHAR_9 || a == J) ? TWENTYONE : (a == K) ? TWO : (a == L) ? FOUR : (a == M) ? EIGHTEEN :
+	       (a == N) ? TWENTY : (a == O) ? ELEVEN : (a == P) ? THREE : (a == Q) ? SIX : (a == R) ? EIGHT :
+		   (a == S) ? TWELVE : (a == T) ? FOURTEEN: (a == U) ? SIXTEEN : (a == V) ? TEN :
+		   (a == W) ? TWENTYTWO  : (a == X) ? TWENTYFIVE : (a == Y) ? TWENTYFOUR : TWENTYTHREE;
 }
 
 static int odd_character(char a){
 	return (a == CHAR_0 || a == A) ? ZERO: (a == CHAR_1 || a == B) ? ONE : (a == CHAR_2 || a == C) ? TWO :
-		(a == CHAR_3 || a == D) ? THREE : (a == CHAR_4 || a == E) ? FOUR : (a == CHAR_5 || a==F) ? FIVE :
-		(a == CHAR_6 || a==G) ? SIX : (a==CHAR_7 || a==H) ? SEVEN : (a==CHAR_8 || a == I) ? EIGHT :
-		(a==CHAR_9 || a == J) ? NINE : (a == K) ? TEN : (a == L) ? ELEVEN : (a == M) ? TWELVE :
-		(a == N) ? THIRTEEN : (a == O) ? FOURTEEN : (a == P) ? FIFTEEN : (a == Q) ? SIXTEEN :
-		(a == R) ? SEVENTEEN : (a == S) ? EIGHTEEN : (a == T) ? NINETEEN : (a == U) ? TWENTY :
-	    (a == V) ? TWENTYONE : (a == W) ? TWENTYTWO  : (a == X) ? TWENTYTHREE : (a == Y) ? TWENTYFOUR :
-	    TWENTYFIVE;
+		   (a == CHAR_3 || a == D) ? THREE : (a == CHAR_4 || a == E) ? FOUR : (a == CHAR_5 || a==F) ? FIVE :
+		   (a == CHAR_6 || a==G) ? SIX : (a==CHAR_7 || a==H) ? SEVEN : (a==CHAR_8 || a == I) ? EIGHT :
+		   (a==CHAR_9 || a == J) ? NINE : (a == K) ? TEN : (a == L) ? ELEVEN : (a == M) ? TWELVE :
+		   (a == N) ? THIRTEEN : (a == O) ? FOURTEEN : (a == P) ? FIFTEEN : (a == Q) ? SIXTEEN :
+		   (a == R) ? SEVENTEEN : (a == S) ? EIGHTEEN : (a == T) ? NINETEEN : (a == U) ? TWENTY :
+	       (a == V) ? TWENTYONE : (a == W) ? TWENTYTWO  : (a == X) ? TWENTYTHREE : (a == Y) ? TWENTYFOUR :
+	       TWENTYFIVE;
 }
 
 static char result(int number){
