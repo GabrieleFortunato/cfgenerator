@@ -95,21 +95,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../src/repeat/repeat.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> get_repeat(<span class="keywordtype">void</span>){</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="repeat_8c.html#a5166aee90fa74302ba51aa82f9cf5075">repeat</a>=0;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">do</span>{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    printf(<a class="code" href="repeat_8h.html#a0f4d394a3ab4e09bff60f714c66dc5ee">STRING</a>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    scanf(<a class="code" href="repeat_8h.html#a48c52584a68db327c4d1099f9f08cb31">SPEC_REP</a>,&amp;repeat);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    } <span class="keywordflow">while</span>(repeat!=1&amp;&amp;repeat!=2);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="repeat_8c.html#a5166aee90fa74302ba51aa82f9cf5075">repeat</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="repeat_8h.html#a5166aee90fa74302ba51aa82f9cf5075">   19</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="repeat_8c.html#a5166aee90fa74302ba51aa82f9cf5075">repeat</a>(<span class="keywordtype">void</span>){</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> get_repeat()==1;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="ttc" id="repeat_8h_html_a0f4d394a3ab4e09bff60f714c66dc5ee"><div class="ttname"><a href="repeat_8h.html#a0f4d394a3ab4e09bff60f714c66dc5ee">STRING</a></div><div class="ttdeci">#define STRING</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8h_source.html#l00015">repeat.h:15</a></div></div>
-<div class="ttc" id="repeat_8c_html_a5166aee90fa74302ba51aa82f9cf5075"><div class="ttname"><a href="repeat_8c.html#a5166aee90fa74302ba51aa82f9cf5075">repeat</a></div><div class="ttdeci">bool repeat(void)</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8c_source.html#l00019">repeat.c:19</a></div></div>
-<div class="ttc" id="repeat_8h_html_a48c52584a68db327c4d1099f9f08cb31"><div class="ttname"><a href="repeat_8h.html#a48c52584a68db327c4d1099f9f08cb31">SPEC_REP</a></div><div class="ttdeci">#define SPEC_REP</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8h_source.html#l00016">repeat.h:16</a></div></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* SPEC_INT = <span class="stringliteral">&quot;%d&quot;</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* REPEAT_STRING =</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="stringliteral">&quot;\nCalcolare un altro codice fiscale?\n(1=si,2=no) &quot;</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="is__valid_8c.html#a888e15353eb3d330c743dbdeb47117e2">TWO</a> = 2;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="is__valid_8c.html#a206b6f5362e56b51ca957635350b70b6">ONE</a> = 1;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="is__valid_8c.html#ac328e551bde3d39b6d7b8cc9e048d941">ZERO</a> = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> get_repeat(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="repeat_8c.html#a5166aee90fa74302ba51aa82f9cf5075">repeat</a> = <a class="code" href="is__valid_8c.html#ac328e551bde3d39b6d7b8cc9e048d941">ZERO</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">do</span>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        printf(REPEAT_STRING);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        scanf(SPEC_INT, &amp;repeat);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    } <span class="keywordflow">while</span> (repeat != <a class="code" href="is__valid_8c.html#a206b6f5362e56b51ca957635350b70b6">ONE</a> &amp;&amp; repeat != <a class="code" href="is__valid_8c.html#a888e15353eb3d330c743dbdeb47117e2">TWO</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="repeat_8c.html#a5166aee90fa74302ba51aa82f9cf5075">repeat</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="repeat_8h.html#a5166aee90fa74302ba51aa82f9cf5075">   26</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="repeat_8c.html#a5166aee90fa74302ba51aa82f9cf5075">repeat</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> get_repeat() == <a class="code" href="is__valid_8c.html#a206b6f5362e56b51ca957635350b70b6">ONE</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="ttc" id="is__valid_8c_html_ac328e551bde3d39b6d7b8cc9e048d941"><div class="ttname"><a href="is__valid_8c.html#ac328e551bde3d39b6d7b8cc9e048d941">ZERO</a></div><div class="ttdeci">#define ZERO</div><div class="ttdef"><b>Definition:</b> <a href="is__valid_8c_source.html#l00011">is_valid.c:11</a></div></div>
+<div class="ttc" id="is__valid_8c_html_a206b6f5362e56b51ca957635350b70b6"><div class="ttname"><a href="is__valid_8c.html#a206b6f5362e56b51ca957635350b70b6">ONE</a></div><div class="ttdeci">#define ONE</div><div class="ttdef"><b>Definition:</b> <a href="is__valid_8c_source.html#l00012">is_valid.c:12</a></div></div>
+<div class="ttc" id="is__valid_8c_html_a888e15353eb3d330c743dbdeb47117e2"><div class="ttname"><a href="is__valid_8c.html#a888e15353eb3d330c743dbdeb47117e2">TWO</a></div><div class="ttdeci">#define TWO</div><div class="ttdef"><b>Definition:</b> <a href="is__valid_8c_source.html#l00013">is_valid.c:13</a></div></div>
+<div class="ttc" id="repeat_8c_html_a5166aee90fa74302ba51aa82f9cf5075"><div class="ttname"><a href="repeat_8c.html#a5166aee90fa74302ba51aa82f9cf5075">repeat</a></div><div class="ttdeci">bool repeat(void)</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8c_source.html#l00026">repeat.c:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

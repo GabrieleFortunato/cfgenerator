@@ -7,15 +7,22 @@
 
 #include "../../src/repeat/repeat.h"
 
+static const char* SPEC_INT = "%d";
+static const char* REPEAT_STRING =
+		"\nCalcolare un altro codice fiscale?\n(1=si,2=no) ";
+static const int TWO = 2;
+static const int ONE = 1;
+static const int ZERO = 0;
+
 static int get_repeat(void){
-	int repeat=0;
+	int repeat = ZERO;
 	do{
-	printf(STRING);
-	scanf(SPEC_REP,&repeat);
-	} while(repeat!=1&&repeat!=2);
+		printf(REPEAT_STRING);
+		scanf(SPEC_INT, &repeat);
+	} while (repeat != ONE && repeat != TWO);
 	return repeat;
 }
 
 bool repeat(void){
-	return get_repeat()==1;
+	return get_repeat() == ONE;
 }
