@@ -336,25 +336,28 @@ void birth_date_code(char date[], char sex, char code[]){
 }
 
 static int even_character(char a){
-	return (a == CHAR_0 || a == A) ? ONE: (a == CHAR_1 || a == B) ? ZERO : (a == CHAR_2 || a == C) ? FIVE :
-		   (a == CHAR_3 || a == D) ? SEVEN : (a == CHAR_4 || a == E) ? NINE :
-		   (a == CHAR_5 || a == F) ? THIRTEEN : (a == CHAR_6 || a==G) ? FIFTEEN :
-		   (a==CHAR_7 || a==H) ? SEVENTEEN : (a==CHAR_8 || a == I) ? NINETEEN :
-		   (a==CHAR_9 || a == J) ? TWENTYONE : (a == K) ? TWO : (a == L) ? FOUR : (a == M) ? EIGHTEEN :
-	       (a == N) ? TWENTY : (a == O) ? ELEVEN : (a == P) ? THREE : (a == Q) ? SIX : (a == R) ? EIGHT :
+	return (a == CHAR_0 || a == A) ? ONE: (a == CHAR_1 || a == B) ? ZERO :
+		   (a == CHAR_2 || a == C) ? FIVE : (a == CHAR_3 || a == D) ? SEVEN :
+		   (a == CHAR_4 || a == E) ? NINE : (a == CHAR_5 || a == F) ? THIRTEEN :
+		   (a == CHAR_6 || a==G) ? FIFTEEN : (a==CHAR_7 || a==H) ? SEVENTEEN :
+		   (a==CHAR_8 || a == I) ? NINETEEN : (a==CHAR_9 || a == J) ? TWENTYONE :
+		   (a == K) ? TWO : (a == L) ? FOUR : (a == M) ? EIGHTEEN : (a == N) ? TWENTY :
+		   (a == O) ? ELEVEN : (a == P) ? THREE : (a == Q) ? SIX : (a == R) ? EIGHT :
 		   (a == S) ? TWELVE : (a == T) ? FOURTEEN: (a == U) ? SIXTEEN : (a == V) ? TEN :
 		   (a == W) ? TWENTYTWO  : (a == X) ? TWENTYFIVE : (a == Y) ? TWENTYFOUR : TWENTYTHREE;
 }
 
 static int odd_character(char a){
-	return (a == CHAR_0 || a == A) ? ZERO: (a == CHAR_1 || a == B) ? ONE : (a == CHAR_2 || a == C) ? TWO :
-		   (a == CHAR_3 || a == D) ? THREE : (a == CHAR_4 || a == E) ? FOUR : (a == CHAR_5 || a==F) ? FIVE :
-		   (a == CHAR_6 || a==G) ? SIX : (a==CHAR_7 || a==H) ? SEVEN : (a==CHAR_8 || a == I) ? EIGHT :
-		   (a==CHAR_9 || a == J) ? NINE : (a == K) ? TEN : (a == L) ? ELEVEN : (a == M) ? TWELVE :
-		   (a == N) ? THIRTEEN : (a == O) ? FOURTEEN : (a == P) ? FIFTEEN : (a == Q) ? SIXTEEN :
-		   (a == R) ? SEVENTEEN : (a == S) ? EIGHTEEN : (a == T) ? NINETEEN : (a == U) ? TWENTY :
-	       (a == V) ? TWENTYONE : (a == W) ? TWENTYTWO  : (a == X) ? TWENTYTHREE : (a == Y) ? TWENTYFOUR :
-	       TWENTYFIVE;
+	return (a == CHAR_0 || a == A) ? ZERO: (a == CHAR_1 || a == B) ? ONE :
+		   (a == CHAR_2 || a == C) ? TWO : (a == CHAR_3 || a == D) ? THREE :
+		   (a == CHAR_4 || a == E) ? FOUR : (a == CHAR_5 || a==F) ? FIVE :
+		   (a == CHAR_6 || a==G) ? SIX : (a==CHAR_7 || a==H) ? SEVEN :
+		   (a==CHAR_8 || a == I) ? EIGHT : (a==CHAR_9 || a == J) ? NINE :
+	       (a == K) ? TEN : (a == L) ? ELEVEN : (a == M) ? TWELVE :
+		   (a == N) ? THIRTEEN : (a == O) ? FOURTEEN : (a == P) ? FIFTEEN :
+		   (a == Q) ? SIXTEEN : (a == R) ? SEVENTEEN : (a == S) ? EIGHTEEN :
+		   (a == T) ? NINETEEN : (a == U) ? TWENTY : (a == V) ? TWENTYONE :
+		   (a == W) ? TWENTYTWO  : (a == X) ? TWENTYTHREE : (a == Y) ? TWENTYFOUR : TWENTYFIVE;
 }
 
 static char result(int number){
@@ -396,7 +399,10 @@ char ctrl_code(char coded_name[], char coded_surname[],char coded_birth_date[], 
 }
 
 void cf_generator(char name[], char surname[], char birth_date[], char coded_town[],char sex, char code[]){
-	assert(is_valid_name(name)&&is_valid_surname(surname)&&is_valid_date(birth_date)&&is_valid_sex(sex));
+	assert(is_valid_name(name));
+	assert(is_valid_surname(surname));
+	assert(is_valid_date(birth_date));
+	assert(is_valid_sex(sex));
 	char coded_birth_date[SIX];
 	char coded_surname[FOUR];
 	char coded_name[FOUR];
