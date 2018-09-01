@@ -36,13 +36,13 @@ void print_cfgenerator(FILE* file){
 }
 
 void cfgenerator(FILE* file){
+	access();
 	do{
 		print_cfgenerator(file);
 	} while (repeat());
 }
 
 int main(void) {
-	access();
 	FILE* file = fopen(ITALIAN_TOWNS_FILE, REAF_FROM_FILE);
 	(file==NULL)?file_not_found():cfgenerator(file);
 	fclose(file);
