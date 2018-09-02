@@ -5,7 +5,7 @@
  *      Author: gabriele
  */
 
-#include "../../../src/print_result/read_birth_place/read_birth_place.h"
+#include <print_code/read_birth_place/read_birth_place.h>
 
 static const int FIFTEEN = 50;
 static const char* PAUSE = "pause";

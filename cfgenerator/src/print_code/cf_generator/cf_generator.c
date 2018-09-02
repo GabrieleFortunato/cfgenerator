@@ -5,7 +5,7 @@
  *      Author: Gabriele Fortunato
  */
 
-#include "cf_generator.h"
+#include <print_code/cf_generator/cf_generator.h>
 
 static const int ZERO = 0;
 static const int ONE = 1;

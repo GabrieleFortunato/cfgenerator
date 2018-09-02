@@ -5,15 +5,15 @@
  *      Author: gabriele
  */
 
-#ifndef SRC_PRINT_RESULT_IS_VALID_IS_VALID_H_
-#define SRC_PRINT_RESULT_IS_VALID_IS_VALID_H_
+#ifndef SRC_PRINT_CODE_IS_VALID_IS_VALID_H_
+#define SRC_PRINT_CODE_IS_VALID_IS_VALID_H_
 
 #include <stdbool.h>
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
 
-#include "../../../src/print_result/read_birth_place/read_birth_place.h"
+#include <print_code/read_birth_place/read_birth_place.h>
 
 /**
  * Verifica che il codice del cognome e del nome siano corretti
@@ -98,4 +98,4 @@ bool is_not_empty_string(char* string);
  */
 bool is_valid_data(char* name, char* surname, char* date, char* coded_town, char sex);
 
-#endif /* SRC_PRINT_RESULT_IS_VALID_IS_VALID_H_ */
+#endif /* SRC_PRINT_CODE_IS_VALID_IS_VALID_H_ */

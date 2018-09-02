@@ -14,7 +14,7 @@ static const int TWO = 2;
 static const int ONE = 1;
 static const int ZERO = 0;
 
-static int get_repeat(void){
+static int get_repeat(){
 	int repeat = ZERO;
 	do{
 		printf(REPEAT_STRING);
@@ -23,6 +23,6 @@ static int get_repeat(void){
 	return repeat;
 }
 
-bool repeat(void){
+bool repeat(){
 	return get_repeat() == ONE;
 }

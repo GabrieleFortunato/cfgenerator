@@ -13,9 +13,9 @@
 #include <ctype.h>
 #include <string.h>
 #include <assert.h>
+#include <print_code/is_valid/is_valid.h>
 
 #include "../../src/get_data/to_upper/to_upper.h"
-#include "../../src/print_result/is_valid/is_valid.h"
 
 /**
  * Acquisisce il nome
