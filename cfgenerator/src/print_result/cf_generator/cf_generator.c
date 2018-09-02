@@ -93,208 +93,38 @@ void get_consonants(char* string, char* consonants) {
 	consonants[k] = EOS;
 }
 
-int get_vowel(int i, int k, char* string, char* vowels) {
-	if (is_vowel(string[i]))
-		vowels[k++] = string[i];
-	return k;
+void fill_code(char text[], char code[]) {
+	int ind = 0;
+	for (int i = 0; i < strlen(text) && ind < 3; i++) {
+		if (is_consonant(text[i]))
+			code[ind++] = text[i];
+	}
+	for (int i = 0; i < strlen(text) && ind < 3; i++)
+		if (is_vowel(text[i]))
+			code[ind++] = text[i];
+	while (ind < 3)
+		code[ind++] = X;
+	code[THREE] = EOS;
 }
 
-void get_vowels(char* string, char* vowels) {
-	int k = ZERO;
-	for (int i = ZERO; i < strlen(string); i++)
-		k = get_vowel(i, k, string, vowels);
-	vowels[k] = EOS;
-}
-
-static void get_consonants_vowels(char* string, char* vowels, char* consonants){
-	get_consonants(string, consonants);
-	get_vowels(string, vowels);
-}
-
-static void name_code_AA(char code[], char consonants[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = consonants[ONE];
-	code[TWO] = consonants[TWO];
-}
-
-static void name_code_AB(char code[], char consonants[]){
+void fill_coded_name_four_consonants(char code[], char* consonants) {
 	code[ZERO] = consonants[ZERO];
 	code[ONE] = consonants[TWO];
 	code[TWO] = consonants[THREE];
 }
 
-static void name_code_A(char code[], char consonants[]){
-	strlen(consonants) == THREE ? name_code_AA(code, consonants) : name_code_AB(code, consonants);
-}
-
-static void name_code_BA(char code[],char consonants[],char vowels[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = consonants[ONE];
-	code[TWO] = vowels[ZERO];
-}
-
-static void name_code_BB(char code[],char consonants[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = consonants[ONE];
-	code[TWO] = X;
-}
-
-static void name_code_B(char code[],char consonants[],char vowels[]){
-	strlen(vowels)>=ONE ? name_code_BA(code, consonants, vowels) : name_code_BB(code, consonants);
-}
-
-static void name_code_CA(char code[],char consonants[],char vowels[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = vowels[ZERO];
-	code[TWO] = vowels[ONE];
-}
-
-static void name_code_CB(char code[],char consonants[],char vowels[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = vowels[ZERO];
-	code[TWO] = X;
-}
-
-static void name_code_CC(char code[],char consonants[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = X;
-	code[TWO] = X;
-}
-
-static void name_code_C(char code[],char consonants[],char vowels[]){
-	(strlen(vowels)>ONE) ? name_code_CA(code, consonants, vowels):
-	(strlen(vowels)==ONE) ? name_code_CB(code, consonants, vowels) : name_code_CC(code, consonants);
-}
-
-static void name_code_DA(char code[], char vowels[]){
-	code[ZERO] = vowels[ZERO];
-	code[ONE] = vowels[ONE];
-	code[TWO] = vowels[TWO];
-}
-
-static void name_code_DB(char code[], char vowels[]){
-	code[ZERO] = vowels[ZERO];
-	code[ONE] = vowels[ONE];
-	code[TWO] = X;
-}
-
-static void name_code_DC(char code[], char vowels[]){
-	code[ZERO] = vowels[ZERO];
-	code[ONE] = X;
-	code[TWO] = X;
-}
-
-static void name_code_DD(char code[]){
-	code[ZERO] = X;
-	code[ONE] = X;
-	code[TWO] = X;
-}
-
-static void name_code_D(char code[], char vowels[]){
-	strlen(vowels) >= THREE ? name_code_DA(code, vowels) :
-	strlen(vowels) == TWO ? name_code_DB(code, vowels) :
-	strlen(vowels) == ONE ? name_code_DC(code, vowels) : name_code_DD(code);
-}
-
 void name_code(char name[], char code[]){
 	assert(is_valid_name(name));
 	char consonants[strlen(name)];
-	char vowels[strlen(name)];
-	get_consonants_vowels(name,vowels,consonants);
-	strlen(consonants) >= THREE ? name_code_A(code, consonants) :
-	strlen(consonants) == TWO ? name_code_B(code, consonants, vowels) :
-	strlen(consonants) == ONE ? name_code_C(code, consonants, vowels) : name_code_D(code, vowels);
-	code[THREE] = EOS;
+	get_consonants(name,consonants);
+	(strlen(consonants) >= FOUR) ? fill_coded_name_four_consonants(code, consonants) :
+			fill_code(name, code);
 	assert(is_valid_coded_surname_name(code));
-}
-
-static void surname_code_A(char code[], char consonants[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = consonants[ONE];
-	code[TWO] = consonants[TWO];
-}
-
-static void surname_code_BA(char code[],char consonants[], char vowels[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = consonants[ONE];
-	code[TWO] = vowels[ZERO];
-}
-
-static void surname_code_BB(char code[],char consonants[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = consonants[ONE];
-	code[TWO] = X;
-}
-
-static void surname_code_B(char code[],char consonants[], char vowels[]){
-	strlen(vowels) >= ONE ? surname_code_BA(code,consonants,vowels) :
-			surname_code_BB(code,consonants);
-}
-
-static void surname_code_CA(char code[], char consonants[], char vowels[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = vowels[ZERO];
-	code[TWO] = vowels[ONE];
-}
-
-static void surname_code_CB(char code[], char consonants[], char vowels[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = vowels[ZERO];
-	code[TWO] = X;
-}
-
-static void surname_code_CC(char code[], char consonants[]){
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = X;
-	code[TWO] = X;
-}
-
-static void surname_code_C(char code[],	char consonants[], char vowels[]){
-	(strlen(vowels) > ONE) ? surname_code_CA(code, consonants, vowels) :
-	(strlen(vowels) == ONE) ? surname_code_CB(code, consonants, vowels):
-	surname_code_CC(code, consonants);
-}
-
-static void surname_code_DA(char code[], char vowels[]){
-	code[ZERO] = vowels[ZERO];
-	code[ONE] = vowels[ONE];
-	code[TWO] = vowels[TWO];
-}
-
-static void surname_code_DB(char code[], char vowels[]){
-	code[ZERO] = vowels[ZERO];
-	code[ONE] = vowels[ONE];
-	code[TWO] = X;
-}
-
-static void surname_code_DC(char code[], char vowels[]){
-	code[ZERO] = vowels[ZERO];
-	code[ONE] = X;
-	code[TWO] = X;
-}
-
-static void surname_code_DD(char code[]){
-	code[ZERO] = X;
-	code[ONE] = X;
-	code[TWO] = X;
-}
-
-static void surname_code_D(char code[], char vowels[]){
-	(strlen(vowels) >= THREE) ? surname_code_DA(code, vowels) :
-	(strlen(vowels) == TWO) ? surname_code_DB(code, vowels) :
-	(strlen(vowels)==ONE) ? surname_code_DC(code, vowels) : surname_code_DD(code);
 }
 
 void surname_code(char surname[], char code[]){
 	assert(is_valid_surname(surname));
-	int length = strlen(surname);
-	char consonants[length];
-	char vowels[length];
-	get_consonants_vowels(surname, vowels, consonants);
-	(strlen(consonants)) >= THREE ? surname_code_A(code, consonants) :
-	(strlen(consonants)) == TWO ? surname_code_B(code, consonants, vowels) :
-	(strlen(consonants)) == ONE ? surname_code_C(code, consonants, vowels) : surname_code_D(code,vowels);
-	code[THREE] = EOS;
+	fill_code(surname, code);
 	assert(is_valid_coded_surname_name(code));
 }
 

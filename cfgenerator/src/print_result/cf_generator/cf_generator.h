@@ -14,8 +14,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-
-#include "../../../src/print_result/is_valid/is_valid.h"
+#include "print_result/is_valid/is_valid.h"
 
 
 /**
