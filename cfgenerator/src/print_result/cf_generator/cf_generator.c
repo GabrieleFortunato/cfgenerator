@@ -162,8 +162,8 @@ static void name_code_CC(char code[],char consonants[]){
 }
 
 static void name_code_C(char code[],char consonants[],char vowels[]){
-	strlen(vowels)>ONE ? name_code_CA(code, consonants, vowels):
-	strlen(vowels)==ONE ? name_code_CB(code, consonants, vowels) : name_code_CC(code,consonants);
+	(strlen(vowels)>ONE) ? name_code_CA(code, consonants, vowels):
+	(strlen(vowels)==ONE) ? name_code_CB(code, consonants, vowels) : name_code_CC(code, consonants);
 }
 
 static void name_code_DA(char code[], char vowels[]){
@@ -250,8 +250,9 @@ static void surname_code_CC(char code[], char consonants[]){
 }
 
 static void surname_code_C(char code[],	char consonants[], char vowels[]){
-	strlen(vowels) > ONE ? surname_code_CA(code, consonants, vowels) :
-	strlen(vowels) == ONE ? surname_code_CB(code, consonants, vowels): surname_code_CC(code, consonants);
+	(strlen(vowels) > ONE) ? surname_code_CA(code, consonants, vowels) :
+	(strlen(vowels) == ONE) ? surname_code_CB(code, consonants, vowels):
+	surname_code_CC(code, consonants);
 }
 
 static void surname_code_DA(char code[], char vowels[]){
@@ -279,9 +280,9 @@ static void surname_code_DD(char code[]){
 }
 
 static void surname_code_D(char code[], char vowels[]){
-	strlen(vowels) >= THREE ? surname_code_DA(code, vowels) :
-	strlen(vowels) == TWO ? surname_code_DB(code, vowels) :
-	strlen(vowels)==ONE ? surname_code_DC(code, vowels) : surname_code_DD(code);
+	(strlen(vowels) >= THREE) ? surname_code_DA(code, vowels) :
+	(strlen(vowels) == TWO) ? surname_code_DB(code, vowels) :
+	(strlen(vowels)==ONE) ? surname_code_DC(code, vowels) : surname_code_DD(code);
 }
 
 void surname_code(char surname[], char code[]){
@@ -290,17 +291,17 @@ void surname_code(char surname[], char code[]){
 	char consonants[length];
 	char vowels[length];
 	get_consonants_vowels(surname, vowels, consonants);
-	strlen(consonants) >= THREE ? surname_code_A(code, consonants) :
-	strlen(consonants) == TWO ? surname_code_B(code, consonants, vowels) :
-	strlen(consonants) == ONE ? surname_code_C(code, consonants, vowels) : surname_code_D(code,vowels);
+	(strlen(consonants)) >= THREE ? surname_code_A(code, consonants) :
+	(strlen(consonants)) == TWO ? surname_code_B(code, consonants, vowels) :
+	(strlen(consonants)) == ONE ? surname_code_C(code, consonants, vowels) : surname_code_D(code,vowels);
 	code[THREE] = EOS;
 	assert(is_valid_coded_surname_name(code));
 }
 
 static char month_0(char a){
 	return (a == CHAR_1) ? A : (a == CHAR_2) ? B : (a == CHAR_3) ? C :
-			(a == CHAR_4) ? D :	(a == CHAR_5) ? E : (a == CHAR_6) ? H :
-			(a == CHAR_7) ? L :(a == CHAR_7) ?  M : P;
+		   (a == CHAR_4) ? D : (a == CHAR_5) ? E : (a == CHAR_6) ? H :
+		   (a == CHAR_7) ? L : (a == CHAR_8) ?  M : P;
 }
 
 static char month_1(char b){
@@ -308,13 +309,13 @@ static char month_1(char b){
 }
 
 static char month(char a, char b){
-	return a==CHAR_0 ? month_0 (b) : month_1(b);
+	return ( a == CHAR_0 ) ? month_0 (b) : month_1(b);
 }
 
 static void birth_date_code_M(char date[], char code[]){
 	code[ZERO] = date[EIGHT];
 	code[ONE] = date[NINE];
-	code[TWO] = month(date[THREE],date[FOUR]);
+	code[TWO] = month(date[THREE], date[FOUR]);
 	code[THREE] = date[ZERO];
 	code[FOUR] = date[ONE];
 }
@@ -329,8 +330,8 @@ static void birth_date_code_F(char date[], char code[]){
 }
 
 void birth_date_code(char date[], char sex, char code[]){
-	assert(is_valid_date(date)&&is_valid_sex(sex));
-	sex==M?birth_date_code_M(date,code):birth_date_code_F(date,code);
+	assert(is_valid_date(date) && is_valid_sex(sex));
+	(sex == M) ? birth_date_code_M(date, code) : birth_date_code_F(date, code);
 	code[FIVE] = EOS;
 	assert(is_valid_date_code(code));
 }
@@ -371,7 +372,8 @@ static char result(int number){
 		   (number == TWENTYFOUR) ? Y : Z ;
 }
 
-static void code_strcat(char coded_name[],char coded_surname[],char coded_birth_date[],char coded_town[],char code[]){
+static void code_strcat(char coded_name[], char coded_surname[], char coded_birth_date[],
+		char coded_town[], char code[]){
 	strcat(code,coded_surname);
 	strcat(code,coded_name);
 	strcat(code,coded_birth_date);
@@ -387,18 +389,20 @@ static int get_sum(char* code) {
 	return sum;
 }
 
-char ctrl_code(char coded_name[], char coded_surname[],char coded_birth_date[], char coded_birth_place[]){
+char ctrl_code(char coded_name[], char coded_surname[], char coded_birth_date[],
+		char coded_birth_place[]){
 	assert(is_valid_coded_surname_name(coded_name));
 	assert(is_valid_coded_surname_name(coded_surname));
 	char code[FIFTEEN];
 	code[ZERO]=EOS;
-	code_strcat(coded_name, coded_surname,coded_birth_date, coded_birth_place,code);
+	code_strcat(coded_name, coded_surname, coded_birth_date, coded_birth_place, code);
 	int sum = get_sum(code);
-	assert(is_valid_ctrl_code(result(sum%TWENTYSIX)));
+	assert(is_valid_ctrl_code(result(sum % TWENTYSIX)));
 	return result(sum % TWENTYSIX);
 }
 
-void cf_generator(char name[], char surname[], char birth_date[], char coded_town[],char sex, char code[]){
+void cf_generator(char name[], char surname[], char birth_date[], char coded_town[],
+		char sex, char code[]){
 	assert(is_valid_name(name));
 	assert(is_valid_surname(surname));
 	assert(is_valid_date(birth_date));
