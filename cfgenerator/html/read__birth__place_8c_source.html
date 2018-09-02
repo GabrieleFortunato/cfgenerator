@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>My Project: src/print_result/read_birth_place/read_birth_place.c Source File</title>
+<title>My Project: src/print_code/read_birth_place/read_birth_place.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0b7407ae6f7bc986c608898dfe5375fb.html">print_result</a></li><li class="navelem"><a class="el" href="dir_164f235dfef42a10d3c07d0a70395353.html">read_birth_place</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ee6d2302dad16aa861628e90a226b9e9.html">print_code</a></li><li class="navelem"><a class="el" href="dir_2c791a41d708979b99fb54a52c39a6a9.html">read_birth_place</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,10 +93,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: gabriele</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../../src/print_result/read_birth_place/read_birth_place.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="read__birth__place_8h.html">print_code/read_birth_place/read_birth_place.h</a>&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> FIFTEEN = 50;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="print__code_8h.html#a5666ac5930c9f903698073ab1fa694f7">PAUSE</a> = <span class="stringliteral">&quot;pause&quot;</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* PAUSE = <span class="stringliteral">&quot;pause&quot;</span>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* FILE_NOT_FOUND = <span class="stringliteral">&quot;File dei codici catastali non trovato\n&quot;</span>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> fourtysix = 46;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> zero = 0;</div>
@@ -134,15 +134,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="read__birth__place_8h.html#ac547debbc7ff88dd753efb9589535d11">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="read__birth__place_8c.html#ac547debbc7ff88dd753efb9589535d11">file_not_found</a>(){</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    puts(FILE_NOT_FOUND);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    system(<a class="code" href="print__code_8h.html#a5666ac5930c9f903698073ab1fa694f7">PAUSE</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    system(PAUSE);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="close_8c.html#a5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="ttc" id="read__birth__place_8c_html_a010678c3c8f5267cb96a048f1b7b0794"><div class="ttname"><a href="read__birth__place_8c.html#a010678c3c8f5267cb96a048f1b7b0794">read_birth_place_code</a></div><div class="ttdeci">char * read_birth_place_code(FILE *places_file, char *birth_place)</div><div class="ttdef"><b>Definition:</b> <a href="read__birth__place_8c_source.html#l00034">read_birth_place.c:34</a></div></div>
 <div class="ttc" id="close_8c_html_a5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="close_8c.html#a5ae591df94fc66ccb85cbb6565368bca">close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition:</b> <a href="close_8c_source.html#l00010">close.c:10</a></div></div>
 <div class="ttc" id="is__valid_8c_html_a931d1013082072d46b16f03df6b9ba9a"><div class="ttname"><a href="is__valid_8c.html#a931d1013082072d46b16f03df6b9ba9a">is_valid_town_code</a></div><div class="ttdeci">bool is_valid_town_code(char *code)</div><div class="ttdef"><b>Definition:</b> <a href="is__valid_8c_source.html#l00114">is_valid.c:114</a></div></div>
-<div class="ttc" id="print__code_8h_html_a5666ac5930c9f903698073ab1fa694f7"><div class="ttname"><a href="print__code_8h.html#a5666ac5930c9f903698073ab1fa694f7">PAUSE</a></div><div class="ttdeci">#define PAUSE</div><div class="ttdef"><b>Definition:</b> <a href="print__code_8h_source.html#l00022">print_code.h:22</a></div></div>
 <div class="ttc" id="read__birth__place_8c_html_ac547debbc7ff88dd753efb9589535d11"><div class="ttname"><a href="read__birth__place_8c.html#ac547debbc7ff88dd753efb9589535d11">file_not_found</a></div><div class="ttdeci">void file_not_found()</div><div class="ttdef"><b>Definition:</b> <a href="read__birth__place_8c_source.html#l00047">read_birth_place.c:47</a></div></div>
 <div class="ttc" id="is__valid_8c_html_a55e1774041ad6bc2aff93c7777fa1af2"><div class="ttname"><a href="is__valid_8c.html#a55e1774041ad6bc2aff93c7777fa1af2">is_not_empty_string</a></div><div class="ttdeci">bool is_not_empty_string(char *string)</div><div class="ttdef"><b>Definition:</b> <a href="is__valid_8c_source.html#l00118">is_valid.c:118</a></div></div>
+<div class="ttc" id="read__birth__place_8h_html"><div class="ttname"><a href="read__birth__place_8h.html">read_birth_place.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

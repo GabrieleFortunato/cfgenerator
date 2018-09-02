@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>My Project: src/print_result/print_code.c Source File</title>
+<title>My Project: src/print_code/print_code.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0b7407ae6f7bc986c608898dfe5375fb.html">print_result</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ee6d2302dad16aa861628e90a226b9e9.html">print_code</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,32 +93,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: Gabriele Fortunato</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../src/print_result/print_code.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="print__code_8h.html">print_code.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> print_code(<span class="keywordtype">char</span>* name, <span class="keywordtype">char</span>* surname, <span class="keywordtype">char</span>* birth_date, <span class="keywordtype">char</span>* coded_town, <span class="keywordtype">char</span> sex){</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">char</span> code [<a class="code" href="print__code_8h.html#adef1ccff66668f22f319063311eb9817">CODE_LENGTH</a>];</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="cf__generator_8c.html#ab4f4e4915be0df06691c1fcc269d1716">cf_generator</a>(name,surname,birth_date,coded_town,sex,code);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    printf(<a class="code" href="print__code_8h.html#a94817932aa06f8bce38b1add563e60ff">BAR_RESULT</a> <a class="code" href="print__code_8h.html#ae6527c8381eb3f23b7fd6d6efec6ffc7">CODE</a> <a class="code" href="print__code_8h.html#a94817932aa06f8bce38b1add563e60ff">BAR_RESULT</a>,code);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> not_valid_data(){</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    printf(<a class="code" href="print__code_8h.html#a4d3c0b56a47e91ca2c00d56f12173156">NOT_VALID_DATA</a>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="print__code_8h.html#ab01fddd39c85ea0329513da9a6d062ac">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="print__code_8c.html#ab01fddd39c85ea0329513da9a6d062ac">print_result</a>(<span class="keywordtype">char</span> sex, <span class="keywordtype">char</span>* coded_town, <span class="keywordtype">char</span>* birth_date, <span class="keywordtype">char</span>* surname, <span class="keywordtype">char</span>* name){</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="is__valid_8c.html#a6e907de5c975401e253e31ca4ecf318d">is_valid_data</a>(name, surname, birth_date, coded_town, sex)){</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        print_code(name,surname,birth_date,coded_town,sex);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        not_valid_data();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* NOT_VALID_DATA =</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="stringliteral">&quot;\nI dati inseriti non sono tutti corretti\n\n&quot;</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* PRINT_CODE =</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="stringliteral">&quot;\n================================\n&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="stringliteral">&quot;Codice fiscale: %s&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="stringliteral">&quot;\n================================\n&quot;</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> CODE_LENGTH = 17;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> print_code(<span class="keywordtype">char</span>* name, <span class="keywordtype">char</span>* surname, <span class="keywordtype">char</span>* birth_date, <span class="keywordtype">char</span>* coded_town, <span class="keywordtype">char</span> sex){</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">char</span> code[CODE_LENGTH];</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="cf__generator_8c.html#ab4f4e4915be0df06691c1fcc269d1716">cf_generator</a>(name,surname,birth_date,coded_town,sex,code);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    printf(</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            PRINT_CODE,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            code);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> not_valid_data(){</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    printf(NOT_VALID_DATA);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="print__code_8h.html#ab01fddd39c85ea0329513da9a6d062ac">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="print__code_8c.html#ab01fddd39c85ea0329513da9a6d062ac">print_result</a>(<span class="keywordtype">char</span> sex, <span class="keywordtype">char</span>* coded_town, <span class="keywordtype">char</span>* birth_date, <span class="keywordtype">char</span>* surname, <span class="keywordtype">char</span>* name){</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    (<a class="code" href="is__valid_8c.html#a6e907de5c975401e253e31ca4ecf318d">is_valid_data</a>(name, surname, birth_date, coded_town, sex)) ?</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            print_code(name,surname,birth_date,coded_town,sex) : not_valid_data();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="ttc" id="is__valid_8c_html_a6e907de5c975401e253e31ca4ecf318d"><div class="ttname"><a href="is__valid_8c.html#a6e907de5c975401e253e31ca4ecf318d">is_valid_data</a></div><div class="ttdeci">bool is_valid_data(char *name, char *surname, char *date, char *coded_town, char sex)</div><div class="ttdef"><b>Definition:</b> <a href="is__valid_8c_source.html#l00130">is_valid.c:130</a></div></div>
-<div class="ttc" id="print__code_8h_html_adef1ccff66668f22f319063311eb9817"><div class="ttname"><a href="print__code_8h.html#adef1ccff66668f22f319063311eb9817">CODE_LENGTH</a></div><div class="ttdeci">#define CODE_LENGTH</div><div class="ttdef"><b>Definition:</b> <a href="print__code_8h_source.html#l00018">print_code.h:18</a></div></div>
-<div class="ttc" id="print__code_8h_html_a94817932aa06f8bce38b1add563e60ff"><div class="ttname"><a href="print__code_8h.html#a94817932aa06f8bce38b1add563e60ff">BAR_RESULT</a></div><div class="ttdeci">#define BAR_RESULT</div><div class="ttdef"><b>Definition:</b> <a href="print__code_8h_source.html#l00019">print_code.h:19</a></div></div>
-<div class="ttc" id="print__code_8h_html_ae6527c8381eb3f23b7fd6d6efec6ffc7"><div class="ttname"><a href="print__code_8h.html#ae6527c8381eb3f23b7fd6d6efec6ffc7">CODE</a></div><div class="ttdeci">#define CODE</div><div class="ttdef"><b>Definition:</b> <a href="print__code_8h_source.html#l00020">print_code.h:20</a></div></div>
-<div class="ttc" id="print__code_8h_html_a4d3c0b56a47e91ca2c00d56f12173156"><div class="ttname"><a href="print__code_8h.html#a4d3c0b56a47e91ca2c00d56f12173156">NOT_VALID_DATA</a></div><div class="ttdeci">#define NOT_VALID_DATA</div><div class="ttdef"><b>Definition:</b> <a href="print__code_8h_source.html#l00021">print_code.h:21</a></div></div>
+<div class="ttc" id="print__code_8h_html"><div class="ttname"><a href="print__code_8h.html">print_code.h</a></div></div>
 <div class="ttc" id="cf__generator_8c_html_ab4f4e4915be0df06691c1fcc269d1716"><div class="ttname"><a href="cf__generator_8c.html#ab4f4e4915be0df06691c1fcc269d1716">cf_generator</a></div><div class="ttdeci">void cf_generator(char name[], char surname[], char birth_date[], char coded_town[], char sex, char code[])</div><div class="ttdef"><b>Definition:</b> <a href="cf__generator_8c_source.html#l00234">cf_generator.c:234</a></div></div>
-<div class="ttc" id="print__code_8c_html_ab01fddd39c85ea0329513da9a6d062ac"><div class="ttname"><a href="print__code_8c.html#ab01fddd39c85ea0329513da9a6d062ac">print_result</a></div><div class="ttdeci">void print_result(char sex, char *coded_town, char *birth_date, char *surname, char *name)</div><div class="ttdef"><b>Definition:</b> <a href="print__code_8c_source.html#l00020">print_code.c:20</a></div></div>
+<div class="ttc" id="print__code_8c_html_ab01fddd39c85ea0329513da9a6d062ac"><div class="ttname"><a href="print__code_8c.html#ab01fddd39c85ea0329513da9a6d062ac">print_result</a></div><div class="ttdeci">void print_result(char sex, char *coded_town, char *birth_date, char *surname, char *name)</div><div class="ttdef"><b>Definition:</b> <a href="print__code_8c_source.html#l00030">print_code.c:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
