@@ -10,10 +10,6 @@
 
 #include <stdlib.h>
 
-#include "../../src/intro/intro.h"
-
-#define CLS "CLS"
-
 /**
  * Chiude il programma
  */

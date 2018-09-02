@@ -7,11 +7,14 @@
 
 #include "../../src/intro/intro.h"
 
+static const char* CLS = "CLS";
+static const char* PRINT_INTRO =
+		"\n======================================="
+		"\nPROGRAMMA DI CALCOLO DEL CODICE FISCALE"
+		"\n======================================="
+		"\na cura di Gabriele Fortunato\n\n";
+
 void intro(void){
 	system(CLS);
-	puts(
-			NEW_LINE BAR NEW_LINE PRESENTATION_ONE
-			NEW_LINE BAR NEW_LINE PRESENTATION_TWO
-			NEW_LINE NEW_LINE
-	);
+	puts(PRINT_INTRO);
 }

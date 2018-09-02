@@ -7,6 +7,8 @@
 
 #include "../../src/close/close.h"
 
+static const char* CLS = "CLS";
+
 void close(){
 	system(CLS);
 }

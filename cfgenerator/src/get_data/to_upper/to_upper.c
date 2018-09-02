@@ -11,5 +11,5 @@ static const int ZERO = 0;
 
 void to_upper_string(char* string){
 	for (int i = ZERO; i < strlen(string); i++)
-		string[i] = (islower(string[i]))?toupper(string[i]):string[i];
+		string[i] = (islower(string[i])) ? toupper(string[i]) : string[i];
 }
