@@ -93,17 +93,41 @@ void get_consonants(char* string, char* consonants) {
 	consonants[k] = EOS;
 }
 
-void fill_code(char text[], char code[]) {
-	int ind = 0;
-	for (int i = 0; i < strlen(text) && ind < 3; i++) {
-		if (is_consonant(text[i]))
-			code[ind++] = text[i];
-	}
+insert_consonant(char text[], int i, char code[], int ind) {
+	if (is_consonant(text[i]))
+		code[ind++] = text[i];
+
+	return ind;
+}
+
+static int insert_consonants(char text[], int ind, char code[]) {
 	for (int i = 0; i < strlen(text) && ind < 3; i++)
-		if (is_vowel(text[i]))
-			code[ind++] = text[i];
+		ind = insert_consonant(text, i, code, ind);
+	return ind;
+}
+
+insert_vowel(char text[], int i, char code[], int ind) {
+	if (is_vowel(text[i]))
+		code[ind++] = text[i];
+	return ind;
+}
+
+static int insert_vowels(char text[], int ind, char code[]) {
+	for (int i = 0; i < strlen(text) && ind < 3; i++)
+		ind = insert_vowel(text, i, code, ind);
+	return ind;
+}
+
+static void insert_X(int ind, char code[]) {
 	while (ind < 3)
 		code[ind++] = X;
+}
+
+void fill_code(char text[], char code[]) {
+	int ind = 0;
+	ind = insert_consonants(text, ind, code);
+	ind = insert_vowels(text, ind, code);
+	insert_X(ind, code);
 	code[THREE] = EOS;
 }
 
