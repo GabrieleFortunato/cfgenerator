@@ -95,20 +95,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../src/intro/intro.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="intro_8h.html#a5ca8c98e0ec07103720da6e2b8241eac">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="intro_8c.html#a5ca8c98e0ec07103720da6e2b8241eac">intro</a>(<span class="keywordtype">void</span>){</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    system(<a class="code" href="close_8h.html#ada59561816893aa39c4aa41f1043c554">CLS</a>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    puts(</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="intro_8h.html#a7b99dc1e1c86b4897498c2d436ead1b5">NEW_LINE</a> <a class="code" href="intro_8h.html#a5bf228ab7079ac2b45e0affe75b5a40d">BAR</a> <a class="code" href="intro_8h.html#a7b99dc1e1c86b4897498c2d436ead1b5">NEW_LINE</a> <a class="code" href="intro_8h.html#ae31925d3288c451ae5c37b46c14aa475">PRESENTATION_ONE</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <a class="code" href="intro_8h.html#a7b99dc1e1c86b4897498c2d436ead1b5">NEW_LINE</a> <a class="code" href="intro_8h.html#a5bf228ab7079ac2b45e0affe75b5a40d">BAR</a> <a class="code" href="intro_8h.html#a7b99dc1e1c86b4897498c2d436ead1b5">NEW_LINE</a> <a class="code" href="intro_8h.html#af21bf7961536e2ed2ae5acd45244b32c">PRESENTATION_TWO</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="intro_8h.html#a7b99dc1e1c86b4897498c2d436ead1b5">NEW_LINE</a> <a class="code" href="intro_8h.html#a7b99dc1e1c86b4897498c2d436ead1b5">NEW_LINE</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    );</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
-<div class="ttc" id="close_8h_html_ada59561816893aa39c4aa41f1043c554"><div class="ttname"><a href="close_8h.html#ada59561816893aa39c4aa41f1043c554">CLS</a></div><div class="ttdeci">#define CLS</div><div class="ttdef"><b>Definition:</b> <a href="close_8h_source.html#l00015">close.h:15</a></div></div>
-<div class="ttc" id="intro_8h_html_a5bf228ab7079ac2b45e0affe75b5a40d"><div class="ttname"><a href="intro_8h.html#a5bf228ab7079ac2b45e0affe75b5a40d">BAR</a></div><div class="ttdeci">#define BAR</div><div class="ttdef"><b>Definition:</b> <a href="intro_8h_source.html#l00016">intro.h:16</a></div></div>
-<div class="ttc" id="intro_8h_html_af21bf7961536e2ed2ae5acd45244b32c"><div class="ttname"><a href="intro_8h.html#af21bf7961536e2ed2ae5acd45244b32c">PRESENTATION_TWO</a></div><div class="ttdeci">#define PRESENTATION_TWO</div><div class="ttdef"><b>Definition:</b> <a href="intro_8h_source.html#l00018">intro.h:18</a></div></div>
-<div class="ttc" id="intro_8h_html_ae31925d3288c451ae5c37b46c14aa475"><div class="ttname"><a href="intro_8h.html#ae31925d3288c451ae5c37b46c14aa475">PRESENTATION_ONE</a></div><div class="ttdeci">#define PRESENTATION_ONE</div><div class="ttdef"><b>Definition:</b> <a href="intro_8h_source.html#l00017">intro.h:17</a></div></div>
-<div class="ttc" id="intro_8c_html_a5ca8c98e0ec07103720da6e2b8241eac"><div class="ttname"><a href="intro_8c.html#a5ca8c98e0ec07103720da6e2b8241eac">intro</a></div><div class="ttdeci">void intro(void)</div><div class="ttdef"><b>Definition:</b> <a href="intro_8c_source.html#l00010">intro.c:10</a></div></div>
-<div class="ttc" id="intro_8h_html_a7b99dc1e1c86b4897498c2d436ead1b5"><div class="ttname"><a href="intro_8h.html#a7b99dc1e1c86b4897498c2d436ead1b5">NEW_LINE</a></div><div class="ttdeci">#define NEW_LINE</div><div class="ttdef"><b>Definition:</b> <a href="intro_8h_source.html#l00014">intro.h:14</a></div></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* CLS = <span class="stringliteral">&quot;CLS&quot;</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* PRINT_INTRO =</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="stringliteral">&quot;\n=======================================&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="stringliteral">&quot;\nPROGRAMMA DI CALCOLO DEL CODICE FISCALE&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="stringliteral">&quot;\n=======================================&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="stringliteral">&quot;\na cura di Gabriele Fortunato\n\n&quot;</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="intro_8h.html#a5ca8c98e0ec07103720da6e2b8241eac">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="intro_8c.html#a5ca8c98e0ec07103720da6e2b8241eac">intro</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    system(CLS);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    puts(PRINT_INTRO);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="ttc" id="intro_8c_html_a5ca8c98e0ec07103720da6e2b8241eac"><div class="ttname"><a href="intro_8c.html#a5ca8c98e0ec07103720da6e2b8241eac">intro</a></div><div class="ttdeci">void intro(void)</div><div class="ttdef"><b>Definition:</b> <a href="intro_8c_source.html#l00017">intro.c:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

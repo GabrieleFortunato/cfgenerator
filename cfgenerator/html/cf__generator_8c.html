@@ -98,18 +98,14 @@ Functions</h2></td></tr>
 <tr class="separator:a6688aa312e4bacef2e48e9da3f05196d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59298ff845932eb7e665929cc771f5bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8c.html#a59298ff845932eb7e665929cc771f5bb">get_consonants</a> (char *string, char *consonants)</td></tr>
 <tr class="separator:a59298ff845932eb7e665929cc771f5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a777c4fc49e4f48f204d3bbe735509618"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8c.html#a777c4fc49e4f48f204d3bbe735509618">fill_code</a> (char text[], char code[])</td></tr>
-<tr class="separator:a777c4fc49e4f48f204d3bbe735509618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad27d5e6455f6580a118d96331b78048c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8c.html#ad27d5e6455f6580a118d96331b78048c">fill_coded_name_four_consonants</a> (char code[], char *consonants)</td></tr>
-<tr class="separator:ad27d5e6455f6580a118d96331b78048c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fc31bfb373229fad595bdd58fd4936d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8c.html#a3fc31bfb373229fad595bdd58fd4936d">name_code</a> (char name[], char code[])</td></tr>
 <tr class="separator:a3fc31bfb373229fad595bdd58fd4936d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b86778c6102ec98c108cf32695b42c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8c.html#ab1b86778c6102ec98c108cf32695b42c">surname_code</a> (char surname[], char code[])</td></tr>
 <tr class="separator:ab1b86778c6102ec98c108cf32695b42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99de8347879a700ec6670f070512d07a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8c.html#a99de8347879a700ec6670f070512d07a">birth_date_code</a> (char date[], char sex, char code[])</td></tr>
 <tr class="separator:a99de8347879a700ec6670f070512d07a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70956311015a919ecee6f20621fb4ed8"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8c.html#a70956311015a919ecee6f20621fb4ed8">ctrl_code</a> (char coded_name[], char coded_surname[], char coded_birth_date[], char coded_birth_place[])</td></tr>
-<tr class="separator:a70956311015a919ecee6f20621fb4ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec64c4fb9a4ae49fa27c601d4d7d5b0"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8c.html#acec64c4fb9a4ae49fa27c601d4d7d5b0">ctrl_code</a> (char *coded_name, char *coded_surname, char *coded_birth_date, char *coded_birth_place)</td></tr>
+<tr class="separator:acec64c4fb9a4ae49fa27c601d4d7d5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4f4e4915be0df06691c1fcc269d1716"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8c.html#ab4f4e4915be0df06691c1fcc269d1716">cf_generator</a> (char name[], char surname[], char birth_date[], char coded_town[], char sex, char code[])</td></tr>
 <tr class="separator:ab4f4e4915be0df06691c1fcc269d1716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -156,11 +152,11 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00162">162</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
+<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00186">186</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
 
-<p>References <a class="el" href="is__valid_8c_source.html#l00016">FIVE</a>, <a class="el" href="is__valid_8c_source.html#l00099">is_valid_date()</a>, <a class="el" href="is__valid_8c_source.html#l00165">is_valid_date_code()</a>, <a class="el" href="is__valid_8c_source.html#l00122">is_valid_sex()</a>, and <a class="el" href="is__valid_8c_source.html#l00034">M</a>.</p>
+<p>References <a class="el" href="is__valid_8c_source.html#l00015">FIVE</a>, <a class="el" href="is__valid_8c_source.html#l00097">is_valid_date()</a>, <a class="el" href="is__valid_8c_source.html#l00164">is_valid_date_code()</a>, <a class="el" href="is__valid_8c_source.html#l00120">is_valid_sex()</a>, and <a class="el" href="is__valid_8c_source.html#l00033">M</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00234">cf_generator()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>.</p>
 
 </div>
 </div>
@@ -230,115 +226,39 @@ La data deve essere una stringa avente formato GG/MM/AAAA </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00234">234</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
+<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00259">259</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
 
-<p>References <a class="el" href="cf__generator_8c_source.html#l00162">birth_date_code()</a>, <a class="el" href="cf__generator_8c_source.html#l00222">ctrl_code()</a>, <a class="el" href="is__valid_8c_source.html#l00015">FOUR</a>, <a class="el" href="is__valid_8c_source.html#l00150">is_valid_cf_code()</a>, <a class="el" href="is__valid_8c_source.html#l00099">is_valid_date()</a>, <a class="el" href="is__valid_8c_source.html#l00062">is_valid_name()</a>, <a class="el" href="is__valid_8c_source.html#l00122">is_valid_sex()</a>, <a class="el" href="is__valid_8c_source.html#l00058">is_valid_surname()</a>, <a class="el" href="cf__generator_8c_source.html#l00116">name_code()</a>, <a class="el" href="is__valid_8c_source.html#l00017">SIX</a>, <a class="el" href="is__valid_8c_source.html#l00025">SIXTEEN</a>, <a class="el" href="cf__generator_8c_source.html#l00125">surname_code()</a>, and <a class="el" href="is__valid_8c_source.html#l00011">ZERO</a>.</p>
+<p>References <a class="el" href="cf__generator_8c_source.html#l00186">birth_date_code()</a>, <a class="el" href="cf__generator_8c_source.html#l00247">ctrl_code()</a>, <a class="el" href="is__valid_8c_source.html#l00014">FOUR</a>, <a class="el" href="is__valid_8c_source.html#l00149">is_valid_cf_code()</a>, <a class="el" href="is__valid_8c_source.html#l00097">is_valid_date()</a>, <a class="el" href="is__valid_8c_source.html#l00061">is_valid_name()</a>, <a class="el" href="is__valid_8c_source.html#l00120">is_valid_sex()</a>, <a class="el" href="is__valid_8c_source.html#l00057">is_valid_surname()</a>, <a class="el" href="cf__generator_8c_source.html#l00139">name_code()</a>, <a class="el" href="is__valid_8c_source.html#l00016">SIX</a>, <a class="el" href="is__valid_8c_source.html#l00024">SIXTEEN</a>, <a class="el" href="cf__generator_8c_source.html#l00149">surname_code()</a>, and <a class="el" href="is__valid_8c_source.html#l00010">ZERO</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a70956311015a919ecee6f20621fb4ed8"></a>
+<a class="anchor" id="acec64c4fb9a4ae49fa27c601d4d7d5b0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">char ctrl_code </td>
           <td>(</td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>coded_name</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>coded_surname</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>coded_birth_date</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>coded_birth_place</em>[]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Genera il carattere di controllo </p>
-<dl class="section post"><dt>Postcondition</dt><dd>il carattere di controllo deve essere una lettera maiuscola </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coded_name</td><td></td></tr>
-    <tr><td class="paramname">coded_surname</td><td></td></tr>
-    <tr><td class="paramname">coded_birth_date</td><td></td></tr>
-    <tr><td class="paramname">coded_birth_place</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00222">222</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
-
-<p>References <a class="el" href="is__valid_8c_source.html#l00047">is_valid_coded_surname_name()</a>, <a class="el" href="is__valid_8c_source.html#l00103">is_valid_ctrl_code()</a>, and <a class="el" href="is__valid_8c_source.html#l00011">ZERO</a>.</p>
-
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00234">cf_generator()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a777c4fc49e4f48f204d3bbe735509618"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void fill_code </td>
-          <td>(</td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>text</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>code</em>[]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00096">96</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
-
-<p>References <a class="el" href="is__valid_8c_source.html#l00014">THREE</a>.</p>
-
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00116">name_code()</a>, and <a class="el" href="cf__generator_8c_source.html#l00125">surname_code()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad27d5e6455f6580a118d96331b78048c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void fill_coded_name_four_consonants </td>
-          <td>(</td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>code</em>[], </td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>coded_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>consonants</em>&#160;</td>
+          <td class="paramname"><em>coded_surname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>coded_birth_date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>coded_birth_place</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -348,11 +268,11 @@ La data deve essere una stringa avente formato GG/MM/AAAA </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00110">110</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
+<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00247">247</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
 
-<p>References <a class="el" href="is__valid_8c_source.html#l00012">ONE</a>, <a class="el" href="is__valid_8c_source.html#l00014">THREE</a>, <a class="el" href="is__valid_8c_source.html#l00013">TWO</a>, and <a class="el" href="is__valid_8c_source.html#l00011">ZERO</a>.</p>
+<p>References <a class="el" href="is__valid_8c_source.html#l00046">is_valid_coded_surname_name()</a>, <a class="el" href="is__valid_8c_source.html#l00101">is_valid_ctrl_code()</a>, and <a class="el" href="is__valid_8c_source.html#l00010">ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00116">name_code()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>.</p>
 
 </div>
 </div>
@@ -424,9 +344,9 @@ La data deve essere una stringa avente formato GG/MM/AAAA </dd></dl>
 
 <p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00089">89</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
 
-<p>References <a class="el" href="cf__generator_8c_source.html#l00083">get_consonant()</a>, and <a class="el" href="is__valid_8c_source.html#l00011">ZERO</a>.</p>
+<p>References <a class="el" href="cf__generator_8c_source.html#l00083">get_consonant()</a>, and <a class="el" href="is__valid_8c_source.html#l00010">ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00116">name_code()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00139">name_code()</a>.</p>
 
 </div>
 </div>
@@ -454,11 +374,11 @@ La data deve essere una stringa avente formato GG/MM/AAAA </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00116">116</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
+<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00139">139</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
 
-<p>References <a class="el" href="cf__generator_8c_source.html#l00096">fill_code()</a>, <a class="el" href="cf__generator_8c_source.html#l00110">fill_coded_name_four_consonants()</a>, <a class="el" href="is__valid_8c_source.html#l00015">FOUR</a>, <a class="el" href="cf__generator_8c_source.html#l00089">get_consonants()</a>, <a class="el" href="is__valid_8c_source.html#l00047">is_valid_coded_surname_name()</a>, and <a class="el" href="is__valid_8c_source.html#l00062">is_valid_name()</a>.</p>
+<p>References <a class="el" href="is__valid_8c_source.html#l00014">FOUR</a>, <a class="el" href="cf__generator_8c_source.html#l00089">get_consonants()</a>, <a class="el" href="is__valid_8c_source.html#l00046">is_valid_coded_surname_name()</a>, and <a class="el" href="is__valid_8c_source.html#l00061">is_valid_name()</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00234">cf_generator()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>.</p>
 
 </div>
 </div>
@@ -486,11 +406,11 @@ La data deve essere una stringa avente formato GG/MM/AAAA </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00125">125</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
+<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00149">149</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
 
-<p>References <a class="el" href="cf__generator_8c_source.html#l00096">fill_code()</a>, <a class="el" href="is__valid_8c_source.html#l00047">is_valid_coded_surname_name()</a>, and <a class="el" href="is__valid_8c_source.html#l00058">is_valid_surname()</a>.</p>
+<p>References <a class="el" href="is__valid_8c_source.html#l00046">is_valid_coded_surname_name()</a>, and <a class="el" href="is__valid_8c_source.html#l00057">is_valid_surname()</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00234">cf_generator()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>.</p>
 
 </div>
 </div>
