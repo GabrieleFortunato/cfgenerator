@@ -62,26 +62,30 @@ void test_coded_name(){
 	CU_ASSERT_STRING_EQUAL(code,"VTR");
 	name_code("CARLO ALBERTO",code);
 	CU_ASSERT_STRING_EQUAL(code,"CLL");
+	name_code("MARC'AURELIO",code);
+	CU_ASSERT_STRING_EQUAL(code,"MCR");
+	name_code("MARC'ANTONIO",code);
+	CU_ASSERT_STRING_EQUAL(code,"MCN");
 	name_code("ANDREA",code);
 	CU_ASSERT_STRING_EQUAL(code,"NDR");
 }
 
 void test_is_valid_name(){
-	CU_ASSERT_TRUE(is_valid_name("GABRIELE"));
-	CU_ASSERT_TRUE(is_valid_name("MARC'AURELIO"));
-	CU_ASSERT_TRUE(is_valid_name("ANNA MARIA"));
-	CU_ASSERT_FALSE(is_valid_name("Anna Maria"));
-	CU_ASSERT_FALSE(is_valid_name("Anna maria"));
-	CU_ASSERT_FALSE(is_valid_name("Annamaria"));
-	CU_ASSERT_FALSE(is_valid_name(""));
+	CU_ASSERT_TRUE(is_valid_name_surname("GABRIELE"));
+	CU_ASSERT_TRUE(is_valid_name_surname("MARC'AURELIO"));
+	CU_ASSERT_TRUE(is_valid_name_surname("ANNA MARIA"));
+	CU_ASSERT_FALSE(is_valid_name_surname("Anna Maria"));
+	CU_ASSERT_FALSE(is_valid_name_surname("Anna maria"));
+	CU_ASSERT_FALSE(is_valid_name_surname("Annamaria"));
+	CU_ASSERT_FALSE(is_valid_name_surname(""));
 }
 
 void test_is_valid_surname(){
-	CU_ASSERT_TRUE(is_valid_surname("FORTUNATO"));
-	CU_ASSERT_TRUE(is_valid_surname("DE ROSSI"));
-	CU_ASSERT_TRUE(is_valid_surname("D'AMATO"));
-	CU_ASSERT_FALSE(is_valid_surname("D'amato"));
-	CU_ASSERT_FALSE(is_valid_surname(""));
+	CU_ASSERT_TRUE(is_valid_name_surname("FORTUNATO"));
+	CU_ASSERT_TRUE(is_valid_name_surname("DE ROSSI"));
+	CU_ASSERT_TRUE(is_valid_name_surname("D'AMATO"));
+	CU_ASSERT_FALSE(is_valid_name_surname("D'amato"));
+	CU_ASSERT_FALSE(is_valid_name_surname(""));
 }
 
 void test_is_valid_date(){

@@ -137,7 +137,7 @@ static void fill_coded_name_four_consonants(char code[], char* consonants) {
 }
 
 void name_code(char name[], char code[]){
-	assert(is_valid_name(name));
+	assert(is_valid_name_surname(name));
 	char consonants[strlen(name)];
 	get_consonants(name,consonants);
 	(strlen(consonants) >= FOUR) ?
@@ -147,7 +147,7 @@ void name_code(char name[], char code[]){
 }
 
 void surname_code(char surname[], char code[]){
-	assert(is_valid_surname(surname));
+	assert(is_valid_name_surname(surname));
 	fill_code(surname, code);
 	assert(is_valid_coded_surname_name(code));
 }
@@ -258,8 +258,8 @@ char ctrl_code(char* coded_name, char* coded_surname, char* coded_birth_date, ch
 
 void cf_generator(char name[], char surname[], char birth_date[], char coded_town[],
 		char sex, char code[]){
-	assert(is_valid_name(name));
-	assert(is_valid_surname(surname));
+	assert(is_valid_name_surname(name));
+	assert(is_valid_name_surname(surname));
 	assert(is_valid_date(birth_date));
 	assert(is_valid_sex(sex));
 	char coded_birth_date[SIX];

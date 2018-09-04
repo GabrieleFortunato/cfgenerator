@@ -64,9 +64,7 @@
 \item 
 bool \hyperlink{is__valid_8c_afba29c08c3a52738f4087552e70c7c6b}{is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name} (char $\ast$code)
 \item 
-bool \hyperlink{is__valid_8c_a855750eef11633aafcf6933a2bfde693}{is\-\_\-valid\-\_\-surname} (char $\ast$surname)
-\item 
-bool \hyperlink{is__valid_8c_affaf1c4607a792ff4202cd86c7450c95}{is\-\_\-valid\-\_\-name} (char $\ast$name)
+bool \hyperlink{is__valid_8c_a2ef433a62b6f81f4fe642b959654e1e6}{is\-\_\-valid\-\_\-name\-\_\-surname} (char $\ast$surname)
 \item 
 bool \hyperlink{is__valid_8c_a02644493e998be0007c7f53839c5cfb8}{is\-\_\-valid\-\_\-date} (char $\ast$date)
 \item 
@@ -320,7 +318,7 @@ Definition at line 10 of file is\-\_\-valid.\-c.
 
 
 
-Referenced by cf\-\_\-generator(), ctrl\-\_\-code(), get\-\_\-consonants(), is\-\_\-not\-\_\-empty\-\_\-string(), is\-\_\-valid\-\_\-name(), is\-\_\-valid\-\_\-surname(), is\-\_\-valid\-\_\-town(), and to\-\_\-upper\-\_\-string().
+Referenced by cf\-\_\-generator(), ctrl\-\_\-code(), get\-\_\-consonants(), is\-\_\-not\-\_\-empty\-\_\-string(), is\-\_\-valid\-\_\-name\-\_\-surname(), is\-\_\-valid\-\_\-town(), and to\-\_\-upper\-\_\-string().
 
 
 
@@ -342,7 +340,7 @@ Verifica che la stringa non sia vuola
 \end{DoxyReturn}
 
 
-Definition at line 116 of file is\-\_\-valid.\-c.
+Definition at line 112 of file is\-\_\-valid.\-c.
 
 
 
@@ -369,7 +367,7 @@ Verifica che il codice fiscale abbia il giusto formato
 \end{DoxyReturn}
 
 
-Definition at line 149 of file is\-\_\-valid.\-c.
+Definition at line 145 of file is\-\_\-valid.\-c.
 
 
 
@@ -423,7 +421,7 @@ Verifica che il carattere di controllo sia una lettera maiuscola
 \end{DoxyReturn}
 
 
-Definition at line 101 of file is\-\_\-valid.\-c.
+Definition at line 97 of file is\-\_\-valid.\-c.
 
 
 
@@ -458,11 +456,11 @@ Verifica la correttezza dei dati immessi
 \end{DoxyReturn}
 
 
-Definition at line 128 of file is\-\_\-valid.\-c.
+Definition at line 124 of file is\-\_\-valid.\-c.
 
 
 
-References is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name(), is\-\_\-valid\-\_\-sex(), is\-\_\-valid\-\_\-surname(), and is\-\_\-valid\-\_\-town\-\_\-code().
+References is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name\-\_\-surname(), is\-\_\-valid\-\_\-sex(), and is\-\_\-valid\-\_\-town\-\_\-code().
 
 
 
@@ -485,7 +483,7 @@ Verifica che la data sia stata inserita nel giusto formato
 \end{DoxyReturn}
 
 
-Definition at line 97 of file is\-\_\-valid.\-c.
+Definition at line 93 of file is\-\_\-valid.\-c.
 
 
 
@@ -512,7 +510,7 @@ Verifica che il codice abbia il giusto formato
 \end{DoxyReturn}
 
 
-Definition at line 164 of file is\-\_\-valid.\-c.
+Definition at line 160 of file is\-\_\-valid.\-c.
 
 
 
@@ -522,14 +520,14 @@ References F\-I\-V\-E.
 
 Referenced by birth\-\_\-date\-\_\-code().
 
-\hypertarget{is__valid_8c_affaf1c4607a792ff4202cd86c7450c95}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-name@{is\-\_\-valid\-\_\-name}}
-\index{is\-\_\-valid\-\_\-name@{is\-\_\-valid\-\_\-name}!is_valid.c@{is\-\_\-valid.\-c}}
-\subsubsection[{is\-\_\-valid\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-valid\-\_\-name (
+\hypertarget{is__valid_8c_a2ef433a62b6f81f4fe642b959654e1e6}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-name\-\_\-surname@{is\-\_\-valid\-\_\-name\-\_\-surname}}
+\index{is\-\_\-valid\-\_\-name\-\_\-surname@{is\-\_\-valid\-\_\-name\-\_\-surname}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{is\-\_\-valid\-\_\-name\-\_\-surname}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-valid\-\_\-name\-\_\-surname (
 \begin{DoxyParamCaption}
 \item[{char $\ast$}]{name}
 \end{DoxyParamCaption}
-)}}\label{is__valid_8c_affaf1c4607a792ff4202cd86c7450c95}
-Verifica la correttezza del cognome 
+)}}\label{is__valid_8c_a2ef433a62b6f81f4fe642b959654e1e6}
+Verifica la correttezza del nome e del cognome 
 \begin{DoxyParams}{Parameters}
 {\em name} & \\
 \hline
@@ -539,7 +537,7 @@ Verifica la correttezza del cognome
 \end{DoxyReturn}
 
 
-Definition at line 61 of file is\-\_\-valid.\-c.
+Definition at line 57 of file is\-\_\-valid.\-c.
 
 
 
@@ -547,7 +545,7 @@ References Z\-E\-R\-O.
 
 
 
-Referenced by cf\-\_\-generator(), is\-\_\-valid\-\_\-data(), and name\-\_\-code().
+Referenced by cf\-\_\-generator(), is\-\_\-valid\-\_\-data(), name\-\_\-code(), and surname\-\_\-code().
 
 \hypertarget{is__valid_8c_a7b1309e387b48ef9611e6b343c34355c}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-sex@{is\-\_\-valid\-\_\-sex}}
 \index{is\-\_\-valid\-\_\-sex@{is\-\_\-valid\-\_\-sex}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -566,7 +564,7 @@ Verifica che il sesso sia rappresentato da un M o da una F
 \end{DoxyReturn}
 
 
-Definition at line 120 of file is\-\_\-valid.\-c.
+Definition at line 116 of file is\-\_\-valid.\-c.
 
 
 
@@ -575,33 +573,6 @@ References F, and M.
 
 
 Referenced by birth\-\_\-date\-\_\-code(), cf\-\_\-generator(), and is\-\_\-valid\-\_\-data().
-
-\hypertarget{is__valid_8c_a855750eef11633aafcf6933a2bfde693}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-surname@{is\-\_\-valid\-\_\-surname}}
-\index{is\-\_\-valid\-\_\-surname@{is\-\_\-valid\-\_\-surname}!is_valid.c@{is\-\_\-valid.\-c}}
-\subsubsection[{is\-\_\-valid\-\_\-surname}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-valid\-\_\-surname (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{surname}
-\end{DoxyParamCaption}
-)}}\label{is__valid_8c_a855750eef11633aafcf6933a2bfde693}
-Verifica la correttezza del cognome 
-\begin{DoxyParams}{Parameters}
-{\em surname} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-
-\end{DoxyReturn}
-
-
-Definition at line 57 of file is\-\_\-valid.\-c.
-
-
-
-References Z\-E\-R\-O.
-
-
-
-Referenced by cf\-\_\-generator(), is\-\_\-valid\-\_\-data(), and surname\-\_\-code().
 
 \hypertarget{is__valid_8c_a6d2e518355a4e6e873983b99ae5cde08}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-town@{is\-\_\-valid\-\_\-town}}
 \index{is\-\_\-valid\-\_\-town@{is\-\_\-valid\-\_\-town}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -612,7 +583,7 @@ Referenced by cf\-\_\-generator(), is\-\_\-valid\-\_\-data(), and surname\-\_\-c
 )}}\label{is__valid_8c_a6d2e518355a4e6e873983b99ae5cde08}
 
 
-Definition at line 124 of file is\-\_\-valid.\-c.
+Definition at line 120 of file is\-\_\-valid.\-c.
 
 
 
@@ -635,7 +606,7 @@ Verifica che il codice catastale sia nel giusto formato
 \end{DoxyReturn}
 
 
-Definition at line 112 of file is\-\_\-valid.\-c.
+Definition at line 108 of file is\-\_\-valid.\-c.
 
 
 

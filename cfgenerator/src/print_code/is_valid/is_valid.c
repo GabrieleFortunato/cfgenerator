@@ -54,12 +54,8 @@ static bool is_valid_char_name_surname(char* string){
 	return flag;
 }
 
-bool is_valid_surname(char* surname){
-	return ((surname==NULL) || (strlen(surname) == ZERO)) ? false : is_valid_char_name_surname(surname);
-}
-
-bool is_valid_name(char* name){
-	return ((name == NULL) || (strlen(name) == ZERO)) ? false : is_valid_char_name_surname(name);
+bool is_valid_name_surname(char* surname){
+	return surname != NULL && strlen(surname) != ZERO && is_valid_char_name_surname(surname);
 }
 
 static int number_A(char a, char b){
@@ -126,7 +122,7 @@ bool is_valid_town(char* town){
 }
 
 bool is_valid_data(char* name, char* surname, char* date, char* coded_town, char sex){
-	return is_valid_name(name) && is_valid_surname(surname) && is_valid_date(date) &&
+	return is_valid_name_surname(name) && is_valid_name_surname(surname) && is_valid_date(date) &&
 		   is_valid_town_code(coded_town) && is_valid_sex(sex);
 }
 

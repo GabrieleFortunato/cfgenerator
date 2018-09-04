@@ -23,19 +23,12 @@
 bool is_valid_coded_surname_name(char* code);
 
 /**
- * Verifica la correttezza del cognome
+ * Verifica la correttezza del nome e del cognome
  * @param name
  * @return
  */
-bool is_valid_name(char* name);
+bool is_valid_name_surname(char* name);
 
-
-/**
- * Verifica la correttezza del cognome
- * @param surname
- * @return
- */
-bool is_valid_surname(char* surname);
 
 /**
  * Verifica che la data sia stata inserita nel giusto formato
