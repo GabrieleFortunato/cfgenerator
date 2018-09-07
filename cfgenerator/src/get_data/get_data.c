@@ -16,54 +16,70 @@ static const char* INSERT_DATE = "Inserisci la data di nascita (formato GG/MM/AA
 static const char* INSERT_TOWN = "Inserisci il comune di nascita>";
 static const char* INSERT_SEX = "Inserisci il sesso (M-F)>";
 
-char* get_name(){
+static void insert_name(char* name) {
+	printf(INSERT_NAME);
+	gets(name);
+}
+
+char* get_name() {
 	fflush(stdin);
 	char* name = malloc(MAX_LENGTH_STRING * sizeof(char));
-	do{
-		printf(INSERT_NAME);
-		gets(name);
-	} while(!is_not_empty_string(name));
+	do
+		insert_name(name);
+	while(!is_not_empty_string(name));
 	assert((is_not_empty_string(name)));
 	to_upper_string(name);
 	return name;
 }
 
-char* get_surname(){
+static void insert_surname(char* surname) {
+	printf(INSERT_SURNAME);
+	gets(surname);
+}
+
+char* get_surname() {
 	fflush(stdin);
 	char* surname = malloc(MAX_LENGTH_STRING * sizeof(char));
-	do{
-		printf(INSERT_SURNAME);
-		gets(surname);
-	} while(!is_not_empty_string(surname));
+	do
+		insert_surname(surname);
+	while(!is_not_empty_string(surname));
 	assert(is_not_empty_string(surname));
 	to_upper_string(surname);
 	return surname;
 }
 
-char* get_birth_date(){
+static void insert_date(char* date) {
+	printf(INSERT_DATE);
+	gets(date);
+}
+
+char* get_birth_date() {
 	fflush(stdin);
 	char* date = malloc(LENGTH_DATE*sizeof(char));
-	do{
-		printf(INSERT_DATE);
-		gets(date);
-	} while(!is_not_empty_string(date));
+	do
+		insert_date(date);
+	while(!is_not_empty_string(date));
 	assert(is_not_empty_string(date));
 	return date;
 }
 
-char* get_birth_town(){
+static void insert_birth_town(char* town) {
+	printf(INSERT_TOWN);
+	gets(town);
+}
+
+char* get_birth_town() {
 	fflush(stdin);
 	char* town = malloc(MAX_LENGTH_STRING * sizeof(char));
-	do{
-		printf(INSERT_TOWN);
-		gets(town);
-	} while(!is_not_empty_string(town));
+	do
+		insert_birth_town(town);
+	while(!is_not_empty_string(town));
 	assert(is_not_empty_string(town));
 	to_upper_string(town);
 	return town;
 }
 
-char get_sex(){
+char get_sex() {
 	fflush(stdin);
 	char sex;
 	printf(INSERT_SEX);
