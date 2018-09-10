@@ -87,11 +87,11 @@ static bool is_valid_char_date(char* date){
 }
 
 static bool are_valid_numbers(char* date){
-	return (is_valid_day(date)) && (is_valid_month(date)) && (is_valid_year(date));
+	return is_valid_day(date) && is_valid_month(date) && is_valid_year(date);
 }
 
 bool is_valid_date(char* date){
-	return (strlen(date) != TEN) ? false: is_valid_char_date(date) && are_valid_numbers(date);
+	return strlen(date) == TEN && is_valid_char_date(date) && are_valid_numbers(date);
 }
 
 bool is_valid_ctrl_code(char code){
@@ -118,10 +118,10 @@ bool is_valid_sex(char sex){
 }
 
 bool is_valid_town(char* town){
-	return strcmp(town, EMPTY_STRING) != ZERO;
+	return strcmp(town, EMPTY_STRING) != ZERO || town != NULL;
 }
 
-bool is_valid_data(char* name, char* surname, char* date, char* coded_town, char sex){
+bool are_valid_data(char* name, char* surname, char* date, char* coded_town, char sex){
 	return is_valid_name_surname(name) && is_valid_name_surname(surname) && is_valid_date(date) &&
 		   is_valid_town_code(coded_town) && is_valid_sex(sex);
 }
@@ -132,10 +132,10 @@ static bool is_valid_index(int i){
 }
 
 static bool is_valid_cf_char(char* code, int i){
-	return (is_valid_index(i))? isdigit(code[i]) : isupper(code[i]);
+	return (is_valid_index(i)) ? isdigit(code[i]) : isupper(code[i]);
 }
 
-static bool is_valid_cf_character(char* code){
+static bool are_valid_cf_chars(char* code){
 	bool flag = true;
 	for (int i = ZERO; i < strlen(code) && flag; i++)
 		flag = is_valid_cf_char(code, i);
@@ -143,14 +143,14 @@ static bool is_valid_cf_character(char* code){
 }
 
 bool is_valid_cf_code(char* code){
-	return (strlen(code) != SIXTEEN) ? false : is_valid_cf_character(code);
+	return (strlen(code) != SIXTEEN) ? false : are_valid_cf_chars(code);
 }
 
 static bool is_valid_char_date_code(char* code, int i){
 	return (i==TWO) ? isupper(code[i]) : isdigit(code[i]);
 }
 
-static bool is_valid_chars_date_code(char* code){
+static bool are_valid_chars_date_code(char* code){
 	bool flag = true;
 	for (int i = ZERO; i < strlen(code) && flag; i++)
 		flag = is_valid_char_date_code(code, i);
@@ -158,5 +158,5 @@ static bool is_valid_chars_date_code(char* code){
 }
 
 bool is_valid_date_code(char* code){
-	return strlen(code) == FIVE && is_valid_chars_date_code(code);
+	return strlen(code) == FIVE && are_valid_chars_date_code(code);
 }

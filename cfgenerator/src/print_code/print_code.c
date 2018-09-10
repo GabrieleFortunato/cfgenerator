@@ -28,6 +28,6 @@ static void not_valid_data(){
 }
 
 void print_result(char sex, char* coded_town, char* birth_date, char* surname, char* name){
-	(is_valid_data(name, surname, birth_date, coded_town, sex)) ?
+	(are_valid_data(name, surname, birth_date, coded_town, sex)) ?
 			print_code(name,surname,birth_date,coded_town,sex) : not_valid_data();
 }

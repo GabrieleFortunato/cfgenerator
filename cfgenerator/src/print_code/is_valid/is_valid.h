@@ -89,6 +89,6 @@ bool is_not_empty_string(char* string);
  * @param sex
  * @return
  */
-bool is_valid_data(char* name, char* surname, char* date, char* coded_town, char sex);
+bool are_valid_data(char* name, char* surname, char* date, char* coded_town, char sex);
 
 #endif /* SRC_PRINT_CODE_IS_VALID_IS_VALID_H_ */
