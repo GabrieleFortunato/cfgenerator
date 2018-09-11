@@ -32,7 +32,7 @@ void access(){
 void print_cfgenerator(FILE* file){
 	intro();
 	(file==NULL)?file_not_found():
-			print_result(get_sex(),read_birth_place_code(file,get_birth_town()),get_birth_date(),get_surname(),get_name());
+			print_code(get_sex(),read_birth_place_code(file,get_birth_town()),get_birth_date(),get_surname(),get_name());
 }
 
 void cfgenerator(FILE* file){

@@ -23,6 +23,6 @@
  * @param surname
  * @param name
  */
-void print_result(char sex, char* coded_town, char* birth_date, char* surname, char* name);
+void print_code(char sex, char* coded_town, char* birth_date, char* surname, char* name);
 
 #endif /* SRC_PRINT_CODE_PRINT_CODE_H_ */
