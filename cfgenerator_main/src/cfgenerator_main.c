@@ -10,8 +10,6 @@
 
 #include <print_code/print_code.h>
 #include <print_code/read_birth_place/read_birth_place.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "access/access.h"
 #include "close/close.h"
 #include "get_data/get_data.h"
