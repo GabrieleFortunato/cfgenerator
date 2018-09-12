@@ -9,7 +9,6 @@
  */
 
 #include <print_code/print_code.h>
-#include <print_code/read_birth_place/read_birth_place.h>
 #include "access/access.h"
 #include "close/close.h"
 #include "get_data/get_data.h"
@@ -29,18 +28,23 @@ void access(){
 
 void print_cfgenerator(FILE* file){
 	intro();
-	(file==NULL)?file_not_found():
-			print_code(get_sex(),read_birth_place_code(file,get_birth_town()),get_birth_date(),get_surname(),get_name());
+	char* name = get_name();
+	char* surname = get_surname();
+	char* birth_date = get_birth_date();
+	char* town = get_birth_town();
+	char sex = get_sex();
+	(file==NULL) ? file_not_found() :
+			print_code(name,surname,birth_date,town,sex,file);
 }
 
 void cfgenerator(FILE* file){
-	access();
 	do{
 		print_cfgenerator(file);
 	} while (repeat());
 }
 
 int main(void) {
+	access();
 	FILE* file = fopen(ITALIAN_TOWNS_FILE, REAF_FROM_FILE);
 	(file==NULL)?file_not_found():cfgenerator(file);
 	fclose(file);
