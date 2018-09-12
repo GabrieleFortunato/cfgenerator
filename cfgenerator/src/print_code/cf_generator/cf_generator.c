@@ -112,18 +112,18 @@ static int insert_vowel(char text[], int i, char code[], int ind) {
 }
 
 static int insert_vowels(char text[], int ind, char code[]) {
-	for (int i = 0; i < strlen(text) && ind < 3; i++)
+	for (int i = 0; i < strlen(text) && ind < THREE; i++)
 		ind = insert_vowel(text, i, code, ind);
 	return ind;
 }
 
 static void insert_X(int ind, char code[]) {
-	while (ind < 3)
+	while (ind < THREE)
 		code[ind++] = X;
 }
 
 static void fill_code(char text[], char code[]) {
-	int ind = 0;
+	int ind = ZERO;
 	ind = insert_consonants(text, ind, code);
 	ind = insert_vowels(text, ind, code);
 	insert_X(ind, code);
@@ -154,8 +154,8 @@ void surname_code(char surname[], char code[]){
 
 static char month_0(char a){
 	return (a == CHAR_1) ? A : (a == CHAR_2) ? B : (a == CHAR_3) ? C :
-		   (a == CHAR_4) ? D : (a == CHAR_5) ? E : (a == CHAR_6) ? H :
-		   (a == CHAR_7) ? L : (a == CHAR_8) ?  M : P;
+			(a == CHAR_4) ? D : (a == CHAR_5) ? E : (a == CHAR_6) ? H :
+					(a == CHAR_7) ? L : (a == CHAR_8) ?  M : P;
 }
 
 static char month_1(char b){
@@ -194,13 +194,13 @@ void birth_date_code(char date[], char sex, char code[]){
 static int even_character(char a){
 	return (a == CHAR_0 || a == A) ? ONE: (a == CHAR_1 || a == B) ? ZERO :
 		   (a == CHAR_2 || a == C) ? FIVE : (a == CHAR_3 || a == D) ? SEVEN :
-		   (a == CHAR_4 || a == E) ? NINE : (a == CHAR_5 || a == F) ? THIRTEEN :
-		   (a == CHAR_6 || a==G) ? FIFTEEN : (a==CHAR_7 || a==H) ? SEVENTEEN :
-		   (a==CHAR_8 || a == I) ? NINETEEN : (a==CHAR_9 || a == J) ? TWENTYONE :
-		   (a == K) ? TWO : (a == L) ? FOUR : (a == M) ? EIGHTEEN : (a == N) ? TWENTY :
-		   (a == O) ? ELEVEN : (a == P) ? THREE : (a == Q) ? SIX : (a == R) ? EIGHT :
-		   (a == S) ? TWELVE : (a == T) ? FOURTEEN: (a == U) ? SIXTEEN : (a == V) ? TEN :
-		   (a == W) ? TWENTYTWO  : (a == X) ? TWENTYFIVE : (a == Y) ? TWENTYFOUR : TWENTYTHREE;
+	       (a == CHAR_4 || a == E) ? NINE : (a == CHAR_5 || a == F) ? THIRTEEN :
+	       (a == CHAR_6 || a==G) ? FIFTEEN : (a==CHAR_7 || a==H) ? SEVENTEEN :
+	       (a==CHAR_8 || a == I) ? NINETEEN : (a==CHAR_9 || a == J) ? TWENTYONE :
+	       (a == K) ? TWO : (a == L) ? FOUR : (a == M) ? EIGHTEEN : (a == N) ? TWENTY :
+	       (a == O) ? ELEVEN : (a == P) ? THREE : (a == Q) ? SIX : (a == R) ? EIGHT :
+	       (a == S) ? TWELVE : (a == T) ? FOURTEEN: (a == U) ? SIXTEEN : (a == V) ? TEN :
+	       (a == W) ? TWENTYTWO  : (a == X) ? TWENTYFIVE : (a == Y) ? TWENTYFOUR : TWENTYTHREE;
 }
 
 static int odd_character(char a){
@@ -209,7 +209,7 @@ static int odd_character(char a){
 		   (a == CHAR_4 || a == E) ? FOUR : (a == CHAR_5 || a==F) ? FIVE :
 		   (a == CHAR_6 || a==G) ? SIX : (a==CHAR_7 || a==H) ? SEVEN :
 		   (a==CHAR_8 || a == I) ? EIGHT : (a==CHAR_9 || a == J) ? NINE :
-	       (a == K) ? TEN : (a == L) ? ELEVEN : (a == M) ? TWELVE :
+		   (a == K) ? TEN : (a == L) ? ELEVEN : (a == M) ? TWELVE :
 		   (a == N) ? THIRTEEN : (a == O) ? FOURTEEN : (a == P) ? FIFTEEN :
 		   (a == Q) ? SIXTEEN : (a == R) ? SEVENTEEN : (a == S) ? EIGHTEEN :
 		   (a == T) ? NINETEEN : (a == U) ? TWENTY : (a == V) ? TWENTYONE :
@@ -227,8 +227,8 @@ static char get_result(int number){
 		   (number == TWENTYFOUR) ? Y : Z ;
 }
 
-static void code_strcat(char* coded_name, char* coded_surname, char* coded_birth_date,
-		char* coded_town, char* code){
+static void code_strcat(char* coded_name, char* coded_surname,
+		char* coded_birth_date, char* coded_town, char* code){
 	strcat(code,coded_surname);
 	strcat(code,coded_name);
 	strcat(code,coded_birth_date);
@@ -244,7 +244,8 @@ static int get_sum(char* code) {
 	return sum;
 }
 
-char ctrl_code(char* coded_name, char* coded_surname, char* coded_birth_date, char* coded_birth_place){
+char ctrl_code(char* coded_name, char* coded_surname,
+		char* coded_birth_date, char* coded_birth_place){
 	assert(is_valid_coded_surname_name(coded_name));
 	assert(is_valid_coded_surname_name(coded_surname));
 	char code[FIFTEEN];
@@ -256,8 +257,8 @@ char ctrl_code(char* coded_name, char* coded_surname, char* coded_birth_date, ch
 	return result;
 }
 
-void cf_generator(char name[], char surname[], char birth_date[], char coded_town[],
-		char sex, char code[]){
+void cf_generator(char name[], char surname[], char birth_date[],
+		char coded_town[], char sex, char code[]){
 	assert(is_valid_name_surname(name));
 	assert(is_valid_name_surname(surname));
 	assert(is_valid_date(birth_date));
@@ -266,11 +267,11 @@ void cf_generator(char name[], char surname[], char birth_date[], char coded_tow
 	char coded_surname[FOUR];
 	char coded_name[FOUR];
 	code[ZERO]=EOS;
-	name_code(name,coded_name);
-	surname_code(surname,coded_surname);
-	birth_date_code(birth_date,sex,coded_birth_date);
-	code_strcat(coded_name,coded_surname,coded_birth_date,coded_town,code);
-	code[FIFTEEN] = ctrl_code(coded_name,coded_surname,coded_birth_date,coded_town);
+	name_code(name, coded_name);
+	surname_code(surname, coded_surname);
+	birth_date_code(birth_date, sex, coded_birth_date);
+	code_strcat(coded_name, coded_surname, coded_birth_date, coded_town,code);
+	code[FIFTEEN] = ctrl_code(coded_name, coded_surname, coded_birth_date, coded_town);
 	code[SIXTEEN]=EOS;
 	assert(is_valid_cf_code(code));
 }

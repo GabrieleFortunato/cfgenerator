@@ -37,6 +37,7 @@ char* read_birth_place_code(FILE* places_file,char* birth_place){
 	assert(is_not_empty_string(birth_place));
 	char *part = (char*) malloc((FIFTEEN) * sizeof(char*));
 	char *result = (char*) malloc((FIVE) * sizeof(char*));
+	result = NULL;
     rewind(places_file);
 	while (fgets(part, FOURTYSIX, places_file))
     	result = get_result(birth_place,part,result);

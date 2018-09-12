@@ -8,8 +8,8 @@
 #ifndef SRC_PRINT_CODE_PRINT_CODE_H_
 #define SRC_PRINT_CODE_PRINT_CODE_H_
 
-#include <print_code/cf_generator/cf_generator.h>
-#include <print_code/read_birth_place/read_birth_place.h>
+#include "print_code/cf_generator/cf_generator.h"
+#include "print_code/read_birth_place/read_birth_place.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -23,6 +23,6 @@
  * @param surname
  * @param name
  */
-void print_code(char sex, char* coded_town, char* birth_date, char* surname, char* name);
+void print_code(char* name, char* surname, char* birth_date, char* coded_town, char sex, FILE* towns);
 
 #endif /* SRC_PRINT_CODE_PRINT_CODE_H_ */
