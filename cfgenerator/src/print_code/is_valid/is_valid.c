@@ -106,7 +106,7 @@ static bool is_valid_char_town_code(char* code){
 }
 
 bool is_valid_town_code(char* code){
-	return strlen(code) == FOUR && is_valid_char_town_code(code);
+	return code!=NULL && strlen(code) == FOUR && is_valid_char_town_code(code);
 }
 
 bool is_not_empty_string(char* string){

@@ -9,7 +9,6 @@
 #define SRC_PRINT_CODE_PRINT_CODE_H_
 
 #include "print_code/cf_generator/cf_generator.h"
-#include "print_code/read_birth_place/read_birth_place.h"
 #include <stdio.h>
 #include <stdlib.h>
 

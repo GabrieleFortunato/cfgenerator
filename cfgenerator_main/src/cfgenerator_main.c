@@ -8,8 +8,9 @@
  ============================================================================
  */
 
-#include <print_code/print_code.h>
+#include "print_code/print_code.h"
 #include "access/access.h"
+#include "print_code/read_birth_place/read_birth_place.h"
 #include "close/close.h"
 #include "get_data/get_data.h"
 #include "intro/intro.h"
@@ -34,7 +35,7 @@ void print_cfgenerator(FILE* file){
 	char* town = get_birth_town();
 	char sex = get_sex();
 	(file==NULL) ? file_not_found() :
-			print_code(name,surname,birth_date,town,sex,file);
+			print_code(name,surname,birth_date,read_birth_place_code(file,town),sex,file);
 }
 
 void cfgenerator(FILE* file){

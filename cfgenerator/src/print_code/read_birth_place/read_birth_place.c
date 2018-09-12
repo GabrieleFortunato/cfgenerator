@@ -5,7 +5,8 @@
  *      Author: gabriele
  */
 
-#include <print_code/read_birth_place/read_birth_place.h>
+#include "read_birth_place.h"
+#include "close/close.h"
 
 static const int FIFTEEN = 50;
 static const char* PAUSE = "pause";
@@ -37,12 +38,14 @@ char* read_birth_place_code(FILE* places_file,char* birth_place){
 	assert(is_not_empty_string(birth_place));
 	char *part = (char*) malloc((FIFTEEN) * sizeof(char*));
 	char *result = (char*) malloc((FIVE) * sizeof(char*));
-	result = NULL;
     rewind(places_file);
 	while (fgets(part, FOURTYSIX, places_file))
     	result = get_result(birth_place,part,result);
-    assert(is_valid_town_code(result));
-    return result;
+	if (is_valid_town_code(result)){
+		assert(is_valid_town_code(result));
+		return result;
+	} else
+		return NULL;
 }
 
 void file_not_found(){
