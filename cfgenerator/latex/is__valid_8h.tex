@@ -27,11 +27,50 @@ bool \hyperlink{is__valid_8h_ae65ab1a3f8095d0c9e085db678d819f2}{is\-\_\-valid\-\
 \item 
 bool \hyperlink{is__valid_8h_a55e1774041ad6bc2aff93c7777fa1af2}{is\-\_\-not\-\_\-empty\-\_\-string} (char $\ast$string)
 \item 
-bool \hyperlink{is__valid_8h_a6e907de5c975401e253e31ca4ecf318d}{is\-\_\-valid\-\_\-data} (char $\ast$name, char $\ast$surname, char $\ast$date, char $\ast$coded\-\_\-town, char sex)
+bool \hyperlink{is__valid_8h_aefdd7166b9e5be1e7e90fdb598a0cb3d}{are\-\_\-valid\-\_\-data} (char $\ast$name, char $\ast$surname, char $\ast$date, char $\ast$coded\-\_\-town, char sex)
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
+\hypertarget{is__valid_8h_aefdd7166b9e5be1e7e90fdb598a0cb3d}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!are\-\_\-valid\-\_\-data@{are\-\_\-valid\-\_\-data}}
+\index{are\-\_\-valid\-\_\-data@{are\-\_\-valid\-\_\-data}!is_valid.h@{is\-\_\-valid.\-h}}
+\subsubsection[{are\-\_\-valid\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}bool are\-\_\-valid\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{char $\ast$}]{surname, }
+\item[{char $\ast$}]{date, }
+\item[{char $\ast$}]{coded\-\_\-town, }
+\item[{char}]{sex}
+\end{DoxyParamCaption}
+)}}\label{is__valid_8h_aefdd7166b9e5be1e7e90fdb598a0cb3d}
+Verifica la correttezza dei dati immessi 
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em surname} & \\
+\hline
+{\em date} & \\
+\hline
+{\em coded\-\_\-town} & \\
+\hline
+{\em sex} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 124 of file is\-\_\-valid.\-c.
+
+
+
+References is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name\-\_\-surname(), is\-\_\-valid\-\_\-sex(), and is\-\_\-valid\-\_\-town\-\_\-code().
+
+
+
+Referenced by print\-\_\-code().
+
 \hypertarget{is__valid_8h_a55e1774041ad6bc2aff93c7777fa1af2}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!is\-\_\-not\-\_\-empty\-\_\-string@{is\-\_\-not\-\_\-empty\-\_\-string}}
 \index{is\-\_\-not\-\_\-empty\-\_\-string@{is\-\_\-not\-\_\-empty\-\_\-string}!is_valid.h@{is\-\_\-valid.\-h}}
 \subsubsection[{is\-\_\-not\-\_\-empty\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-not\-\_\-empty\-\_\-string (
@@ -136,45 +175,6 @@ Definition at line 97 of file is\-\_\-valid.\-c.
 
 Referenced by ctrl\-\_\-code().
 
-\hypertarget{is__valid_8h_a6e907de5c975401e253e31ca4ecf318d}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!is\-\_\-valid\-\_\-data@{is\-\_\-valid\-\_\-data}}
-\index{is\-\_\-valid\-\_\-data@{is\-\_\-valid\-\_\-data}!is_valid.h@{is\-\_\-valid.\-h}}
-\subsubsection[{is\-\_\-valid\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-valid\-\_\-data (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{name, }
-\item[{char $\ast$}]{surname, }
-\item[{char $\ast$}]{date, }
-\item[{char $\ast$}]{coded\-\_\-town, }
-\item[{char}]{sex}
-\end{DoxyParamCaption}
-)}}\label{is__valid_8h_a6e907de5c975401e253e31ca4ecf318d}
-Verifica la correttezza dei dati immessi 
-\begin{DoxyParams}{Parameters}
-{\em name} & \\
-\hline
-{\em surname} & \\
-\hline
-{\em date} & \\
-\hline
-{\em coded\-\_\-town} & \\
-\hline
-{\em sex} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-
-\end{DoxyReturn}
-
-
-Definition at line 124 of file is\-\_\-valid.\-c.
-
-
-
-References is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name\-\_\-surname(), is\-\_\-valid\-\_\-sex(), and is\-\_\-valid\-\_\-town\-\_\-code().
-
-
-
-Referenced by print\-\_\-result().
-
 \hypertarget{is__valid_8h_a02644493e998be0007c7f53839c5cfb8}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!is\-\_\-valid\-\_\-date@{is\-\_\-valid\-\_\-date}}
 \index{is\-\_\-valid\-\_\-date@{is\-\_\-valid\-\_\-date}!is_valid.h@{is\-\_\-valid.\-h}}
 \subsubsection[{is\-\_\-valid\-\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-valid\-\_\-date (
@@ -200,7 +200,7 @@ References T\-E\-N.
 
 
 
-Referenced by birth\-\_\-date\-\_\-code(), cf\-\_\-generator(), and is\-\_\-valid\-\_\-data().
+Referenced by are\-\_\-valid\-\_\-data(), birth\-\_\-date\-\_\-code(), and cf\-\_\-generator().
 
 \hypertarget{is__valid_8h_a2208ce7082532c2908b15902e924cf22}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!is\-\_\-valid\-\_\-date\-\_\-code@{is\-\_\-valid\-\_\-date\-\_\-code}}
 \index{is\-\_\-valid\-\_\-date\-\_\-code@{is\-\_\-valid\-\_\-date\-\_\-code}!is_valid.h@{is\-\_\-valid.\-h}}
@@ -254,7 +254,7 @@ References Z\-E\-R\-O.
 
 
 
-Referenced by cf\-\_\-generator(), is\-\_\-valid\-\_\-data(), name\-\_\-code(), and surname\-\_\-code().
+Referenced by are\-\_\-valid\-\_\-data(), cf\-\_\-generator(), name\-\_\-code(), and surname\-\_\-code().
 
 \hypertarget{is__valid_8h_a7b1309e387b48ef9611e6b343c34355c}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!is\-\_\-valid\-\_\-sex@{is\-\_\-valid\-\_\-sex}}
 \index{is\-\_\-valid\-\_\-sex@{is\-\_\-valid\-\_\-sex}!is_valid.h@{is\-\_\-valid.\-h}}
@@ -281,7 +281,7 @@ References F, and M.
 
 
 
-Referenced by birth\-\_\-date\-\_\-code(), cf\-\_\-generator(), and is\-\_\-valid\-\_\-data().
+Referenced by are\-\_\-valid\-\_\-data(), birth\-\_\-date\-\_\-code(), and cf\-\_\-generator().
 
 \hypertarget{is__valid_8h_a931d1013082072d46b16f03df6b9ba9a}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!is\-\_\-valid\-\_\-town\-\_\-code@{is\-\_\-valid\-\_\-town\-\_\-code}}
 \index{is\-\_\-valid\-\_\-town\-\_\-code@{is\-\_\-valid\-\_\-town\-\_\-code}!is_valid.h@{is\-\_\-valid.\-h}}
@@ -308,5 +308,5 @@ References F\-O\-U\-R.
 
 
 
-Referenced by is\-\_\-valid\-\_\-data(), and read\-\_\-birth\-\_\-place\-\_\-code().
+Referenced by are\-\_\-valid\-\_\-data(), and read\-\_\-birth\-\_\-place\-\_\-code().
 

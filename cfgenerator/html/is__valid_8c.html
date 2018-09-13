@@ -168,8 +168,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7b1309e387b48ef9611e6b343c34355c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d2e518355a4e6e873983b99ae5cde08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a6d2e518355a4e6e873983b99ae5cde08">is_valid_town</a> (char *town)</td></tr>
 <tr class="separator:a6d2e518355a4e6e873983b99ae5cde08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e907de5c975401e253e31ca4ecf318d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a6e907de5c975401e253e31ca4ecf318d">is_valid_data</a> (char *name, char *surname, char *date, char *coded_town, char sex)</td></tr>
-<tr class="separator:a6e907de5c975401e253e31ca4ecf318d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefdd7166b9e5be1e7e90fdb598a0cb3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#aefdd7166b9e5be1e7e90fdb598a0cb3d">are_valid_data</a> (char *name, char *surname, char *date, char *coded_town, char sex)</td></tr>
+<tr class="separator:aefdd7166b9e5be1e7e90fdb598a0cb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae65ab1a3f8095d0c9e085db678d819f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#ae65ab1a3f8095d0c9e085db678d819f2">is_valid_cf_code</a> (char *code)</td></tr>
 <tr class="separator:ae65ab1a3f8095d0c9e085db678d819f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2208ce7082532c2908b15902e924cf22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a2208ce7082532c2908b15902e924cf22">is_valid_date_code</a> (char *code)</td></tr>
@@ -262,7 +262,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="is__valid_8c_source.html#l00015">15</a> of file <a class="el" href="is__valid_8c_source.html">is_valid.c</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00186">birth_date_code()</a>, <a class="el" href="is__valid_8c_source.html#l00160">is_valid_date_code()</a>, and <a class="el" href="read__birth__place_8c_source.html#l00034">read_birth_place_code()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00186">birth_date_code()</a>, <a class="el" href="is__valid_8c_source.html#l00160">is_valid_date_code()</a>, and <a class="el" href="read__birth__place_8c_source.html#l00035">read_birth_place_code()</a>.</p>
 
 </div>
 </div>
@@ -278,7 +278,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="is__valid_8c_source.html#l00014">14</a> of file <a class="el" href="is__valid_8c_source.html">is_valid.c</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>, <a class="el" href="is__valid_8c_source.html#l00108">is_valid_town_code()</a>, and <a class="el" href="cf__generator_8c_source.html#l00139">name_code()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00260">cf_generator()</a>, <a class="el" href="is__valid_8c_source.html#l00108">is_valid_town_code()</a>, and <a class="el" href="cf__generator_8c_source.html#l00139">name_code()</a>.</p>
 
 </div>
 </div>
@@ -410,7 +410,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="is__valid_8c_source.html#l00016">16</a> of file <a class="el" href="is__valid_8c_source.html">is_valid.c</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00260">cf_generator()</a>.</p>
 
 </div>
 </div>
@@ -426,7 +426,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="is__valid_8c_source.html#l00024">24</a> of file <a class="el" href="is__valid_8c_source.html">is_valid.c</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>, and <a class="el" href="is__valid_8c_source.html#l00145">is_valid_cf_code()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00260">cf_generator()</a>, and <a class="el" href="is__valid_8c_source.html#l00145">is_valid_cf_code()</a>.</p>
 
 </div>
 </div>
@@ -572,11 +572,73 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="is__valid_8c_source.html#l00010">10</a> of file <a class="el" href="is__valid_8c_source.html">is_valid.c</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>, <a class="el" href="cf__generator_8c_source.html#l00247">ctrl_code()</a>, <a class="el" href="cf__generator_8c_source.html#l00089">get_consonants()</a>, <a class="el" href="is__valid_8c_source.html#l00112">is_not_empty_string()</a>, <a class="el" href="is__valid_8c_source.html#l00057">is_valid_name_surname()</a>, <a class="el" href="is__valid_8c_source.html#l00120">is_valid_town()</a>, and <a class="el" href="to__upper_8c_source.html#l00012">to_upper_string()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00260">cf_generator()</a>, <a class="el" href="cf__generator_8c_source.html#l00247">ctrl_code()</a>, <a class="el" href="cf__generator_8c_source.html#l00089">get_consonants()</a>, <a class="el" href="is__valid_8c_source.html#l00112">is_not_empty_string()</a>, <a class="el" href="is__valid_8c_source.html#l00057">is_valid_name_surname()</a>, <a class="el" href="is__valid_8c_source.html#l00120">is_valid_town()</a>, and <a class="el" href="to__upper_8c_source.html#l00012">to_upper_string()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="aefdd7166b9e5be1e7e90fdb598a0cb3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool are_valid_data </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>surname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>coded_town</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>sex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Verifica la correttezza dei dati immessi </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+    <tr><td class="paramname">surname</td><td></td></tr>
+    <tr><td class="paramname">date</td><td></td></tr>
+    <tr><td class="paramname">coded_town</td><td></td></tr>
+    <tr><td class="paramname">sex</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="is__valid_8c_source.html#l00124">124</a> of file <a class="el" href="is__valid_8c_source.html">is_valid.c</a>.</p>
+
+<p>References <a class="el" href="is__valid_8c_source.html#l00093">is_valid_date()</a>, <a class="el" href="is__valid_8c_source.html#l00057">is_valid_name_surname()</a>, <a class="el" href="is__valid_8c_source.html#l00116">is_valid_sex()</a>, and <a class="el" href="is__valid_8c_source.html#l00108">is_valid_town_code()</a>.</p>
+
+<p>Referenced by <a class="el" href="print__code_8c_source.html#l00028">print_code()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a55e1774041ad6bc2aff93c7777fa1af2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -603,7 +665,7 @@ Functions</h2></td></tr>
 
 <p>References <a class="el" href="is__valid_8c_source.html#l00036">EMPTY_STRING</a>, and <a class="el" href="is__valid_8c_source.html#l00010">ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="get__data_8c_source.html#l00056">get_birth_date()</a>, <a class="el" href="get__data_8c_source.html#l00071">get_birth_town()</a>, <a class="el" href="get__data_8c_source.html#l00024">get_name()</a>, <a class="el" href="get__data_8c_source.html#l00040">get_surname()</a>, and <a class="el" href="read__birth__place_8c_source.html#l00034">read_birth_place_code()</a>.</p>
+<p>Referenced by <a class="el" href="get__data_8c_source.html#l00056">get_birth_date()</a>, <a class="el" href="get__data_8c_source.html#l00071">get_birth_town()</a>, <a class="el" href="get__data_8c_source.html#l00024">get_name()</a>, <a class="el" href="get__data_8c_source.html#l00040">get_surname()</a>, and <a class="el" href="read__birth__place_8c_source.html#l00035">read_birth_place_code()</a>.</p>
 
 </div>
 </div>
@@ -633,7 +695,7 @@ Functions</h2></td></tr>
 
 <p>References <a class="el" href="is__valid_8c_source.html#l00024">SIXTEEN</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>.</p>
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00260">cf_generator()</a>.</p>
 
 </div>
 </div>
@@ -695,68 +757,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6e907de5c975401e253e31ca4ecf318d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_valid_data </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>surname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>date</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>coded_town</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>sex</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Verifica la correttezza dei dati immessi </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td></td></tr>
-    <tr><td class="paramname">surname</td><td></td></tr>
-    <tr><td class="paramname">date</td><td></td></tr>
-    <tr><td class="paramname">coded_town</td><td></td></tr>
-    <tr><td class="paramname">sex</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-<p>Definition at line <a class="el" href="is__valid_8c_source.html#l00124">124</a> of file <a class="el" href="is__valid_8c_source.html">is_valid.c</a>.</p>
-
-<p>References <a class="el" href="is__valid_8c_source.html#l00093">is_valid_date()</a>, <a class="el" href="is__valid_8c_source.html#l00057">is_valid_name_surname()</a>, <a class="el" href="is__valid_8c_source.html#l00116">is_valid_sex()</a>, and <a class="el" href="is__valid_8c_source.html#l00108">is_valid_town_code()</a>.</p>
-
-<p>Referenced by <a class="el" href="print__code_8c_source.html#l00030">print_result()</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a02644493e998be0007c7f53839c5cfb8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -783,7 +783,7 @@ Functions</h2></td></tr>
 
 <p>References <a class="el" href="is__valid_8c_source.html#l00020">TEN</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00186">birth_date_code()</a>, <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>, and <a class="el" href="is__valid_8c_source.html#l00124">is_valid_data()</a>.</p>
+<p>Referenced by <a class="el" href="is__valid_8c_source.html#l00124">are_valid_data()</a>, <a class="el" href="cf__generator_8c_source.html#l00186">birth_date_code()</a>, and <a class="el" href="cf__generator_8c_source.html#l00260">cf_generator()</a>.</p>
 
 </div>
 </div>
@@ -843,7 +843,7 @@ Functions</h2></td></tr>
 
 <p>References <a class="el" href="is__valid_8c_source.html#l00010">ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>, <a class="el" href="is__valid_8c_source.html#l00124">is_valid_data()</a>, <a class="el" href="cf__generator_8c_source.html#l00139">name_code()</a>, and <a class="el" href="cf__generator_8c_source.html#l00149">surname_code()</a>.</p>
+<p>Referenced by <a class="el" href="is__valid_8c_source.html#l00124">are_valid_data()</a>, <a class="el" href="cf__generator_8c_source.html#l00260">cf_generator()</a>, <a class="el" href="cf__generator_8c_source.html#l00139">name_code()</a>, and <a class="el" href="cf__generator_8c_source.html#l00149">surname_code()</a>.</p>
 
 </div>
 </div>
@@ -873,7 +873,7 @@ Functions</h2></td></tr>
 
 <p>References <a class="el" href="is__valid_8c_source.html#l00032">F</a>, and <a class="el" href="is__valid_8c_source.html#l00033">M</a>.</p>
 
-<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00186">birth_date_code()</a>, <a class="el" href="cf__generator_8c_source.html#l00259">cf_generator()</a>, and <a class="el" href="is__valid_8c_source.html#l00124">is_valid_data()</a>.</p>
+<p>Referenced by <a class="el" href="is__valid_8c_source.html#l00124">are_valid_data()</a>, <a class="el" href="cf__generator_8c_source.html#l00186">birth_date_code()</a>, and <a class="el" href="cf__generator_8c_source.html#l00260">cf_generator()</a>.</p>
 
 </div>
 </div>
@@ -923,7 +923,7 @@ Functions</h2></td></tr>
 
 <p>References <a class="el" href="is__valid_8c_source.html#l00014">FOUR</a>.</p>
 
-<p>Referenced by <a class="el" href="is__valid_8c_source.html#l00124">is_valid_data()</a>, and <a class="el" href="read__birth__place_8c_source.html#l00034">read_birth_place_code()</a>.</p>
+<p>Referenced by <a class="el" href="is__valid_8c_source.html#l00124">are_valid_data()</a>, and <a class="el" href="read__birth__place_8c_source.html#l00035">read_birth_place_code()</a>.</p>
 
 </div>
 </div>

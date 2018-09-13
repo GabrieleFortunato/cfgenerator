@@ -16,11 +16,12 @@
 
 /**
  * Stampa a video il codice generato
- * @param sex
- * @param coded_town
- * @param birth_date
- * @param surname
  * @param name
+ * @param surname
+ * @param birth_date
+ * @param coded_town
+ * @param sex
+ * @param towns
  */
 void print_code(char* name, char* surname, char* birth_date, char* coded_town, char sex, FILE* towns);
 
