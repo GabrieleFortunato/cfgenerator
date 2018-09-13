@@ -10,9 +10,6 @@
 
 #include "print_code/cf_generator/cf_generator.h"
 #include <stdio.h>
-#include <stdlib.h>
-
-#include "../../src/close/close.h"
 
 /**
  * Stampa a video il codice generato
