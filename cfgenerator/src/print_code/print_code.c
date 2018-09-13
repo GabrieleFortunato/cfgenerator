@@ -26,6 +26,7 @@ static void not_valid_data(){
 }
 
 void print_code(char* name, char* surname, char* birth_date, char* coded_town, char sex, FILE* towns){
-	(are_valid_data(name, surname, birth_date, coded_town, sex) && read_birth_place_code(towns,coded_town) != NULL) ?
-			print_valid_code(name, surname, birth_date, read_birth_place_code(towns,coded_town), sex) : not_valid_data();
+	(are_valid_data(name, surname, birth_date, coded_town, sex)) ?
+			print_valid_code(name, surname, birth_date, coded_town, sex) :
+			not_valid_data();
 }
