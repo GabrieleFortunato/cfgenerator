@@ -5,7 +5,7 @@
  *      Author: Gabriele Fortunato
  */
 
-#include <print_code/cf_generator/cf_generator.h>
+#include "cf_generator.h"
 
 static const int ZERO = 0;
 static const int ONE = 1;
@@ -73,11 +73,11 @@ static const char CHAR_8 = '8';
 static const char CHAR_9 = '9';
 
 static bool is_vowel(char a){
-	return a==A||a==E||a==I||a==O||a==U;
+	return a==A || a==E || a==I || a==O || a==U;
 }
 
 static bool is_consonant(char a){
-	return !is_vowel(a)&&isalpha(a);
+	return !is_vowel(a) && isalpha(a);
 }
 
 int get_consonant(int i, int k, char* string, char* consonants) {
@@ -100,7 +100,7 @@ static int insert_consonant(char* text, int i, char* code, int ind) {
 }
 
 static int insert_consonants(char* text, int ind, char* code) {
-	for (int i = 0; i < strlen(text) && ind < 3; i++)
+	for (int i = ZERO; i < strlen(text) && ind < THREE; i++)
 		ind = insert_consonant(text, i, code, ind);
 	return ind;
 }
@@ -112,28 +112,31 @@ static int insert_vowel(char text[], int i, char code[], int ind) {
 }
 
 static int insert_vowels(char text[], int ind, char code[]) {
-	for (int i = 0; i < strlen(text) && ind < THREE; i++)
+	for (int i = ZERO; i < strlen(text) && ind < THREE; i++)
 		ind = insert_vowel(text, i, code, ind);
 	return ind;
 }
 
-static void insert_X(int ind, char code[]) {
+static int fill_X(int ind, char code[]) {
 	while (ind < THREE)
 		code[ind++] = X;
+	return ind;
 }
 
 static void fill_code(char text[], char code[]) {
 	int ind = ZERO;
 	ind = insert_consonants(text, ind, code);
 	ind = insert_vowels(text, ind, code);
-	insert_X(ind, code);
-	code[THREE] = EOS;
+	ind = fill_X(ind, code);
+	code[ind] = EOS;
 }
 
 static void fill_coded_name_four_consonants(char code[], char* consonants) {
-	code[ZERO] = consonants[ZERO];
-	code[ONE] = consonants[TWO];
-	code[TWO] = consonants[THREE];
+	int ind = ZERO;
+	code[ind++] = consonants[ZERO];
+	code[ind++] = consonants[TWO];
+	code[ind++] = consonants[THREE];
+	code[ind] = EOS;
 }
 
 void name_code(char name[], char code[]){
@@ -154,8 +157,8 @@ void surname_code(char surname[], char code[]){
 
 static char month_0(char a){
 	return (a == CHAR_1) ? A : (a == CHAR_2) ? B : (a == CHAR_3) ? C :
-			(a == CHAR_4) ? D : (a == CHAR_5) ? E : (a == CHAR_6) ? H :
-					(a == CHAR_7) ? L : (a == CHAR_8) ?  M : P;
+		   (a == CHAR_4) ? D : (a == CHAR_5) ? E : (a == CHAR_6) ? H :
+		   (a == CHAR_7) ? L : (a == CHAR_8) ?  M : P;
 }
 
 static char month_1(char b){

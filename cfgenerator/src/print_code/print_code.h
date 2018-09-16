@@ -8,8 +8,8 @@
 #ifndef SRC_PRINT_CODE_PRINT_CODE_H_
 #define SRC_PRINT_CODE_PRINT_CODE_H_
 
-#include "print_code/cf_generator/cf_generator.h"
 #include <stdio.h>
+#include "print_code/cf_generator/cf_generator.h"
 
 /**
  * Stampa a video il codice generato

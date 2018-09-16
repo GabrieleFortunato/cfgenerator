@@ -44,7 +44,7 @@ static bool is_valid_char_name_surname_code(char* code){
 }
 
 bool is_valid_coded_surname_name(char* code){
-	return (strlen(code)!=THREE)? false : is_valid_char_name_surname_code(code);
+	return strlen(code) == THREE && is_valid_char_name_surname_code(code);
 }
 
 static bool is_valid_char_name_surname(char* string){
@@ -122,8 +122,8 @@ bool is_valid_town(char* town){
 }
 
 bool are_valid_data(char* name, char* surname, char* date, char* coded_town, char sex){
-	return is_valid_name_surname(name) && is_valid_name_surname(surname) && is_valid_date(date) &&
-		   is_valid_town_code(coded_town) && is_valid_sex(sex);
+	return is_valid_name_surname(name) && is_valid_name_surname(surname) &&
+		   is_valid_date(date) && is_valid_town_code(coded_town) && is_valid_sex(sex);
 }
 
 static bool is_valid_index(int i){

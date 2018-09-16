@@ -10,12 +10,10 @@
 
 #include <assert.h>
 #include <ctype.h>
-#include <print_code/is_valid/is_valid.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <string.h>
-
+#include "print_code/is_valid/is_valid.h"
 
 /**
  * Codifica il nome

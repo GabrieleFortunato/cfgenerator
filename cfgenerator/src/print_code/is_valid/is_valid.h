@@ -8,12 +8,10 @@
 #ifndef SRC_PRINT_CODE_IS_VALID_IS_VALID_H_
 #define SRC_PRINT_CODE_IS_VALID_IS_VALID_H_
 
-#include <stdbool.h>
-#include <string.h>
-#include <stdio.h>
 #include <ctype.h>
-
-#include <print_code/read_birth_place/read_birth_place.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
 
 /**
  * Verifica che il codice del cognome e del nome siano corretti
