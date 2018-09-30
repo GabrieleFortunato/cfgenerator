@@ -27,7 +27,6 @@ bool is_valid_coded_surname_name(char* code);
  */
 bool is_valid_name_surname(char* name);
 
-
 /**
  * Verifica che la data sia stata inserita nel giusto formato
  * @param date

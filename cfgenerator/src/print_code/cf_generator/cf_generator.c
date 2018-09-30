@@ -181,8 +181,7 @@ static void birth_date_code_F(char date[], char code[]){
 	code[ZERO] = date[EIGHT];
 	code[ONE] = date[NINE];
 	code[TWO] = month(date[THREE],date[FOUR]);
-	code[THREE] = date[ZERO];
-	code[THREE] = code[THREE] + FOUR;
+	code[THREE] = date[ZERO] + FOUR;
 	code[FOUR] = date[ONE];
 }
 
@@ -220,9 +219,10 @@ static int odd_character(char a){
 }
 
 static char get_result(int number){
-	return (number == ZERO) ? A : (number == ONE) ? B : (number == TWO) ? C : (number == THREE) ? D :
-		   (number == FOUR) ? E : (number == FIVE) ? F : (number == SIX) ? G : (number == SEVEN) ? H :
-		   (number == EIGHT) ? I : (number == NINE) ? J : (number == TEN) ? K : (number == ELEVEN) ? L :
+	return (number == ZERO) ? A : (number == ONE) ? B : (number == TWO) ? C :
+		   (number == THREE) ? D : (number == FOUR) ? E : (number == FIVE) ? F :
+		   (number == SIX) ? G : (number == SEVEN) ? H : (number == EIGHT) ? I :
+		   (number == NINE) ? J : (number == TEN) ? K : (number == ELEVEN) ? L :
 		   (number == TWELVE) ? M : (number == THIRTEEN) ? N : (number == FOURTEEN) ? O :
 		   (number == FIFTEEN) ? P : (number == SIXTEEN) ? Q : (number == SEVENTEEN) ? R :
 		   (number == EIGHTEEN) ? S : (number == NINETEEN) ? T : (number == TWENTY) ? U :

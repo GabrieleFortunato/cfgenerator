@@ -50,7 +50,7 @@ bool is_valid_coded_surname_name(char* code){
 static bool is_valid_char_name_surname(char* string){
 	bool flag = true;
 	for (int i=ZERO;i < strlen(string) && flag; i++)
-		flag = isupper(string[i]) || string[i] ==APOSTROPHE || string[i] == SPACE;
+		flag = (isupper(string[i])) || (string[i]) == (APOSTROPHE || string[i] == SPACE);
 	return flag;
 }
 
@@ -59,11 +59,11 @@ bool is_valid_name_surname(char* surname){
 }
 
 static int number_A(char a, char b){
-	return TEN*(a-ASCII) + (b-ASCII);
+	return TEN * (a - ASCII) + (b - ASCII);
 }
 
 static int number_B(char a, char b, char c, char d){
-	return THOUSAND* (a - ASCII) + HUNDRED * (b-ASCII) + TEN * (c-ASCII) + (d-ASCII);
+	return THOUSAND * (a - ASCII) + HUNDRED * (b - ASCII) + TEN * (c - ASCII) + (d - ASCII);
 }
 
 static bool is_valid_day(char* date){
@@ -82,7 +82,7 @@ static bool is_valid_year(char* date){
 static bool is_valid_char_date(char* date){
 	bool flag = true;
 	for (int i = ZERO; i<strlen(date)&&flag; i++)
-		flag = (((i==TWO || i==FIVE) && (date[i] == SLASH)) || isdigit(date[i]));
+		flag = ((i==TWO || i==FIVE) && (date[i] == SLASH)) || isdigit(date[i]);
 	return flag;
 }
 

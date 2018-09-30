@@ -12,8 +12,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define STRING   "\nCalcolare un altro codice fiscale?\n(1=si,2=no) "
-#define SPEC_REP "%d"
+
 /**
  * Verifica l'intenzione dell'utente di calcolare un altro codice fiscale
  * @return
