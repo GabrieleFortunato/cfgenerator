@@ -27,7 +27,7 @@ void access(){
 	fclose(file);
 }
 
-void print_cfgenerator(FILE* file){
+void cfgenerator(FILE* file){
 	intro();
 	char* name = get_name();
 	char* surname = get_surname();
@@ -36,12 +36,7 @@ void print_cfgenerator(FILE* file){
 	char sex = get_sex();
 	(file==NULL) ? file_not_found() :
 			print_code(name,surname, birth_date, read_birth_place_code(file, town), sex, file);
-}
-
-void cfgenerator(FILE* file){
-	do{
-		print_cfgenerator(file);
-	} while (repeat());
+	(repeat()) ? cfgenerator(file) : close();
 }
 
 int main(void) {
@@ -49,6 +44,5 @@ int main(void) {
 	FILE* file = fopen(ITALIAN_TOWNS_FILE, READ_FROM_FILE);
 	(file==NULL) ? file_not_found() : cfgenerator(file);
 	fclose(file);
-	close();
 	return EXIT_SUCCESS;
 }

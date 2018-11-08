@@ -35,8 +35,7 @@
 #define APOSTROPHE      '\''
 #define EMPTY_STRING    ""
 
-
-static bool is_valid_char_name_surname_code(char* code){
+static bool are_valid_chars_name_surname_code(char* code){
 	bool flag = true;
 	for (int i = ZERO; i < strlen(code) && flag;)
 		flag = 	isupper(code[i++]);
@@ -44,13 +43,13 @@ static bool is_valid_char_name_surname_code(char* code){
 }
 
 bool is_valid_coded_surname_name(char* code){
-	return strlen(code) == THREE && is_valid_char_name_surname_code(code);
+	return strlen(code) == THREE && are_valid_chars_name_surname_code(code);
 }
 
 static bool is_valid_char_name_surname(char* string){
 	bool flag = true;
 	for (int i=ZERO;i < strlen(string) && flag; i++)
-		flag = (isupper(string[i])) || (string[i]) == (APOSTROPHE || string[i] == SPACE);
+		flag = (isupper(string[i])) || (string[i]) == APOSTROPHE || (string[i] == SPACE);
 	return flag;
 }
 

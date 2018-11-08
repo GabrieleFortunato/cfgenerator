@@ -80,13 +80,13 @@ static bool is_consonant(char a){
 	return !is_vowel(a) && isalpha(a);
 }
 
-int get_consonant(int i, int k, char* string, char* consonants) {
+static int get_consonant(int i, int k, char* string, char* consonants) {
 	if (is_consonant(string[i]))
 		consonants[k++] = string[i];
 	return k;
 }
 
-void get_consonants(char* string, char* consonants) {
+static void get_consonants(char* string, char* consonants) {
 	int k = ZERO;
 	for (int i = ZERO; i < strlen(string); i++)
 		k = get_consonant(i, k, string, consonants);
@@ -139,22 +139,6 @@ static void fill_coded_name_four_consonants(char code[], char* consonants) {
 	code[ind] = EOS;
 }
 
-void name_code(char name[], char code[]){
-	assert(is_valid_name_surname(name));
-	char consonants[strlen(name)];
-	get_consonants(name,consonants);
-	(strlen(consonants) >= FOUR) ?
-			fill_coded_name_four_consonants(code, consonants) :
-			fill_code(name, code);
-	assert(is_valid_coded_surname_name(code));
-}
-
-void surname_code(char surname[], char code[]){
-	assert(is_valid_name_surname(surname));
-	fill_code(surname, code);
-	assert(is_valid_coded_surname_name(code));
-}
-
 static char month_0(char a){
 	return (a == CHAR_1) ? A : (a == CHAR_2) ? B : (a == CHAR_3) ? C :
 		   (a == CHAR_4) ? D : (a == CHAR_5) ? E : (a == CHAR_6) ? H :
@@ -183,14 +167,6 @@ static void birth_date_code_F(char date[], char code[]){
 	code[TWO] = month(date[THREE],date[FOUR]);
 	code[THREE] = date[ZERO] + FOUR;
 	code[FOUR] = date[ONE];
-}
-
-void birth_date_code(char date[], char sex, char code[]){
-	assert(is_valid_date(date));
-	assert(is_valid_sex(sex));
-	(sex == M) ? birth_date_code_M(date, code) : birth_date_code_F(date, code);
-	code[FIVE] = EOS;
-	assert(is_valid_date_code(code));
 }
 
 static int even_character(char a){
@@ -247,6 +223,30 @@ static int get_sum(char* code) {
 	return sum;
 }
 
+void name_code(char name[], char code[]){
+	assert(is_valid_name_surname(name));
+	char consonants[strlen(name)];
+	get_consonants(name,consonants);
+	(strlen(consonants) >= FOUR) ?
+			fill_coded_name_four_consonants(code, consonants) :
+			fill_code(name, code);
+	assert(is_valid_coded_surname_name(code));
+}
+
+void surname_code(char surname[], char code[]){
+	assert(is_valid_name_surname(surname));
+	fill_code(surname, code);
+	assert(is_valid_coded_surname_name(code));
+}
+
+void birth_date_code(char date[], char sex, char code[]){
+	assert(is_valid_date(date));
+	assert(is_valid_sex(sex));
+	(sex == M) ? birth_date_code_M(date, code) : birth_date_code_F(date, code);
+	code[FIVE] = EOS;
+	assert(is_valid_date_code(code));
+}
+
 char ctrl_code(char* coded_name, char* coded_surname,
 		char* coded_birth_date, char* coded_birth_place){
 	assert(is_valid_coded_surname_name(coded_name));
@@ -259,6 +259,7 @@ char ctrl_code(char* coded_name, char* coded_surname,
 	assert(is_valid_ctrl_code(result));
 	return result;
 }
+
 
 void cf_generator(char name[], char surname[], char birth_date[],
 		char coded_town[], char sex, char code[]){
@@ -273,7 +274,7 @@ void cf_generator(char name[], char surname[], char birth_date[],
 	name_code(name, coded_name);
 	surname_code(surname, coded_surname);
 	birth_date_code(birth_date, sex, coded_birth_date);
-	code_strcat(coded_name, coded_surname, coded_birth_date, coded_town,code);
+	code_strcat(coded_name, coded_surname, coded_birth_date, coded_town, code);
 	code[FIFTEEN] = ctrl_code(coded_name, coded_surname, coded_birth_date, coded_town);
 	code[SIXTEEN]=EOS;
 	assert(is_valid_cf_code(code));
