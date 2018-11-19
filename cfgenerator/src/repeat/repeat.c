@@ -5,7 +5,7 @@
  *      Author: Gabriele Fortunato
  */
 
-#include "../../src/repeat/repeat.h"
+#include "repeat.h"
 
 static const char* SPEC_INT = "%d";
 static const char* REPEAT_STRING =
@@ -16,10 +16,10 @@ static const int ZERO = 0;
 
 static int get_repeat(){
 	int repeat = ZERO;
-	do{
+	while (repeat != ONE && repeat != TWO){
 		printf(REPEAT_STRING);
 		scanf(SPEC_INT, &repeat);
-	} while (repeat != ONE && repeat != TWO);
+	}
 	return repeat;
 }
 

@@ -77,43 +77,43 @@ static bool is_vowel(char a){
 }
 
 static bool is_consonant(char a){
-	return !is_vowel(a) && isalpha(a);
+	return isalpha(a) && !is_vowel(a);
 }
 
-static int get_consonant(int i, int k, char* string, char* consonants) {
-	if (is_consonant(string[i]))
-		consonants[k++] = string[i];
+static int get_consonant(int k, char string, char* consonants) {
+	if (is_consonant(string))
+		consonants[k++] = string;
 	return k;
 }
 
 static void get_consonants(char* string, char* consonants) {
 	int k = ZERO;
 	for (int i = ZERO; i < strlen(string); i++)
-		k = get_consonant(i, k, string, consonants);
+		k = get_consonant(k, string[i], consonants);
 	consonants[k] = EOS;
 }
 
-static int insert_consonant(char* text, int i, char* code, int ind) {
-	if (is_consonant(text[i]))
-		code[ind++] = text[i];
+static int insert_consonant(char text, char* code, int ind) {
+	if (is_consonant(text))
+		code[ind++] = text;
 	return ind;
 }
 
 static int insert_consonants(char* text, int ind, char* code) {
 	for (int i = ZERO; i < strlen(text) && ind < THREE; i++)
-		ind = insert_consonant(text, i, code, ind);
+		ind = insert_consonant(text[i], code, ind);
 	return ind;
 }
 
-static int insert_vowel(char text[], int i, char code[], int ind) {
-	if (is_vowel(text[i]))
-		code[ind++] = text[i];
+static int insert_vowel(char text, char code[], int ind) {
+	if (is_vowel(text))
+		code[ind++] = text;
 	return ind;
 }
 
 static int insert_vowels(char text[], int ind, char code[]) {
 	for (int i = ZERO; i < strlen(text) && ind < THREE; i++)
-		ind = insert_vowel(text, i, code, ind);
+		ind = insert_vowel(text[i], code, ind);
 	return ind;
 }
 
