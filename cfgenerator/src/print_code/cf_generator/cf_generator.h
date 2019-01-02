@@ -22,7 +22,7 @@
  * @param name
  * @param code
  */
-void name_code(char name[], char* code);
+void name_code(const char* name, char* code);
 
 /**
  * Codifica il cognome
@@ -30,7 +30,7 @@ void name_code(char name[], char* code);
  * @post il cognome codificato deve essere una stringa composta da tre lettere
  * @return
  */
-void surname_code(char surname[], char* code);
+void surname_code(const char* surname, char* code);
 
 /**
  * Codifica la data di nascita
@@ -41,7 +41,7 @@ void surname_code(char surname[], char* code);
  * @param code
  * @return
  */
-void birth_date_code(char date[], char sex, char code[]);
+void birth_date_code(const char* date, char sex, char code[]);
 
 /**
  * Genera il carattere di controllo
@@ -67,6 +67,7 @@ char ctrl_code(char coded_name[], char coded_surname[],char coded_birth_date[], 
  * @param sex
  * @param code
  */
-void cf_generator(char name[], char surname[], char birth_date[],char coded_town[], char sex, char code[]);
+void cf_generator(const char* name, const char*  surname,
+		const char* birth_date, char* coded_town, char sex, char* code);
 
 #endif /* SRC_CFGENERATOR_CF_GENERATOR_H_ */

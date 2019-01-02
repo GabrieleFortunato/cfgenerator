@@ -21,7 +21,7 @@ static void insert_name(char* name) {
 	gets(name);
 }
 
-char* get_name() {
+const char* get_name() {
 	fflush(stdin);
 	char* name = malloc(MAX_LENGTH_STRING * sizeof(char));
 	do
@@ -37,7 +37,7 @@ static void insert_surname(char* surname) {
 	gets(surname);
 }
 
-char* get_surname() {
+const char* get_surname() {
 	fflush(stdin);
 	char* surname = malloc(MAX_LENGTH_STRING * sizeof(char));
 	do
@@ -53,7 +53,7 @@ static void insert_date(char* date) {
 	gets(date);
 }
 
-char* get_birth_date() {
+const char* get_birth_date() {
 	fflush(stdin);
 	char* date = malloc(LENGTH_DATE*sizeof(char));
 	do
@@ -68,7 +68,7 @@ static void insert_birth_town(char* town) {
 	gets(town);
 }
 
-char* get_birth_town() {
+const char* get_birth_town() {
 	fflush(stdin);
 	char* town = malloc(MAX_LENGTH_STRING * sizeof(char));
 	do

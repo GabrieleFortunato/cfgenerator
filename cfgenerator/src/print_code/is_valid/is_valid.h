@@ -25,14 +25,14 @@ bool is_valid_coded_surname_name(char* code);
  * @param name
  * @return
  */
-bool is_valid_name_surname(char* name);
+bool is_valid_name_surname(const char* name);
 
 /**
  * Verifica che la data sia stata inserita nel giusto formato
  * @param date
  * @return
  */
-bool is_valid_date(char* date);
+bool is_valid_date(const char* date);
 
 /**
  * Verifica che il carattere di controllo sia una lettera maiuscola

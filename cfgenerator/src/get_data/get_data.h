@@ -21,23 +21,23 @@
  * Acquisisce il nome
  * @return
  */
-char* get_name();
+const char* get_name();
 
 /**
  * Acquisisce il cognome
  * @return
  */
-char* get_surname();
+const char* get_surname();
 
 /**
  * Acquisisce la data di nascita
  */
-char* get_birth_date();
+const char* get_birth_date();
 
 /**
  * Acquisisce il comune di nascita
  */
-char* get_birth_town();
+const char* get_birth_town();
 
 /**
  * Acquisisce il sesso

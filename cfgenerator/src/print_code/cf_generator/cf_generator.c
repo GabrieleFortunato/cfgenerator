@@ -223,7 +223,7 @@ static int get_sum(char* code) {
 	return sum;
 }
 
-void name_code(char name[], char code[]){
+void name_code(const char*  name, char code[]){
 	assert(is_valid_name_surname(name));
 	char consonants[strlen(name)];
 	get_consonants(name,consonants);
@@ -233,13 +233,13 @@ void name_code(char name[], char code[]){
 	assert(is_valid_coded_surname_name(code));
 }
 
-void surname_code(char surname[], char code[]){
+void surname_code(const char*  surname, char code[]){
 	assert(is_valid_name_surname(surname));
 	fill_code(surname, code);
 	assert(is_valid_coded_surname_name(code));
 }
 
-void birth_date_code(char date[], char sex, char code[]){
+void birth_date_code(const char* date, char sex, char code[]){
 	assert(is_valid_date(date));
 	assert(is_valid_sex(sex));
 	(sex == M) ? birth_date_code_M(date, code) : birth_date_code_F(date, code);
@@ -261,8 +261,8 @@ char ctrl_code(char* coded_name, char* coded_surname,
 }
 
 
-void cf_generator(char name[], char surname[], char birth_date[],
-		char coded_town[], char sex, char code[]){
+void cf_generator(const char* name, const char* surname, const char* birth_date,
+		char* coded_town, char sex, char* code){
 	assert(is_valid_name_surname(name));
 	assert(is_valid_name_surname(surname));
 	assert(is_valid_date(birth_date));

@@ -46,14 +46,14 @@ bool is_valid_coded_surname_name(char* code){
 	return strlen(code) == THREE && are_valid_chars_name_surname_code(code);
 }
 
-static bool is_valid_char_name_surname(char* string){
+static bool is_valid_char_name_surname(const char* string){
 	bool flag = true;
 	for (int i=ZERO;i < strlen(string) && flag; i++)
 		flag = (isupper(string[i])) || (string[i]) == APOSTROPHE || (string[i] == SPACE);
 	return flag;
 }
 
-bool is_valid_name_surname(char* surname){
+bool is_valid_name_surname(const char* surname){
 	return surname != NULL && strlen(surname) != ZERO && is_valid_char_name_surname(surname);
 }
 
@@ -65,31 +65,31 @@ static int number_B(char a, char b, char c, char d){
 	return THOUSAND * (a - ASCII) + HUNDRED * (b - ASCII) + TEN * (c - ASCII) + (d - ASCII);
 }
 
-static bool is_valid_day(char* date){
+static bool is_valid_day(const char* date){
 	return number_A(date[ZERO], date[ONE]) > ZERO && number_A(date[ZERO], date[ONE]) <= THIRTYONE;
 }
 
-static bool is_valid_month(char* date){
+static bool is_valid_month(const char* date){
 	return number_A(date[THREE], date[FOUR]) > ZERO && number_A(date[THREE], date[FOUR]) <= TWELVE;
 }
 
-static bool is_valid_year(char* date){
+static bool is_valid_year(const char* date){
 	return number_B(date[SIX], date[SEVEN], date[EIGHT], date[NINE]) >= MIN_YEAR
 	       && number_B(date[SIX], date[SEVEN], date[EIGHT], date[NINE]) <= MAX_YEAR;
 }
 
-static bool is_valid_char_date(char* date){
+static bool is_valid_char_date(const char* date){
 	bool flag = true;
 	for (int i = ZERO; i<strlen(date)&&flag; i++)
 		flag = ((i==TWO || i==FIVE) && (date[i] == SLASH)) || isdigit(date[i]);
 	return flag;
 }
 
-static bool are_valid_numbers(char* date){
+static bool are_valid_numbers(const char* date){
 	return is_valid_day(date) && is_valid_month(date) && is_valid_year(date);
 }
 
-bool is_valid_date(char* date){
+bool is_valid_date(const char* date){
 	return strlen(date) == TEN && is_valid_char_date(date) && are_valid_numbers(date);
 }
 
