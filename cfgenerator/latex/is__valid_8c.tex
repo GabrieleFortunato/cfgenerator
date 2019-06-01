@@ -62,13 +62,33 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+static bool \hyperlink{is__valid_8c_a234d80a96b49845d68863acd44ab4e9c}{are\-\_\-valid\-\_\-chars\-\_\-name\-\_\-surname\-\_\-code} (char $\ast$code)
+\item 
 bool \hyperlink{is__valid_8c_afba29c08c3a52738f4087552e70c7c6b}{is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name} (char $\ast$code)
 \item 
-bool \hyperlink{is__valid_8c_a2ef433a62b6f81f4fe642b959654e1e6}{is\-\_\-valid\-\_\-name\-\_\-surname} (char $\ast$surname)
+static bool \hyperlink{is__valid_8c_a4a695f98a321f3b294cfc9e184f74ed7}{is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname} (const char $\ast$string)
 \item 
-bool \hyperlink{is__valid_8c_a02644493e998be0007c7f53839c5cfb8}{is\-\_\-valid\-\_\-date} (char $\ast$date)
+bool \hyperlink{is__valid_8c_a3936abb515aa8023d40db8513f4feaea}{is\-\_\-valid\-\_\-name\-\_\-surname} (const char $\ast$surname)
+\item 
+static int \hyperlink{is__valid_8c_a870f6840f724637be8297897dadf0746}{number\-\_\-\-A} (char a, char b)
+\item 
+static int \hyperlink{is__valid_8c_a085d34e4c451ce866e6dba1f77670845}{number\-\_\-\-B} (char a, char b, char c, char d)
+\item 
+static bool \hyperlink{is__valid_8c_a793adcc48b98aeaab5706be9b5eb479e}{is\-\_\-valid\-\_\-day} (const char $\ast$date)
+\item 
+static bool \hyperlink{is__valid_8c_a7bb91ffb751649335fa6d389459aa68b}{is\-\_\-valid\-\_\-month} (const char $\ast$date)
+\item 
+static bool \hyperlink{is__valid_8c_ace7d74584863febc706c60153cc9091d}{is\-\_\-valid\-\_\-year} (const char $\ast$date)
+\item 
+static bool \hyperlink{is__valid_8c_ad601fb59999297269e9517bc38dfe4cc}{is\-\_\-valid\-\_\-char\-\_\-date} (const char $\ast$date)
+\item 
+static bool \hyperlink{is__valid_8c_aa9d3f8d81f6ce07c1df4e9cebdece7f4}{are\-\_\-valid\-\_\-numbers} (const char $\ast$date)
+\item 
+bool \hyperlink{is__valid_8c_a040a1ed664c51f87b79830e162ea3cca}{is\-\_\-valid\-\_\-date} (const char $\ast$date)
 \item 
 bool \hyperlink{is__valid_8c_a053ab1181823a73951f675960eb54537}{is\-\_\-valid\-\_\-ctrl\-\_\-code} (char code)
+\item 
+static bool \hyperlink{is__valid_8c_adf46ce4a4478a5b30ac1848a34323371}{is\-\_\-valid\-\_\-char\-\_\-town\-\_\-code} (char $\ast$code)
 \item 
 bool \hyperlink{is__valid_8c_a931d1013082072d46b16f03df6b9ba9a}{is\-\_\-valid\-\_\-town\-\_\-code} (char $\ast$code)
 \item 
@@ -80,7 +100,17 @@ bool \hyperlink{is__valid_8c_a6d2e518355a4e6e873983b99ae5cde08}{is\-\_\-valid\-\
 \item 
 bool \hyperlink{is__valid_8c_aefdd7166b9e5be1e7e90fdb598a0cb3d}{are\-\_\-valid\-\_\-data} (char $\ast$name, char $\ast$surname, char $\ast$date, char $\ast$coded\-\_\-town, char sex)
 \item 
+static bool \hyperlink{is__valid_8c_a2332043ba5aefd51af00d68ffb593b8c}{is\-\_\-valid\-\_\-index} (int i)
+\item 
+static bool \hyperlink{is__valid_8c_a02d121ae68928c28c34629587881fcf4}{is\-\_\-valid\-\_\-cf\-\_\-char} (char $\ast$code, int i)
+\item 
+static bool \hyperlink{is__valid_8c_a25890af93bcff7148ea58fe435eafb6c}{are\-\_\-valid\-\_\-cf\-\_\-chars} (char $\ast$code)
+\item 
 bool \hyperlink{is__valid_8c_ae65ab1a3f8095d0c9e085db678d819f2}{is\-\_\-valid\-\_\-cf\-\_\-code} (char $\ast$code)
+\item 
+static bool \hyperlink{is__valid_8c_ae888434defcd82041a913dceb47d1a7f}{is\-\_\-valid\-\_\-char\-\_\-date\-\_\-code} (char $\ast$code, int i)
+\item 
+static bool \hyperlink{is__valid_8c_ac839224c4f2dbd7efd2e59fc68838b18}{are\-\_\-valid\-\_\-chars\-\_\-date\-\_\-code} (char $\ast$code)
 \item 
 bool \hyperlink{is__valid_8c_a2208ce7082532c2908b15902e924cf22}{is\-\_\-valid\-\_\-date\-\_\-code} (char $\ast$code)
 \end{DoxyCompactItemize}
@@ -94,6 +124,10 @@ bool \hyperlink{is__valid_8c_a2208ce7082532c2908b15902e924cf22}{is\-\_\-valid\-\
 
 Definition at line 35 of file is\-\_\-valid.\-c.
 
+
+
+Referenced by is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname().
+
 \hypertarget{is__valid_8c_a60710bac11b4f1135f61ded06542d661}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!A\-S\-C\-I\-I@{A\-S\-C\-I\-I}}
 \index{A\-S\-C\-I\-I@{A\-S\-C\-I\-I}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{A\-S\-C\-I\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S\-C\-I\-I~48}}\label{is__valid_8c_a60710bac11b4f1135f61ded06542d661}
@@ -101,12 +135,20 @@ Definition at line 35 of file is\-\_\-valid.\-c.
 
 Definition at line 26 of file is\-\_\-valid.\-c.
 
+
+
+Referenced by number\-\_\-\-A(), and number\-\_\-\-B().
+
 \hypertarget{is__valid_8c_aaf6cfeda610d5092df7deb18fd5d63c2}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!E\-I\-G\-H\-T@{E\-I\-G\-H\-T}}
 \index{E\-I\-G\-H\-T@{E\-I\-G\-H\-T}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{E\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-I\-G\-H\-T~8}}\label{is__valid_8c_aaf6cfeda610d5092df7deb18fd5d63c2}
 
 
 Definition at line 18 of file is\-\_\-valid.\-c.
+
+
+
+Referenced by is\-\_\-valid\-\_\-year().
 
 \hypertarget{is__valid_8c_a4cc630b5a4ac206fbcb8794c4fcd8529}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!E\-M\-P\-T\-Y\-\_\-\-S\-T\-R\-I\-N\-G@{E\-M\-P\-T\-Y\-\_\-\-S\-T\-R\-I\-N\-G}}
 \index{E\-M\-P\-T\-Y\-\_\-\-S\-T\-R\-I\-N\-G@{E\-M\-P\-T\-Y\-\_\-\-S\-T\-R\-I\-N\-G}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -139,7 +181,7 @@ Definition at line 15 of file is\-\_\-valid.\-c.
 
 
 
-Referenced by birth\-\_\-date\-\_\-code(), is\-\_\-valid\-\_\-date\-\_\-code(), and read\-\_\-birth\-\_\-place\-\_\-code().
+Referenced by is\-\_\-valid\-\_\-char\-\_\-date(), and is\-\_\-valid\-\_\-date\-\_\-code().
 
 \hypertarget{is__valid_8c_a64a9b58c6a5bcd3724f3b56ad6d006a7}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!F\-O\-U\-R@{F\-O\-U\-R}}
 \index{F\-O\-U\-R@{F\-O\-U\-R}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -150,7 +192,7 @@ Definition at line 14 of file is\-\_\-valid.\-c.
 
 
 
-Referenced by cf\-\_\-generator(), is\-\_\-valid\-\_\-town\-\_\-code(), and name\-\_\-code().
+Referenced by is\-\_\-valid\-\_\-month(), and is\-\_\-valid\-\_\-town\-\_\-code().
 
 \hypertarget{is__valid_8c_a5da5aa6dc417c256063aa5c5a5ec494d}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!F\-O\-U\-R\-T\-E\-E\-N@{F\-O\-U\-R\-T\-E\-E\-N}}
 \index{F\-O\-U\-R\-T\-E\-E\-N@{F\-O\-U\-R\-T\-E\-E\-N}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -159,12 +201,20 @@ Referenced by cf\-\_\-generator(), is\-\_\-valid\-\_\-town\-\_\-code(), and name
 
 Definition at line 23 of file is\-\_\-valid.\-c.
 
+
+
+Referenced by is\-\_\-valid\-\_\-index().
+
 \hypertarget{is__valid_8c_a625dac461fbab83b1c1d04f3aceeb8f3}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!H\-U\-N\-D\-R\-E\-D@{H\-U\-N\-D\-R\-E\-D}}
 \index{H\-U\-N\-D\-R\-E\-D@{H\-U\-N\-D\-R\-E\-D}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{H\-U\-N\-D\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-U\-N\-D\-R\-E\-D~100}}\label{is__valid_8c_a625dac461fbab83b1c1d04f3aceeb8f3}
 
 
 Definition at line 27 of file is\-\_\-valid.\-c.
+
+
+
+Referenced by number\-\_\-\-B().
 
 \hypertarget{is__valid_8c_a52037c938e3c1b126c6277da5ca689d0}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!M@{M}}
 \index{M@{M}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -175,7 +225,7 @@ Definition at line 33 of file is\-\_\-valid.\-c.
 
 
 
-Referenced by birth\-\_\-date\-\_\-code(), and is\-\_\-valid\-\_\-sex().
+Referenced by is\-\_\-valid\-\_\-sex().
 
 \hypertarget{is__valid_8c_a59bcbb5f6896e44dfd79fa63508cfec3}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!M\-A\-X\-\_\-\-Y\-E\-A\-R@{M\-A\-X\-\_\-\-Y\-E\-A\-R}}
 \index{M\-A\-X\-\_\-\-Y\-E\-A\-R@{M\-A\-X\-\_\-\-Y\-E\-A\-R}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -184,6 +234,10 @@ Referenced by birth\-\_\-date\-\_\-code(), and is\-\_\-valid\-\_\-sex().
 
 Definition at line 30 of file is\-\_\-valid.\-c.
 
+
+
+Referenced by is\-\_\-valid\-\_\-year().
+
 \hypertarget{is__valid_8c_a66979cc5bd82220ee4c973b4bcb36f10}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!M\-I\-N\-\_\-\-Y\-E\-A\-R@{M\-I\-N\-\_\-\-Y\-E\-A\-R}}
 \index{M\-I\-N\-\_\-\-Y\-E\-A\-R@{M\-I\-N\-\_\-\-Y\-E\-A\-R}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{M\-I\-N\-\_\-\-Y\-E\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-N\-\_\-\-Y\-E\-A\-R~1900}}\label{is__valid_8c_a66979cc5bd82220ee4c973b4bcb36f10}
@@ -191,12 +245,20 @@ Definition at line 30 of file is\-\_\-valid.\-c.
 
 Definition at line 29 of file is\-\_\-valid.\-c.
 
+
+
+Referenced by is\-\_\-valid\-\_\-year().
+
 \hypertarget{is__valid_8c_aef08329d0c1db97d7b269330ae9a70af}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!N\-I\-N\-E@{N\-I\-N\-E}}
 \index{N\-I\-N\-E@{N\-I\-N\-E}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{N\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-I\-N\-E~9}}\label{is__valid_8c_aef08329d0c1db97d7b269330ae9a70af}
 
 
 Definition at line 19 of file is\-\_\-valid.\-c.
+
+
+
+Referenced by is\-\_\-valid\-\_\-index(), and is\-\_\-valid\-\_\-year().
 
 \hypertarget{is__valid_8c_a206b6f5362e56b51ca957635350b70b6}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!O\-N\-E@{O\-N\-E}}
 \index{O\-N\-E@{O\-N\-E}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -207,7 +269,7 @@ Definition at line 11 of file is\-\_\-valid.\-c.
 
 
 
-Referenced by repeat().
+Referenced by is\-\_\-valid\-\_\-day().
 
 \hypertarget{is__valid_8c_ac537e6e7dad3ecef73fc3fc4f14fe020}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!S\-E\-V\-E\-N@{S\-E\-V\-E\-N}}
 \index{S\-E\-V\-E\-N@{S\-E\-V\-E\-N}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -215,6 +277,10 @@ Referenced by repeat().
 
 
 Definition at line 17 of file is\-\_\-valid.\-c.
+
+
+
+Referenced by is\-\_\-valid\-\_\-index(), and is\-\_\-valid\-\_\-year().
 
 \hypertarget{is__valid_8c_afad3d8b3d66fceadb1732af784734c75}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!S\-I\-X@{S\-I\-X}}
 \index{S\-I\-X@{S\-I\-X}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -225,7 +291,7 @@ Definition at line 16 of file is\-\_\-valid.\-c.
 
 
 
-Referenced by cf\-\_\-generator().
+Referenced by is\-\_\-valid\-\_\-index(), and is\-\_\-valid\-\_\-year().
 
 \hypertarget{is__valid_8c_abb254031f3aabcf1496d49bc967946e4}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!S\-I\-X\-T\-E\-E\-N@{S\-I\-X\-T\-E\-E\-N}}
 \index{S\-I\-X\-T\-E\-E\-N@{S\-I\-X\-T\-E\-E\-N}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -236,7 +302,7 @@ Definition at line 24 of file is\-\_\-valid.\-c.
 
 
 
-Referenced by cf\-\_\-generator(), and is\-\_\-valid\-\_\-cf\-\_\-code().
+Referenced by is\-\_\-valid\-\_\-cf\-\_\-code().
 
 \hypertarget{is__valid_8c_a69eb17477fd6f6af2c9ca2d5f4c7df3c}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!S\-L\-A\-S\-H@{S\-L\-A\-S\-H}}
 \index{S\-L\-A\-S\-H@{S\-L\-A\-S\-H}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -245,12 +311,20 @@ Referenced by cf\-\_\-generator(), and is\-\_\-valid\-\_\-cf\-\_\-code().
 
 Definition at line 31 of file is\-\_\-valid.\-c.
 
+
+
+Referenced by is\-\_\-valid\-\_\-char\-\_\-date().
+
 \hypertarget{is__valid_8c_a5ff6e798033f03e74730e99f01936f84}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!S\-P\-A\-C\-E@{S\-P\-A\-C\-E}}
 \index{S\-P\-A\-C\-E@{S\-P\-A\-C\-E}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{S\-P\-A\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-A\-C\-E~' '}}\label{is__valid_8c_a5ff6e798033f03e74730e99f01936f84}
 
 
 Definition at line 34 of file is\-\_\-valid.\-c.
+
+
+
+Referenced by is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname().
 
 \hypertarget{is__valid_8c_aabc53aa7e6353d8f58b8ae93fd015fab}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!T\-E\-N@{T\-E\-N}}
 \index{T\-E\-N@{T\-E\-N}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -261,7 +335,7 @@ Definition at line 20 of file is\-\_\-valid.\-c.
 
 
 
-Referenced by is\-\_\-valid\-\_\-date().
+Referenced by is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-index(), number\-\_\-\-A(), and number\-\_\-\-B().
 
 \hypertarget{is__valid_8c_a3ba95b1375c651717834b4ce6ed05baa}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!T\-H\-I\-R\-T\-E\-E\-N@{T\-H\-I\-R\-T\-E\-E\-N}}
 \index{T\-H\-I\-R\-T\-E\-E\-N@{T\-H\-I\-R\-T\-E\-E\-N}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -270,6 +344,10 @@ Referenced by is\-\_\-valid\-\_\-date().
 
 Definition at line 22 of file is\-\_\-valid.\-c.
 
+
+
+Referenced by is\-\_\-valid\-\_\-index().
+
 \hypertarget{is__valid_8c_ace2680396d9233134430c9e09066c621}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!T\-H\-I\-R\-T\-Y\-O\-N\-E@{T\-H\-I\-R\-T\-Y\-O\-N\-E}}
 \index{T\-H\-I\-R\-T\-Y\-O\-N\-E@{T\-H\-I\-R\-T\-Y\-O\-N\-E}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{T\-H\-I\-R\-T\-Y\-O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-I\-R\-T\-Y\-O\-N\-E~31}}\label{is__valid_8c_ace2680396d9233134430c9e09066c621}
@@ -277,12 +355,20 @@ Definition at line 22 of file is\-\_\-valid.\-c.
 
 Definition at line 25 of file is\-\_\-valid.\-c.
 
+
+
+Referenced by is\-\_\-valid\-\_\-day().
+
 \hypertarget{is__valid_8c_ae9684b7111809b055eab5275c27cb765}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!T\-H\-O\-U\-S\-A\-N\-D@{T\-H\-O\-U\-S\-A\-N\-D}}
 \index{T\-H\-O\-U\-S\-A\-N\-D@{T\-H\-O\-U\-S\-A\-N\-D}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{T\-H\-O\-U\-S\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-O\-U\-S\-A\-N\-D~1000}}\label{is__valid_8c_ae9684b7111809b055eab5275c27cb765}
 
 
 Definition at line 28 of file is\-\_\-valid.\-c.
+
+
+
+Referenced by number\-\_\-\-B().
 
 \hypertarget{is__valid_8c_a1859c475c0bde19dfc1101e35d71b939}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!T\-H\-R\-E\-E@{T\-H\-R\-E\-E}}
 \index{T\-H\-R\-E\-E@{T\-H\-R\-E\-E}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -293,7 +379,7 @@ Definition at line 13 of file is\-\_\-valid.\-c.
 
 
 
-Referenced by is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name().
+Referenced by is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), and is\-\_\-valid\-\_\-month().
 
 \hypertarget{is__valid_8c_a65e6604e8c6e54fdc7f706be201f115e}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!T\-W\-E\-L\-V\-E@{T\-W\-E\-L\-V\-E}}
 \index{T\-W\-E\-L\-V\-E@{T\-W\-E\-L\-V\-E}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -302,12 +388,20 @@ Referenced by is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name().
 
 Definition at line 21 of file is\-\_\-valid.\-c.
 
+
+
+Referenced by is\-\_\-valid\-\_\-index(), and is\-\_\-valid\-\_\-month().
+
 \hypertarget{is__valid_8c_a888e15353eb3d330c743dbdeb47117e2}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!T\-W\-O@{T\-W\-O}}
 \index{T\-W\-O@{T\-W\-O}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{T\-W\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-W\-O~2}}\label{is__valid_8c_a888e15353eb3d330c743dbdeb47117e2}
 
 
 Definition at line 12 of file is\-\_\-valid.\-c.
+
+
+
+Referenced by is\-\_\-valid\-\_\-char\-\_\-date(), and is\-\_\-valid\-\_\-char\-\_\-date\-\_\-code().
 
 \hypertarget{is__valid_8c_ac328e551bde3d39b6d7b8cc9e048d941}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!Z\-E\-R\-O@{Z\-E\-R\-O}}
 \index{Z\-E\-R\-O@{Z\-E\-R\-O}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -318,11 +412,68 @@ Definition at line 10 of file is\-\_\-valid.\-c.
 
 
 
-Referenced by cf\-\_\-generator(), ctrl\-\_\-code(), is\-\_\-not\-\_\-empty\-\_\-string(), is\-\_\-valid\-\_\-name\-\_\-surname(), is\-\_\-valid\-\_\-town(), and to\-\_\-upper\-\_\-string().
+Referenced by are\-\_\-valid\-\_\-cf\-\_\-chars(), are\-\_\-valid\-\_\-chars\-\_\-date\-\_\-code(), are\-\_\-valid\-\_\-chars\-\_\-name\-\_\-surname\-\_\-code(), is\-\_\-not\-\_\-empty\-\_\-string(), is\-\_\-valid\-\_\-char\-\_\-date(), is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname(), is\-\_\-valid\-\_\-char\-\_\-town\-\_\-code(), is\-\_\-valid\-\_\-day(), is\-\_\-valid\-\_\-month(), is\-\_\-valid\-\_\-name\-\_\-surname(), and is\-\_\-valid\-\_\-town().
 
 
 
 \subsection{Function Documentation}
+\hypertarget{is__valid_8c_a25890af93bcff7148ea58fe435eafb6c}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!are\-\_\-valid\-\_\-cf\-\_\-chars@{are\-\_\-valid\-\_\-cf\-\_\-chars}}
+\index{are\-\_\-valid\-\_\-cf\-\_\-chars@{are\-\_\-valid\-\_\-cf\-\_\-chars}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{are\-\_\-valid\-\_\-cf\-\_\-chars}]{\setlength{\rightskip}{0pt plus 5cm}static bool are\-\_\-valid\-\_\-cf\-\_\-chars (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_a25890af93bcff7148ea58fe435eafb6c}
+
+
+Definition at line 137 of file is\-\_\-valid.\-c.
+
+
+
+References is\-\_\-valid\-\_\-cf\-\_\-char(), and Z\-E\-R\-O.
+
+
+
+Referenced by is\-\_\-valid\-\_\-cf\-\_\-code().
+
+\hypertarget{is__valid_8c_ac839224c4f2dbd7efd2e59fc68838b18}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!are\-\_\-valid\-\_\-chars\-\_\-date\-\_\-code@{are\-\_\-valid\-\_\-chars\-\_\-date\-\_\-code}}
+\index{are\-\_\-valid\-\_\-chars\-\_\-date\-\_\-code@{are\-\_\-valid\-\_\-chars\-\_\-date\-\_\-code}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{are\-\_\-valid\-\_\-chars\-\_\-date\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}static bool are\-\_\-valid\-\_\-chars\-\_\-date\-\_\-code (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_ac839224c4f2dbd7efd2e59fc68838b18}
+
+
+Definition at line 152 of file is\-\_\-valid.\-c.
+
+
+
+References is\-\_\-valid\-\_\-char\-\_\-date\-\_\-code(), and Z\-E\-R\-O.
+
+
+
+Referenced by is\-\_\-valid\-\_\-date\-\_\-code().
+
+\hypertarget{is__valid_8c_a234d80a96b49845d68863acd44ab4e9c}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!are\-\_\-valid\-\_\-chars\-\_\-name\-\_\-surname\-\_\-code@{are\-\_\-valid\-\_\-chars\-\_\-name\-\_\-surname\-\_\-code}}
+\index{are\-\_\-valid\-\_\-chars\-\_\-name\-\_\-surname\-\_\-code@{are\-\_\-valid\-\_\-chars\-\_\-name\-\_\-surname\-\_\-code}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{are\-\_\-valid\-\_\-chars\-\_\-name\-\_\-surname\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}static bool are\-\_\-valid\-\_\-chars\-\_\-name\-\_\-surname\-\_\-code (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_a234d80a96b49845d68863acd44ab4e9c}
+
+
+Definition at line 38 of file is\-\_\-valid.\-c.
+
+
+
+References Z\-E\-R\-O.
+
+
+
+Referenced by is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name().
+
 \hypertarget{is__valid_8c_aefdd7166b9e5be1e7e90fdb598a0cb3d}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!are\-\_\-valid\-\_\-data@{are\-\_\-valid\-\_\-data}}
 \index{are\-\_\-valid\-\_\-data@{are\-\_\-valid\-\_\-data}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{are\-\_\-valid\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}bool are\-\_\-valid\-\_\-data (
@@ -362,6 +513,25 @@ References is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name\-\_\-surname(), is
 
 Referenced by print\-\_\-code().
 
+\hypertarget{is__valid_8c_aa9d3f8d81f6ce07c1df4e9cebdece7f4}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!are\-\_\-valid\-\_\-numbers@{are\-\_\-valid\-\_\-numbers}}
+\index{are\-\_\-valid\-\_\-numbers@{are\-\_\-valid\-\_\-numbers}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{are\-\_\-valid\-\_\-numbers}]{\setlength{\rightskip}{0pt plus 5cm}static bool are\-\_\-valid\-\_\-numbers (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_aa9d3f8d81f6ce07c1df4e9cebdece7f4}
+
+
+Definition at line 88 of file is\-\_\-valid.\-c.
+
+
+
+References is\-\_\-valid\-\_\-day(), is\-\_\-valid\-\_\-month(), and is\-\_\-valid\-\_\-year().
+
+
+
+Referenced by is\-\_\-valid\-\_\-date().
+
 \hypertarget{is__valid_8c_a55e1774041ad6bc2aff93c7777fa1af2}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-not\-\_\-empty\-\_\-string@{is\-\_\-not\-\_\-empty\-\_\-string}}
 \index{is\-\_\-not\-\_\-empty\-\_\-string@{is\-\_\-not\-\_\-empty\-\_\-string}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{is\-\_\-not\-\_\-empty\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-not\-\_\-empty\-\_\-string (
@@ -389,6 +559,26 @@ References E\-M\-P\-T\-Y\-\_\-\-S\-T\-R\-I\-N\-G, and Z\-E\-R\-O.
 
 Referenced by get\-\_\-birth\-\_\-date(), get\-\_\-birth\-\_\-town(), get\-\_\-name(), get\-\_\-surname(), and read\-\_\-birth\-\_\-place\-\_\-code().
 
+\hypertarget{is__valid_8c_a02d121ae68928c28c34629587881fcf4}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-cf\-\_\-char@{is\-\_\-valid\-\_\-cf\-\_\-char}}
+\index{is\-\_\-valid\-\_\-cf\-\_\-char@{is\-\_\-valid\-\_\-cf\-\_\-char}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{is\-\_\-valid\-\_\-cf\-\_\-char}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-valid\-\_\-cf\-\_\-char (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{code, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_a02d121ae68928c28c34629587881fcf4}
+
+
+Definition at line 133 of file is\-\_\-valid.\-c.
+
+
+
+References is\-\_\-valid\-\_\-index().
+
+
+
+Referenced by are\-\_\-valid\-\_\-cf\-\_\-chars().
+
 \hypertarget{is__valid_8c_ae65ab1a3f8095d0c9e085db678d819f2}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-cf\-\_\-code@{is\-\_\-valid\-\_\-cf\-\_\-code}}
 \index{is\-\_\-valid\-\_\-cf\-\_\-code@{is\-\_\-valid\-\_\-cf\-\_\-code}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{is\-\_\-valid\-\_\-cf\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-valid\-\_\-cf\-\_\-code (
@@ -410,11 +600,88 @@ Definition at line 144 of file is\-\_\-valid.\-c.
 
 
 
-References S\-I\-X\-T\-E\-E\-N.
+References are\-\_\-valid\-\_\-cf\-\_\-chars(), and S\-I\-X\-T\-E\-E\-N.
 
 
 
 Referenced by cf\-\_\-generator().
+
+\hypertarget{is__valid_8c_ad601fb59999297269e9517bc38dfe4cc}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-char\-\_\-date@{is\-\_\-valid\-\_\-char\-\_\-date}}
+\index{is\-\_\-valid\-\_\-char\-\_\-date@{is\-\_\-valid\-\_\-char\-\_\-date}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{is\-\_\-valid\-\_\-char\-\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-valid\-\_\-char\-\_\-date (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_ad601fb59999297269e9517bc38dfe4cc}
+
+
+Definition at line 81 of file is\-\_\-valid.\-c.
+
+
+
+References F\-I\-V\-E, S\-L\-A\-S\-H, T\-W\-O, and Z\-E\-R\-O.
+
+
+
+Referenced by is\-\_\-valid\-\_\-date().
+
+\hypertarget{is__valid_8c_ae888434defcd82041a913dceb47d1a7f}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-char\-\_\-date\-\_\-code@{is\-\_\-valid\-\_\-char\-\_\-date\-\_\-code}}
+\index{is\-\_\-valid\-\_\-char\-\_\-date\-\_\-code@{is\-\_\-valid\-\_\-char\-\_\-date\-\_\-code}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{is\-\_\-valid\-\_\-char\-\_\-date\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-valid\-\_\-char\-\_\-date\-\_\-code (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{code, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_ae888434defcd82041a913dceb47d1a7f}
+
+
+Definition at line 148 of file is\-\_\-valid.\-c.
+
+
+
+References T\-W\-O.
+
+
+
+Referenced by are\-\_\-valid\-\_\-chars\-\_\-date\-\_\-code().
+
+\hypertarget{is__valid_8c_a4a695f98a321f3b294cfc9e184f74ed7}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname@{is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname}}
+\index{is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname@{is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_a4a695f98a321f3b294cfc9e184f74ed7}
+
+
+Definition at line 49 of file is\-\_\-valid.\-c.
+
+
+
+References A\-P\-O\-S\-T\-R\-O\-P\-H\-E, S\-P\-A\-C\-E, and Z\-E\-R\-O.
+
+
+
+Referenced by is\-\_\-valid\-\_\-name\-\_\-surname().
+
+\hypertarget{is__valid_8c_adf46ce4a4478a5b30ac1848a34323371}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-char\-\_\-town\-\_\-code@{is\-\_\-valid\-\_\-char\-\_\-town\-\_\-code}}
+\index{is\-\_\-valid\-\_\-char\-\_\-town\-\_\-code@{is\-\_\-valid\-\_\-char\-\_\-town\-\_\-code}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{is\-\_\-valid\-\_\-char\-\_\-town\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-valid\-\_\-char\-\_\-town\-\_\-code (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_adf46ce4a4478a5b30ac1848a34323371}
+
+
+Definition at line 100 of file is\-\_\-valid.\-c.
+
+
+
+References Z\-E\-R\-O.
+
+
+
+Referenced by is\-\_\-valid\-\_\-town\-\_\-code().
 
 \hypertarget{is__valid_8c_afba29c08c3a52738f4087552e70c7c6b}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name@{is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name}}
 \index{is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name@{is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name}!is_valid.c@{is\-\_\-valid.\-c}}
@@ -437,7 +704,7 @@ Definition at line 45 of file is\-\_\-valid.\-c.
 
 
 
-References T\-H\-R\-E\-E.
+References are\-\_\-valid\-\_\-chars\-\_\-name\-\_\-surname\-\_\-code(), and T\-H\-R\-E\-E.
 
 
 
@@ -466,13 +733,13 @@ Definition at line 96 of file is\-\_\-valid.\-c.
 
 Referenced by ctrl\-\_\-code().
 
-\hypertarget{is__valid_8c_a02644493e998be0007c7f53839c5cfb8}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-date@{is\-\_\-valid\-\_\-date}}
+\hypertarget{is__valid_8c_a040a1ed664c51f87b79830e162ea3cca}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-date@{is\-\_\-valid\-\_\-date}}
 \index{is\-\_\-valid\-\_\-date@{is\-\_\-valid\-\_\-date}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{is\-\_\-valid\-\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-valid\-\_\-date (
 \begin{DoxyParamCaption}
-\item[{char $\ast$}]{date}
+\item[{const char $\ast$}]{date}
 \end{DoxyParamCaption}
-)}}\label{is__valid_8c_a02644493e998be0007c7f53839c5cfb8}
+)}}\label{is__valid_8c_a040a1ed664c51f87b79830e162ea3cca}
 Verifica che la data sia stata inserita nel giusto formato 
 \begin{DoxyParams}{Parameters}
 {\em date} & \\
@@ -487,7 +754,7 @@ Definition at line 92 of file is\-\_\-valid.\-c.
 
 
 
-References T\-E\-N.
+References are\-\_\-valid\-\_\-numbers(), is\-\_\-valid\-\_\-char\-\_\-date(), and T\-E\-N.
 
 
 
@@ -514,19 +781,76 @@ Definition at line 159 of file is\-\_\-valid.\-c.
 
 
 
-References F\-I\-V\-E.
+References are\-\_\-valid\-\_\-chars\-\_\-date\-\_\-code(), and F\-I\-V\-E.
 
 
 
 Referenced by birth\-\_\-date\-\_\-code().
 
-\hypertarget{is__valid_8c_a2ef433a62b6f81f4fe642b959654e1e6}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-name\-\_\-surname@{is\-\_\-valid\-\_\-name\-\_\-surname}}
+\hypertarget{is__valid_8c_a793adcc48b98aeaab5706be9b5eb479e}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-day@{is\-\_\-valid\-\_\-day}}
+\index{is\-\_\-valid\-\_\-day@{is\-\_\-valid\-\_\-day}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{is\-\_\-valid\-\_\-day}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-valid\-\_\-day (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_a793adcc48b98aeaab5706be9b5eb479e}
+
+
+Definition at line 68 of file is\-\_\-valid.\-c.
+
+
+
+References number\-\_\-\-A(), O\-N\-E, T\-H\-I\-R\-T\-Y\-O\-N\-E, and Z\-E\-R\-O.
+
+
+
+Referenced by are\-\_\-valid\-\_\-numbers().
+
+\hypertarget{is__valid_8c_a2332043ba5aefd51af00d68ffb593b8c}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-index@{is\-\_\-valid\-\_\-index}}
+\index{is\-\_\-valid\-\_\-index@{is\-\_\-valid\-\_\-index}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{is\-\_\-valid\-\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-valid\-\_\-index (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_a2332043ba5aefd51af00d68ffb593b8c}
+
+
+Definition at line 128 of file is\-\_\-valid.\-c.
+
+
+
+References F\-O\-U\-R\-T\-E\-E\-N, N\-I\-N\-E, S\-E\-V\-E\-N, S\-I\-X, T\-E\-N, T\-H\-I\-R\-T\-E\-E\-N, and T\-W\-E\-L\-V\-E.
+
+
+
+Referenced by is\-\_\-valid\-\_\-cf\-\_\-char().
+
+\hypertarget{is__valid_8c_a7bb91ffb751649335fa6d389459aa68b}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-month@{is\-\_\-valid\-\_\-month}}
+\index{is\-\_\-valid\-\_\-month@{is\-\_\-valid\-\_\-month}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{is\-\_\-valid\-\_\-month}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-valid\-\_\-month (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_a7bb91ffb751649335fa6d389459aa68b}
+
+
+Definition at line 72 of file is\-\_\-valid.\-c.
+
+
+
+References F\-O\-U\-R, number\-\_\-\-A(), T\-H\-R\-E\-E, T\-W\-E\-L\-V\-E, and Z\-E\-R\-O.
+
+
+
+Referenced by are\-\_\-valid\-\_\-numbers().
+
+\hypertarget{is__valid_8c_a3936abb515aa8023d40db8513f4feaea}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-name\-\_\-surname@{is\-\_\-valid\-\_\-name\-\_\-surname}}
 \index{is\-\_\-valid\-\_\-name\-\_\-surname@{is\-\_\-valid\-\_\-name\-\_\-surname}!is_valid.c@{is\-\_\-valid.\-c}}
 \subsubsection[{is\-\_\-valid\-\_\-name\-\_\-surname}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-valid\-\_\-name\-\_\-surname (
 \begin{DoxyParamCaption}
-\item[{char $\ast$}]{name}
+\item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
-)}}\label{is__valid_8c_a2ef433a62b6f81f4fe642b959654e1e6}
+)}}\label{is__valid_8c_a3936abb515aa8023d40db8513f4feaea}
 Verifica la correttezza del nome e del cognome 
 \begin{DoxyParams}{Parameters}
 {\em name} & \\
@@ -541,7 +865,7 @@ Definition at line 56 of file is\-\_\-valid.\-c.
 
 
 
-References Z\-E\-R\-O.
+References is\-\_\-valid\-\_\-char\-\_\-name\-\_\-surname(), and Z\-E\-R\-O.
 
 
 
@@ -610,9 +934,70 @@ Definition at line 107 of file is\-\_\-valid.\-c.
 
 
 
-References F\-O\-U\-R.
+References F\-O\-U\-R, and is\-\_\-valid\-\_\-char\-\_\-town\-\_\-code().
 
 
 
 Referenced by are\-\_\-valid\-\_\-data(), and read\-\_\-birth\-\_\-place\-\_\-code().
+
+\hypertarget{is__valid_8c_ace7d74584863febc706c60153cc9091d}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!is\-\_\-valid\-\_\-year@{is\-\_\-valid\-\_\-year}}
+\index{is\-\_\-valid\-\_\-year@{is\-\_\-valid\-\_\-year}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{is\-\_\-valid\-\_\-year}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-valid\-\_\-year (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_ace7d74584863febc706c60153cc9091d}
+
+
+Definition at line 76 of file is\-\_\-valid.\-c.
+
+
+
+References E\-I\-G\-H\-T, M\-A\-X\-\_\-\-Y\-E\-A\-R, M\-I\-N\-\_\-\-Y\-E\-A\-R, N\-I\-N\-E, number\-\_\-\-B(), S\-E\-V\-E\-N, and S\-I\-X.
+
+
+
+Referenced by are\-\_\-valid\-\_\-numbers().
+
+\hypertarget{is__valid_8c_a870f6840f724637be8297897dadf0746}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!number\-\_\-\-A@{number\-\_\-\-A}}
+\index{number\-\_\-\-A@{number\-\_\-\-A}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{number\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}static int number\-\_\-\-A (
+\begin{DoxyParamCaption}
+\item[{char}]{a, }
+\item[{char}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_a870f6840f724637be8297897dadf0746}
+
+
+Definition at line 60 of file is\-\_\-valid.\-c.
+
+
+
+References A\-S\-C\-I\-I, and T\-E\-N.
+
+
+
+Referenced by is\-\_\-valid\-\_\-day(), and is\-\_\-valid\-\_\-month().
+
+\hypertarget{is__valid_8c_a085d34e4c451ce866e6dba1f77670845}{\index{is\-\_\-valid.\-c@{is\-\_\-valid.\-c}!number\-\_\-\-B@{number\-\_\-\-B}}
+\index{number\-\_\-\-B@{number\-\_\-\-B}!is_valid.c@{is\-\_\-valid.\-c}}
+\subsubsection[{number\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}static int number\-\_\-\-B (
+\begin{DoxyParamCaption}
+\item[{char}]{a, }
+\item[{char}]{b, }
+\item[{char}]{c, }
+\item[{char}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{is__valid_8c_a085d34e4c451ce866e6dba1f77670845}
+
+
+Definition at line 64 of file is\-\_\-valid.\-c.
+
+
+
+References A\-S\-C\-I\-I, H\-U\-N\-D\-R\-E\-D, T\-E\-N, and T\-H\-O\-U\-S\-A\-N\-D.
+
+
+
+Referenced by is\-\_\-valid\-\_\-year().
 

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>My Project: src/get_data/to_upper/to_upper.c Source File</title>
+<title>cfgenerator: src/get_data/to_upper/to_upper.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">cfgenerator
    </div>
   </td>
  </tr>
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -95,15 +95,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="to__upper_8h.html">to_upper.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="is__valid_8c.html#ac328e551bde3d39b6d7b8cc9e048d941">ZERO</a> = 0;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="to__upper_8c.html#acdb9580f8c1b2955aa58958261a6c582">   10</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="to__upper_8c.html#acdb9580f8c1b2955aa58958261a6c582">ZERO</a> = 0;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="to__upper_8h.html#a50c6bf2d96f6ccc2faaf2f768de56c70">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="to__upper_8c.html#a50c6bf2d96f6ccc2faaf2f768de56c70">to_upper_string</a>(<span class="keywordtype">char</span>* <span class="keywordtype">string</span>){</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <a class="code" href="is__valid_8c.html#ac328e551bde3d39b6d7b8cc9e048d941">ZERO</a>; i &lt; strlen(<span class="keywordtype">string</span>); i++)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <a class="code" href="to__upper_8c.html#acdb9580f8c1b2955aa58958261a6c582">ZERO</a>; i &lt; strlen(<span class="keywordtype">string</span>); i++)</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">string</span>[i] = (islower(<span class="keywordtype">string</span>[i])) ? toupper(<span class="keywordtype">string</span>[i]) : <span class="keywordtype">string</span>[i];</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 <div class="ttc" id="to__upper_8h_html"><div class="ttname"><a href="to__upper_8h.html">to_upper.h</a></div></div>
-<div class="ttc" id="is__valid_8c_html_ac328e551bde3d39b6d7b8cc9e048d941"><div class="ttname"><a href="is__valid_8c.html#ac328e551bde3d39b6d7b8cc9e048d941">ZERO</a></div><div class="ttdeci">#define ZERO</div><div class="ttdef"><b>Definition:</b> <a href="is__valid_8c_source.html#l00010">is_valid.c:10</a></div></div>
 <div class="ttc" id="to__upper_8c_html_a50c6bf2d96f6ccc2faaf2f768de56c70"><div class="ttname"><a href="to__upper_8c.html#a50c6bf2d96f6ccc2faaf2f768de56c70">to_upper_string</a></div><div class="ttdeci">void to_upper_string(char *string)</div><div class="ttdef"><b>Definition:</b> <a href="to__upper_8c_source.html#l00012">to_upper.c:12</a></div></div>
+<div class="ttc" id="to__upper_8c_html_acdb9580f8c1b2955aa58958261a6c582"><div class="ttname"><a href="to__upper_8c.html#acdb9580f8c1b2955aa58958261a6c582">ZERO</a></div><div class="ttdeci">static const int ZERO</div><div class="ttdef"><b>Definition:</b> <a href="to__upper_8c_source.html#l00010">to_upper.c:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

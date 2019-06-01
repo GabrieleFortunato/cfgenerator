@@ -6,9 +6,34 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-char $\ast$ \hyperlink{read__birth__place_8c_a010678c3c8f5267cb96a048f1b7b0794}{read\-\_\-birth\-\_\-place\-\_\-code} (F\-I\-L\-E $\ast$places\-\_\-file, char $\ast$birth\-\_\-place)
+static void \hyperlink{read__birth__place_8c_a976b2579f6e42b95d89ad387e84b2702}{result\-\_\-code} (char $\ast$code, char $\ast$result)
+\item 
+static char $\ast$ \hyperlink{read__birth__place_8c_a8b02585a1ea5520b21b5d8569f8c838d}{get\-\_\-result} (char $\ast$birth\-\_\-place, char $\ast$part, char $\ast$result)
+\item 
+const char $\ast$ \hyperlink{read__birth__place_8c_a62227ff5f08c1f18f1c025470db2f1e6}{read\-\_\-birth\-\_\-place\-\_\-code} (F\-I\-L\-E $\ast$places\-\_\-file, char $\ast$birth\-\_\-place)
 \item 
 void \hyperlink{read__birth__place_8c_ac547debbc7ff88dd753efb9589535d11}{file\-\_\-not\-\_\-found} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{read__birth__place_8c_ab7e53332a94239e438169f170510847a}{F\-I\-F\-T\-E\-E\-N} = 50
+\item 
+static const char $\ast$ \hyperlink{read__birth__place_8c_aaf9af32599c871ff05b6a94e650462d6}{P\-A\-U\-S\-E} = \char`\"{}pause\char`\"{}
+\item 
+static const char $\ast$ \hyperlink{read__birth__place_8c_a885b009d800b491be41120b650c1a971}{F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D} = \char`\"{}File dei codici catastali non trovato\textbackslash{}n\char`\"{}
+\item 
+static const int \hyperlink{read__birth__place_8c_aa7b241cc8a7022f0018618a13700e3ec}{F\-O\-U\-R\-T\-Y\-S\-I\-X} = 46
+\item 
+static const int \hyperlink{read__birth__place_8c_a6f2ece3128fa540ac3301b24572901b9}{F\-I\-V\-E} = 5
+\item 
+static const int \hyperlink{read__birth__place_8c_a03732b1f90df5c759962ce41dd8046ac}{O\-N\-E} = 1
+\item 
+static const int \hyperlink{read__birth__place_8c_acdb9580f8c1b2955aa58958261a6c582}{Z\-E\-R\-O} = 0
+\item 
+static const char \hyperlink{read__birth__place_8c_a4fed43412fad2f4169aa68d9b59a24ba}{eos} = '\textbackslash{}0'
+\item 
+static const char $\ast$ \hyperlink{read__birth__place_8c_acc4ecdbad57717b8babc04d156ce7212}{V\-I\-R\-G\-O} = \char`\"{},\char`\"{}
 \end{DoxyCompactItemize}
 
 
@@ -26,16 +51,37 @@ Definition at line 51 of file read\-\_\-birth\-\_\-place.\-c.
 
 
 
-References close().
+References close(), F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D, and P\-A\-U\-S\-E.
 
-\hypertarget{read__birth__place_8c_a010678c3c8f5267cb96a048f1b7b0794}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!read\-\_\-birth\-\_\-place\-\_\-code@{read\-\_\-birth\-\_\-place\-\_\-code}}
+\hypertarget{read__birth__place_8c_a8b02585a1ea5520b21b5d8569f8c838d}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!get\-\_\-result@{get\-\_\-result}}
+\index{get\-\_\-result@{get\-\_\-result}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{get\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ get\-\_\-result (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{birth\-\_\-place, }
+\item[{char $\ast$}]{part, }
+\item[{char $\ast$}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_a8b02585a1ea5520b21b5d8569f8c838d}
+
+
+Definition at line 27 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+References F\-I\-V\-E, result\-\_\-code(), V\-I\-R\-G\-O, and Z\-E\-R\-O.
+
+
+
+Referenced by read\-\_\-birth\-\_\-place\-\_\-code().
+
+\hypertarget{read__birth__place_8c_a62227ff5f08c1f18f1c025470db2f1e6}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!read\-\_\-birth\-\_\-place\-\_\-code@{read\-\_\-birth\-\_\-place\-\_\-code}}
 \index{read\-\_\-birth\-\_\-place\-\_\-code@{read\-\_\-birth\-\_\-place\-\_\-code}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
-\subsubsection[{read\-\_\-birth\-\_\-place\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ read\-\_\-birth\-\_\-place\-\_\-code (
+\subsubsection[{read\-\_\-birth\-\_\-place\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ read\-\_\-birth\-\_\-place\-\_\-code (
 \begin{DoxyParamCaption}
 \item[{F\-I\-L\-E $\ast$}]{places\-\_\-file, }
 \item[{char $\ast$}]{birth\-\_\-place}
 \end{DoxyParamCaption}
-)}}\label{read__birth__place_8c_a010678c3c8f5267cb96a048f1b7b0794}
+)}}\label{read__birth__place_8c_a62227ff5f08c1f18f1c025470db2f1e6}
 Legge da file il codice catastale del comune di nascita \begin{DoxyPrecond}{Precondition}
 il file deve essere aperto 
 \end{DoxyPrecond}
@@ -58,5 +104,127 @@ Definition at line 35 of file read\-\_\-birth\-\_\-place.\-c.
 
 
 
-References F\-I\-V\-E, is\-\_\-not\-\_\-empty\-\_\-string(), and is\-\_\-valid\-\_\-town\-\_\-code().
+References F\-I\-F\-T\-E\-E\-N, F\-I\-V\-E, F\-O\-U\-R\-T\-Y\-S\-I\-X, get\-\_\-result(), is\-\_\-not\-\_\-empty\-\_\-string(), and is\-\_\-valid\-\_\-town\-\_\-code().
+
+\hypertarget{read__birth__place_8c_a976b2579f6e42b95d89ad387e84b2702}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!result\-\_\-code@{result\-\_\-code}}
+\index{result\-\_\-code@{result\-\_\-code}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{result\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}static void result\-\_\-code (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{code, }
+\item[{char $\ast$}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_a976b2579f6e42b95d89ad387e84b2702}
+
+
+Definition at line 21 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+References eos, O\-N\-E, and V\-I\-R\-G\-O.
+
+
+
+Referenced by get\-\_\-result().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{read__birth__place_8c_a4fed43412fad2f4169aa68d9b59a24ba}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!eos@{eos}}
+\index{eos@{eos}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{eos}]{\setlength{\rightskip}{0pt plus 5cm}const char eos = '\textbackslash{}0'\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_a4fed43412fad2f4169aa68d9b59a24ba}
+
+
+Definition at line 18 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+Referenced by result\-\_\-code().
+
+\hypertarget{read__birth__place_8c_ab7e53332a94239e438169f170510847a}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!F\-I\-F\-T\-E\-E\-N@{F\-I\-F\-T\-E\-E\-N}}
+\index{F\-I\-F\-T\-E\-E\-N@{F\-I\-F\-T\-E\-E\-N}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{F\-I\-F\-T\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int F\-I\-F\-T\-E\-E\-N = 50\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_ab7e53332a94239e438169f170510847a}
+
+
+Definition at line 11 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+Referenced by read\-\_\-birth\-\_\-place\-\_\-code().
+
+\hypertarget{read__birth__place_8c_a885b009d800b491be41120b650c1a971}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D@{F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D}}
+\index{F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D@{F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D = \char`\"{}File dei codici catastali non trovato\textbackslash{}n\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_a885b009d800b491be41120b650c1a971}
+
+
+Definition at line 13 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+Referenced by file\-\_\-not\-\_\-found().
+
+\hypertarget{read__birth__place_8c_a6f2ece3128fa540ac3301b24572901b9}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!F\-I\-V\-E@{F\-I\-V\-E}}
+\index{F\-I\-V\-E@{F\-I\-V\-E}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{F\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int F\-I\-V\-E = 5\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_a6f2ece3128fa540ac3301b24572901b9}
+
+
+Definition at line 15 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+Referenced by get\-\_\-result(), and read\-\_\-birth\-\_\-place\-\_\-code().
+
+\hypertarget{read__birth__place_8c_aa7b241cc8a7022f0018618a13700e3ec}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!F\-O\-U\-R\-T\-Y\-S\-I\-X@{F\-O\-U\-R\-T\-Y\-S\-I\-X}}
+\index{F\-O\-U\-R\-T\-Y\-S\-I\-X@{F\-O\-U\-R\-T\-Y\-S\-I\-X}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{F\-O\-U\-R\-T\-Y\-S\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}const int F\-O\-U\-R\-T\-Y\-S\-I\-X = 46\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_aa7b241cc8a7022f0018618a13700e3ec}
+
+
+Definition at line 14 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+Referenced by read\-\_\-birth\-\_\-place\-\_\-code().
+
+\hypertarget{read__birth__place_8c_a03732b1f90df5c759962ce41dd8046ac}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!O\-N\-E@{O\-N\-E}}
+\index{O\-N\-E@{O\-N\-E}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int O\-N\-E = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_a03732b1f90df5c759962ce41dd8046ac}
+
+
+Definition at line 16 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+Referenced by result\-\_\-code().
+
+\hypertarget{read__birth__place_8c_aaf9af32599c871ff05b6a94e650462d6}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!P\-A\-U\-S\-E@{P\-A\-U\-S\-E}}
+\index{P\-A\-U\-S\-E@{P\-A\-U\-S\-E}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{P\-A\-U\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ P\-A\-U\-S\-E = \char`\"{}pause\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_aaf9af32599c871ff05b6a94e650462d6}
+
+
+Definition at line 12 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+Referenced by file\-\_\-not\-\_\-found().
+
+\hypertarget{read__birth__place_8c_acc4ecdbad57717b8babc04d156ce7212}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!V\-I\-R\-G\-O@{V\-I\-R\-G\-O}}
+\index{V\-I\-R\-G\-O@{V\-I\-R\-G\-O}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{V\-I\-R\-G\-O}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ V\-I\-R\-G\-O = \char`\"{},\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_acc4ecdbad57717b8babc04d156ce7212}
+
+
+Definition at line 19 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+Referenced by get\-\_\-result(), and result\-\_\-code().
+
+\hypertarget{read__birth__place_8c_acdb9580f8c1b2955aa58958261a6c582}{\index{read\-\_\-birth\-\_\-place.\-c@{read\-\_\-birth\-\_\-place.\-c}!Z\-E\-R\-O@{Z\-E\-R\-O}}
+\index{Z\-E\-R\-O@{Z\-E\-R\-O}!read_birth_place.c@{read\-\_\-birth\-\_\-place.\-c}}
+\subsubsection[{Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}const int Z\-E\-R\-O = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{read__birth__place_8c_acdb9580f8c1b2955aa58958261a6c582}
+
+
+Definition at line 17 of file read\-\_\-birth\-\_\-place.\-c.
+
+
+
+Referenced by get\-\_\-result().
 

@@ -5,28 +5,201 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{cf__generator_8c_a3fc31bfb373229fad595bdd58fd4936d}{name\-\_\-code} (char name\mbox{[}$\,$\mbox{]}, char code\mbox{[}$\,$\mbox{]})
+static bool \hyperlink{cf__generator_8c_abe4e536dc09d41a523c0ed260dfca457}{is\-\_\-vowel} (char a)
 \item 
-void \hyperlink{cf__generator_8c_ab1b86778c6102ec98c108cf32695b42c}{surname\-\_\-code} (char surname\mbox{[}$\,$\mbox{]}, char code\mbox{[}$\,$\mbox{]})
+static bool \hyperlink{cf__generator_8c_ad3e5bf79af86d63a23de009cc0c567f3}{is\-\_\-consonant} (char a)
 \item 
-void \hyperlink{cf__generator_8c_a99de8347879a700ec6670f070512d07a}{birth\-\_\-date\-\_\-code} (char date\mbox{[}$\,$\mbox{]}, char sex, char code\mbox{[}$\,$\mbox{]})
+static int \hyperlink{cf__generator_8c_ad96f26729d08b9dc381c9edac96a3756}{get\-\_\-consonant} (int k, char string, char $\ast$consonants)
+\item 
+static void \hyperlink{cf__generator_8c_aa381cf78c3ed048947705e3889269224}{get\-\_\-consonants} (const char $\ast$string, char $\ast$consonants)
+\item 
+static int \hyperlink{cf__generator_8c_a8496a8edc975416407621cc2c2957894}{insert\-\_\-consonant} (char text, char $\ast$code, int ind)
+\item 
+static int \hyperlink{cf__generator_8c_af4e5877f89b42aa651575aeec23b871e}{insert\-\_\-consonants} (const char $\ast$text, int ind, char $\ast$code)
+\item 
+static int \hyperlink{cf__generator_8c_ae6db8bb6f80c83f311ad3b91d8d0409a}{insert\-\_\-vowel} (char text, char code\mbox{[}$\,$\mbox{]}, int ind)
+\item 
+static int \hyperlink{cf__generator_8c_a26529f04f8e48ce33e3c69bb8d2d9ae9}{insert\-\_\-vowels} (const char text\mbox{[}$\,$\mbox{]}, int ind, char code\mbox{[}$\,$\mbox{]})
+\item 
+static int \hyperlink{cf__generator_8c_a6c54887926ddbcbccb38771ada86c765}{fill\-\_\-\-X} (int ind, char code\mbox{[}$\,$\mbox{]})
+\item 
+static void \hyperlink{cf__generator_8c_a14cc710fd2ccc6ddccabff2af0ca31b5}{fill\-\_\-code} (const char text\mbox{[}$\,$\mbox{]}, char code\mbox{[}$\,$\mbox{]})
+\item 
+static void \hyperlink{cf__generator_8c_a9c37c613311541c5c814e2b27a58c10a}{fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants} (char code\mbox{[}$\,$\mbox{]}, char $\ast$consonants)
+\item 
+static char \hyperlink{cf__generator_8c_a5af1c46c8f6810872e1f2385553bb790}{month\-\_\-0} (char a)
+\item 
+static char \hyperlink{cf__generator_8c_a716e00289abd3685715cad376f6740f5}{month\-\_\-1} (char b)
+\item 
+static char \hyperlink{cf__generator_8c_a39a585b7c3b83355d6155ea0ba2b7534}{month} (char a, char b)
+\item 
+static void \hyperlink{cf__generator_8c_a14af87f7d85778451e498405ea1d7bf1}{birth\-\_\-date\-\_\-code\-\_\-\-M} (const char date\mbox{[}$\,$\mbox{]}, char code\mbox{[}$\,$\mbox{]})
+\item 
+static void \hyperlink{cf__generator_8c_a8d2948b82bedf5720207c57961fb4298}{birth\-\_\-date\-\_\-code\-\_\-\-F} (const char date\mbox{[}$\,$\mbox{]}, char code\mbox{[}$\,$\mbox{]})
+\item 
+static int \hyperlink{cf__generator_8c_a697b4b6a661ca02db91b4f7592738641}{even\-\_\-character} (char a)
+\item 
+static int \hyperlink{cf__generator_8c_a89795a74a18a95d8297459255d49f356}{odd\-\_\-character} (char a)
+\item 
+static char \hyperlink{cf__generator_8c_ab581b1b0a5a7aa43da1ed79dc020d2cc}{get\-\_\-result} (int number)
+\item 
+static void \hyperlink{cf__generator_8c_a2ed9384404b7de0f82754818eb4f124c}{code\-\_\-strcat} (char $\ast$coded\-\_\-name, char $\ast$coded\-\_\-surname, char $\ast$coded\-\_\-birth\-\_\-date, char $\ast$coded\-\_\-town, char $\ast$code)
+\item 
+static int \hyperlink{cf__generator_8c_a5cc91b87c9b3cf3e8bc095bea4da4e6a}{get\-\_\-sum} (char $\ast$code)
+\item 
+void \hyperlink{cf__generator_8c_ac9f4dc64b5d0ee3e57843aae4247dbb8}{name\-\_\-code} (const char $\ast$name, char code\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{cf__generator_8c_abf355c0c79769133a75598fce30abcac}{surname\-\_\-code} (const char $\ast$surname, char code\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{cf__generator_8c_ab2693ce2c01c833deac31fdb57f678f1}{birth\-\_\-date\-\_\-code} (const char $\ast$date, char sex, char code\mbox{[}$\,$\mbox{]})
 \item 
 char \hyperlink{cf__generator_8c_acec64c4fb9a4ae49fa27c601d4d7d5b0}{ctrl\-\_\-code} (char $\ast$coded\-\_\-name, char $\ast$coded\-\_\-surname, char $\ast$coded\-\_\-birth\-\_\-date, char $\ast$coded\-\_\-birth\-\_\-place)
 \item 
-void \hyperlink{cf__generator_8c_ab4f4e4915be0df06691c1fcc269d1716}{cf\-\_\-generator} (char name\mbox{[}$\,$\mbox{]}, char surname\mbox{[}$\,$\mbox{]}, char birth\-\_\-date\mbox{[}$\,$\mbox{]}, char coded\-\_\-town\mbox{[}$\,$\mbox{]}, char sex, char code\mbox{[}$\,$\mbox{]})
+void \hyperlink{cf__generator_8c_a814837b51b6bf870528d29ff85a5925e}{cf\-\_\-generator} (const char $\ast$name, const char $\ast$surname, const char $\ast$birth\-\_\-date, char $\ast$coded\-\_\-town, char sex, char $\ast$code)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{cf__generator_8c_acdb9580f8c1b2955aa58958261a6c582}{Z\-E\-R\-O} = 0
+\item 
+static const int \hyperlink{cf__generator_8c_a03732b1f90df5c759962ce41dd8046ac}{O\-N\-E} = 1
+\item 
+static const int \hyperlink{cf__generator_8c_a611b700be7e491d94ecc6fc196a6099f}{T\-W\-O} = 2
+\item 
+static const int \hyperlink{cf__generator_8c_a1310f39e29bae777ed061629efde0f8e}{T\-H\-R\-E\-E} = 3
+\item 
+static const int \hyperlink{cf__generator_8c_a155c590b838ec51b170af77c3cf4752b}{F\-O\-U\-R} = 4
+\item 
+static const int \hyperlink{cf__generator_8c_a6f2ece3128fa540ac3301b24572901b9}{F\-I\-V\-E} = 5
+\item 
+static const int \hyperlink{cf__generator_8c_a699ec7bc230e4a768928f3cdff86a759}{S\-I\-X} = 6
+\item 
+static const int \hyperlink{cf__generator_8c_a2c23ca53fc5922ec38516328d442c761}{S\-E\-V\-E\-N} = 7
+\item 
+static const int \hyperlink{cf__generator_8c_a282ba01a8497073d8c8eff05b4f03a35}{E\-I\-G\-H\-T} = 8
+\item 
+static const int \hyperlink{cf__generator_8c_acebd8d729fe3c4c48f28dcc616fae280}{N\-I\-N\-E} = 9
+\item 
+static const int \hyperlink{cf__generator_8c_a0ff27c5eba0b420dcf7bb4dc94ebf6b9}{T\-E\-N} = 10
+\item 
+static const int \hyperlink{cf__generator_8c_a4c1383359f2abbef42e3320eed217f64}{E\-L\-E\-V\-E\-N} = 11
+\item 
+static const int \hyperlink{cf__generator_8c_a2b918f7cb2a2f6a8d938887ed066e313}{T\-W\-E\-L\-V\-E} = 12
+\item 
+static const int \hyperlink{cf__generator_8c_ae12f936e0b4f89d06a4ebadab2de25de}{T\-H\-I\-R\-T\-E\-E\-N} = 13
+\item 
+static const int \hyperlink{cf__generator_8c_a559141277d5287f5c2ae9d7f62b04465}{F\-O\-U\-R\-T\-E\-E\-N} = 14
+\item 
+static const int \hyperlink{cf__generator_8c_ab7e53332a94239e438169f170510847a}{F\-I\-F\-T\-E\-E\-N} = 15
+\item 
+static const int \hyperlink{cf__generator_8c_a175df448b152d4c76c161353c1fdf2ca}{S\-I\-X\-T\-E\-E\-N} = 16
+\item 
+static const int \hyperlink{cf__generator_8c_a7575dcf2be77fc6293537bbe18c5cfa8}{S\-E\-V\-E\-N\-T\-E\-E\-N} = 17
+\item 
+static const int \hyperlink{cf__generator_8c_ab75652b4b267de222e6608e8ed92beb1}{E\-I\-G\-H\-T\-E\-E\-N} = 18
+\item 
+static const int \hyperlink{cf__generator_8c_afc0a2efe4830ed9bf494cef900113c9b}{N\-I\-N\-E\-T\-E\-E\-N} = 19
+\item 
+static const int \hyperlink{cf__generator_8c_adeaef10683b237f25bd4791a70c2ba28}{T\-W\-E\-N\-T\-Y} = 20
+\item 
+static const int \hyperlink{cf__generator_8c_a703b6985c5d0446ea5d11f2ffabe0f08}{T\-W\-E\-N\-T\-Y\-O\-N\-E} = 21
+\item 
+static const int \hyperlink{cf__generator_8c_ae767ff04fe6b7540ce69214b9ac0d938}{T\-W\-E\-N\-T\-Y\-T\-W\-O} = 22
+\item 
+static const int \hyperlink{cf__generator_8c_a905c70154adfe2c8e7f6001e8c836cf3}{T\-W\-E\-N\-T\-Y\-T\-H\-R\-E\-E} = 23
+\item 
+static const int \hyperlink{cf__generator_8c_ae71fa21f5cf5dce070140952adb87c9a}{T\-W\-E\-N\-T\-Y\-F\-O\-U\-R} = 24
+\item 
+static const int \hyperlink{cf__generator_8c_a37cfb3af24ffbdd3deec1d8b3624791d}{T\-W\-E\-N\-T\-Y\-F\-I\-V\-E} = 25
+\item 
+static const int \hyperlink{cf__generator_8c_a93053a8bf7b38bd54826768b6dcf2649}{T\-W\-E\-N\-T\-Y\-S\-I\-X} = 26
+\item 
+static const char \hyperlink{cf__generator_8c_ae8ab676de0a059d5911f0fc60fe47a1e}{E\-O\-S} = '\textbackslash{}0'
+\item 
+static const char \hyperlink{cf__generator_8c_a530d2fc72f6a33c2d8cddd40bf4e7a34}{A} ='A'
+\item 
+static const char \hyperlink{cf__generator_8c_a76253c8d2f0fe4be0dbec039025aee9a}{B} = 'B'
+\item 
+static const char \hyperlink{cf__generator_8c_af98377366650f40dbc93f33f67232f49}{C} = 'C'
+\item 
+static const char \hyperlink{cf__generator_8c_aa19cd7c11e9c73228585bcb905e4541f}{D} = 'D'
+\item 
+static const char \hyperlink{cf__generator_8c_ad9a4713c071a9d59ce6c367755a21207}{E} = 'E'
+\item 
+static const char \hyperlink{cf__generator_8c_a24e7a920f61b1600eade1b9dcb773ce3}{F} = 'F'
+\item 
+static const char \hyperlink{cf__generator_8c_ad3f36f27e64ed5982c93a5856e2134b5}{G} = 'G'
+\item 
+static const char \hyperlink{cf__generator_8c_a4ada6a20b01a7a84b35184e6ae474ce8}{H} = 'H'
+\item 
+static const char \hyperlink{cf__generator_8c_ab9cfcf92a6915b736872d475dd536aa6}{I} = 'I'
+\item 
+static const char \hyperlink{cf__generator_8c_a7f481d2a0875a87b1e0cd746c15345b4}{J} = 'J'
+\item 
+static const char \hyperlink{cf__generator_8c_aa66df68de74c812ae2de7ada92ebdd63}{K} = 'K'
+\item 
+static const char \hyperlink{cf__generator_8c_a2ccc02c5a956650a52862eecb1eda498}{L} = 'L'
+\item 
+static const char \hyperlink{cf__generator_8c_a559ad192e528677abe7051fe49e47d49}{M} = 'M'
+\item 
+static const char \hyperlink{cf__generator_8c_ac07c41e51852dc6fc59dd8bf4482e8d4}{N} = 'N'
+\item 
+static const char \hyperlink{cf__generator_8c_ada65313d692e42532499ce96bd3150e7}{O} = 'O'
+\item 
+static const char \hyperlink{cf__generator_8c_a9112c9eaff0f08f12708f495c3a40f7e}{P} = 'P'
+\item 
+static const char \hyperlink{cf__generator_8c_a4d06d3a985405e7462b24cd6f56dbe9e}{Q} = 'Q'
+\item 
+static const char \hyperlink{cf__generator_8c_ab8dcc89430649bb122636e176f0c2492}{R} = 'R'
+\item 
+static const char \hyperlink{cf__generator_8c_ac17bc0dbc0bcfce13fd6559f84c1ed9e}{S} = 'S'
+\item 
+static const char \hyperlink{cf__generator_8c_a4cefde573dad000e786e8e941721c950}{T} = 'T'
+\item 
+static const char \hyperlink{cf__generator_8c_a90784a38cd61f391acb0d43bac12558d}{U} = 'U'
+\item 
+static const char \hyperlink{cf__generator_8c_a105bef195c8a5316032314290120d170}{V} = 'V'
+\item 
+static const char \hyperlink{cf__generator_8c_a9f704bbd8358544dc286109cd65ba778}{W} = 'W'
+\item 
+static const char \hyperlink{cf__generator_8c_ab37aa22a4128b93883c3d4de63c4f916}{X} = 'X'
+\item 
+static const char \hyperlink{cf__generator_8c_aecb7a48bf527ac0585250551f77b2657}{Y} = 'Y'
+\item 
+static const char \hyperlink{cf__generator_8c_a362f1db478d8a44cc8f02cfd8c0cbad9}{Z} = 'Z'
+\item 
+static const char \hyperlink{cf__generator_8c_a16126c129d41c7829c991a167cb4064b}{C\-H\-A\-R\-\_\-0} = '0'
+\item 
+static const char \hyperlink{cf__generator_8c_a5a01ea3c6447ee37fc1d7ed627499750}{C\-H\-A\-R\-\_\-1} = '1'
+\item 
+static const char \hyperlink{cf__generator_8c_a6beb6b469dd44e0f30e4ff9777a16ee4}{C\-H\-A\-R\-\_\-2} = '2'
+\item 
+static const char \hyperlink{cf__generator_8c_ad7b3b2c2b0b4f2d8705d6f3e524e856e}{C\-H\-A\-R\-\_\-3} = '3'
+\item 
+static const char \hyperlink{cf__generator_8c_a90329cc521f590267cc7dc8331734838}{C\-H\-A\-R\-\_\-4} = '4'
+\item 
+static const char \hyperlink{cf__generator_8c_a85cbe3009f00ae2904a03f99e8fb57ad}{C\-H\-A\-R\-\_\-5} = '5'
+\item 
+static const char \hyperlink{cf__generator_8c_a16646dd54133af10f59e47b9bad487bd}{C\-H\-A\-R\-\_\-6} = '6'
+\item 
+static const char \hyperlink{cf__generator_8c_a6270e1cfedd518a00d96d15ac465f317}{C\-H\-A\-R\-\_\-7} = '7'
+\item 
+static const char \hyperlink{cf__generator_8c_af81a357091c83a5c7eb309e9ebbb6154}{C\-H\-A\-R\-\_\-8} = '8'
+\item 
+static const char \hyperlink{cf__generator_8c_a5b2f7304b4d4ab15feb545df3e8425c9}{C\-H\-A\-R\-\_\-9} = '9'
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{cf__generator_8c_a99de8347879a700ec6670f070512d07a}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!birth\-\_\-date\-\_\-code@{birth\-\_\-date\-\_\-code}}
+\hypertarget{cf__generator_8c_ab2693ce2c01c833deac31fdb57f678f1}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!birth\-\_\-date\-\_\-code@{birth\-\_\-date\-\_\-code}}
 \index{birth\-\_\-date\-\_\-code@{birth\-\_\-date\-\_\-code}!cf_generator.c@{cf\-\_\-generator.\-c}}
 \subsubsection[{birth\-\_\-date\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}void birth\-\_\-date\-\_\-code (
 \begin{DoxyParamCaption}
-\item[{char}]{date\mbox{[}$\,$\mbox{]}, }
+\item[{const char $\ast$}]{date, }
 \item[{char}]{sex, }
 \item[{char}]{code\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8c_a99de8347879a700ec6670f070512d07a}
+)}}\label{cf__generator_8c_ab2693ce2c01c833deac31fdb57f678f1}
 Codifica la data di nascita \begin{DoxyPrecond}{Precondition}
 La data deve essere una stringa avente formato G\-G/\-M\-M/\-A\-A\-A\-A 
 \end{DoxyPrecond}
@@ -51,24 +224,64 @@ Definition at line 242 of file cf\-\_\-generator.\-c.
 
 
 
-References F\-I\-V\-E, is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-date\-\_\-code(), is\-\_\-valid\-\_\-sex(), and M.
+References birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-\-M(), E\-O\-S, F\-I\-V\-E, is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-date\-\_\-code(), is\-\_\-valid\-\_\-sex(), and M.
 
 
 
 Referenced by cf\-\_\-generator().
 
-\hypertarget{cf__generator_8c_ab4f4e4915be0df06691c1fcc269d1716}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!cf\-\_\-generator@{cf\-\_\-generator}}
+\hypertarget{cf__generator_8c_a8d2948b82bedf5720207c57961fb4298}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!birth\-\_\-date\-\_\-code\-\_\-\-F@{birth\-\_\-date\-\_\-code\-\_\-\-F}}
+\index{birth\-\_\-date\-\_\-code\-\_\-\-F@{birth\-\_\-date\-\_\-code\-\_\-\-F}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{birth\-\_\-date\-\_\-code\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}static void birth\-\_\-date\-\_\-code\-\_\-\-F (
+\begin{DoxyParamCaption}
+\item[{const char}]{date\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{code\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a8d2948b82bedf5720207c57961fb4298}
+
+
+Definition at line 164 of file cf\-\_\-generator.\-c.
+
+
+
+References E\-I\-G\-H\-T, F\-O\-U\-R, month(), N\-I\-N\-E, O\-N\-E, T\-H\-R\-E\-E, T\-W\-O, and Z\-E\-R\-O.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code().
+
+\hypertarget{cf__generator_8c_a14af87f7d85778451e498405ea1d7bf1}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!birth\-\_\-date\-\_\-code\-\_\-\-M@{birth\-\_\-date\-\_\-code\-\_\-\-M}}
+\index{birth\-\_\-date\-\_\-code\-\_\-\-M@{birth\-\_\-date\-\_\-code\-\_\-\-M}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{birth\-\_\-date\-\_\-code\-\_\-\-M}]{\setlength{\rightskip}{0pt plus 5cm}static void birth\-\_\-date\-\_\-code\-\_\-\-M (
+\begin{DoxyParamCaption}
+\item[{const char}]{date\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{code\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a14af87f7d85778451e498405ea1d7bf1}
+
+
+Definition at line 156 of file cf\-\_\-generator.\-c.
+
+
+
+References E\-I\-G\-H\-T, F\-O\-U\-R, month(), N\-I\-N\-E, O\-N\-E, T\-H\-R\-E\-E, T\-W\-O, and Z\-E\-R\-O.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code().
+
+\hypertarget{cf__generator_8c_a814837b51b6bf870528d29ff85a5925e}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!cf\-\_\-generator@{cf\-\_\-generator}}
 \index{cf\-\_\-generator@{cf\-\_\-generator}!cf_generator.c@{cf\-\_\-generator.\-c}}
 \subsubsection[{cf\-\_\-generator}]{\setlength{\rightskip}{0pt plus 5cm}void cf\-\_\-generator (
 \begin{DoxyParamCaption}
-\item[{char}]{name\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{surname\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{birth\-\_\-date\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{coded\-\_\-town\mbox{[}$\,$\mbox{]}, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{surname, }
+\item[{const char $\ast$}]{birth\-\_\-date, }
+\item[{char $\ast$}]{coded\-\_\-town, }
 \item[{char}]{sex, }
-\item[{char}]{code\mbox{[}$\,$\mbox{]}}
+\item[{char $\ast$}]{code}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8c_ab4f4e4915be0df06691c1fcc269d1716}
+)}}\label{cf__generator_8c_a814837b51b6bf870528d29ff85a5925e}
 Genera il codice fiscale \begin{DoxyPrecond}{Precondition}
 la stringa del nome non deve essere vuota 
 
@@ -100,7 +313,34 @@ Definition at line 264 of file cf\-\_\-generator.\-c.
 
 
 
-References birth\-\_\-date\-\_\-code(), ctrl\-\_\-code(), F\-O\-U\-R, is\-\_\-valid\-\_\-cf\-\_\-code(), is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name\-\_\-surname(), is\-\_\-valid\-\_\-sex(), name\-\_\-code(), S\-I\-X, S\-I\-X\-T\-E\-E\-N, surname\-\_\-code(), and Z\-E\-R\-O.
+References birth\-\_\-date\-\_\-code(), code\-\_\-strcat(), ctrl\-\_\-code(), E\-O\-S, F\-I\-F\-T\-E\-E\-N, F\-O\-U\-R, is\-\_\-valid\-\_\-cf\-\_\-code(), is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name\-\_\-surname(), is\-\_\-valid\-\_\-sex(), name\-\_\-code(), S\-I\-X, S\-I\-X\-T\-E\-E\-N, surname\-\_\-code(), and Z\-E\-R\-O.
+
+
+
+Referenced by print\-\_\-valid\-\_\-code().
+
+\hypertarget{cf__generator_8c_a2ed9384404b7de0f82754818eb4f124c}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!code\-\_\-strcat@{code\-\_\-strcat}}
+\index{code\-\_\-strcat@{code\-\_\-strcat}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{code\-\_\-strcat}]{\setlength{\rightskip}{0pt plus 5cm}static void code\-\_\-strcat (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{coded\-\_\-name, }
+\item[{char $\ast$}]{coded\-\_\-surname, }
+\item[{char $\ast$}]{coded\-\_\-birth\-\_\-date, }
+\item[{char $\ast$}]{coded\-\_\-town, }
+\item[{char $\ast$}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a2ed9384404b7de0f82754818eb4f124c}
+
+
+Definition at line 209 of file cf\-\_\-generator.\-c.
+
+
+
+References E\-O\-S.
+
+
+
+Referenced by cf\-\_\-generator(), and ctrl\-\_\-code().
 
 \hypertarget{cf__generator_8c_acec64c4fb9a4ae49fa27c601d4d7d5b0}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!ctrl\-\_\-code@{ctrl\-\_\-code}}
 \index{ctrl\-\_\-code@{ctrl\-\_\-code}!cf_generator.c@{cf\-\_\-generator.\-c}}
@@ -118,49 +358,1113 @@ Definition at line 250 of file cf\-\_\-generator.\-c.
 
 
 
-References is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), is\-\_\-valid\-\_\-ctrl\-\_\-code(), and Z\-E\-R\-O.
+References code\-\_\-strcat(), E\-O\-S, F\-I\-F\-T\-E\-E\-N, get\-\_\-result(), get\-\_\-sum(), is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), is\-\_\-valid\-\_\-ctrl\-\_\-code(), T\-W\-E\-N\-T\-Y\-S\-I\-X, and Z\-E\-R\-O.
 
 
 
 Referenced by cf\-\_\-generator().
 
-\hypertarget{cf__generator_8c_a3fc31bfb373229fad595bdd58fd4936d}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!name\-\_\-code@{name\-\_\-code}}
+\hypertarget{cf__generator_8c_a697b4b6a661ca02db91b4f7592738641}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!even\-\_\-character@{even\-\_\-character}}
+\index{even\-\_\-character@{even\-\_\-character}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{even\-\_\-character}]{\setlength{\rightskip}{0pt plus 5cm}static int even\-\_\-character (
+\begin{DoxyParamCaption}
+\item[{char}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a697b4b6a661ca02db91b4f7592738641}
+
+
+Definition at line 172 of file cf\-\_\-generator.\-c.
+
+
+
+References A, B, C, C\-H\-A\-R\-\_\-0, C\-H\-A\-R\-\_\-1, C\-H\-A\-R\-\_\-2, C\-H\-A\-R\-\_\-3, C\-H\-A\-R\-\_\-4, C\-H\-A\-R\-\_\-5, C\-H\-A\-R\-\_\-6, C\-H\-A\-R\-\_\-7, C\-H\-A\-R\-\_\-8, C\-H\-A\-R\-\_\-9, D, E, E\-I\-G\-H\-T, E\-I\-G\-H\-T\-E\-E\-N, E\-L\-E\-V\-E\-N, F, F\-I\-F\-T\-E\-E\-N, F\-I\-V\-E, F\-O\-U\-R, F\-O\-U\-R\-T\-E\-E\-N, G, H, I, J, K, L, M, N, N\-I\-N\-E, N\-I\-N\-E\-T\-E\-E\-N, O, O\-N\-E, P, Q, R, S, S\-E\-V\-E\-N, S\-E\-V\-E\-N\-T\-E\-E\-N, S\-I\-X, S\-I\-X\-T\-E\-E\-N, T, T\-E\-N, T\-H\-I\-R\-T\-E\-E\-N, T\-H\-R\-E\-E, T\-W\-E\-L\-V\-E, T\-W\-E\-N\-T\-Y, T\-W\-E\-N\-T\-Y\-F\-I\-V\-E, T\-W\-E\-N\-T\-Y\-F\-O\-U\-R, T\-W\-E\-N\-T\-Y\-O\-N\-E, T\-W\-E\-N\-T\-Y\-T\-H\-R\-E\-E, T\-W\-E\-N\-T\-Y\-T\-W\-O, T\-W\-O, U, V, W, X, Y, and Z\-E\-R\-O.
+
+
+
+Referenced by get\-\_\-sum().
+
+\hypertarget{cf__generator_8c_a14cc710fd2ccc6ddccabff2af0ca31b5}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!fill\-\_\-code@{fill\-\_\-code}}
+\index{fill\-\_\-code@{fill\-\_\-code}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{fill\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}static void fill\-\_\-code (
+\begin{DoxyParamCaption}
+\item[{const char}]{text\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{code\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a14cc710fd2ccc6ddccabff2af0ca31b5}
+
+
+Definition at line 126 of file cf\-\_\-generator.\-c.
+
+
+
+References E\-O\-S, fill\-\_\-\-X(), insert\-\_\-consonants(), insert\-\_\-vowels(), and Z\-E\-R\-O.
+
+
+
+Referenced by name\-\_\-code(), and surname\-\_\-code().
+
+\hypertarget{cf__generator_8c_a9c37c613311541c5c814e2b27a58c10a}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants@{fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants}}
+\index{fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants@{fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants}]{\setlength{\rightskip}{0pt plus 5cm}static void fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants (
+\begin{DoxyParamCaption}
+\item[{char}]{code\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{consonants}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a9c37c613311541c5c814e2b27a58c10a}
+
+
+Definition at line 134 of file cf\-\_\-generator.\-c.
+
+
+
+References E\-O\-S, T\-H\-R\-E\-E, T\-W\-O, and Z\-E\-R\-O.
+
+
+
+Referenced by name\-\_\-code().
+
+\hypertarget{cf__generator_8c_a6c54887926ddbcbccb38771ada86c765}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!fill\-\_\-\-X@{fill\-\_\-\-X}}
+\index{fill\-\_\-\-X@{fill\-\_\-\-X}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{fill\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}static int fill\-\_\-\-X (
+\begin{DoxyParamCaption}
+\item[{int}]{ind, }
+\item[{char}]{code\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a6c54887926ddbcbccb38771ada86c765}
+
+
+Definition at line 120 of file cf\-\_\-generator.\-c.
+
+
+
+References T\-H\-R\-E\-E, and X.
+
+
+
+Referenced by fill\-\_\-code().
+
+\hypertarget{cf__generator_8c_ad96f26729d08b9dc381c9edac96a3756}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!get\-\_\-consonant@{get\-\_\-consonant}}
+\index{get\-\_\-consonant@{get\-\_\-consonant}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{get\-\_\-consonant}]{\setlength{\rightskip}{0pt plus 5cm}static int get\-\_\-consonant (
+\begin{DoxyParamCaption}
+\item[{int}]{k, }
+\item[{char}]{string, }
+\item[{char $\ast$}]{consonants}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ad96f26729d08b9dc381c9edac96a3756}
+
+
+Definition at line 83 of file cf\-\_\-generator.\-c.
+
+
+
+References is\-\_\-consonant().
+
+
+
+Referenced by get\-\_\-consonants().
+
+\hypertarget{cf__generator_8c_aa381cf78c3ed048947705e3889269224}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!get\-\_\-consonants@{get\-\_\-consonants}}
+\index{get\-\_\-consonants@{get\-\_\-consonants}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{get\-\_\-consonants}]{\setlength{\rightskip}{0pt plus 5cm}static void get\-\_\-consonants (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{string, }
+\item[{char $\ast$}]{consonants}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_aa381cf78c3ed048947705e3889269224}
+
+
+Definition at line 89 of file cf\-\_\-generator.\-c.
+
+
+
+References E\-O\-S, get\-\_\-consonant(), and Z\-E\-R\-O.
+
+
+
+Referenced by name\-\_\-code().
+
+\hypertarget{cf__generator_8c_ab581b1b0a5a7aa43da1ed79dc020d2cc}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!get\-\_\-result@{get\-\_\-result}}
+\index{get\-\_\-result@{get\-\_\-result}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{get\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}static char get\-\_\-result (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ab581b1b0a5a7aa43da1ed79dc020d2cc}
+
+
+Definition at line 197 of file cf\-\_\-generator.\-c.
+
+
+
+References A, B, C, D, E, E\-I\-G\-H\-T, E\-I\-G\-H\-T\-E\-E\-N, E\-L\-E\-V\-E\-N, F, F\-I\-F\-T\-E\-E\-N, F\-I\-V\-E, F\-O\-U\-R, F\-O\-U\-R\-T\-E\-E\-N, G, H, I, J, K, L, M, N, N\-I\-N\-E, N\-I\-N\-E\-T\-E\-E\-N, O, O\-N\-E, P, Q, R, S, S\-E\-V\-E\-N, S\-E\-V\-E\-N\-T\-E\-E\-N, S\-I\-X, S\-I\-X\-T\-E\-E\-N, T, T\-E\-N, T\-H\-I\-R\-T\-E\-E\-N, T\-H\-R\-E\-E, T\-W\-E\-L\-V\-E, T\-W\-E\-N\-T\-Y, T\-W\-E\-N\-T\-Y\-F\-O\-U\-R, T\-W\-E\-N\-T\-Y\-O\-N\-E, T\-W\-E\-N\-T\-Y\-T\-H\-R\-E\-E, T\-W\-E\-N\-T\-Y\-T\-W\-O, T\-W\-O, U, V, W, X, Y, Z, and Z\-E\-R\-O.
+
+
+
+Referenced by ctrl\-\_\-code().
+
+\hypertarget{cf__generator_8c_a5cc91b87c9b3cf3e8bc095bea4da4e6a}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!get\-\_\-sum@{get\-\_\-sum}}
+\index{get\-\_\-sum@{get\-\_\-sum}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{get\-\_\-sum}]{\setlength{\rightskip}{0pt plus 5cm}static int get\-\_\-sum (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a5cc91b87c9b3cf3e8bc095bea4da4e6a}
+
+
+Definition at line 218 of file cf\-\_\-generator.\-c.
+
+
+
+References even\-\_\-character(), odd\-\_\-character(), T\-W\-O, and Z\-E\-R\-O.
+
+
+
+Referenced by ctrl\-\_\-code().
+
+\hypertarget{cf__generator_8c_a8496a8edc975416407621cc2c2957894}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!insert\-\_\-consonant@{insert\-\_\-consonant}}
+\index{insert\-\_\-consonant@{insert\-\_\-consonant}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{insert\-\_\-consonant}]{\setlength{\rightskip}{0pt plus 5cm}static int insert\-\_\-consonant (
+\begin{DoxyParamCaption}
+\item[{char}]{text, }
+\item[{char $\ast$}]{code, }
+\item[{int}]{ind}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a8496a8edc975416407621cc2c2957894}
+
+
+Definition at line 96 of file cf\-\_\-generator.\-c.
+
+
+
+References is\-\_\-consonant().
+
+
+
+Referenced by insert\-\_\-consonants().
+
+\hypertarget{cf__generator_8c_af4e5877f89b42aa651575aeec23b871e}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!insert\-\_\-consonants@{insert\-\_\-consonants}}
+\index{insert\-\_\-consonants@{insert\-\_\-consonants}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{insert\-\_\-consonants}]{\setlength{\rightskip}{0pt plus 5cm}static int insert\-\_\-consonants (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text, }
+\item[{int}]{ind, }
+\item[{char $\ast$}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_af4e5877f89b42aa651575aeec23b871e}
+
+
+Definition at line 102 of file cf\-\_\-generator.\-c.
+
+
+
+References insert\-\_\-consonant(), T\-H\-R\-E\-E, and Z\-E\-R\-O.
+
+
+
+Referenced by fill\-\_\-code().
+
+\hypertarget{cf__generator_8c_ae6db8bb6f80c83f311ad3b91d8d0409a}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!insert\-\_\-vowel@{insert\-\_\-vowel}}
+\index{insert\-\_\-vowel@{insert\-\_\-vowel}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{insert\-\_\-vowel}]{\setlength{\rightskip}{0pt plus 5cm}static int insert\-\_\-vowel (
+\begin{DoxyParamCaption}
+\item[{char}]{text, }
+\item[{char}]{code\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{ind}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ae6db8bb6f80c83f311ad3b91d8d0409a}
+
+
+Definition at line 108 of file cf\-\_\-generator.\-c.
+
+
+
+References is\-\_\-vowel().
+
+
+
+Referenced by insert\-\_\-vowels().
+
+\hypertarget{cf__generator_8c_a26529f04f8e48ce33e3c69bb8d2d9ae9}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!insert\-\_\-vowels@{insert\-\_\-vowels}}
+\index{insert\-\_\-vowels@{insert\-\_\-vowels}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{insert\-\_\-vowels}]{\setlength{\rightskip}{0pt plus 5cm}static int insert\-\_\-vowels (
+\begin{DoxyParamCaption}
+\item[{const char}]{text\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{ind, }
+\item[{char}]{code\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a26529f04f8e48ce33e3c69bb8d2d9ae9}
+
+
+Definition at line 114 of file cf\-\_\-generator.\-c.
+
+
+
+References insert\-\_\-vowel(), T\-H\-R\-E\-E, and Z\-E\-R\-O.
+
+
+
+Referenced by fill\-\_\-code().
+
+\hypertarget{cf__generator_8c_ad3e5bf79af86d63a23de009cc0c567f3}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!is\-\_\-consonant@{is\-\_\-consonant}}
+\index{is\-\_\-consonant@{is\-\_\-consonant}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{is\-\_\-consonant}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-consonant (
+\begin{DoxyParamCaption}
+\item[{char}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ad3e5bf79af86d63a23de009cc0c567f3}
+
+
+Definition at line 79 of file cf\-\_\-generator.\-c.
+
+
+
+References is\-\_\-vowel().
+
+
+
+Referenced by get\-\_\-consonant(), and insert\-\_\-consonant().
+
+\hypertarget{cf__generator_8c_abe4e536dc09d41a523c0ed260dfca457}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!is\-\_\-vowel@{is\-\_\-vowel}}
+\index{is\-\_\-vowel@{is\-\_\-vowel}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{is\-\_\-vowel}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\-\_\-vowel (
+\begin{DoxyParamCaption}
+\item[{char}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_abe4e536dc09d41a523c0ed260dfca457}
+
+
+Definition at line 75 of file cf\-\_\-generator.\-c.
+
+
+
+References A, E, I, O, and U.
+
+
+
+Referenced by insert\-\_\-vowel(), and is\-\_\-consonant().
+
+\hypertarget{cf__generator_8c_a39a585b7c3b83355d6155ea0ba2b7534}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!month@{month}}
+\index{month@{month}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{month}]{\setlength{\rightskip}{0pt plus 5cm}static char month (
+\begin{DoxyParamCaption}
+\item[{char}]{a, }
+\item[{char}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a39a585b7c3b83355d6155ea0ba2b7534}
+
+
+Definition at line 152 of file cf\-\_\-generator.\-c.
+
+
+
+References C\-H\-A\-R\-\_\-0, month\-\_\-0(), and month\-\_\-1().
+
+
+
+Referenced by birth\-\_\-date\-\_\-code\-\_\-\-F(), and birth\-\_\-date\-\_\-code\-\_\-\-M().
+
+\hypertarget{cf__generator_8c_a5af1c46c8f6810872e1f2385553bb790}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!month\-\_\-0@{month\-\_\-0}}
+\index{month\-\_\-0@{month\-\_\-0}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{month\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}static char month\-\_\-0 (
+\begin{DoxyParamCaption}
+\item[{char}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a5af1c46c8f6810872e1f2385553bb790}
+
+
+Definition at line 142 of file cf\-\_\-generator.\-c.
+
+
+
+References A, B, C, C\-H\-A\-R\-\_\-1, C\-H\-A\-R\-\_\-2, C\-H\-A\-R\-\_\-3, C\-H\-A\-R\-\_\-4, C\-H\-A\-R\-\_\-5, C\-H\-A\-R\-\_\-6, C\-H\-A\-R\-\_\-7, C\-H\-A\-R\-\_\-8, D, E, H, L, M, and P.
+
+
+
+Referenced by month().
+
+\hypertarget{cf__generator_8c_a716e00289abd3685715cad376f6740f5}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!month\-\_\-1@{month\-\_\-1}}
+\index{month\-\_\-1@{month\-\_\-1}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{month\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}static char month\-\_\-1 (
+\begin{DoxyParamCaption}
+\item[{char}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a716e00289abd3685715cad376f6740f5}
+
+
+Definition at line 148 of file cf\-\_\-generator.\-c.
+
+
+
+References C\-H\-A\-R\-\_\-0, C\-H\-A\-R\-\_\-1, R, S, and T.
+
+
+
+Referenced by month().
+
+\hypertarget{cf__generator_8c_ac9f4dc64b5d0ee3e57843aae4247dbb8}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!name\-\_\-code@{name\-\_\-code}}
 \index{name\-\_\-code@{name\-\_\-code}!cf_generator.c@{cf\-\_\-generator.\-c}}
 \subsubsection[{name\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}void name\-\_\-code (
 \begin{DoxyParamCaption}
-\item[{char}]{name\mbox{[}$\,$\mbox{]}, }
+\item[{const char $\ast$}]{name, }
 \item[{char}]{code\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8c_a3fc31bfb373229fad595bdd58fd4936d}
+)}}\label{cf__generator_8c_ac9f4dc64b5d0ee3e57843aae4247dbb8}
 
 
 Definition at line 226 of file cf\-\_\-generator.\-c.
 
 
 
-References F\-O\-U\-R, is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), and is\-\_\-valid\-\_\-name\-\_\-surname().
+References fill\-\_\-code(), fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants(), F\-O\-U\-R, get\-\_\-consonants(), is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), and is\-\_\-valid\-\_\-name\-\_\-surname().
 
 
 
 Referenced by cf\-\_\-generator().
 
-\hypertarget{cf__generator_8c_ab1b86778c6102ec98c108cf32695b42c}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!surname\-\_\-code@{surname\-\_\-code}}
+\hypertarget{cf__generator_8c_a89795a74a18a95d8297459255d49f356}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!odd\-\_\-character@{odd\-\_\-character}}
+\index{odd\-\_\-character@{odd\-\_\-character}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{odd\-\_\-character}]{\setlength{\rightskip}{0pt plus 5cm}static int odd\-\_\-character (
+\begin{DoxyParamCaption}
+\item[{char}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a89795a74a18a95d8297459255d49f356}
+
+
+Definition at line 184 of file cf\-\_\-generator.\-c.
+
+
+
+References A, B, C, C\-H\-A\-R\-\_\-0, C\-H\-A\-R\-\_\-1, C\-H\-A\-R\-\_\-2, C\-H\-A\-R\-\_\-3, C\-H\-A\-R\-\_\-4, C\-H\-A\-R\-\_\-5, C\-H\-A\-R\-\_\-6, C\-H\-A\-R\-\_\-7, C\-H\-A\-R\-\_\-8, C\-H\-A\-R\-\_\-9, D, E, E\-I\-G\-H\-T, E\-I\-G\-H\-T\-E\-E\-N, E\-L\-E\-V\-E\-N, F, F\-I\-F\-T\-E\-E\-N, F\-I\-V\-E, F\-O\-U\-R, F\-O\-U\-R\-T\-E\-E\-N, G, H, I, J, K, L, M, N, N\-I\-N\-E, N\-I\-N\-E\-T\-E\-E\-N, O, O\-N\-E, P, Q, R, S, S\-E\-V\-E\-N, S\-E\-V\-E\-N\-T\-E\-E\-N, S\-I\-X, S\-I\-X\-T\-E\-E\-N, T, T\-E\-N, T\-H\-I\-R\-T\-E\-E\-N, T\-H\-R\-E\-E, T\-W\-E\-L\-V\-E, T\-W\-E\-N\-T\-Y, T\-W\-E\-N\-T\-Y\-F\-I\-V\-E, T\-W\-E\-N\-T\-Y\-F\-O\-U\-R, T\-W\-E\-N\-T\-Y\-O\-N\-E, T\-W\-E\-N\-T\-Y\-T\-H\-R\-E\-E, T\-W\-E\-N\-T\-Y\-T\-W\-O, T\-W\-O, U, V, W, X, Y, and Z\-E\-R\-O.
+
+
+
+Referenced by get\-\_\-sum().
+
+\hypertarget{cf__generator_8c_abf355c0c79769133a75598fce30abcac}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!surname\-\_\-code@{surname\-\_\-code}}
 \index{surname\-\_\-code@{surname\-\_\-code}!cf_generator.c@{cf\-\_\-generator.\-c}}
 \subsubsection[{surname\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}void surname\-\_\-code (
 \begin{DoxyParamCaption}
-\item[{char}]{surname\mbox{[}$\,$\mbox{]}, }
+\item[{const char $\ast$}]{surname, }
 \item[{char}]{code\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8c_ab1b86778c6102ec98c108cf32695b42c}
+)}}\label{cf__generator_8c_abf355c0c79769133a75598fce30abcac}
 
 
 Definition at line 236 of file cf\-\_\-generator.\-c.
 
 
 
-References is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), and is\-\_\-valid\-\_\-name\-\_\-surname().
+References fill\-\_\-code(), is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), and is\-\_\-valid\-\_\-name\-\_\-surname().
 
 
 
 Referenced by cf\-\_\-generator().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{cf__generator_8c_a530d2fc72f6a33c2d8cddd40bf4e7a34}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!A@{A}}
+\index{A@{A}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{A}]{\setlength{\rightskip}{0pt plus 5cm}const char A ='A'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a530d2fc72f6a33c2d8cddd40bf4e7a34}
+
+
+Definition at line 38 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), is\-\_\-vowel(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a76253c8d2f0fe4be0dbec039025aee9a}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!B@{B}}
+\index{B@{B}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{B}]{\setlength{\rightskip}{0pt plus 5cm}const char B = 'B'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a76253c8d2f0fe4be0dbec039025aee9a}
+
+
+Definition at line 39 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_af98377366650f40dbc93f33f67232f49}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C@{C}}
+\index{C@{C}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C}]{\setlength{\rightskip}{0pt plus 5cm}const char C = 'C'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_af98377366650f40dbc93f33f67232f49}
+
+
+Definition at line 40 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a16126c129d41c7829c991a167cb4064b}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C\-H\-A\-R\-\_\-0@{C\-H\-A\-R\-\_\-0}}
+\index{C\-H\-A\-R\-\_\-0@{C\-H\-A\-R\-\_\-0}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C\-H\-A\-R\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}const char C\-H\-A\-R\-\_\-0 = '0'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a16126c129d41c7829c991a167cb4064b}
+
+
+Definition at line 64 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), month(), month\-\_\-1(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a5a01ea3c6447ee37fc1d7ed627499750}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C\-H\-A\-R\-\_\-1@{C\-H\-A\-R\-\_\-1}}
+\index{C\-H\-A\-R\-\_\-1@{C\-H\-A\-R\-\_\-1}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C\-H\-A\-R\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}const char C\-H\-A\-R\-\_\-1 = '1'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a5a01ea3c6447ee37fc1d7ed627499750}
+
+
+Definition at line 65 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), month\-\_\-0(), month\-\_\-1(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a6beb6b469dd44e0f30e4ff9777a16ee4}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C\-H\-A\-R\-\_\-2@{C\-H\-A\-R\-\_\-2}}
+\index{C\-H\-A\-R\-\_\-2@{C\-H\-A\-R\-\_\-2}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C\-H\-A\-R\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}const char C\-H\-A\-R\-\_\-2 = '2'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a6beb6b469dd44e0f30e4ff9777a16ee4}
+
+
+Definition at line 66 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ad7b3b2c2b0b4f2d8705d6f3e524e856e}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C\-H\-A\-R\-\_\-3@{C\-H\-A\-R\-\_\-3}}
+\index{C\-H\-A\-R\-\_\-3@{C\-H\-A\-R\-\_\-3}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C\-H\-A\-R\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}const char C\-H\-A\-R\-\_\-3 = '3'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ad7b3b2c2b0b4f2d8705d6f3e524e856e}
+
+
+Definition at line 67 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a90329cc521f590267cc7dc8331734838}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C\-H\-A\-R\-\_\-4@{C\-H\-A\-R\-\_\-4}}
+\index{C\-H\-A\-R\-\_\-4@{C\-H\-A\-R\-\_\-4}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C\-H\-A\-R\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}const char C\-H\-A\-R\-\_\-4 = '4'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a90329cc521f590267cc7dc8331734838}
+
+
+Definition at line 68 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a85cbe3009f00ae2904a03f99e8fb57ad}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C\-H\-A\-R\-\_\-5@{C\-H\-A\-R\-\_\-5}}
+\index{C\-H\-A\-R\-\_\-5@{C\-H\-A\-R\-\_\-5}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C\-H\-A\-R\-\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}const char C\-H\-A\-R\-\_\-5 = '5'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a85cbe3009f00ae2904a03f99e8fb57ad}
+
+
+Definition at line 69 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a16646dd54133af10f59e47b9bad487bd}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C\-H\-A\-R\-\_\-6@{C\-H\-A\-R\-\_\-6}}
+\index{C\-H\-A\-R\-\_\-6@{C\-H\-A\-R\-\_\-6}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C\-H\-A\-R\-\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}const char C\-H\-A\-R\-\_\-6 = '6'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a16646dd54133af10f59e47b9bad487bd}
+
+
+Definition at line 70 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a6270e1cfedd518a00d96d15ac465f317}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C\-H\-A\-R\-\_\-7@{C\-H\-A\-R\-\_\-7}}
+\index{C\-H\-A\-R\-\_\-7@{C\-H\-A\-R\-\_\-7}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C\-H\-A\-R\-\_\-7}]{\setlength{\rightskip}{0pt plus 5cm}const char C\-H\-A\-R\-\_\-7 = '7'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a6270e1cfedd518a00d96d15ac465f317}
+
+
+Definition at line 71 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_af81a357091c83a5c7eb309e9ebbb6154}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C\-H\-A\-R\-\_\-8@{C\-H\-A\-R\-\_\-8}}
+\index{C\-H\-A\-R\-\_\-8@{C\-H\-A\-R\-\_\-8}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C\-H\-A\-R\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}const char C\-H\-A\-R\-\_\-8 = '8'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_af81a357091c83a5c7eb309e9ebbb6154}
+
+
+Definition at line 72 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a5b2f7304b4d4ab15feb545df3e8425c9}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!C\-H\-A\-R\-\_\-9@{C\-H\-A\-R\-\_\-9}}
+\index{C\-H\-A\-R\-\_\-9@{C\-H\-A\-R\-\_\-9}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{C\-H\-A\-R\-\_\-9}]{\setlength{\rightskip}{0pt plus 5cm}const char C\-H\-A\-R\-\_\-9 = '9'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a5b2f7304b4d4ab15feb545df3e8425c9}
+
+
+Definition at line 73 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_aa19cd7c11e9c73228585bcb905e4541f}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!D@{D}}
+\index{D@{D}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{D}]{\setlength{\rightskip}{0pt plus 5cm}const char D = 'D'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_aa19cd7c11e9c73228585bcb905e4541f}
+
+
+Definition at line 41 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ad9a4713c071a9d59ce6c367755a21207}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!E@{E}}
+\index{E@{E}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{E}]{\setlength{\rightskip}{0pt plus 5cm}const char E = 'E'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ad9a4713c071a9d59ce6c367755a21207}
+
+
+Definition at line 42 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), is\-\_\-vowel(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a282ba01a8497073d8c8eff05b4f03a35}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!E\-I\-G\-H\-T@{E\-I\-G\-H\-T}}
+\index{E\-I\-G\-H\-T@{E\-I\-G\-H\-T}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{E\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int E\-I\-G\-H\-T = 8\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a282ba01a8497073d8c8eff05b4f03a35}
+
+
+Definition at line 18 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-\-M(), even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ab75652b4b267de222e6608e8ed92beb1}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!E\-I\-G\-H\-T\-E\-E\-N@{E\-I\-G\-H\-T\-E\-E\-N}}
+\index{E\-I\-G\-H\-T\-E\-E\-N@{E\-I\-G\-H\-T\-E\-E\-N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{E\-I\-G\-H\-T\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int E\-I\-G\-H\-T\-E\-E\-N = 18\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ab75652b4b267de222e6608e8ed92beb1}
+
+
+Definition at line 28 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a4c1383359f2abbef42e3320eed217f64}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!E\-L\-E\-V\-E\-N@{E\-L\-E\-V\-E\-N}}
+\index{E\-L\-E\-V\-E\-N@{E\-L\-E\-V\-E\-N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{E\-L\-E\-V\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int E\-L\-E\-V\-E\-N = 11\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a4c1383359f2abbef42e3320eed217f64}
+
+
+Definition at line 21 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ae8ab676de0a059d5911f0fc60fe47a1e}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!E\-O\-S@{E\-O\-S}}
+\index{E\-O\-S@{E\-O\-S}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{E\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}const char E\-O\-S = '\textbackslash{}0'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ae8ab676de0a059d5911f0fc60fe47a1e}
+
+
+Definition at line 37 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code(), cf\-\_\-generator(), code\-\_\-strcat(), ctrl\-\_\-code(), fill\-\_\-code(), fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants(), and get\-\_\-consonants().
+
+\hypertarget{cf__generator_8c_a24e7a920f61b1600eade1b9dcb773ce3}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!F@{F}}
+\index{F@{F}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{F}]{\setlength{\rightskip}{0pt plus 5cm}const char F = 'F'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a24e7a920f61b1600eade1b9dcb773ce3}
+
+
+Definition at line 43 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ab7e53332a94239e438169f170510847a}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!F\-I\-F\-T\-E\-E\-N@{F\-I\-F\-T\-E\-E\-N}}
+\index{F\-I\-F\-T\-E\-E\-N@{F\-I\-F\-T\-E\-E\-N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{F\-I\-F\-T\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int F\-I\-F\-T\-E\-E\-N = 15\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ab7e53332a94239e438169f170510847a}
+
+
+Definition at line 25 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by cf\-\_\-generator(), ctrl\-\_\-code(), even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a6f2ece3128fa540ac3301b24572901b9}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!F\-I\-V\-E@{F\-I\-V\-E}}
+\index{F\-I\-V\-E@{F\-I\-V\-E}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{F\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int F\-I\-V\-E = 5\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a6f2ece3128fa540ac3301b24572901b9}
+
+
+Definition at line 15 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code(), even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a155c590b838ec51b170af77c3cf4752b}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!F\-O\-U\-R@{F\-O\-U\-R}}
+\index{F\-O\-U\-R@{F\-O\-U\-R}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{F\-O\-U\-R}]{\setlength{\rightskip}{0pt plus 5cm}const int F\-O\-U\-R = 4\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a155c590b838ec51b170af77c3cf4752b}
+
+
+Definition at line 14 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-\-M(), cf\-\_\-generator(), even\-\_\-character(), get\-\_\-result(), name\-\_\-code(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a559141277d5287f5c2ae9d7f62b04465}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!F\-O\-U\-R\-T\-E\-E\-N@{F\-O\-U\-R\-T\-E\-E\-N}}
+\index{F\-O\-U\-R\-T\-E\-E\-N@{F\-O\-U\-R\-T\-E\-E\-N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{F\-O\-U\-R\-T\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int F\-O\-U\-R\-T\-E\-E\-N = 14\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a559141277d5287f5c2ae9d7f62b04465}
+
+
+Definition at line 24 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ad3f36f27e64ed5982c93a5856e2134b5}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!G@{G}}
+\index{G@{G}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{G}]{\setlength{\rightskip}{0pt plus 5cm}const char G = 'G'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ad3f36f27e64ed5982c93a5856e2134b5}
+
+
+Definition at line 44 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a4ada6a20b01a7a84b35184e6ae474ce8}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!H@{H}}
+\index{H@{H}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{H}]{\setlength{\rightskip}{0pt plus 5cm}const char H = 'H'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a4ada6a20b01a7a84b35184e6ae474ce8}
+
+
+Definition at line 45 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ab9cfcf92a6915b736872d475dd536aa6}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!I@{I}}
+\index{I@{I}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{I}]{\setlength{\rightskip}{0pt plus 5cm}const char I = 'I'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ab9cfcf92a6915b736872d475dd536aa6}
+
+
+Definition at line 46 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), is\-\_\-vowel(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a7f481d2a0875a87b1e0cd746c15345b4}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!J@{J}}
+\index{J@{J}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{J}]{\setlength{\rightskip}{0pt plus 5cm}const char J = 'J'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a7f481d2a0875a87b1e0cd746c15345b4}
+
+
+Definition at line 47 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_aa66df68de74c812ae2de7ada92ebdd63}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!K@{K}}
+\index{K@{K}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{K}]{\setlength{\rightskip}{0pt plus 5cm}const char K = 'K'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_aa66df68de74c812ae2de7ada92ebdd63}
+
+
+Definition at line 48 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a2ccc02c5a956650a52862eecb1eda498}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!L@{L}}
+\index{L@{L}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{L}]{\setlength{\rightskip}{0pt plus 5cm}const char L = 'L'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a2ccc02c5a956650a52862eecb1eda498}
+
+
+Definition at line 49 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a559ad192e528677abe7051fe49e47d49}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!M@{M}}
+\index{M@{M}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{M}]{\setlength{\rightskip}{0pt plus 5cm}const char M = 'M'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a559ad192e528677abe7051fe49e47d49}
+
+
+Definition at line 50 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code(), even\-\_\-character(), get\-\_\-result(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ac07c41e51852dc6fc59dd8bf4482e8d4}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!N@{N}}
+\index{N@{N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{N}]{\setlength{\rightskip}{0pt plus 5cm}const char N = 'N'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ac07c41e51852dc6fc59dd8bf4482e8d4}
+
+
+Definition at line 51 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_acebd8d729fe3c4c48f28dcc616fae280}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!N\-I\-N\-E@{N\-I\-N\-E}}
+\index{N\-I\-N\-E@{N\-I\-N\-E}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{N\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int N\-I\-N\-E = 9\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_acebd8d729fe3c4c48f28dcc616fae280}
+
+
+Definition at line 19 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-\-M(), even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_afc0a2efe4830ed9bf494cef900113c9b}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!N\-I\-N\-E\-T\-E\-E\-N@{N\-I\-N\-E\-T\-E\-E\-N}}
+\index{N\-I\-N\-E\-T\-E\-E\-N@{N\-I\-N\-E\-T\-E\-E\-N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{N\-I\-N\-E\-T\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int N\-I\-N\-E\-T\-E\-E\-N = 19\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_afc0a2efe4830ed9bf494cef900113c9b}
+
+
+Definition at line 29 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ada65313d692e42532499ce96bd3150e7}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!O@{O}}
+\index{O@{O}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{O}]{\setlength{\rightskip}{0pt plus 5cm}const char O = 'O'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ada65313d692e42532499ce96bd3150e7}
+
+
+Definition at line 52 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), is\-\_\-vowel(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a03732b1f90df5c759962ce41dd8046ac}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!O\-N\-E@{O\-N\-E}}
+\index{O\-N\-E@{O\-N\-E}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int O\-N\-E = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a03732b1f90df5c759962ce41dd8046ac}
+
+
+Definition at line 11 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-\-M(), even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a9112c9eaff0f08f12708f495c3a40f7e}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!P@{P}}
+\index{P@{P}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}const char P = 'P'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a9112c9eaff0f08f12708f495c3a40f7e}
+
+
+Definition at line 53 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), month\-\_\-0(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a4d06d3a985405e7462b24cd6f56dbe9e}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!Q@{Q}}
+\index{Q@{Q}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{Q}]{\setlength{\rightskip}{0pt plus 5cm}const char Q = 'Q'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a4d06d3a985405e7462b24cd6f56dbe9e}
+
+
+Definition at line 54 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ab8dcc89430649bb122636e176f0c2492}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!R@{R}}
+\index{R@{R}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{R}]{\setlength{\rightskip}{0pt plus 5cm}const char R = 'R'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ab8dcc89430649bb122636e176f0c2492}
+
+
+Definition at line 55 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), month\-\_\-1(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ac17bc0dbc0bcfce13fd6559f84c1ed9e}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!S@{S}}
+\index{S@{S}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{S}]{\setlength{\rightskip}{0pt plus 5cm}const char S = 'S'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ac17bc0dbc0bcfce13fd6559f84c1ed9e}
+
+
+Definition at line 56 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), month\-\_\-1(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a2c23ca53fc5922ec38516328d442c761}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!S\-E\-V\-E\-N@{S\-E\-V\-E\-N}}
+\index{S\-E\-V\-E\-N@{S\-E\-V\-E\-N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{S\-E\-V\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int S\-E\-V\-E\-N = 7\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a2c23ca53fc5922ec38516328d442c761}
+
+
+Definition at line 17 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a7575dcf2be77fc6293537bbe18c5cfa8}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!S\-E\-V\-E\-N\-T\-E\-E\-N@{S\-E\-V\-E\-N\-T\-E\-E\-N}}
+\index{S\-E\-V\-E\-N\-T\-E\-E\-N@{S\-E\-V\-E\-N\-T\-E\-E\-N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{S\-E\-V\-E\-N\-T\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int S\-E\-V\-E\-N\-T\-E\-E\-N = 17\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a7575dcf2be77fc6293537bbe18c5cfa8}
+
+
+Definition at line 27 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a699ec7bc230e4a768928f3cdff86a759}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!S\-I\-X@{S\-I\-X}}
+\index{S\-I\-X@{S\-I\-X}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{S\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}const int S\-I\-X = 6\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a699ec7bc230e4a768928f3cdff86a759}
+
+
+Definition at line 16 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by cf\-\_\-generator(), even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a175df448b152d4c76c161353c1fdf2ca}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!S\-I\-X\-T\-E\-E\-N@{S\-I\-X\-T\-E\-E\-N}}
+\index{S\-I\-X\-T\-E\-E\-N@{S\-I\-X\-T\-E\-E\-N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{S\-I\-X\-T\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int S\-I\-X\-T\-E\-E\-N = 16\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a175df448b152d4c76c161353c1fdf2ca}
+
+
+Definition at line 26 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by cf\-\_\-generator(), even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a4cefde573dad000e786e8e941721c950}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T@{T}}
+\index{T@{T}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T}]{\setlength{\rightskip}{0pt plus 5cm}const char T = 'T'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a4cefde573dad000e786e8e941721c950}
+
+
+Definition at line 57 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), month\-\_\-1(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a0ff27c5eba0b420dcf7bb4dc94ebf6b9}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-E\-N@{T\-E\-N}}
+\index{T\-E\-N@{T\-E\-N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-E\-N = 10\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a0ff27c5eba0b420dcf7bb4dc94ebf6b9}
+
+
+Definition at line 20 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ae12f936e0b4f89d06a4ebadab2de25de}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-H\-I\-R\-T\-E\-E\-N@{T\-H\-I\-R\-T\-E\-E\-N}}
+\index{T\-H\-I\-R\-T\-E\-E\-N@{T\-H\-I\-R\-T\-E\-E\-N}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-H\-I\-R\-T\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-H\-I\-R\-T\-E\-E\-N = 13\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ae12f936e0b4f89d06a4ebadab2de25de}
+
+
+Definition at line 23 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a1310f39e29bae777ed061629efde0f8e}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-H\-R\-E\-E@{T\-H\-R\-E\-E}}
+\index{T\-H\-R\-E\-E@{T\-H\-R\-E\-E}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-H\-R\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-H\-R\-E\-E = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a1310f39e29bae777ed061629efde0f8e}
+
+
+Definition at line 13 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-\-M(), even\-\_\-character(), fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants(), fill\-\_\-\-X(), get\-\_\-result(), insert\-\_\-consonants(), insert\-\_\-vowels(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a2b918f7cb2a2f6a8d938887ed066e313}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-W\-E\-L\-V\-E@{T\-W\-E\-L\-V\-E}}
+\index{T\-W\-E\-L\-V\-E@{T\-W\-E\-L\-V\-E}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-W\-E\-L\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-W\-E\-L\-V\-E = 12\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a2b918f7cb2a2f6a8d938887ed066e313}
+
+
+Definition at line 22 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_adeaef10683b237f25bd4791a70c2ba28}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-W\-E\-N\-T\-Y@{T\-W\-E\-N\-T\-Y}}
+\index{T\-W\-E\-N\-T\-Y@{T\-W\-E\-N\-T\-Y}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-W\-E\-N\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-W\-E\-N\-T\-Y = 20\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_adeaef10683b237f25bd4791a70c2ba28}
+
+
+Definition at line 30 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a37cfb3af24ffbdd3deec1d8b3624791d}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-W\-E\-N\-T\-Y\-F\-I\-V\-E@{T\-W\-E\-N\-T\-Y\-F\-I\-V\-E}}
+\index{T\-W\-E\-N\-T\-Y\-F\-I\-V\-E@{T\-W\-E\-N\-T\-Y\-F\-I\-V\-E}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-W\-E\-N\-T\-Y\-F\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-W\-E\-N\-T\-Y\-F\-I\-V\-E = 25\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a37cfb3af24ffbdd3deec1d8b3624791d}
+
+
+Definition at line 35 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ae71fa21f5cf5dce070140952adb87c9a}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-W\-E\-N\-T\-Y\-F\-O\-U\-R@{T\-W\-E\-N\-T\-Y\-F\-O\-U\-R}}
+\index{T\-W\-E\-N\-T\-Y\-F\-O\-U\-R@{T\-W\-E\-N\-T\-Y\-F\-O\-U\-R}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-W\-E\-N\-T\-Y\-F\-O\-U\-R}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-W\-E\-N\-T\-Y\-F\-O\-U\-R = 24\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ae71fa21f5cf5dce070140952adb87c9a}
+
+
+Definition at line 34 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a703b6985c5d0446ea5d11f2ffabe0f08}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-W\-E\-N\-T\-Y\-O\-N\-E@{T\-W\-E\-N\-T\-Y\-O\-N\-E}}
+\index{T\-W\-E\-N\-T\-Y\-O\-N\-E@{T\-W\-E\-N\-T\-Y\-O\-N\-E}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-W\-E\-N\-T\-Y\-O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-W\-E\-N\-T\-Y\-O\-N\-E = 21\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a703b6985c5d0446ea5d11f2ffabe0f08}
+
+
+Definition at line 31 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a93053a8bf7b38bd54826768b6dcf2649}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-W\-E\-N\-T\-Y\-S\-I\-X@{T\-W\-E\-N\-T\-Y\-S\-I\-X}}
+\index{T\-W\-E\-N\-T\-Y\-S\-I\-X@{T\-W\-E\-N\-T\-Y\-S\-I\-X}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-W\-E\-N\-T\-Y\-S\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-W\-E\-N\-T\-Y\-S\-I\-X = 26\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a93053a8bf7b38bd54826768b6dcf2649}
+
+
+Definition at line 36 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by ctrl\-\_\-code().
+
+\hypertarget{cf__generator_8c_a905c70154adfe2c8e7f6001e8c836cf3}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-W\-E\-N\-T\-Y\-T\-H\-R\-E\-E@{T\-W\-E\-N\-T\-Y\-T\-H\-R\-E\-E}}
+\index{T\-W\-E\-N\-T\-Y\-T\-H\-R\-E\-E@{T\-W\-E\-N\-T\-Y\-T\-H\-R\-E\-E}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-W\-E\-N\-T\-Y\-T\-H\-R\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-W\-E\-N\-T\-Y\-T\-H\-R\-E\-E = 23\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a905c70154adfe2c8e7f6001e8c836cf3}
+
+
+Definition at line 33 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ae767ff04fe6b7540ce69214b9ac0d938}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-W\-E\-N\-T\-Y\-T\-W\-O@{T\-W\-E\-N\-T\-Y\-T\-W\-O}}
+\index{T\-W\-E\-N\-T\-Y\-T\-W\-O@{T\-W\-E\-N\-T\-Y\-T\-W\-O}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-W\-E\-N\-T\-Y\-T\-W\-O}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-W\-E\-N\-T\-Y\-T\-W\-O = 22\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ae767ff04fe6b7540ce69214b9ac0d938}
+
+
+Definition at line 32 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a611b700be7e491d94ecc6fc196a6099f}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!T\-W\-O@{T\-W\-O}}
+\index{T\-W\-O@{T\-W\-O}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{T\-W\-O}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-W\-O = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a611b700be7e491d94ecc6fc196a6099f}
+
+
+Definition at line 12 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-\-M(), even\-\_\-character(), fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants(), get\-\_\-result(), get\-\_\-sum(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a90784a38cd61f391acb0d43bac12558d}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!U@{U}}
+\index{U@{U}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{U}]{\setlength{\rightskip}{0pt plus 5cm}const char U = 'U'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a90784a38cd61f391acb0d43bac12558d}
+
+
+Definition at line 58 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), is\-\_\-vowel(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a105bef195c8a5316032314290120d170}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!V@{V}}
+\index{V@{V}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{V}]{\setlength{\rightskip}{0pt plus 5cm}const char V = 'V'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a105bef195c8a5316032314290120d170}
+
+
+Definition at line 59 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a9f704bbd8358544dc286109cd65ba778}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!W@{W}}
+\index{W@{W}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{W}]{\setlength{\rightskip}{0pt plus 5cm}const char W = 'W'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a9f704bbd8358544dc286109cd65ba778}
+
+
+Definition at line 60 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_ab37aa22a4128b93883c3d4de63c4f916}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!X@{X}}
+\index{X@{X}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}const char X = 'X'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ab37aa22a4128b93883c3d4de63c4f916}
+
+
+Definition at line 61 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), fill\-\_\-\-X(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_aecb7a48bf527ac0585250551f77b2657}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!Y@{Y}}
+\index{Y@{Y}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{Y}]{\setlength{\rightskip}{0pt plus 5cm}const char Y = 'Y'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_aecb7a48bf527ac0585250551f77b2657}
+
+
+Definition at line 62 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by even\-\_\-character(), get\-\_\-result(), and odd\-\_\-character().
+
+\hypertarget{cf__generator_8c_a362f1db478d8a44cc8f02cfd8c0cbad9}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!Z@{Z}}
+\index{Z@{Z}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{Z}]{\setlength{\rightskip}{0pt plus 5cm}const char Z = 'Z'\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a362f1db478d8a44cc8f02cfd8c0cbad9}
+
+
+Definition at line 63 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by get\-\_\-result().
+
+\hypertarget{cf__generator_8c_acdb9580f8c1b2955aa58958261a6c582}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!Z\-E\-R\-O@{Z\-E\-R\-O}}
+\index{Z\-E\-R\-O@{Z\-E\-R\-O}!cf_generator.c@{cf\-\_\-generator.\-c}}
+\subsubsection[{Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}const int Z\-E\-R\-O = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_acdb9580f8c1b2955aa58958261a6c582}
+
+
+Definition at line 10 of file cf\-\_\-generator.\-c.
+
+
+
+Referenced by birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-\-M(), cf\-\_\-generator(), ctrl\-\_\-code(), even\-\_\-character(), fill\-\_\-code(), fill\-\_\-coded\-\_\-name\-\_\-four\-\_\-consonants(), get\-\_\-consonants(), get\-\_\-result(), get\-\_\-sum(), insert\-\_\-consonants(), insert\-\_\-vowels(), and odd\-\_\-character().
 

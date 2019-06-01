@@ -16,7 +16,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 /**
  * Legge da file il codice catastale del comune di nascita
  * @pre il file deve essere aperto
@@ -26,7 +25,7 @@
  * @param birth_place
  * @return
  */
-char* read_birth_place_code(FILE* places_file,char* birth_place);
+const char* read_birth_place_code(FILE* places_file,char* birth_place);
 
 /**
  * Stampa un messaggio di errore se il file non è stato trovato

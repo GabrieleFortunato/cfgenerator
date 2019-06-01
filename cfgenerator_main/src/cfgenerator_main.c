@@ -8,6 +8,8 @@
  ============================================================================
  */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "print_code/print_code.h"
 #include "access/access.h"
 #include "print_code/read_birth_place/read_birth_place.h"
@@ -29,13 +31,13 @@ void access(){
 
 void cfgenerator(FILE* file){
 	intro();
-	char* name = get_name();
-	char* surname = get_surname();
-	char* birth_date = get_birth_date();
-	char* town = get_birth_town();
+	const char* name = get_name();
+	const char* surname = get_surname();
+	const char* birth_date = get_birth_date();
+	const char* town = get_birth_town();
 	char sex = get_sex();
 	(file==NULL) ? file_not_found() :
-			print_code(name,surname, birth_date, read_birth_place_code(file, town), sex, file);
+			print_code(name, surname, birth_date, read_birth_place_code(file, town), sex, file);
 	(repeat()) ? cfgenerator(file) : close();
 }
 

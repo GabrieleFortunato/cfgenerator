@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>My Project: src/print_code/read_birth_place/read_birth_place.c File Reference</title>
+<title>cfgenerator: src/print_code/read_birth_place/read_birth_place.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">cfgenerator
    </div>
   </td>
  </tr>
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,7 +83,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">read_birth_place.c File Reference</div>  </div>
 </div><!--header-->
@@ -95,10 +96,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a010678c3c8f5267cb96a048f1b7b0794"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#a010678c3c8f5267cb96a048f1b7b0794">read_birth_place_code</a> (FILE *places_file, char *birth_place)</td></tr>
-<tr class="separator:a010678c3c8f5267cb96a048f1b7b0794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976b2579f6e42b95d89ad387e84b2702"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#a976b2579f6e42b95d89ad387e84b2702">result_code</a> (char *code, char *result)</td></tr>
+<tr class="separator:a976b2579f6e42b95d89ad387e84b2702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b02585a1ea5520b21b5d8569f8c838d"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#a8b02585a1ea5520b21b5d8569f8c838d">get_result</a> (char *birth_place, char *part, char *result)</td></tr>
+<tr class="separator:a8b02585a1ea5520b21b5d8569f8c838d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62227ff5f08c1f18f1c025470db2f1e6"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#a62227ff5f08c1f18f1c025470db2f1e6">read_birth_place_code</a> (FILE *places_file, char *birth_place)</td></tr>
+<tr class="separator:a62227ff5f08c1f18f1c025470db2f1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac547debbc7ff88dd753efb9589535d11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#ac547debbc7ff88dd753efb9589535d11">file_not_found</a> ()</td></tr>
 <tr class="separator:ac547debbc7ff88dd753efb9589535d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab7e53332a94239e438169f170510847a"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#ab7e53332a94239e438169f170510847a">FIFTEEN</a> = 50</td></tr>
+<tr class="separator:ab7e53332a94239e438169f170510847a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf9af32599c871ff05b6a94e650462d6"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#aaf9af32599c871ff05b6a94e650462d6">PAUSE</a> = &quot;pause&quot;</td></tr>
+<tr class="separator:aaf9af32599c871ff05b6a94e650462d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a885b009d800b491be41120b650c1a971"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#a885b009d800b491be41120b650c1a971">FILE_NOT_FOUND</a> = &quot;File dei codici catastali non trovato\n&quot;</td></tr>
+<tr class="separator:a885b009d800b491be41120b650c1a971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b241cc8a7022f0018618a13700e3ec"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#aa7b241cc8a7022f0018618a13700e3ec">FOURTYSIX</a> = 46</td></tr>
+<tr class="separator:aa7b241cc8a7022f0018618a13700e3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2ece3128fa540ac3301b24572901b9"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#a6f2ece3128fa540ac3301b24572901b9">FIVE</a> = 5</td></tr>
+<tr class="separator:a6f2ece3128fa540ac3301b24572901b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03732b1f90df5c759962ce41dd8046ac"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#a03732b1f90df5c759962ce41dd8046ac">ONE</a> = 1</td></tr>
+<tr class="separator:a03732b1f90df5c759962ce41dd8046ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb9580f8c1b2955aa58958261a6c582"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#acdb9580f8c1b2955aa58958261a6c582">ZERO</a> = 0</td></tr>
+<tr class="separator:acdb9580f8c1b2955aa58958261a6c582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fed43412fad2f4169aa68d9b59a24ba"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#a4fed43412fad2f4169aa68d9b59a24ba">eos</a> = '\0'</td></tr>
+<tr class="separator:a4fed43412fad2f4169aa68d9b59a24ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4ecdbad57717b8babc04d156ce7212"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__birth__place_8c.html#acc4ecdbad57717b8babc04d156ce7212">VIRGO</a> = &quot;,&quot;</td></tr>
+<tr class="separator:acc4ecdbad57717b8babc04d156ce7212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ac547debbc7ff88dd753efb9589535d11"></a>
@@ -117,16 +143,62 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00051">51</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
 
-<p>References <a class="el" href="close_8c_source.html#l00012">close()</a>.</p>
+<p>References <a class="el" href="close_8c_source.html#l00012">close()</a>, <a class="el" href="read__birth__place_8c_source.html#l00013">FILE_NOT_FOUND</a>, and <a class="el" href="read__birth__place_8c_source.html#l00012">PAUSE</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a010678c3c8f5267cb96a048f1b7b0794"></a>
+<a class="anchor" id="a8b02585a1ea5520b21b5d8569f8c838d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static char* get_result </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>birth_place</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>part</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00027">27</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>References <a class="el" href="read__birth__place_8c_source.html#l00015">FIVE</a>, <a class="el" href="read__birth__place_8c_source.html#l00021">result_code()</a>, <a class="el" href="read__birth__place_8c_source.html#l00019">VIRGO</a>, and <a class="el" href="read__birth__place_8c_source.html#l00017">ZERO</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00035">read_birth_place_code()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a62227ff5f08c1f18f1c025470db2f1e6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* read_birth_place_code </td>
+          <td class="memname">const char* read_birth_place_code </td>
           <td>(</td>
           <td class="paramtype">FILE *&#160;</td>
           <td class="paramname"><em>places_file</em>, </td>
@@ -158,7 +230,264 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00035">35</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
 
-<p>References <a class="el" href="is__valid_8c_source.html#l00015">FIVE</a>, <a class="el" href="is__valid_8c_source.html#l00111">is_not_empty_string()</a>, and <a class="el" href="is__valid_8c_source.html#l00107">is_valid_town_code()</a>.</p>
+<p>References <a class="el" href="read__birth__place_8c_source.html#l00011">FIFTEEN</a>, <a class="el" href="read__birth__place_8c_source.html#l00015">FIVE</a>, <a class="el" href="read__birth__place_8c_source.html#l00014">FOURTYSIX</a>, <a class="el" href="read__birth__place_8c_source.html#l00027">get_result()</a>, <a class="el" href="is__valid_8c_source.html#l00111">is_not_empty_string()</a>, and <a class="el" href="is__valid_8c_source.html#l00107">is_valid_town_code()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a976b2579f6e42b95d89ad387e84b2702"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void result_code </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00021">21</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>References <a class="el" href="read__birth__place_8c_source.html#l00018">eos</a>, <a class="el" href="read__birth__place_8c_source.html#l00016">ONE</a>, and <a class="el" href="read__birth__place_8c_source.html#l00019">VIRGO</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00027">get_result()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a4fed43412fad2f4169aa68d9b59a24ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char eos = '\0'</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00018">18</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00021">result_code()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7e53332a94239e438169f170510847a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int FIFTEEN = 50</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00011">11</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00035">read_birth_place_code()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a885b009d800b491be41120b650c1a971"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* FILE_NOT_FOUND = &quot;File dei codici catastali non trovato\n&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00013">13</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00051">file_not_found()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f2ece3128fa540ac3301b24572901b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int FIVE = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00015">15</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00027">get_result()</a>, and <a class="el" href="read__birth__place_8c_source.html#l00035">read_birth_place_code()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa7b241cc8a7022f0018618a13700e3ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int FOURTYSIX = 46</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00014">14</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00035">read_birth_place_code()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03732b1f90df5c759962ce41dd8046ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ONE = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00016">16</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00021">result_code()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf9af32599c871ff05b6a94e650462d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* PAUSE = &quot;pause&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00012">12</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00051">file_not_found()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acc4ecdbad57717b8babc04d156ce7212"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* VIRGO = &quot;,&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00019">19</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00027">get_result()</a>, and <a class="el" href="read__birth__place_8c_source.html#l00021">result_code()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acdb9580f8c1b2955aa58958261a6c582"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZERO = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="read__birth__place_8c_source.html#l00017">17</a> of file <a class="el" href="read__birth__place_8c_source.html">read_birth_place.c</a>.</p>
+
+<p>Referenced by <a class="el" href="read__birth__place_8c_source.html#l00027">get_result()</a>.</p>
 
 </div>
 </div>

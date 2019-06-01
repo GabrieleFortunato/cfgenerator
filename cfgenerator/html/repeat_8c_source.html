@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>My Project: src/repeat/repeat.c Source File</title>
+<title>cfgenerator: src/repeat/repeat.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">cfgenerator
    </div>
   </td>
  </tr>
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,31 +93,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: Gabriele Fortunato</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../src/repeat/repeat.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="repeat_8h.html">repeat.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* SPEC_INT = <span class="stringliteral">&quot;%d&quot;</span>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* REPEAT_STRING =</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="repeat_8c.html#ac817e632cac63218335454d0ebe89efe">   10</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="repeat_8c.html#ac817e632cac63218335454d0ebe89efe">SPEC_INT</a> = <span class="stringliteral">&quot;%d&quot;</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="repeat_8c.html#ae023907c20375d939ba39327d5e1f303">   11</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="repeat_8c.html#ae023907c20375d939ba39327d5e1f303">REPEAT_STRING</a> =</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="stringliteral">&quot;\nCalcolare un altro codice fiscale?\n(1=si,2=no) &quot;</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="is__valid_8c.html#a888e15353eb3d330c743dbdeb47117e2">TWO</a> = 2;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="is__valid_8c.html#a206b6f5362e56b51ca957635350b70b6">ONE</a> = 1;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="is__valid_8c.html#ac328e551bde3d39b6d7b8cc9e048d941">ZERO</a> = 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="repeat_8c.html#a611b700be7e491d94ecc6fc196a6099f">   13</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="repeat_8c.html#a611b700be7e491d94ecc6fc196a6099f">TWO</a> = 2;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="repeat_8c.html#a03732b1f90df5c759962ce41dd8046ac">   14</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="repeat_8c.html#a03732b1f90df5c759962ce41dd8046ac">ONE</a> = 1;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="repeat_8c.html#acdb9580f8c1b2955aa58958261a6c582">   15</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="repeat_8c.html#acdb9580f8c1b2955aa58958261a6c582">ZERO</a> = 0;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> get_repeat(){</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="repeat_8c.html#ac7058264851b1479e01129febff7d689">repeat</a> = <a class="code" href="is__valid_8c.html#ac328e551bde3d39b6d7b8cc9e048d941">ZERO</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">do</span>{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        printf(REPEAT_STRING);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        scanf(SPEC_INT, &amp;repeat);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    } <span class="keywordflow">while</span> (repeat != <a class="code" href="is__valid_8c.html#a206b6f5362e56b51ca957635350b70b6">ONE</a> &amp;&amp; repeat != <a class="code" href="is__valid_8c.html#a888e15353eb3d330c743dbdeb47117e2">TWO</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="repeat_8c.html#a255dfb4ebad196efbfb499c521b56805">   17</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="repeat_8c.html#a255dfb4ebad196efbfb499c521b56805">get_repeat</a>(){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="repeat_8c.html#ac7058264851b1479e01129febff7d689">repeat</a> = <a class="code" href="repeat_8c.html#acdb9580f8c1b2955aa58958261a6c582">ZERO</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">while</span> (repeat != <a class="code" href="repeat_8c.html#a03732b1f90df5c759962ce41dd8046ac">ONE</a> &amp;&amp; repeat != <a class="code" href="repeat_8c.html#a611b700be7e491d94ecc6fc196a6099f">TWO</a>){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        printf(<a class="code" href="repeat_8c.html#ae023907c20375d939ba39327d5e1f303">REPEAT_STRING</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        scanf(<a class="code" href="repeat_8c.html#ac817e632cac63218335454d0ebe89efe">SPEC_INT</a>, &amp;repeat);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="repeat_8c.html#ac7058264851b1479e01129febff7d689">repeat</a>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="repeat_8h.html#a5166aee90fa74302ba51aa82f9cf5075">   26</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="repeat_8c.html#ac7058264851b1479e01129febff7d689">repeat</a>(){</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> get_repeat() == <a class="code" href="is__valid_8c.html#a206b6f5362e56b51ca957635350b70b6">ONE</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="repeat_8c.html#a255dfb4ebad196efbfb499c521b56805">get_repeat</a>() == <a class="code" href="repeat_8c.html#a03732b1f90df5c759962ce41dd8046ac">ONE</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="ttc" id="is__valid_8c_html_ac328e551bde3d39b6d7b8cc9e048d941"><div class="ttname"><a href="is__valid_8c.html#ac328e551bde3d39b6d7b8cc9e048d941">ZERO</a></div><div class="ttdeci">#define ZERO</div><div class="ttdef"><b>Definition:</b> <a href="is__valid_8c_source.html#l00010">is_valid.c:10</a></div></div>
-<div class="ttc" id="is__valid_8c_html_a206b6f5362e56b51ca957635350b70b6"><div class="ttname"><a href="is__valid_8c.html#a206b6f5362e56b51ca957635350b70b6">ONE</a></div><div class="ttdeci">#define ONE</div><div class="ttdef"><b>Definition:</b> <a href="is__valid_8c_source.html#l00011">is_valid.c:11</a></div></div>
+<div class="ttc" id="repeat_8c_html_ae023907c20375d939ba39327d5e1f303"><div class="ttname"><a href="repeat_8c.html#ae023907c20375d939ba39327d5e1f303">REPEAT_STRING</a></div><div class="ttdeci">static const char * REPEAT_STRING</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8c_source.html#l00011">repeat.c:11</a></div></div>
+<div class="ttc" id="repeat_8c_html_a255dfb4ebad196efbfb499c521b56805"><div class="ttname"><a href="repeat_8c.html#a255dfb4ebad196efbfb499c521b56805">get_repeat</a></div><div class="ttdeci">static int get_repeat()</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8c_source.html#l00017">repeat.c:17</a></div></div>
+<div class="ttc" id="repeat_8h_html"><div class="ttname"><a href="repeat_8h.html">repeat.h</a></div></div>
 <div class="ttc" id="repeat_8c_html_ac7058264851b1479e01129febff7d689"><div class="ttname"><a href="repeat_8c.html#ac7058264851b1479e01129febff7d689">repeat</a></div><div class="ttdeci">bool repeat()</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8c_source.html#l00026">repeat.c:26</a></div></div>
-<div class="ttc" id="is__valid_8c_html_a888e15353eb3d330c743dbdeb47117e2"><div class="ttname"><a href="is__valid_8c.html#a888e15353eb3d330c743dbdeb47117e2">TWO</a></div><div class="ttdeci">#define TWO</div><div class="ttdef"><b>Definition:</b> <a href="is__valid_8c_source.html#l00012">is_valid.c:12</a></div></div>
+<div class="ttc" id="repeat_8c_html_acdb9580f8c1b2955aa58958261a6c582"><div class="ttname"><a href="repeat_8c.html#acdb9580f8c1b2955aa58958261a6c582">ZERO</a></div><div class="ttdeci">static const int ZERO</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8c_source.html#l00015">repeat.c:15</a></div></div>
+<div class="ttc" id="repeat_8c_html_a611b700be7e491d94ecc6fc196a6099f"><div class="ttname"><a href="repeat_8c.html#a611b700be7e491d94ecc6fc196a6099f">TWO</a></div><div class="ttdeci">static const int TWO</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8c_source.html#l00013">repeat.c:13</a></div></div>
+<div class="ttc" id="repeat_8c_html_a03732b1f90df5c759962ce41dd8046ac"><div class="ttname"><a href="repeat_8c.html#a03732b1f90df5c759962ce41dd8046ac">ONE</a></div><div class="ttdeci">static const int ONE</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8c_source.html#l00014">repeat.c:14</a></div></div>
+<div class="ttc" id="repeat_8c_html_ac817e632cac63218335454d0ebe89efe"><div class="ttname"><a href="repeat_8c.html#ac817e632cac63218335454d0ebe89efe">SPEC_INT</a></div><div class="ttdeci">static const char * SPEC_INT</div><div class="ttdef"><b>Definition:</b> <a href="repeat_8c_source.html#l00010">repeat.c:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

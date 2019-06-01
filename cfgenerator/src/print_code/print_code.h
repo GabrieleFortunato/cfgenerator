@@ -20,6 +20,6 @@
  * @param sex
  * @param towns
  */
-void print_code(char* name, char* surname, char* birth_date, char* coded_town, char sex, FILE* towns);
+void print_code(const char* name, const char* surname, const char* birth_date, char* coded_town, char sex, FILE* towns);
 
 #endif /* SRC_PRINT_CODE_PRINT_CODE_H_ */

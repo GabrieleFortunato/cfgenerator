@@ -5,56 +5,83 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-char $\ast$ \hyperlink{get__data_8c_a00cc0f1952798a88b8ca5f7e6f690349}{get\-\_\-name} ()
+static void \hyperlink{get__data_8c_a7dfda4ecbcb24c5b3e8d429a05a69b0d}{insert\-\_\-name} (char $\ast$name)
 \item 
-char $\ast$ \hyperlink{get__data_8c_a68f48cb862effaf5baf4d26f3111e6ad}{get\-\_\-surname} ()
+const char $\ast$ \hyperlink{get__data_8c_aa37ab6a2f004bfa2c956115231072736}{get\-\_\-name} ()
 \item 
-char $\ast$ \hyperlink{get__data_8c_a9035593d5e0448fa979e53226d53812f}{get\-\_\-birth\-\_\-date} ()
+static void \hyperlink{get__data_8c_aa6efe0899ebb5498cd167a4bc13cff6a}{insert\-\_\-surname} (char $\ast$surname)
 \item 
-char $\ast$ \hyperlink{get__data_8c_a9245ddebe5d7031ae42765d2b57a7cd4}{get\-\_\-birth\-\_\-town} ()
+const char $\ast$ \hyperlink{get__data_8c_a328f0cb24adc8c78be4feccad46fe5c0}{get\-\_\-surname} ()
+\item 
+static void \hyperlink{get__data_8c_aa6a606897eddde081f7c7b97ad7bcc35}{insert\-\_\-date} (char $\ast$date)
+\item 
+const char $\ast$ \hyperlink{get__data_8c_a371e821456b9d236e584c4d81b0d93d8}{get\-\_\-birth\-\_\-date} ()
+\item 
+static void \hyperlink{get__data_8c_a81d10c2ea37c93426f511eb8f153d7bc}{insert\-\_\-birth\-\_\-town} (char $\ast$town)
+\item 
+const char $\ast$ \hyperlink{get__data_8c_a2882e5dba403c75465ece719426f05e1}{get\-\_\-birth\-\_\-town} ()
 \item 
 char \hyperlink{get__data_8c_a5800a9e149aff849e994280d74411dd4}{get\-\_\-sex} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{get__data_8c_a051cc98478581ca874ffd568c56ac4b7}{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-S\-T\-R\-I\-N\-G} = 100
+\item 
+static const int \hyperlink{get__data_8c_a67e919fd6a534351d5460f677452a5d7}{L\-E\-N\-G\-T\-H\-\_\-\-D\-A\-T\-E} = 11
+\item 
+static const char $\ast$ \hyperlink{get__data_8c_a43ab60304a915ef1e4af0bf4dabf6737}{S\-P\-E\-C\-\_\-\-C\-H\-A\-R} = \char`\"{}\%c\char`\"{}
+\item 
+static const char $\ast$ \hyperlink{get__data_8c_acc6cd2c11cef82fbb8841577ba90418b}{I\-N\-S\-E\-R\-T\-\_\-\-N\-A\-M\-E} = \char`\"{}Inserisci il nome$>$\char`\"{}
+\item 
+static const char $\ast$ \hyperlink{get__data_8c_aad474af3984d2a4f5ab6d7f8ce64720c}{I\-N\-S\-E\-R\-T\-\_\-\-S\-U\-R\-N\-A\-M\-E} = \char`\"{}Inserisci il cognome$>$\char`\"{}
+\item 
+static const char $\ast$ \hyperlink{get__data_8c_a98d0f617923cbd82c311124cc09a488d}{I\-N\-S\-E\-R\-T\-\_\-\-D\-A\-T\-E} = \char`\"{}Inserisci la data di nascita (formato G\-G/M\-M/A\-A\-A\-A)$>$\char`\"{}
+\item 
+static const char $\ast$ \hyperlink{get__data_8c_a287db51a56159141cf6017d0ab3e590b}{I\-N\-S\-E\-R\-T\-\_\-\-T\-O\-W\-N} = \char`\"{}Inserisci il comune di nascita$>$\char`\"{}
+\item 
+static const char $\ast$ \hyperlink{get__data_8c_a6c4590056dfeaab3b74658d682e0c3f6}{I\-N\-S\-E\-R\-T\-\_\-\-S\-E\-X} = \char`\"{}Inserisci il sesso (\hyperlink{cf__generator_8c_a559ad192e528677abe7051fe49e47d49}{M}-\/\hyperlink{cf__generator_8c_a24e7a920f61b1600eade1b9dcb773ce3}{F})$>$\char`\"{}
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{get__data_8c_a9035593d5e0448fa979e53226d53812f}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!get\-\_\-birth\-\_\-date@{get\-\_\-birth\-\_\-date}}
+\hypertarget{get__data_8c_a371e821456b9d236e584c4d81b0d93d8}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!get\-\_\-birth\-\_\-date@{get\-\_\-birth\-\_\-date}}
 \index{get\-\_\-birth\-\_\-date@{get\-\_\-birth\-\_\-date}!get_data.c@{get\-\_\-data.\-c}}
-\subsubsection[{get\-\_\-birth\-\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\-\_\-birth\-\_\-date (
+\subsubsection[{get\-\_\-birth\-\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ get\-\_\-birth\-\_\-date (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{get__data_8c_a9035593d5e0448fa979e53226d53812f}
+)}}\label{get__data_8c_a371e821456b9d236e584c4d81b0d93d8}
 Acquisisce la data di nascita 
 
 Definition at line 56 of file get\-\_\-data.\-c.
 
 
 
-References is\-\_\-not\-\_\-empty\-\_\-string().
+References insert\-\_\-date(), is\-\_\-not\-\_\-empty\-\_\-string(), and L\-E\-N\-G\-T\-H\-\_\-\-D\-A\-T\-E.
 
-\hypertarget{get__data_8c_a9245ddebe5d7031ae42765d2b57a7cd4}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!get\-\_\-birth\-\_\-town@{get\-\_\-birth\-\_\-town}}
+\hypertarget{get__data_8c_a2882e5dba403c75465ece719426f05e1}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!get\-\_\-birth\-\_\-town@{get\-\_\-birth\-\_\-town}}
 \index{get\-\_\-birth\-\_\-town@{get\-\_\-birth\-\_\-town}!get_data.c@{get\-\_\-data.\-c}}
-\subsubsection[{get\-\_\-birth\-\_\-town}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\-\_\-birth\-\_\-town (
+\subsubsection[{get\-\_\-birth\-\_\-town}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ get\-\_\-birth\-\_\-town (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{get__data_8c_a9245ddebe5d7031ae42765d2b57a7cd4}
+)}}\label{get__data_8c_a2882e5dba403c75465ece719426f05e1}
 Acquisisce il comune di nascita 
 
 Definition at line 71 of file get\-\_\-data.\-c.
 
 
 
-References is\-\_\-not\-\_\-empty\-\_\-string(), and to\-\_\-upper\-\_\-string().
+References insert\-\_\-birth\-\_\-town(), is\-\_\-not\-\_\-empty\-\_\-string(), M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-S\-T\-R\-I\-N\-G, and to\-\_\-upper\-\_\-string().
 
-\hypertarget{get__data_8c_a00cc0f1952798a88b8ca5f7e6f690349}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!get\-\_\-name@{get\-\_\-name}}
+\hypertarget{get__data_8c_aa37ab6a2f004bfa2c956115231072736}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!get\-\_\-name@{get\-\_\-name}}
 \index{get\-\_\-name@{get\-\_\-name}!get_data.c@{get\-\_\-data.\-c}}
-\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\-\_\-name (
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ get\-\_\-name (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{get__data_8c_a00cc0f1952798a88b8ca5f7e6f690349}
+)}}\label{get__data_8c_aa37ab6a2f004bfa2c956115231072736}
 Acquisisce il nome \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
@@ -64,7 +91,7 @@ Definition at line 24 of file get\-\_\-data.\-c.
 
 
 
-References is\-\_\-not\-\_\-empty\-\_\-string(), and to\-\_\-upper\-\_\-string().
+References insert\-\_\-name(), is\-\_\-not\-\_\-empty\-\_\-string(), M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-S\-T\-R\-I\-N\-G, and to\-\_\-upper\-\_\-string().
 
 \hypertarget{get__data_8c_a5800a9e149aff849e994280d74411dd4}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!get\-\_\-sex@{get\-\_\-sex}}
 \index{get\-\_\-sex@{get\-\_\-sex}!get_data.c@{get\-\_\-data.\-c}}
@@ -80,13 +107,17 @@ Acquisisce il sesso \begin{DoxyReturn}{Returns}
 
 Definition at line 82 of file get\-\_\-data.\-c.
 
-\hypertarget{get__data_8c_a68f48cb862effaf5baf4d26f3111e6ad}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!get\-\_\-surname@{get\-\_\-surname}}
+
+
+References I\-N\-S\-E\-R\-T\-\_\-\-S\-E\-X, and S\-P\-E\-C\-\_\-\-C\-H\-A\-R.
+
+\hypertarget{get__data_8c_a328f0cb24adc8c78be4feccad46fe5c0}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!get\-\_\-surname@{get\-\_\-surname}}
 \index{get\-\_\-surname@{get\-\_\-surname}!get_data.c@{get\-\_\-data.\-c}}
-\subsubsection[{get\-\_\-surname}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\-\_\-surname (
+\subsubsection[{get\-\_\-surname}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ get\-\_\-surname (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{get__data_8c_a68f48cb862effaf5baf4d26f3111e6ad}
+)}}\label{get__data_8c_a328f0cb24adc8c78be4feccad46fe5c0}
 Acquisisce il cognome \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
@@ -96,5 +127,172 @@ Definition at line 40 of file get\-\_\-data.\-c.
 
 
 
-References is\-\_\-not\-\_\-empty\-\_\-string(), and to\-\_\-upper\-\_\-string().
+References insert\-\_\-surname(), is\-\_\-not\-\_\-empty\-\_\-string(), M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-S\-T\-R\-I\-N\-G, and to\-\_\-upper\-\_\-string().
+
+\hypertarget{get__data_8c_a81d10c2ea37c93426f511eb8f153d7bc}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!insert\-\_\-birth\-\_\-town@{insert\-\_\-birth\-\_\-town}}
+\index{insert\-\_\-birth\-\_\-town@{insert\-\_\-birth\-\_\-town}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{insert\-\_\-birth\-\_\-town}]{\setlength{\rightskip}{0pt plus 5cm}static void insert\-\_\-birth\-\_\-town (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{town}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_a81d10c2ea37c93426f511eb8f153d7bc}
+
+
+Definition at line 66 of file get\-\_\-data.\-c.
+
+
+
+References I\-N\-S\-E\-R\-T\-\_\-\-T\-O\-W\-N.
+
+
+
+Referenced by get\-\_\-birth\-\_\-town().
+
+\hypertarget{get__data_8c_aa6a606897eddde081f7c7b97ad7bcc35}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!insert\-\_\-date@{insert\-\_\-date}}
+\index{insert\-\_\-date@{insert\-\_\-date}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{insert\-\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}static void insert\-\_\-date (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_aa6a606897eddde081f7c7b97ad7bcc35}
+
+
+Definition at line 51 of file get\-\_\-data.\-c.
+
+
+
+References I\-N\-S\-E\-R\-T\-\_\-\-D\-A\-T\-E.
+
+
+
+Referenced by get\-\_\-birth\-\_\-date().
+
+\hypertarget{get__data_8c_a7dfda4ecbcb24c5b3e8d429a05a69b0d}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!insert\-\_\-name@{insert\-\_\-name}}
+\index{insert\-\_\-name@{insert\-\_\-name}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{insert\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}static void insert\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_a7dfda4ecbcb24c5b3e8d429a05a69b0d}
+
+
+Definition at line 19 of file get\-\_\-data.\-c.
+
+
+
+References I\-N\-S\-E\-R\-T\-\_\-\-N\-A\-M\-E.
+
+
+
+Referenced by get\-\_\-name().
+
+\hypertarget{get__data_8c_aa6efe0899ebb5498cd167a4bc13cff6a}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!insert\-\_\-surname@{insert\-\_\-surname}}
+\index{insert\-\_\-surname@{insert\-\_\-surname}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{insert\-\_\-surname}]{\setlength{\rightskip}{0pt plus 5cm}static void insert\-\_\-surname (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{surname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_aa6efe0899ebb5498cd167a4bc13cff6a}
+
+
+Definition at line 35 of file get\-\_\-data.\-c.
+
+
+
+References I\-N\-S\-E\-R\-T\-\_\-\-S\-U\-R\-N\-A\-M\-E.
+
+
+
+Referenced by get\-\_\-surname().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{get__data_8c_a98d0f617923cbd82c311124cc09a488d}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!I\-N\-S\-E\-R\-T\-\_\-\-D\-A\-T\-E@{I\-N\-S\-E\-R\-T\-\_\-\-D\-A\-T\-E}}
+\index{I\-N\-S\-E\-R\-T\-\_\-\-D\-A\-T\-E@{I\-N\-S\-E\-R\-T\-\_\-\-D\-A\-T\-E}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{I\-N\-S\-E\-R\-T\-\_\-\-D\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ I\-N\-S\-E\-R\-T\-\_\-\-D\-A\-T\-E = \char`\"{}Inserisci la data di nascita (formato G\-G/M\-M/A\-A\-A\-A)$>$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_a98d0f617923cbd82c311124cc09a488d}
+
+
+Definition at line 15 of file get\-\_\-data.\-c.
+
+
+
+Referenced by insert\-\_\-date().
+
+\hypertarget{get__data_8c_acc6cd2c11cef82fbb8841577ba90418b}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!I\-N\-S\-E\-R\-T\-\_\-\-N\-A\-M\-E@{I\-N\-S\-E\-R\-T\-\_\-\-N\-A\-M\-E}}
+\index{I\-N\-S\-E\-R\-T\-\_\-\-N\-A\-M\-E@{I\-N\-S\-E\-R\-T\-\_\-\-N\-A\-M\-E}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{I\-N\-S\-E\-R\-T\-\_\-\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ I\-N\-S\-E\-R\-T\-\_\-\-N\-A\-M\-E = \char`\"{}Inserisci il nome$>$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_acc6cd2c11cef82fbb8841577ba90418b}
+
+
+Definition at line 13 of file get\-\_\-data.\-c.
+
+
+
+Referenced by insert\-\_\-name().
+
+\hypertarget{get__data_8c_a6c4590056dfeaab3b74658d682e0c3f6}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!I\-N\-S\-E\-R\-T\-\_\-\-S\-E\-X@{I\-N\-S\-E\-R\-T\-\_\-\-S\-E\-X}}
+\index{I\-N\-S\-E\-R\-T\-\_\-\-S\-E\-X@{I\-N\-S\-E\-R\-T\-\_\-\-S\-E\-X}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{I\-N\-S\-E\-R\-T\-\_\-\-S\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ I\-N\-S\-E\-R\-T\-\_\-\-S\-E\-X = \char`\"{}Inserisci il sesso ({\bf M}-\/{\bf F})$>$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_a6c4590056dfeaab3b74658d682e0c3f6}
+
+
+Definition at line 17 of file get\-\_\-data.\-c.
+
+
+
+Referenced by get\-\_\-sex().
+
+\hypertarget{get__data_8c_aad474af3984d2a4f5ab6d7f8ce64720c}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!I\-N\-S\-E\-R\-T\-\_\-\-S\-U\-R\-N\-A\-M\-E@{I\-N\-S\-E\-R\-T\-\_\-\-S\-U\-R\-N\-A\-M\-E}}
+\index{I\-N\-S\-E\-R\-T\-\_\-\-S\-U\-R\-N\-A\-M\-E@{I\-N\-S\-E\-R\-T\-\_\-\-S\-U\-R\-N\-A\-M\-E}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{I\-N\-S\-E\-R\-T\-\_\-\-S\-U\-R\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ I\-N\-S\-E\-R\-T\-\_\-\-S\-U\-R\-N\-A\-M\-E = \char`\"{}Inserisci il cognome$>$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_aad474af3984d2a4f5ab6d7f8ce64720c}
+
+
+Definition at line 14 of file get\-\_\-data.\-c.
+
+
+
+Referenced by insert\-\_\-surname().
+
+\hypertarget{get__data_8c_a287db51a56159141cf6017d0ab3e590b}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!I\-N\-S\-E\-R\-T\-\_\-\-T\-O\-W\-N@{I\-N\-S\-E\-R\-T\-\_\-\-T\-O\-W\-N}}
+\index{I\-N\-S\-E\-R\-T\-\_\-\-T\-O\-W\-N@{I\-N\-S\-E\-R\-T\-\_\-\-T\-O\-W\-N}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{I\-N\-S\-E\-R\-T\-\_\-\-T\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ I\-N\-S\-E\-R\-T\-\_\-\-T\-O\-W\-N = \char`\"{}Inserisci il comune di nascita$>$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_a287db51a56159141cf6017d0ab3e590b}
+
+
+Definition at line 16 of file get\-\_\-data.\-c.
+
+
+
+Referenced by insert\-\_\-birth\-\_\-town().
+
+\hypertarget{get__data_8c_a67e919fd6a534351d5460f677452a5d7}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!L\-E\-N\-G\-T\-H\-\_\-\-D\-A\-T\-E@{L\-E\-N\-G\-T\-H\-\_\-\-D\-A\-T\-E}}
+\index{L\-E\-N\-G\-T\-H\-\_\-\-D\-A\-T\-E@{L\-E\-N\-G\-T\-H\-\_\-\-D\-A\-T\-E}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{L\-E\-N\-G\-T\-H\-\_\-\-D\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int L\-E\-N\-G\-T\-H\-\_\-\-D\-A\-T\-E = 11\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_a67e919fd6a534351d5460f677452a5d7}
+
+
+Definition at line 11 of file get\-\_\-data.\-c.
+
+
+
+Referenced by get\-\_\-birth\-\_\-date().
+
+\hypertarget{get__data_8c_a051cc98478581ca874ffd568c56ac4b7}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-S\-T\-R\-I\-N\-G@{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-S\-T\-R\-I\-N\-G@{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-S\-T\-R\-I\-N\-G}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}const int M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-S\-T\-R\-I\-N\-G = 100\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_a051cc98478581ca874ffd568c56ac4b7}
+
+
+Definition at line 10 of file get\-\_\-data.\-c.
+
+
+
+Referenced by get\-\_\-birth\-\_\-town(), get\-\_\-name(), and get\-\_\-surname().
+
+\hypertarget{get__data_8c_a43ab60304a915ef1e4af0bf4dabf6737}{\index{get\-\_\-data.\-c@{get\-\_\-data.\-c}!S\-P\-E\-C\-\_\-\-C\-H\-A\-R@{S\-P\-E\-C\-\_\-\-C\-H\-A\-R}}
+\index{S\-P\-E\-C\-\_\-\-C\-H\-A\-R@{S\-P\-E\-C\-\_\-\-C\-H\-A\-R}!get_data.c@{get\-\_\-data.\-c}}
+\subsubsection[{S\-P\-E\-C\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ S\-P\-E\-C\-\_\-\-C\-H\-A\-R = \char`\"{}\%c\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{get__data_8c_a43ab60304a915ef1e4af0bf4dabf6737}
+
+
+Definition at line 12 of file get\-\_\-data.\-c.
+
+
+
+Referenced by get\-\_\-sex().
 

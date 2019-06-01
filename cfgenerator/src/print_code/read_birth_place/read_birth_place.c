@@ -32,7 +32,7 @@ static char* get_result(char* birth_place,char *part,char *result){
 	return result;
 }
 
-char* read_birth_place_code(FILE* places_file,char* birth_place){
+const char* read_birth_place_code(FILE* places_file,char* birth_place){
 	assert(places_file!= NULL);
 	assert(birth_place!= NULL);
 	assert(is_not_empty_string(birth_place));

@@ -5,11 +5,43 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+static void \hyperlink{print__code_8c_a05c9c4b099987cfe161da4af58577ff5}{print\-\_\-valid\-\_\-code} (char $\ast$name, char $\ast$surname, char $\ast$birth\-\_\-date, char $\ast$coded\-\_\-town, char sex)
+\item 
+static void \hyperlink{print__code_8c_a0e7da14e7bad59aeddde7c6ce53dc645}{not\-\_\-valid\-\_\-data} ()
+\item 
 void \hyperlink{print__code_8c_ae2e8d46e105b698b3a9a8fbe6e24dc88}{print\-\_\-code} (char $\ast$name, char $\ast$surname, char $\ast$birth\-\_\-date, char $\ast$coded\-\_\-town, char sex, F\-I\-L\-E $\ast$towns)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{print__code_8c_af59a3b5376e25b8338f520d1c3e70e2a}{N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A}
+\item 
+static const char $\ast$ \hyperlink{print__code_8c_a0fce746fd69ca8040f6f928401235c68}{P\-R\-I\-N\-T\-\_\-\-C\-O\-D\-E}
+\item 
+static const int \hyperlink{print__code_8c_a6923fb1cde44c51bd3a768c59680b4bb}{C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H} = 17
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
+\hypertarget{print__code_8c_a0e7da14e7bad59aeddde7c6ce53dc645}{\index{print\-\_\-code.\-c@{print\-\_\-code.\-c}!not\-\_\-valid\-\_\-data@{not\-\_\-valid\-\_\-data}}
+\index{not\-\_\-valid\-\_\-data@{not\-\_\-valid\-\_\-data}!print_code.c@{print\-\_\-code.\-c}}
+\subsubsection[{not\-\_\-valid\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}static void not\-\_\-valid\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{print__code_8c_a0e7da14e7bad59aeddde7c6ce53dc645}
+
+
+Definition at line 24 of file print\-\_\-code.\-c.
+
+
+
+References N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A.
+
+
+
+Referenced by print\-\_\-code().
+
 \hypertarget{print__code_8c_ae2e8d46e105b698b3a9a8fbe6e24dc88}{\index{print\-\_\-code.\-c@{print\-\_\-code.\-c}!print\-\_\-code@{print\-\_\-code}}
 \index{print\-\_\-code@{print\-\_\-code}!print_code.c@{print\-\_\-code.\-c}}
 \subsubsection[{print\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-code (
@@ -43,5 +75,76 @@ Definition at line 28 of file print\-\_\-code.\-c.
 
 
 
-References are\-\_\-valid\-\_\-data().
+References are\-\_\-valid\-\_\-data(), not\-\_\-valid\-\_\-data(), and print\-\_\-valid\-\_\-code().
+
+\hypertarget{print__code_8c_a05c9c4b099987cfe161da4af58577ff5}{\index{print\-\_\-code.\-c@{print\-\_\-code.\-c}!print\-\_\-valid\-\_\-code@{print\-\_\-valid\-\_\-code}}
+\index{print\-\_\-valid\-\_\-code@{print\-\_\-valid\-\_\-code}!print_code.c@{print\-\_\-code.\-c}}
+\subsubsection[{print\-\_\-valid\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}static void print\-\_\-valid\-\_\-code (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{char $\ast$}]{surname, }
+\item[{char $\ast$}]{birth\-\_\-date, }
+\item[{char $\ast$}]{coded\-\_\-town, }
+\item[{char}]{sex}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{print__code_8c_a05c9c4b099987cfe161da4af58577ff5}
+
+
+Definition at line 18 of file print\-\_\-code.\-c.
+
+
+
+References cf\-\_\-generator(), C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H, and P\-R\-I\-N\-T\-\_\-\-C\-O\-D\-E.
+
+
+
+Referenced by print\-\_\-code().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{print__code_8c_a6923fb1cde44c51bd3a768c59680b4bb}{\index{print\-\_\-code.\-c@{print\-\_\-code.\-c}!C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H@{C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H@{C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H}!print_code.c@{print\-\_\-code.\-c}}
+\subsubsection[{C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}const int C\-O\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H = 17\hspace{0.3cm}{\ttfamily [static]}}}\label{print__code_8c_a6923fb1cde44c51bd3a768c59680b4bb}
+
+
+Definition at line 16 of file print\-\_\-code.\-c.
+
+
+
+Referenced by print\-\_\-valid\-\_\-code().
+
+\hypertarget{print__code_8c_af59a3b5376e25b8338f520d1c3e70e2a}{\index{print\-\_\-code.\-c@{print\-\_\-code.\-c}!N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A@{N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A}}
+\index{N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A@{N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A}!print_code.c@{print\-\_\-code.\-c}}
+\subsubsection[{N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ N\-O\-T\-\_\-\-V\-A\-L\-I\-D\-\_\-\-D\-A\-T\-A\hspace{0.3cm}{\ttfamily [static]}}}\label{print__code_8c_af59a3b5376e25b8338f520d1c3e70e2a}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+        \textcolor{stringliteral}{"\(\backslash\)nI dati inseriti non sono tutti corretti\(\backslash\)n\(\backslash\)n"}
+\end{DoxyCode}
+
+
+Definition at line 10 of file print\-\_\-code.\-c.
+
+
+
+Referenced by not\-\_\-valid\-\_\-data().
+
+\hypertarget{print__code_8c_a0fce746fd69ca8040f6f928401235c68}{\index{print\-\_\-code.\-c@{print\-\_\-code.\-c}!P\-R\-I\-N\-T\-\_\-\-C\-O\-D\-E@{P\-R\-I\-N\-T\-\_\-\-C\-O\-D\-E}}
+\index{P\-R\-I\-N\-T\-\_\-\-C\-O\-D\-E@{P\-R\-I\-N\-T\-\_\-\-C\-O\-D\-E}!print_code.c@{print\-\_\-code.\-c}}
+\subsubsection[{P\-R\-I\-N\-T\-\_\-\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ P\-R\-I\-N\-T\-\_\-\-C\-O\-D\-E\hspace{0.3cm}{\ttfamily [static]}}}\label{print__code_8c_a0fce746fd69ca8040f6f928401235c68}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+        \textcolor{stringliteral}{"\(\backslash\)n================================\(\backslash\)n"}
+        \textcolor{stringliteral}{"Codice fiscale: %s"}
+        \textcolor{stringliteral}{"\(\backslash\)n================================\(\backslash\)n"}
+\end{DoxyCode}
+
+
+Definition at line 12 of file print\-\_\-code.\-c.
+
+
+
+Referenced by print\-\_\-valid\-\_\-code().
 

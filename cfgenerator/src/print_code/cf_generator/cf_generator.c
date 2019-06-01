@@ -86,7 +86,7 @@ static int get_consonant(int k, char string, char* consonants) {
 	return k;
 }
 
-static void get_consonants(char* string, char* consonants) {
+static void get_consonants(const char* string, char* consonants) {
 	int k = ZERO;
 	for (int i = ZERO; i < strlen(string); i++)
 		k = get_consonant(k, string[i], consonants);
@@ -99,7 +99,7 @@ static int insert_consonant(char text, char* code, int ind) {
 	return ind;
 }
 
-static int insert_consonants(char* text, int ind, char* code) {
+static int insert_consonants(const char* text, int ind, char* code) {
 	for (int i = ZERO; i < strlen(text) && ind < THREE; i++)
 		ind = insert_consonant(text[i], code, ind);
 	return ind;
@@ -111,7 +111,7 @@ static int insert_vowel(char text, char code[], int ind) {
 	return ind;
 }
 
-static int insert_vowels(char text[], int ind, char code[]) {
+static int insert_vowels(const char text[], int ind, char code[]) {
 	for (int i = ZERO; i < strlen(text) && ind < THREE; i++)
 		ind = insert_vowel(text[i], code, ind);
 	return ind;
@@ -123,7 +123,7 @@ static int fill_X(int ind, char code[]) {
 	return ind;
 }
 
-static void fill_code(char text[], char code[]) {
+static void fill_code(const char text[], char code[]) {
 	int ind = ZERO;
 	ind = insert_consonants(text, ind, code);
 	ind = insert_vowels(text, ind, code);
@@ -153,7 +153,7 @@ static char month(char a, char b){
 	return (a == CHAR_0) ? month_0 (b) : month_1(b);
 }
 
-static void birth_date_code_M(char date[], char code[]){
+static void birth_date_code_M(const char date[], char code[]){
 	code[ZERO] = date[EIGHT];
 	code[ONE] = date[NINE];
 	code[TWO] = month(date[THREE], date[FOUR]);
@@ -161,7 +161,7 @@ static void birth_date_code_M(char date[], char code[]){
 	code[FOUR] = date[ONE];
 }
 
-static void birth_date_code_F(char date[], char code[]){
+static void birth_date_code_F(const char date[], char code[]){
 	code[ZERO] = date[EIGHT];
 	code[ONE] = date[NINE];
 	code[TWO] = month(date[THREE],date[FOUR]);

@@ -120,7 +120,7 @@ bool is_valid_town(char* town){
 	return strcmp(town, EMPTY_STRING) != ZERO || town != NULL;
 }
 
-bool are_valid_data(char* name, char* surname, char* date, char* coded_town, char sex){
+bool are_valid_data(const char* name, const char* surname, const char* date, char* coded_town, char sex){
 	return is_valid_name_surname(name) && is_valid_name_surname(surname) &&
 		   is_valid_date(date) && is_valid_town_code(coded_town) && is_valid_sex(sex);
 }

@@ -1,15 +1,49 @@
 \hypertarget{repeat_8c}{\section{src/repeat/repeat.c File Reference}
 \label{repeat_8c}\index{src/repeat/repeat.\-c@{src/repeat/repeat.\-c}}
 }
-{\ttfamily \#include \char`\"{}../../src/repeat/repeat.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}repeat.\-h\char`\"{}}\\*
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+static int \hyperlink{repeat_8c_a255dfb4ebad196efbfb499c521b56805}{get\-\_\-repeat} ()
+\item 
 bool \hyperlink{repeat_8c_ac7058264851b1479e01129febff7d689}{repeat} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{repeat_8c_ac817e632cac63218335454d0ebe89efe}{S\-P\-E\-C\-\_\-\-I\-N\-T} = \char`\"{}\%d\char`\"{}
+\item 
+static const char $\ast$ \hyperlink{repeat_8c_ae023907c20375d939ba39327d5e1f303}{R\-E\-P\-E\-A\-T\-\_\-\-S\-T\-R\-I\-N\-G}
+\item 
+static const int \hyperlink{repeat_8c_a611b700be7e491d94ecc6fc196a6099f}{T\-W\-O} = 2
+\item 
+static const int \hyperlink{repeat_8c_a03732b1f90df5c759962ce41dd8046ac}{O\-N\-E} = 1
+\item 
+static const int \hyperlink{repeat_8c_acdb9580f8c1b2955aa58958261a6c582}{Z\-E\-R\-O} = 0
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
+\hypertarget{repeat_8c_a255dfb4ebad196efbfb499c521b56805}{\index{repeat.\-c@{repeat.\-c}!get\-\_\-repeat@{get\-\_\-repeat}}
+\index{get\-\_\-repeat@{get\-\_\-repeat}!repeat.c@{repeat.\-c}}
+\subsubsection[{get\-\_\-repeat}]{\setlength{\rightskip}{0pt plus 5cm}static int get\-\_\-repeat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{repeat_8c_a255dfb4ebad196efbfb499c521b56805}
+
+
+Definition at line 17 of file repeat.\-c.
+
+
+
+References O\-N\-E, repeat(), R\-E\-P\-E\-A\-T\-\_\-\-S\-T\-R\-I\-N\-G, S\-P\-E\-C\-\_\-\-I\-N\-T, T\-W\-O, and Z\-E\-R\-O.
+
+
+
+Referenced by repeat().
+
 \hypertarget{repeat_8c_ac7058264851b1479e01129febff7d689}{\index{repeat.\-c@{repeat.\-c}!repeat@{repeat}}
 \index{repeat@{repeat}!repeat.c@{repeat.\-c}}
 \subsubsection[{repeat}]{\setlength{\rightskip}{0pt plus 5cm}bool repeat (
@@ -26,5 +60,72 @@ Definition at line 26 of file repeat.\-c.
 
 
 
-References O\-N\-E.
+References get\-\_\-repeat(), and O\-N\-E.
+
+
+
+Referenced by get\-\_\-repeat().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{repeat_8c_a03732b1f90df5c759962ce41dd8046ac}{\index{repeat.\-c@{repeat.\-c}!O\-N\-E@{O\-N\-E}}
+\index{O\-N\-E@{O\-N\-E}!repeat.c@{repeat.\-c}}
+\subsubsection[{O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int O\-N\-E = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{repeat_8c_a03732b1f90df5c759962ce41dd8046ac}
+
+
+Definition at line 14 of file repeat.\-c.
+
+
+
+Referenced by get\-\_\-repeat(), and repeat().
+
+\hypertarget{repeat_8c_ae023907c20375d939ba39327d5e1f303}{\index{repeat.\-c@{repeat.\-c}!R\-E\-P\-E\-A\-T\-\_\-\-S\-T\-R\-I\-N\-G@{R\-E\-P\-E\-A\-T\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{R\-E\-P\-E\-A\-T\-\_\-\-S\-T\-R\-I\-N\-G@{R\-E\-P\-E\-A\-T\-\_\-\-S\-T\-R\-I\-N\-G}!repeat.c@{repeat.\-c}}
+\subsubsection[{R\-E\-P\-E\-A\-T\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ R\-E\-P\-E\-A\-T\-\_\-\-S\-T\-R\-I\-N\-G\hspace{0.3cm}{\ttfamily [static]}}}\label{repeat_8c_ae023907c20375d939ba39327d5e1f303}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+        \textcolor{stringliteral}{"\(\backslash\)nCalcolare un altro codice fiscale?\(\backslash\)n(1=si,2=no) "}
+\end{DoxyCode}
+
+
+Definition at line 11 of file repeat.\-c.
+
+
+
+Referenced by get\-\_\-repeat().
+
+\hypertarget{repeat_8c_ac817e632cac63218335454d0ebe89efe}{\index{repeat.\-c@{repeat.\-c}!S\-P\-E\-C\-\_\-\-I\-N\-T@{S\-P\-E\-C\-\_\-\-I\-N\-T}}
+\index{S\-P\-E\-C\-\_\-\-I\-N\-T@{S\-P\-E\-C\-\_\-\-I\-N\-T}!repeat.c@{repeat.\-c}}
+\subsubsection[{S\-P\-E\-C\-\_\-\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ S\-P\-E\-C\-\_\-\-I\-N\-T = \char`\"{}\%d\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{repeat_8c_ac817e632cac63218335454d0ebe89efe}
+
+
+Definition at line 10 of file repeat.\-c.
+
+
+
+Referenced by get\-\_\-repeat().
+
+\hypertarget{repeat_8c_a611b700be7e491d94ecc6fc196a6099f}{\index{repeat.\-c@{repeat.\-c}!T\-W\-O@{T\-W\-O}}
+\index{T\-W\-O@{T\-W\-O}!repeat.c@{repeat.\-c}}
+\subsubsection[{T\-W\-O}]{\setlength{\rightskip}{0pt plus 5cm}const int T\-W\-O = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{repeat_8c_a611b700be7e491d94ecc6fc196a6099f}
+
+
+Definition at line 13 of file repeat.\-c.
+
+
+
+Referenced by get\-\_\-repeat().
+
+\hypertarget{repeat_8c_acdb9580f8c1b2955aa58958261a6c582}{\index{repeat.\-c@{repeat.\-c}!Z\-E\-R\-O@{Z\-E\-R\-O}}
+\index{Z\-E\-R\-O@{Z\-E\-R\-O}!repeat.c@{repeat.\-c}}
+\subsubsection[{Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}const int Z\-E\-R\-O = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{repeat_8c_acdb9580f8c1b2955aa58958261a6c582}
+
+
+Definition at line 15 of file repeat.\-c.
+
+
+
+Referenced by get\-\_\-repeat().
 

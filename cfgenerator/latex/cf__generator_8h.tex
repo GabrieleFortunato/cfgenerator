@@ -10,28 +10,28 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{cf__generator_8h_a688dae3359ca616de70dd5db0ec77cb9}{name\-\_\-code} (char name\mbox{[}$\,$\mbox{]}, char $\ast$code)
+void \hyperlink{cf__generator_8h_aa598705112bf1d6144d976a3b10097e9}{name\-\_\-code} (const char $\ast$name, char $\ast$code)
 \item 
-void \hyperlink{cf__generator_8h_a66ec1c8b6e2b97b7e7f588ce83e82549}{surname\-\_\-code} (char surname\mbox{[}$\,$\mbox{]}, char $\ast$code)
+void \hyperlink{cf__generator_8h_abf689089aca247889f1d9780257b1a50}{surname\-\_\-code} (const char $\ast$surname, char $\ast$code)
 \item 
-void \hyperlink{cf__generator_8h_a99de8347879a700ec6670f070512d07a}{birth\-\_\-date\-\_\-code} (char date\mbox{[}$\,$\mbox{]}, char sex, char code\mbox{[}$\,$\mbox{]})
+void \hyperlink{cf__generator_8h_ab2693ce2c01c833deac31fdb57f678f1}{birth\-\_\-date\-\_\-code} (const char $\ast$date, char sex, char code\mbox{[}$\,$\mbox{]})
 \item 
 char \hyperlink{cf__generator_8h_a70956311015a919ecee6f20621fb4ed8}{ctrl\-\_\-code} (char coded\-\_\-name\mbox{[}$\,$\mbox{]}, char coded\-\_\-surname\mbox{[}$\,$\mbox{]}, char coded\-\_\-birth\-\_\-date\mbox{[}$\,$\mbox{]}, char coded\-\_\-birth\-\_\-place\mbox{[}$\,$\mbox{]})
 \item 
-void \hyperlink{cf__generator_8h_ab4f4e4915be0df06691c1fcc269d1716}{cf\-\_\-generator} (char name\mbox{[}$\,$\mbox{]}, char surname\mbox{[}$\,$\mbox{]}, char birth\-\_\-date\mbox{[}$\,$\mbox{]}, char coded\-\_\-town\mbox{[}$\,$\mbox{]}, char sex, char code\mbox{[}$\,$\mbox{]})
+void \hyperlink{cf__generator_8h_a814837b51b6bf870528d29ff85a5925e}{cf\-\_\-generator} (const char $\ast$name, const char $\ast$surname, const char $\ast$birth\-\_\-date, char $\ast$coded\-\_\-town, char sex, char $\ast$code)
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{cf__generator_8h_a99de8347879a700ec6670f070512d07a}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!birth\-\_\-date\-\_\-code@{birth\-\_\-date\-\_\-code}}
+\hypertarget{cf__generator_8h_ab2693ce2c01c833deac31fdb57f678f1}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!birth\-\_\-date\-\_\-code@{birth\-\_\-date\-\_\-code}}
 \index{birth\-\_\-date\-\_\-code@{birth\-\_\-date\-\_\-code}!cf_generator.h@{cf\-\_\-generator.\-h}}
 \subsubsection[{birth\-\_\-date\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}void birth\-\_\-date\-\_\-code (
 \begin{DoxyParamCaption}
-\item[{char}]{date\mbox{[}$\,$\mbox{]}, }
+\item[{const char $\ast$}]{date, }
 \item[{char}]{sex, }
 \item[{char}]{code\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8h_a99de8347879a700ec6670f070512d07a}
+)}}\label{cf__generator_8h_ab2693ce2c01c833deac31fdb57f678f1}
 Codifica la data di nascita \begin{DoxyPrecond}{Precondition}
 La data deve essere una stringa avente formato G\-G/\-M\-M/\-A\-A\-A\-A 
 \end{DoxyPrecond}
@@ -56,24 +56,24 @@ Definition at line 242 of file cf\-\_\-generator.\-c.
 
 
 
-References F\-I\-V\-E, is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-date\-\_\-code(), is\-\_\-valid\-\_\-sex(), and M.
+References birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-\-M(), E\-O\-S, F\-I\-V\-E, is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-date\-\_\-code(), is\-\_\-valid\-\_\-sex(), and M.
 
 
 
 Referenced by cf\-\_\-generator().
 
-\hypertarget{cf__generator_8h_ab4f4e4915be0df06691c1fcc269d1716}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!cf\-\_\-generator@{cf\-\_\-generator}}
+\hypertarget{cf__generator_8h_a814837b51b6bf870528d29ff85a5925e}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!cf\-\_\-generator@{cf\-\_\-generator}}
 \index{cf\-\_\-generator@{cf\-\_\-generator}!cf_generator.h@{cf\-\_\-generator.\-h}}
 \subsubsection[{cf\-\_\-generator}]{\setlength{\rightskip}{0pt plus 5cm}void cf\-\_\-generator (
 \begin{DoxyParamCaption}
-\item[{char}]{name\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{surname\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{birth\-\_\-date\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{coded\-\_\-town\mbox{[}$\,$\mbox{]}, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{surname, }
+\item[{const char $\ast$}]{birth\-\_\-date, }
+\item[{char $\ast$}]{coded\-\_\-town, }
 \item[{char}]{sex, }
-\item[{char}]{code\mbox{[}$\,$\mbox{]}}
+\item[{char $\ast$}]{code}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8h_ab4f4e4915be0df06691c1fcc269d1716}
+)}}\label{cf__generator_8h_a814837b51b6bf870528d29ff85a5925e}
 Genera il codice fiscale \begin{DoxyPrecond}{Precondition}
 la stringa del nome non deve essere vuota 
 
@@ -105,7 +105,11 @@ Definition at line 264 of file cf\-\_\-generator.\-c.
 
 
 
-References birth\-\_\-date\-\_\-code(), ctrl\-\_\-code(), F\-O\-U\-R, is\-\_\-valid\-\_\-cf\-\_\-code(), is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name\-\_\-surname(), is\-\_\-valid\-\_\-sex(), name\-\_\-code(), S\-I\-X, S\-I\-X\-T\-E\-E\-N, surname\-\_\-code(), and Z\-E\-R\-O.
+References birth\-\_\-date\-\_\-code(), code\-\_\-strcat(), ctrl\-\_\-code(), E\-O\-S, F\-I\-F\-T\-E\-E\-N, F\-O\-U\-R, is\-\_\-valid\-\_\-cf\-\_\-code(), is\-\_\-valid\-\_\-date(), is\-\_\-valid\-\_\-name\-\_\-surname(), is\-\_\-valid\-\_\-sex(), name\-\_\-code(), S\-I\-X, S\-I\-X\-T\-E\-E\-N, surname\-\_\-code(), and Z\-E\-R\-O.
+
+
+
+Referenced by print\-\_\-valid\-\_\-code().
 
 \hypertarget{cf__generator_8h_a70956311015a919ecee6f20621fb4ed8}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!ctrl\-\_\-code@{ctrl\-\_\-code}}
 \index{ctrl\-\_\-code@{ctrl\-\_\-code}!cf_generator.h@{cf\-\_\-generator.\-h}}
@@ -134,14 +138,14 @@ il carattere di controllo deve essere una lettera maiuscola
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-\hypertarget{cf__generator_8h_a688dae3359ca616de70dd5db0ec77cb9}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!name\-\_\-code@{name\-\_\-code}}
+\hypertarget{cf__generator_8h_aa598705112bf1d6144d976a3b10097e9}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!name\-\_\-code@{name\-\_\-code}}
 \index{name\-\_\-code@{name\-\_\-code}!cf_generator.h@{cf\-\_\-generator.\-h}}
 \subsubsection[{name\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}void name\-\_\-code (
 \begin{DoxyParamCaption}
-\item[{char}]{name\mbox{[}$\,$\mbox{]}, }
+\item[{const char $\ast$}]{name, }
 \item[{char $\ast$}]{code}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8h_a688dae3359ca616de70dd5db0ec77cb9}
+)}}\label{cf__generator_8h_aa598705112bf1d6144d976a3b10097e9}
 Codifica il nome \begin{DoxyPrecond}{Precondition}
 la stringa del nome non deve essere vuota 
 \end{DoxyPrecond}
@@ -155,14 +159,14 @@ il nome codificato deve essere una stringa di tre lettere
 {\em code} & \\
 \hline
 \end{DoxyParams}
-\hypertarget{cf__generator_8h_a66ec1c8b6e2b97b7e7f588ce83e82549}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!surname\-\_\-code@{surname\-\_\-code}}
+\hypertarget{cf__generator_8h_abf689089aca247889f1d9780257b1a50}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!surname\-\_\-code@{surname\-\_\-code}}
 \index{surname\-\_\-code@{surname\-\_\-code}!cf_generator.h@{cf\-\_\-generator.\-h}}
 \subsubsection[{surname\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}void surname\-\_\-code (
 \begin{DoxyParamCaption}
-\item[{char}]{surname\mbox{[}$\,$\mbox{]}, }
+\item[{const char $\ast$}]{surname, }
 \item[{char $\ast$}]{code}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8h_a66ec1c8b6e2b97b7e7f588ce83e82549}
+)}}\label{cf__generator_8h_abf689089aca247889f1d9780257b1a50}
 Codifica il cognome \begin{DoxyPrecond}{Precondition}
 la stringa del cognome non deve essere vuota 
 \end{DoxyPrecond}
