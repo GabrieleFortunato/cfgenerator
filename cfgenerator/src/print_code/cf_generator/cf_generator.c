@@ -153,7 +153,7 @@ static char month(char a, char b){
 	return (a == CHAR_0) ? month_0 (b) : month_1(b);
 }
 
-static void birth_date_code_M(const char date[], char code[]){
+static void birth_date_code_M(const char* date, char code[]){
 	code[ZERO] = date[EIGHT];
 	code[ONE] = date[NINE];
 	code[TWO] = month(date[THREE], date[FOUR]);
@@ -161,7 +161,7 @@ static void birth_date_code_M(const char date[], char code[]){
 	code[FOUR] = date[ONE];
 }
 
-static void birth_date_code_F(const char date[], char code[]){
+static void birth_date_code_F(const char* date, char code[]){
 	code[ZERO] = date[EIGHT];
 	code[ONE] = date[NINE];
 	code[TWO] = month(date[THREE],date[FOUR]);
@@ -206,8 +206,8 @@ static char get_result(int number){
 		   (number == TWENTYFOUR) ? Y : Z ;
 }
 
-static void code_strcat(char* coded_name, char* coded_surname,
-		char* coded_birth_date, char* coded_town, char* code){
+static void code_strcat(const char* coded_name, const char* coded_surname,
+		const char* coded_birth_date, const char* coded_town, char* code){
 	strcat(code,coded_surname);
 	strcat(code,coded_name);
 	strcat(code,coded_birth_date);
@@ -247,8 +247,8 @@ void birth_date_code(const char* date, char sex, char code[]){
 	assert(is_valid_date_code(code));
 }
 
-char ctrl_code(char* coded_name, char* coded_surname,
-		char* coded_birth_date, char* coded_birth_place){
+char ctrl_code(const char coded_name[], const char coded_surname[],
+		const char coded_birth_date[], const char coded_birth_place[]){
 	assert(is_valid_coded_surname_name(coded_name));
 	assert(is_valid_coded_surname_name(coded_surname));
 	char code[FIFTEEN];
@@ -262,7 +262,7 @@ char ctrl_code(char* coded_name, char* coded_surname,
 
 
 void cf_generator(const char* name, const char* surname, const char* birth_date,
-		char* coded_town, char sex, char* code){
+		const char* coded_town, char sex, char* code){
 	assert(is_valid_name_surname(name));
 	assert(is_valid_name_surname(surname));
 	assert(is_valid_date(birth_date));

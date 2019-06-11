@@ -18,7 +18,7 @@
  * @param code
  * @return
  */
-bool is_valid_coded_surname_name(char* code);
+bool is_valid_coded_surname_name(const char* code);
 
 /**
  * Verifica la correttezza del nome e del cognome

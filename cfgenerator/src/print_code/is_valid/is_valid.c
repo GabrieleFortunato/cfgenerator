@@ -35,14 +35,14 @@
 #define APOSTROPHE      '\''
 #define EMPTY_STRING    ""
 
-static bool are_valid_chars_name_surname_code(char* code){
+static bool are_valid_chars_name_surname_code(const char* code){
 	bool flag = true;
 	for (int i = ZERO; i < strlen(code) && flag;)
 		flag = 	isupper(code[i++]);
 	return flag;
 }
 
-bool is_valid_coded_surname_name(char* code){
+bool is_valid_coded_surname_name(const char* code){
 	return strlen(code) == THREE && are_valid_chars_name_surname_code(code);
 }
 

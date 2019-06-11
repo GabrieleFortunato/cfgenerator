@@ -15,7 +15,7 @@ static const char* PRINT_CODE =
 		"\n================================\n";
 static const int CODE_LENGTH = 17;
 
-static void print_valid_code(const char* name, const char* surname, char* birth_date, const char* coded_town, char sex){
+static void print_valid_code(const char* name, const char* surname, const char* birth_date, const char* coded_town, char sex){
 	char code[CODE_LENGTH];
 	cf_generator(name, surname, birth_date, coded_town, sex, code);
 	printf(PRINT_CODE, code);
