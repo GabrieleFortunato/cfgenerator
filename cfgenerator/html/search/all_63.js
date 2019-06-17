@@ -1,7 +1,7 @@
 var searchData=
 [
   ['c',['C',['../cf__generator_8c.html#af98377366650f40dbc93f33f67232f49',1,'cf_generator.c']]],
-  ['cf_5fgenerator',['cf_generator',['../cf__generator_8c.html#a814837b51b6bf870528d29ff85a5925e',1,'cf_generator(const char *name, const char *surname, const char *birth_date, char *coded_town, char sex, char *code):&#160;cf_generator.c'],['../cf__generator_8h.html#a814837b51b6bf870528d29ff85a5925e',1,'cf_generator(const char *name, const char *surname, const char *birth_date, char *coded_town, char sex, char *code):&#160;cf_generator.c']]],
+  ['cf_5fgenerator',['cf_generator',['../cf__generator_8c.html#ae507847a272e55d99cf0682ad6e1f0cf',1,'cf_generator(const char *name, const char *surname, const char *birth_date, const char *coded_town, char sex, char *code):&#160;cf_generator.c'],['../cf__generator_8h.html#ae507847a272e55d99cf0682ad6e1f0cf',1,'cf_generator(const char *name, const char *surname, const char *birth_date, const char *coded_town, char sex, char *code):&#160;cf_generator.c']]],
   ['cf_5fgenerator_2ec',['cf_generator.c',['../cf__generator_8c.html',1,'']]],
   ['cf_5fgenerator_2eh',['cf_generator.h',['../cf__generator_8h.html',1,'']]],
   ['char_5f0',['CHAR_0',['../cf__generator_8c.html#a16126c129d41c7829c991a167cb4064b',1,'cf_generator.c']]],
@@ -19,6 +19,6 @@ var searchData=
   ['close_2eh',['close.h',['../close_8h.html',1,'']]],
   ['cls',['CLS',['../close_8c.html#afe350deae20d2d39da1a2a4e5cfed3a8',1,'CLS():&#160;close.c'],['../intro_8c.html#afe350deae20d2d39da1a2a4e5cfed3a8',1,'CLS():&#160;intro.c']]],
   ['code_5flength',['CODE_LENGTH',['../print__code_8c.html#a6923fb1cde44c51bd3a768c59680b4bb',1,'print_code.c']]],
-  ['code_5fstrcat',['code_strcat',['../cf__generator_8c.html#a2ed9384404b7de0f82754818eb4f124c',1,'cf_generator.c']]],
-  ['ctrl_5fcode',['ctrl_code',['../cf__generator_8c.html#acec64c4fb9a4ae49fa27c601d4d7d5b0',1,'ctrl_code(char *coded_name, char *coded_surname, char *coded_birth_date, char *coded_birth_place):&#160;cf_generator.c'],['../cf__generator_8h.html#a70956311015a919ecee6f20621fb4ed8',1,'ctrl_code(char coded_name[], char coded_surname[], char coded_birth_date[], char coded_birth_place[]):&#160;cf_generator.h']]]
+  ['code_5fstrcat',['code_strcat',['../cf__generator_8c.html#ab26bed785d151e12ff5e6ad8ebbcfff6',1,'cf_generator.c']]],
+  ['ctrl_5fcode',['ctrl_code',['../cf__generator_8c.html#a803684b80220361de0704d7b75874e05',1,'ctrl_code(const char coded_name[], const char coded_surname[], const char coded_birth_date[], const char coded_birth_place[]):&#160;cf_generator.c'],['../cf__generator_8h.html#a803684b80220361de0704d7b75874e05',1,'ctrl_code(const char coded_name[], const char coded_surname[], const char coded_birth_date[], const char coded_birth_place[]):&#160;cf_generator.c']]]
 ];

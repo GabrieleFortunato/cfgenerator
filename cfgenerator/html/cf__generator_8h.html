@@ -105,10 +105,10 @@ Functions</h2></td></tr>
 <tr class="separator:abf689089aca247889f1d9780257b1a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2693ce2c01c833deac31fdb57f678f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8h.html#ab2693ce2c01c833deac31fdb57f678f1">birth_date_code</a> (const char *date, char sex, char code[])</td></tr>
 <tr class="separator:ab2693ce2c01c833deac31fdb57f678f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70956311015a919ecee6f20621fb4ed8"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8h.html#a70956311015a919ecee6f20621fb4ed8">ctrl_code</a> (char coded_name[], char coded_surname[], char coded_birth_date[], char coded_birth_place[])</td></tr>
-<tr class="separator:a70956311015a919ecee6f20621fb4ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a814837b51b6bf870528d29ff85a5925e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8h.html#a814837b51b6bf870528d29ff85a5925e">cf_generator</a> (const char *name, const char *surname, const char *birth_date, char *coded_town, char sex, char *code)</td></tr>
-<tr class="separator:a814837b51b6bf870528d29ff85a5925e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a803684b80220361de0704d7b75874e05"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8h.html#a803684b80220361de0704d7b75874e05">ctrl_code</a> (const char coded_name[], const char coded_surname[], const char coded_birth_date[], const char coded_birth_place[])</td></tr>
+<tr class="separator:a803684b80220361de0704d7b75874e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae507847a272e55d99cf0682ad6e1f0cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cf__generator_8h.html#ae507847a272e55d99cf0682ad6e1f0cf">cf_generator</a> (const char *name, const char *surname, const char *birth_date, const char *coded_town, char sex, char *code)</td></tr>
+<tr class="separator:ae507847a272e55d99cf0682ad6e1f0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ab2693ce2c01c833deac31fdb57f678f1"></a>
@@ -161,7 +161,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a814837b51b6bf870528d29ff85a5925e"></a>
+<a class="anchor" id="ae507847a272e55d99cf0682ad6e1f0cf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -186,7 +186,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>coded_town</em>, </td>
         </tr>
         <tr>
@@ -235,32 +235,32 @@ La data deve essere una stringa avente formato GG/MM/AAAA </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a70956311015a919ecee6f20621fb4ed8"></a>
+<a class="anchor" id="a803684b80220361de0704d7b75874e05"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">char ctrl_code </td>
           <td>(</td>
-          <td class="paramtype">char&#160;</td>
+          <td class="paramtype">const char&#160;</td>
           <td class="paramname"><em>coded_name</em>[], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char&#160;</td>
+          <td class="paramtype">const char&#160;</td>
           <td class="paramname"><em>coded_surname</em>[], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char&#160;</td>
+          <td class="paramtype">const char&#160;</td>
           <td class="paramname"><em>coded_birth_date</em>[], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char&#160;</td>
+          <td class="paramtype">const char&#160;</td>
           <td class="paramname"><em>coded_birth_place</em>[]&#160;</td>
         </tr>
         <tr>
@@ -282,6 +282,12 @@ La data deve essere una stringa avente formato GG/MM/AAAA </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="cf__generator_8c_source.html#l00250">250</a> of file <a class="el" href="cf__generator_8c_source.html">cf_generator.c</a>.</p>
+
+<p>References <a class="el" href="cf__generator_8c_source.html#l00209">code_strcat()</a>, <a class="el" href="cf__generator_8c_source.html#l00037">EOS</a>, <a class="el" href="cf__generator_8c_source.html#l00025">FIFTEEN</a>, <a class="el" href="cf__generator_8c_source.html#l00197">get_result()</a>, <a class="el" href="cf__generator_8c_source.html#l00218">get_sum()</a>, <a class="el" href="is__valid_8c_source.html#l00045">is_valid_coded_surname_name()</a>, <a class="el" href="is__valid_8c_source.html#l00096">is_valid_ctrl_code()</a>, <a class="el" href="cf__generator_8c_source.html#l00036">TWENTYSIX</a>, and <a class="el" href="cf__generator_8c_source.html#l00010">ZERO</a>.</p>
+
+<p>Referenced by <a class="el" href="cf__generator_8c_source.html#l00264">cf_generator()</a>.</p>
 
 </div>
 </div>

@@ -16,9 +16,9 @@ void \hyperlink{cf__generator_8h_abf689089aca247889f1d9780257b1a50}{surname\-\_\
 \item 
 void \hyperlink{cf__generator_8h_ab2693ce2c01c833deac31fdb57f678f1}{birth\-\_\-date\-\_\-code} (const char $\ast$date, char sex, char code\mbox{[}$\,$\mbox{]})
 \item 
-char \hyperlink{cf__generator_8h_a70956311015a919ecee6f20621fb4ed8}{ctrl\-\_\-code} (char coded\-\_\-name\mbox{[}$\,$\mbox{]}, char coded\-\_\-surname\mbox{[}$\,$\mbox{]}, char coded\-\_\-birth\-\_\-date\mbox{[}$\,$\mbox{]}, char coded\-\_\-birth\-\_\-place\mbox{[}$\,$\mbox{]})
+char \hyperlink{cf__generator_8h_a803684b80220361de0704d7b75874e05}{ctrl\-\_\-code} (const char coded\-\_\-name\mbox{[}$\,$\mbox{]}, const char coded\-\_\-surname\mbox{[}$\,$\mbox{]}, const char coded\-\_\-birth\-\_\-date\mbox{[}$\,$\mbox{]}, const char coded\-\_\-birth\-\_\-place\mbox{[}$\,$\mbox{]})
 \item 
-void \hyperlink{cf__generator_8h_a814837b51b6bf870528d29ff85a5925e}{cf\-\_\-generator} (const char $\ast$name, const char $\ast$surname, const char $\ast$birth\-\_\-date, char $\ast$coded\-\_\-town, char sex, char $\ast$code)
+void \hyperlink{cf__generator_8h_ae507847a272e55d99cf0682ad6e1f0cf}{cf\-\_\-generator} (const char $\ast$name, const char $\ast$surname, const char $\ast$birth\-\_\-date, const char $\ast$coded\-\_\-town, char sex, char $\ast$code)
 \end{DoxyCompactItemize}
 
 
@@ -62,18 +62,18 @@ References birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-
 
 Referenced by cf\-\_\-generator().
 
-\hypertarget{cf__generator_8h_a814837b51b6bf870528d29ff85a5925e}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!cf\-\_\-generator@{cf\-\_\-generator}}
+\hypertarget{cf__generator_8h_ae507847a272e55d99cf0682ad6e1f0cf}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!cf\-\_\-generator@{cf\-\_\-generator}}
 \index{cf\-\_\-generator@{cf\-\_\-generator}!cf_generator.h@{cf\-\_\-generator.\-h}}
 \subsubsection[{cf\-\_\-generator}]{\setlength{\rightskip}{0pt plus 5cm}void cf\-\_\-generator (
 \begin{DoxyParamCaption}
 \item[{const char $\ast$}]{name, }
 \item[{const char $\ast$}]{surname, }
 \item[{const char $\ast$}]{birth\-\_\-date, }
-\item[{char $\ast$}]{coded\-\_\-town, }
+\item[{const char $\ast$}]{coded\-\_\-town, }
 \item[{char}]{sex, }
 \item[{char $\ast$}]{code}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8h_a814837b51b6bf870528d29ff85a5925e}
+)}}\label{cf__generator_8h_ae507847a272e55d99cf0682ad6e1f0cf}
 Genera il codice fiscale \begin{DoxyPrecond}{Precondition}
 la stringa del nome non deve essere vuota 
 
@@ -111,16 +111,16 @@ References birth\-\_\-date\-\_\-code(), code\-\_\-strcat(), ctrl\-\_\-code(), E\
 
 Referenced by print\-\_\-valid\-\_\-code().
 
-\hypertarget{cf__generator_8h_a70956311015a919ecee6f20621fb4ed8}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!ctrl\-\_\-code@{ctrl\-\_\-code}}
+\hypertarget{cf__generator_8h_a803684b80220361de0704d7b75874e05}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!ctrl\-\_\-code@{ctrl\-\_\-code}}
 \index{ctrl\-\_\-code@{ctrl\-\_\-code}!cf_generator.h@{cf\-\_\-generator.\-h}}
 \subsubsection[{ctrl\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}char ctrl\-\_\-code (
 \begin{DoxyParamCaption}
-\item[{char}]{coded\-\_\-name\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{coded\-\_\-surname\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{coded\-\_\-birth\-\_\-date\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{coded\-\_\-birth\-\_\-place\mbox{[}$\,$\mbox{]}}
+\item[{const char}]{coded\-\_\-name\mbox{[}$\,$\mbox{]}, }
+\item[{const char}]{coded\-\_\-surname\mbox{[}$\,$\mbox{]}, }
+\item[{const char}]{coded\-\_\-birth\-\_\-date\mbox{[}$\,$\mbox{]}, }
+\item[{const char}]{coded\-\_\-birth\-\_\-place\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8h_a70956311015a919ecee6f20621fb4ed8}
+)}}\label{cf__generator_8h_a803684b80220361de0704d7b75874e05}
 Genera il carattere di controllo \begin{DoxyPostcond}{Postcondition}
 il carattere di controllo deve essere una lettera maiuscola 
 \end{DoxyPostcond}
@@ -138,6 +138,18 @@ il carattere di controllo deve essere una lettera maiuscola
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+
+
+Definition at line 250 of file cf\-\_\-generator.\-c.
+
+
+
+References code\-\_\-strcat(), E\-O\-S, F\-I\-F\-T\-E\-E\-N, get\-\_\-result(), get\-\_\-sum(), is\-\_\-valid\-\_\-coded\-\_\-surname\-\_\-name(), is\-\_\-valid\-\_\-ctrl\-\_\-code(), T\-W\-E\-N\-T\-Y\-S\-I\-X, and Z\-E\-R\-O.
+
+
+
+Referenced by cf\-\_\-generator().
+
 \hypertarget{cf__generator_8h_aa598705112bf1d6144d976a3b10097e9}{\index{cf\-\_\-generator.\-h@{cf\-\_\-generator.\-h}!name\-\_\-code@{name\-\_\-code}}
 \index{name\-\_\-code@{name\-\_\-code}!cf_generator.h@{cf\-\_\-generator.\-h}}
 \subsubsection[{name\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}void name\-\_\-code (

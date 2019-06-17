@@ -33,9 +33,9 @@ static char \hyperlink{cf__generator_8c_a716e00289abd3685715cad376f6740f5}{month
 \item 
 static char \hyperlink{cf__generator_8c_a39a585b7c3b83355d6155ea0ba2b7534}{month} (char a, char b)
 \item 
-static void \hyperlink{cf__generator_8c_a14af87f7d85778451e498405ea1d7bf1}{birth\-\_\-date\-\_\-code\-\_\-\-M} (const char date\mbox{[}$\,$\mbox{]}, char code\mbox{[}$\,$\mbox{]})
+static void \hyperlink{cf__generator_8c_afcdc33c29d2f910b48ddc62cf8664965}{birth\-\_\-date\-\_\-code\-\_\-\-M} (const char $\ast$date, char code\mbox{[}$\,$\mbox{]})
 \item 
-static void \hyperlink{cf__generator_8c_a8d2948b82bedf5720207c57961fb4298}{birth\-\_\-date\-\_\-code\-\_\-\-F} (const char date\mbox{[}$\,$\mbox{]}, char code\mbox{[}$\,$\mbox{]})
+static void \hyperlink{cf__generator_8c_a10de05b6e6cc6b355c71a7b85976b72b}{birth\-\_\-date\-\_\-code\-\_\-\-F} (const char $\ast$date, char code\mbox{[}$\,$\mbox{]})
 \item 
 static int \hyperlink{cf__generator_8c_a697b4b6a661ca02db91b4f7592738641}{even\-\_\-character} (char a)
 \item 
@@ -43,7 +43,7 @@ static int \hyperlink{cf__generator_8c_a89795a74a18a95d8297459255d49f356}{odd\-\
 \item 
 static char \hyperlink{cf__generator_8c_ab581b1b0a5a7aa43da1ed79dc020d2cc}{get\-\_\-result} (int number)
 \item 
-static void \hyperlink{cf__generator_8c_a2ed9384404b7de0f82754818eb4f124c}{code\-\_\-strcat} (char $\ast$coded\-\_\-name, char $\ast$coded\-\_\-surname, char $\ast$coded\-\_\-birth\-\_\-date, char $\ast$coded\-\_\-town, char $\ast$code)
+static void \hyperlink{cf__generator_8c_ab26bed785d151e12ff5e6ad8ebbcfff6}{code\-\_\-strcat} (const char $\ast$coded\-\_\-name, const char $\ast$coded\-\_\-surname, const char $\ast$coded\-\_\-birth\-\_\-date, const char $\ast$coded\-\_\-town, char $\ast$code)
 \item 
 static int \hyperlink{cf__generator_8c_a5cc91b87c9b3cf3e8bc095bea4da4e6a}{get\-\_\-sum} (char $\ast$code)
 \item 
@@ -53,9 +53,9 @@ void \hyperlink{cf__generator_8c_abf355c0c79769133a75598fce30abcac}{surname\-\_\
 \item 
 void \hyperlink{cf__generator_8c_ab2693ce2c01c833deac31fdb57f678f1}{birth\-\_\-date\-\_\-code} (const char $\ast$date, char sex, char code\mbox{[}$\,$\mbox{]})
 \item 
-char \hyperlink{cf__generator_8c_acec64c4fb9a4ae49fa27c601d4d7d5b0}{ctrl\-\_\-code} (char $\ast$coded\-\_\-name, char $\ast$coded\-\_\-surname, char $\ast$coded\-\_\-birth\-\_\-date, char $\ast$coded\-\_\-birth\-\_\-place)
+char \hyperlink{cf__generator_8c_a803684b80220361de0704d7b75874e05}{ctrl\-\_\-code} (const char coded\-\_\-name\mbox{[}$\,$\mbox{]}, const char coded\-\_\-surname\mbox{[}$\,$\mbox{]}, const char coded\-\_\-birth\-\_\-date\mbox{[}$\,$\mbox{]}, const char coded\-\_\-birth\-\_\-place\mbox{[}$\,$\mbox{]})
 \item 
-void \hyperlink{cf__generator_8c_a814837b51b6bf870528d29ff85a5925e}{cf\-\_\-generator} (const char $\ast$name, const char $\ast$surname, const char $\ast$birth\-\_\-date, char $\ast$coded\-\_\-town, char sex, char $\ast$code)
+void \hyperlink{cf__generator_8c_ae507847a272e55d99cf0682ad6e1f0cf}{cf\-\_\-generator} (const char $\ast$name, const char $\ast$surname, const char $\ast$birth\-\_\-date, const char $\ast$coded\-\_\-town, char sex, char $\ast$code)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -230,14 +230,14 @@ References birth\-\_\-date\-\_\-code\-\_\-\-F(), birth\-\_\-date\-\_\-code\-\_\-
 
 Referenced by cf\-\_\-generator().
 
-\hypertarget{cf__generator_8c_a8d2948b82bedf5720207c57961fb4298}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!birth\-\_\-date\-\_\-code\-\_\-\-F@{birth\-\_\-date\-\_\-code\-\_\-\-F}}
+\hypertarget{cf__generator_8c_a10de05b6e6cc6b355c71a7b85976b72b}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!birth\-\_\-date\-\_\-code\-\_\-\-F@{birth\-\_\-date\-\_\-code\-\_\-\-F}}
 \index{birth\-\_\-date\-\_\-code\-\_\-\-F@{birth\-\_\-date\-\_\-code\-\_\-\-F}!cf_generator.c@{cf\-\_\-generator.\-c}}
 \subsubsection[{birth\-\_\-date\-\_\-code\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}static void birth\-\_\-date\-\_\-code\-\_\-\-F (
 \begin{DoxyParamCaption}
-\item[{const char}]{date\mbox{[}$\,$\mbox{]}, }
+\item[{const char $\ast$}]{date, }
 \item[{char}]{code\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a8d2948b82bedf5720207c57961fb4298}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a10de05b6e6cc6b355c71a7b85976b72b}
 
 
 Definition at line 164 of file cf\-\_\-generator.\-c.
@@ -250,14 +250,14 @@ References E\-I\-G\-H\-T, F\-O\-U\-R, month(), N\-I\-N\-E, O\-N\-E, T\-H\-R\-E\-
 
 Referenced by birth\-\_\-date\-\_\-code().
 
-\hypertarget{cf__generator_8c_a14af87f7d85778451e498405ea1d7bf1}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!birth\-\_\-date\-\_\-code\-\_\-\-M@{birth\-\_\-date\-\_\-code\-\_\-\-M}}
+\hypertarget{cf__generator_8c_afcdc33c29d2f910b48ddc62cf8664965}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!birth\-\_\-date\-\_\-code\-\_\-\-M@{birth\-\_\-date\-\_\-code\-\_\-\-M}}
 \index{birth\-\_\-date\-\_\-code\-\_\-\-M@{birth\-\_\-date\-\_\-code\-\_\-\-M}!cf_generator.c@{cf\-\_\-generator.\-c}}
 \subsubsection[{birth\-\_\-date\-\_\-code\-\_\-\-M}]{\setlength{\rightskip}{0pt plus 5cm}static void birth\-\_\-date\-\_\-code\-\_\-\-M (
 \begin{DoxyParamCaption}
-\item[{const char}]{date\mbox{[}$\,$\mbox{]}, }
+\item[{const char $\ast$}]{date, }
 \item[{char}]{code\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a14af87f7d85778451e498405ea1d7bf1}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_afcdc33c29d2f910b48ddc62cf8664965}
 
 
 Definition at line 156 of file cf\-\_\-generator.\-c.
@@ -270,18 +270,18 @@ References E\-I\-G\-H\-T, F\-O\-U\-R, month(), N\-I\-N\-E, O\-N\-E, T\-H\-R\-E\-
 
 Referenced by birth\-\_\-date\-\_\-code().
 
-\hypertarget{cf__generator_8c_a814837b51b6bf870528d29ff85a5925e}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!cf\-\_\-generator@{cf\-\_\-generator}}
+\hypertarget{cf__generator_8c_ae507847a272e55d99cf0682ad6e1f0cf}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!cf\-\_\-generator@{cf\-\_\-generator}}
 \index{cf\-\_\-generator@{cf\-\_\-generator}!cf_generator.c@{cf\-\_\-generator.\-c}}
 \subsubsection[{cf\-\_\-generator}]{\setlength{\rightskip}{0pt plus 5cm}void cf\-\_\-generator (
 \begin{DoxyParamCaption}
 \item[{const char $\ast$}]{name, }
 \item[{const char $\ast$}]{surname, }
 \item[{const char $\ast$}]{birth\-\_\-date, }
-\item[{char $\ast$}]{coded\-\_\-town, }
+\item[{const char $\ast$}]{coded\-\_\-town, }
 \item[{char}]{sex, }
 \item[{char $\ast$}]{code}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8c_a814837b51b6bf870528d29ff85a5925e}
+)}}\label{cf__generator_8c_ae507847a272e55d99cf0682ad6e1f0cf}
 Genera il codice fiscale \begin{DoxyPrecond}{Precondition}
 la stringa del nome non deve essere vuota 
 
@@ -319,17 +319,17 @@ References birth\-\_\-date\-\_\-code(), code\-\_\-strcat(), ctrl\-\_\-code(), E\
 
 Referenced by print\-\_\-valid\-\_\-code().
 
-\hypertarget{cf__generator_8c_a2ed9384404b7de0f82754818eb4f124c}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!code\-\_\-strcat@{code\-\_\-strcat}}
+\hypertarget{cf__generator_8c_ab26bed785d151e12ff5e6ad8ebbcfff6}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!code\-\_\-strcat@{code\-\_\-strcat}}
 \index{code\-\_\-strcat@{code\-\_\-strcat}!cf_generator.c@{cf\-\_\-generator.\-c}}
 \subsubsection[{code\-\_\-strcat}]{\setlength{\rightskip}{0pt plus 5cm}static void code\-\_\-strcat (
 \begin{DoxyParamCaption}
-\item[{char $\ast$}]{coded\-\_\-name, }
-\item[{char $\ast$}]{coded\-\_\-surname, }
-\item[{char $\ast$}]{coded\-\_\-birth\-\_\-date, }
-\item[{char $\ast$}]{coded\-\_\-town, }
+\item[{const char $\ast$}]{coded\-\_\-name, }
+\item[{const char $\ast$}]{coded\-\_\-surname, }
+\item[{const char $\ast$}]{coded\-\_\-birth\-\_\-date, }
+\item[{const char $\ast$}]{coded\-\_\-town, }
 \item[{char $\ast$}]{code}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_a2ed9384404b7de0f82754818eb4f124c}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{cf__generator_8c_ab26bed785d151e12ff5e6ad8ebbcfff6}
 
 
 Definition at line 209 of file cf\-\_\-generator.\-c.
@@ -342,16 +342,33 @@ References E\-O\-S.
 
 Referenced by cf\-\_\-generator(), and ctrl\-\_\-code().
 
-\hypertarget{cf__generator_8c_acec64c4fb9a4ae49fa27c601d4d7d5b0}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!ctrl\-\_\-code@{ctrl\-\_\-code}}
+\hypertarget{cf__generator_8c_a803684b80220361de0704d7b75874e05}{\index{cf\-\_\-generator.\-c@{cf\-\_\-generator.\-c}!ctrl\-\_\-code@{ctrl\-\_\-code}}
 \index{ctrl\-\_\-code@{ctrl\-\_\-code}!cf_generator.c@{cf\-\_\-generator.\-c}}
 \subsubsection[{ctrl\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}char ctrl\-\_\-code (
 \begin{DoxyParamCaption}
-\item[{char $\ast$}]{coded\-\_\-name, }
-\item[{char $\ast$}]{coded\-\_\-surname, }
-\item[{char $\ast$}]{coded\-\_\-birth\-\_\-date, }
-\item[{char $\ast$}]{coded\-\_\-birth\-\_\-place}
+\item[{const char}]{coded\-\_\-name\mbox{[}$\,$\mbox{]}, }
+\item[{const char}]{coded\-\_\-surname\mbox{[}$\,$\mbox{]}, }
+\item[{const char}]{coded\-\_\-birth\-\_\-date\mbox{[}$\,$\mbox{]}, }
+\item[{const char}]{coded\-\_\-birth\-\_\-place\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
-)}}\label{cf__generator_8c_acec64c4fb9a4ae49fa27c601d4d7d5b0}
+)}}\label{cf__generator_8c_a803684b80220361de0704d7b75874e05}
+Genera il carattere di controllo \begin{DoxyPostcond}{Postcondition}
+il carattere di controllo deve essere una lettera maiuscola 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em coded\-\_\-name} & \\
+\hline
+{\em coded\-\_\-surname} & \\
+\hline
+{\em coded\-\_\-birth\-\_\-date} & \\
+\hline
+{\em coded\-\_\-birth\-\_\-place} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Definition at line 250 of file cf\-\_\-generator.\-c.

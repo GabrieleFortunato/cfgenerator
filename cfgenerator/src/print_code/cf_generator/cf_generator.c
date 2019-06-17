@@ -276,6 +276,6 @@ void cf_generator(const char* name, const char* surname, const char* birth_date,
 	birth_date_code(birth_date, sex, coded_birth_date);
 	code_strcat(coded_name, coded_surname, coded_birth_date, coded_town, code);
 	code[FIFTEEN] = ctrl_code(coded_name, coded_surname, coded_birth_date, coded_town);
-	code[SIXTEEN]=EOS;
+	code[SIXTEEN] = EOS;
 	assert(is_valid_cf_code(code));
 }

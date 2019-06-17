@@ -152,10 +152,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a234d80a96b49845d68863acd44ab4e9c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a234d80a96b49845d68863acd44ab4e9c">are_valid_chars_name_surname_code</a> (char *code)</td></tr>
-<tr class="separator:a234d80a96b49845d68863acd44ab4e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afba29c08c3a52738f4087552e70c7c6b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#afba29c08c3a52738f4087552e70c7c6b">is_valid_coded_surname_name</a> (char *code)</td></tr>
-<tr class="separator:afba29c08c3a52738f4087552e70c7c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e36604f516169a7f5adf11b0fb4ada"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a14e36604f516169a7f5adf11b0fb4ada">are_valid_chars_name_surname_code</a> (const char *code)</td></tr>
+<tr class="separator:a14e36604f516169a7f5adf11b0fb4ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13979b0bb3596bc3b446263eab8750b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a13979b0bb3596bc3b446263eab8750b9">is_valid_coded_surname_name</a> (const char *code)</td></tr>
+<tr class="separator:a13979b0bb3596bc3b446263eab8750b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a695f98a321f3b294cfc9e184f74ed7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a4a695f98a321f3b294cfc9e184f74ed7">is_valid_char_name_surname</a> (const char *string)</td></tr>
 <tr class="separator:a4a695f98a321f3b294cfc9e184f74ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3936abb515aa8023d40db8513f4feaea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a3936abb515aa8023d40db8513f4feaea">is_valid_name_surname</a> (const char *surname)</td></tr>
@@ -188,8 +188,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7b1309e387b48ef9611e6b343c34355c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d2e518355a4e6e873983b99ae5cde08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a6d2e518355a4e6e873983b99ae5cde08">is_valid_town</a> (char *town)</td></tr>
 <tr class="separator:a6d2e518355a4e6e873983b99ae5cde08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefdd7166b9e5be1e7e90fdb598a0cb3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#aefdd7166b9e5be1e7e90fdb598a0cb3d">are_valid_data</a> (char *name, char *surname, char *date, char *coded_town, char sex)</td></tr>
-<tr class="separator:aefdd7166b9e5be1e7e90fdb598a0cb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99990c29beb94c37df592d67d54078c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a99990c29beb94c37df592d67d54078c6">are_valid_data</a> (const char *name, const char *surname, const char *date, char *coded_town, char sex)</td></tr>
+<tr class="separator:a99990c29beb94c37df592d67d54078c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2332043ba5aefd51af00d68ffb593b8c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a2332043ba5aefd51af00d68ffb593b8c">is_valid_index</a> (int i)</td></tr>
 <tr class="separator:a2332043ba5aefd51af00d68ffb593b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d121ae68928c28c34629587881fcf4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="is__valid_8c.html#a02d121ae68928c28c34629587881fcf4">is_valid_cf_char</a> (char *code, int i)</td></tr>
@@ -699,7 +699,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a234d80a96b49845d68863acd44ab4e9c"></a>
+<a class="anchor" id="a14e36604f516169a7f5adf11b0fb4ada"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -709,7 +709,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">static bool are_valid_chars_name_surname_code </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>code</em></td><td>)</td>
           <td></td>
         </tr>
@@ -729,26 +729,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aefdd7166b9e5be1e7e90fdb598a0cb3d"></a>
+<a class="anchor" id="a99990c29beb94c37df592d67d54078c6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool are_valid_data </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>surname</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>date</em>, </td>
         </tr>
         <tr>
@@ -1051,14 +1051,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afba29c08c3a52738f4087552e70c7c6b"></a>
+<a class="anchor" id="a13979b0bb3596bc3b446263eab8750b9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool is_valid_coded_surname_name </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>code</em></td><td>)</td>
           <td></td>
         </tr>
