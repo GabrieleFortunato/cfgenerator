@@ -223,7 +223,7 @@ static int get_sum(char* code) {
 	return sum;
 }
 
-void name_code(const char*  name, char code[]){
+void name_code(const char* name, char code[]){
 	assert(is_valid_name_surname(name));
 	char consonants[strlen(name)];
 	get_consonants(name,consonants);
@@ -233,7 +233,7 @@ void name_code(const char*  name, char code[]){
 	assert(is_valid_coded_surname_name(code));
 }
 
-void surname_code(const char*  surname, char code[]){
+void surname_code(const char* surname, char code[]){
 	assert(is_valid_name_surname(surname));
 	fill_code(surname, code);
 	assert(is_valid_coded_surname_name(code));
