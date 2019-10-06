@@ -226,7 +226,7 @@ static int get_sum(char* code) {
 void name_code(const char* name, char code[]){
 	assert(is_valid_name_surname(name));
 	char consonants[strlen(name)];
-	get_consonants(name,consonants);
+	get_consonants(name, consonants);
 	(strlen(consonants) >= FOUR) ?
 			fill_coded_name_four_consonants(code, consonants) :
 			fill_code(name, code);
