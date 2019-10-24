@@ -46,7 +46,7 @@ bool is_valid_ctrl_code(char code);
  * @param code
  * @return
  */
-bool is_valid_town_code(char* code);
+bool is_valid_town_code(const char* code);
 
 /**
  * Verifica che il codice abbia il giusto formato
@@ -86,6 +86,6 @@ bool is_not_empty_string(char* string);
  * @param sex
  * @return
  */
-bool are_valid_data(const char* name, const char* surname, const char* date, char* coded_town, char sex);
+bool are_valid_data(const char* name, const char* surname, const char* date, const char* coded_town, char sex);
 
 #endif /* SRC_PRINT_CODE_IS_VALID_IS_VALID_H_ */

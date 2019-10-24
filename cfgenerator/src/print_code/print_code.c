@@ -25,7 +25,7 @@ static void not_valid_data(){
 	printf(NOT_VALID_DATA);
 }
 
-void print_code(const char* name, const char* surname, const char* birth_date, char* coded_town, char sex, FILE* towns){
+void print_code(const char* name, const char* surname, const char* birth_date, const char* coded_town, char sex, FILE* towns){
 	(are_valid_data(name, surname, birth_date, coded_town, sex)) ?
 			print_valid_code(name, surname, birth_date, coded_town, sex) :
 			not_valid_data();

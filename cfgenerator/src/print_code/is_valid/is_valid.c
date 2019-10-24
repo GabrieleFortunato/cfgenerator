@@ -97,14 +97,14 @@ bool is_valid_ctrl_code(char code){
 	return isupper(code);
 }
 
-static bool is_valid_char_town_code(char* code){
+static bool is_valid_char_town_code(const char* code){
 	bool flag = true;
 	for (int i = ZERO; i< strlen(code) && flag;)
 		flag = (i == ZERO) ? isupper(code[i++]) : isdigit(code[i++]);
 	return flag;
 }
 
-bool is_valid_town_code(char* code){
+bool is_valid_town_code(const char* code){
 	return code!=NULL && strlen(code) == FOUR && is_valid_char_town_code(code);
 }
 
@@ -120,7 +120,7 @@ bool is_valid_town(char* town){
 	return strcmp(town, EMPTY_STRING) != ZERO || town != NULL;
 }
 
-bool are_valid_data(const char* name, const char* surname, const char* date, char* coded_town, char sex){
+bool are_valid_data(const char* name, const char* surname, const char* date, const char* coded_town, char sex){
 	return is_valid_name_surname(name) && is_valid_name_surname(surname) &&
 		   is_valid_date(date) && is_valid_town_code(coded_town) && is_valid_sex(sex);
 }

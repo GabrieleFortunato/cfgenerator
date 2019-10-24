@@ -21,7 +21,7 @@
 static const char* ITALIAN_TOWNS_FILE = "comuni.csv";
 static const char* READ_FROM_FILE = "r";
 static const char* WRITE_ON_FILE = "w";
-static const char* ACCESS_FILE_NAME = "accessi.txt";
+static const char* ACCESS_FILE_NAME = "accessi al programma cfgenerator.txt";
 
 void access(){
 	FILE* file = fopen(ACCESS_FILE_NAME, WRITE_ON_FILE);
