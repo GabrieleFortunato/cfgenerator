@@ -10,6 +10,7 @@
 static const char* PRINT_ACCESS = "%s";
 
 void print_access(FILE* file){
+	assert(file != NULL);
 	time_t ora = time(NULL);
 	fprintf(file, PRINT_ACCESS, asctime(localtime(&ora)));
 }

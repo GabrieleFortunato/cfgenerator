@@ -16,7 +16,7 @@ bool \hyperlink{is__valid_8h_a040a1ed664c51f87b79830e162ea3cca}{is\-\_\-valid\-\
 \item 
 bool \hyperlink{is__valid_8h_a053ab1181823a73951f675960eb54537}{is\-\_\-valid\-\_\-ctrl\-\_\-code} (char code)
 \item 
-bool \hyperlink{is__valid_8h_a931d1013082072d46b16f03df6b9ba9a}{is\-\_\-valid\-\_\-town\-\_\-code} (char $\ast$code)
+bool \hyperlink{is__valid_8h_a84bddfcc7a1dd0b7dea5293fdee29243}{is\-\_\-valid\-\_\-town\-\_\-code} (const char $\ast$code)
 \item 
 bool \hyperlink{is__valid_8h_a2208ce7082532c2908b15902e924cf22}{is\-\_\-valid\-\_\-date\-\_\-code} (char $\ast$code)
 \item 
@@ -26,22 +26,22 @@ bool \hyperlink{is__valid_8h_ae65ab1a3f8095d0c9e085db678d819f2}{is\-\_\-valid\-\
 \item 
 bool \hyperlink{is__valid_8h_a55e1774041ad6bc2aff93c7777fa1af2}{is\-\_\-not\-\_\-empty\-\_\-string} (char $\ast$string)
 \item 
-bool \hyperlink{is__valid_8h_a99990c29beb94c37df592d67d54078c6}{are\-\_\-valid\-\_\-data} (const char $\ast$name, const char $\ast$surname, const char $\ast$date, char $\ast$coded\-\_\-town, char sex)
+bool \hyperlink{is__valid_8h_a2c6f4e7a60268591707060d905cb11f9}{are\-\_\-valid\-\_\-data} (const char $\ast$name, const char $\ast$surname, const char $\ast$date, const char $\ast$coded\-\_\-town, char sex)
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{is__valid_8h_a99990c29beb94c37df592d67d54078c6}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!are\-\_\-valid\-\_\-data@{are\-\_\-valid\-\_\-data}}
+\hypertarget{is__valid_8h_a2c6f4e7a60268591707060d905cb11f9}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!are\-\_\-valid\-\_\-data@{are\-\_\-valid\-\_\-data}}
 \index{are\-\_\-valid\-\_\-data@{are\-\_\-valid\-\_\-data}!is_valid.h@{is\-\_\-valid.\-h}}
 \subsubsection[{are\-\_\-valid\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}bool are\-\_\-valid\-\_\-data (
 \begin{DoxyParamCaption}
 \item[{const char $\ast$}]{name, }
 \item[{const char $\ast$}]{surname, }
 \item[{const char $\ast$}]{date, }
-\item[{char $\ast$}]{coded\-\_\-town, }
+\item[{const char $\ast$}]{coded\-\_\-town, }
 \item[{char}]{sex}
 \end{DoxyParamCaption}
-)}}\label{is__valid_8h_a99990c29beb94c37df592d67d54078c6}
+)}}\label{is__valid_8h_a2c6f4e7a60268591707060d905cb11f9}
 Verifica la correttezza dei dati immessi 
 \begin{DoxyParams}{Parameters}
 {\em name} & \\
@@ -282,13 +282,13 @@ References F, and M.
 
 Referenced by are\-\_\-valid\-\_\-data(), birth\-\_\-date\-\_\-code(), and cf\-\_\-generator().
 
-\hypertarget{is__valid_8h_a931d1013082072d46b16f03df6b9ba9a}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!is\-\_\-valid\-\_\-town\-\_\-code@{is\-\_\-valid\-\_\-town\-\_\-code}}
+\hypertarget{is__valid_8h_a84bddfcc7a1dd0b7dea5293fdee29243}{\index{is\-\_\-valid.\-h@{is\-\_\-valid.\-h}!is\-\_\-valid\-\_\-town\-\_\-code@{is\-\_\-valid\-\_\-town\-\_\-code}}
 \index{is\-\_\-valid\-\_\-town\-\_\-code@{is\-\_\-valid\-\_\-town\-\_\-code}!is_valid.h@{is\-\_\-valid.\-h}}
 \subsubsection[{is\-\_\-valid\-\_\-town\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-valid\-\_\-town\-\_\-code (
 \begin{DoxyParamCaption}
-\item[{char $\ast$}]{code}
+\item[{const char $\ast$}]{code}
 \end{DoxyParamCaption}
-)}}\label{is__valid_8h_a931d1013082072d46b16f03df6b9ba9a}
+)}}\label{is__valid_8h_a84bddfcc7a1dd0b7dea5293fdee29243}
 Verifica che il codice catastale sia nel giusto formato 
 \begin{DoxyParams}{Parameters}
 {\em code} & \\
