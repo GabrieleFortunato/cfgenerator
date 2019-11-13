@@ -75,7 +75,7 @@ bool is_valid_cf_code(char* code);
  * @param string
  * @return
  */
-bool is_not_empty_string(char* string);
+bool is_not_empty_string(const char* string);
 
 /**
  * Verifica la correttezza dei dati immessi

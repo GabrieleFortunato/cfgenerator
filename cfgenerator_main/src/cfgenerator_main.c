@@ -8,8 +8,6 @@
  ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "print_code/print_code.h"
 #include "access/access.h"
 #include "print_code/read_birth_place/read_birth_place.h"

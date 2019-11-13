@@ -25,7 +25,7 @@
  * @param birth_place
  * @return
  */
-const char* read_birth_place_code(FILE* places_file,char* birth_place);
+const char* read_birth_place_code(FILE* places_file, const char* birth_place);
 
 /**
  * Stampa un messaggio di errore se il file non è stato trovato

@@ -24,7 +24,7 @@ static void result_code(char* code, char* result){
 	strcpy(result, code);
 }
 
-static char* get_result(char* birth_place,char *part,char *result){
+static char* get_result(const char* birth_place,char *part,char *result){
 	char *town = strtok(part, VIRGO);
 	char *code = (char*) malloc((FIVE) * sizeof(char*));
 	if (strcmp(birth_place, town) == ZERO)
@@ -32,7 +32,7 @@ static char* get_result(char* birth_place,char *part,char *result){
 	return result;
 }
 
-const char* read_birth_place_code(FILE* places_file,char* birth_place){
+const char* read_birth_place_code(FILE* places_file, const char* birth_place){
 	assert(places_file!= NULL);
 	assert(birth_place!= NULL);
 	assert(is_not_empty_string(birth_place));
